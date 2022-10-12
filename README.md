@@ -98,3 +98,13 @@ This project is licensed under the < INSERT LICENSE NAME > - see the [LICENSE](L
 * Hat tip to anyone whose code was used
 * Inspiration
 * etc
+
+## Troubleshooting
+
+Below are some of the most common installation issues and instructions on how to solve them.
+
+Issue: An unexpected error occurred: "https://msazure.pkgs.visualstudio.com/_packaging/AzurePortal/npm/registry/yarn-audit-fix/-/yarn-audit-fix-9.3.6.tgz: Request failed \"404 Not Found\"".
+Solution: 
+* yarn config set registry https://registry.npmjs.org
+* rm yarn.lock
+* yarn
