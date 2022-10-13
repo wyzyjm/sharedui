@@ -1,32 +1,32 @@
 import {
-    CommandBar,
-    CommandBarButton,
-    DefaultButton,
-    IButtonProps,
-    ICommandBarProps,
-    Icon,
-    IconButton as FabricIconButton,
-    IconButton,
-    IIconProps,
-    PrimaryButton as FabricPrimaryButton,
-    registerIcons,
-    Spinner,
-    SpinnerSize,
+  CommandBar,
+  CommandBarButton,
+  DefaultButton,
+  IButtonProps,
+  ICommandBarProps,
+  Icon,
+  IconButton as FabricIconButton,
+  IconButton,
+  IIconProps,
+  PrimaryButton as FabricPrimaryButton,
+  registerIcons,
+  Spinner,
+  SpinnerSize,
 } from "@fluentui/react";
 import { useTheme } from "@fluentui/react-theme-provider";
 import React from "react";
 import styled, { ThemedStyledProps } from "styled-components";
 
 const iconThemedStyles = (props: CSButtonProps) => `
-    color: ${props.disabled ? props.theme?.palette?.neutralTertiary : props.theme?.palette?.themePrimary};
+    color: ${props.disabled ? props.theme.palette.neutralTertiary : props.theme.palette.themePrimary};
   
     svg {
-      fill: ${props.disabled ? props.theme?.palette?.neutralTertiary : props.theme?.palette?.themePrimary};
+      fill: ${props.disabled ? props.theme.palette.neutralTertiary : props.theme.palette.themePrimary};
       path {
-        ${props.disabled ? props.theme?.palette?.neutralTertiary : props.theme?.palette?.themePrimary};
+        ${props.disabled ? props.theme.palette.neutralTertiary : props.theme.palette.themePrimary};
       }
       path[stroke="placeholder"]{
-        stroke: ${props.disabled ? props.theme?.palette?.neutralTertiary : props.theme?.palette?.themePrimary}
+        stroke: ${props.disabled ? props.theme.palette.neutralTertiary : props.theme.palette.themePrimary}
       }
     }
   `;
@@ -48,38 +48,39 @@ const cellButtonThemedStyles = (props: CSButtonProps) => `
 const secondaryButtonThemedStyles = (props: CSButtonProps) => `
     ${cellButtonThemedStyles(props)}
   
-    border: ${props.disabled ? "none" : `1px solid ${props.theme?.palette?.themePrimary}`};
-    background-color: ${props.disabled ? props.theme?.palette?.neutralLighter : "white"};
+    border: ${props.disabled ? "none" : `1px solid ${props.theme.palette.themePrimary}`};
+    background-color: ${props.disabled ? props.theme.palette.neutralLighter : "white"};
   
     &:hover, &:focus {
-      background-color: ${props.disabled ? props.theme?.palette?.neutralLighter : props.theme?.palette?.neutralLighter};
+      background-color: ${props.disabled ? props.theme.palette.neutralLighter : props.theme.palette.neutralLighter};
       border-width: 1px;
     }
   `;
 
 const primaryButtonThemedStyles = (props: CSButtonProps) => `
-    background-color: ${props.disabled ? props.theme?.palette?.neutralLighter : props.theme?.palette?.themePrimary};
-    color: ${props.disabled ? props.theme?.palette?.neutralTertiary : "white"} !important;
+    background-color: ${props.disabled ? props.theme.palette.neutralLighter : props.theme.palette.themePrimary};
+    color: ${props.disabled ? props.theme.palette.neutralTertiary : "white"} !important;
   
     i {
       margin: 0;
-      color: ${props.disabled ? props.theme?.palette?.neutralTertiary : "white"} !important;
+      color: ${props.disabled ? props.theme.palette.neutralTertiary : "white"} !important;
     }
   
     svg {
-      fill: ${props.disabled ? props.theme?.palette?.neutralTertiary : "white"} !important;
+      fill: ${props.disabled ? props.theme.palette.neutralTertiary : "white"} !important;
       vertical-align: baseline;
       height: 1.125rem;
     }
   
     &:hover, &:focus {
-      background-color: ${props.disabled ? props.theme?.palette?.neutralLighter : props.theme?.palette?.themeDarkAlt};
+      background-color: ${props.disabled ? props.theme.palette.neutralLighter : props.theme.palette.themeDarkAlt};
     }
   `;
 
-const themedStylesWithSplitButton = (props: CSButtonProps, themedStylesFunc: any) => `
-    ${themedStylesFunc({ ...props, disabled: props.disabled || props.primaryDisabled })}
-  `;
+const themedStylesWithSplitButton = (props: CSButtonProps, themedStylesFunc: any) => {
+  const theme = useTheme();
+  return `${themedStylesFunc({ ...props, disabled: props.disabled || props.primaryDisabled, theme })}`;
+}
 
 interface DefaultButtonProps {
   hasPrefixIcon?: boolean;
@@ -87,7 +88,7 @@ interface DefaultButtonProps {
 
 export type CSButtonProps = ThemedStyledProps<IButtonProps & React.RefAttributes<DefaultButton> & DefaultButtonProps, any>;
 
-const Button = styled(DefaultButton)<DefaultButtonProps>`
+const Button = styled(DefaultButton) <DefaultButtonProps>`
   display: inline-block;
   height: 2.25rem;
   text-align: center;
@@ -102,8 +103,8 @@ const Button = styled(DefaultButton)<DefaultButtonProps>`
   box-shadow: none;
 
   ${props =>
-        props.hasPrefixIcon &&
-        `& {
+    props.hasPrefixIcon &&
+    `& {
       padding: 0 0.75rem;
 
       i {
@@ -113,7 +114,6 @@ const Button = styled(DefaultButton)<DefaultButtonProps>`
       }
     }`}
 `;
-
 
 export const PrimaryButton = styled(Button)`
     min-width: 5.375rem;

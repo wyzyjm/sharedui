@@ -1,63 +1,38 @@
 import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 import { CSButtonProps, PrimaryButton, SecondaryButton } from './Button';
+import { defaultTheme } from "../../../themes";
 import {
-    DefaultButton,
-    IButtonProps
+    ThemeProvider
 } from "@fluentui/react";
 
-// More on default export: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
 export default {
     title: 'Button',
-    component: PrimaryButton
-    // subcomponents: { PrimaryButton, SecondaryButton }
-} as ComponentMeta<typeof PrimaryButton>;
+    subcomponents: { PrimaryButton, SecondaryButton }
+} as ComponentMeta<any>;
 
-// const Template: ComponentStory<typeof PrimaryButton> = (args) => <PrimaryButton {...args} />;
-// export const Primary = Template.bind({});
-// Primary.args = {
-//     hasPrefixIcon: false,
-
-// } as CSButtonProps;
-
-const foo: CSButtonProps = {
-    disabled: false,
-    theme: null,
-    
-};
-
-// export const Secondary: ComponentStory<typeof SecondaryButton> = (args) => (
-//     <SecondaryButton {...args} />
-// );
-
-const Template: ComponentStory<typeof DefaultButton> = (args) => <DefaultButton {...args} />;
-const PrimaryDefaultButton = Template.bind({});
-PrimaryDefaultButton.args = {
+const PrimaryButtonTemplate: ComponentStory<typeof PrimaryButton> = (args) => (
+    <ThemeProvider theme={defaultTheme.body}>
+        <PrimaryButton {...args} />
+    </ThemeProvider>);
+export const Primary = PrimaryButtonTemplate.bind({});
+Primary.args = {
+    ariaLabel: "",
+    id: "",
+    title: "",
+    text: "Primary",
+    disabled: false
 } as CSButtonProps;
 
-// function activator<T>(type: { new(): T ;} ): T {
-//     return new type();
-// }
-
-// const foo2 = {} as IButtonProps;
-// IButtonProps.
-// console.log(foo2);
-
-// const foo1: CSButtonProps = activator<CSButtonProps>(CSButtonProps);
-
-const TemplatePrimary: ComponentStory<typeof PrimaryButton> = (args) => <PrimaryButton {...args} />;
-export const Primary = TemplatePrimary.bind({});
-Primary.args = {};
-debugger;
-Object.keys(PrimaryDefaultButton.args).forEach(argName => {
-    debugger;
-    Primary.args[argName] = undefined;
-});
-
-Primary.args["abc"] = undefined;
-
-
-// export const Primary: ComponentStory<typeof PrimaryButton> = (args) => (
-//     <PrimaryButton {...args} />
-// );
-
+const SecondaryButtonTemplate: ComponentStory<typeof SecondaryButton> = (args) => (
+    <ThemeProvider theme={defaultTheme.body}>
+        <SecondaryButton {...args} />
+    </ThemeProvider>);
+export const Secondary = SecondaryButtonTemplate.bind({});
+Secondary.args = {
+    ariaLabel: "",
+    id: "",
+    title: "",
+    text: "Secondary",
+    disabled: false
+} as CSButtonProps;
