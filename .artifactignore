@@ -1,0 +1,5 @@
+# This file instructs obpipeline on what to exclude from artifact upload. By default, obpipeline will create
+# an .artifactignore file that excludes a lot of important outputs, making debugging the build difficult. To
+# fix this, we provide our own blank file to ensure everything is included.
+#
+# For details, see docs at https://onebranch.visualstudio.com/OneBranch/_wiki/wikis/OneBranch.wiki/4605/Artifacts?anchor=artifacts-upload-in-failed-builds

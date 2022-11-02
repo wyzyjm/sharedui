@@ -1,22 +1,25 @@
+const path = require('path');
+
 (function () {
   "use strict";
+  const { CleanWebpackPlugin } = require('clean-webpack-plugin');
   var MiniCssExtractPlugin = require("mini-css-extract-plugin");
   var webpack = require("webpack");
 
-  const { CleanWebpackPlugin } = require('clean-webpack-plugin');
-  var webpack = require("webpack");
-  var HtmlWebpackPlugin = require("html-webpack-plugin");
-  var ScriptExtHtmlWebpackPlugin = require("script-ext-html-webpack-plugin");
-
   module.exports = {
-    entry: {
-      app: "./src/index.tsx"
+    entry: path.resolve(__dirname, 'src/index.tsx'),
+    output: {
+      path: path.resolve(__dirname, 'dist', 'package'),
+      filename: 'index.js',
+      library: 'CognitiveServices',
+      libraryTarget: 'umd'
     },
+    devtool: 'source-map',
     module: {
       rules: [
         {
           test: /\.(js|jsx)$/,
-          exclude: /node_modules/,
+          exclude: [/node_modules/, /\.stories\.tsx$/,],
           use: {
             loader: "babel-loader",
           },
@@ -26,6 +29,11 @@
           exclude: /node_modules/,
           use: [MiniCssExtractPlugin.loader, "css-loader", "sass-loader"],
         },
+        // {
+        //   test: /\.tsx?$/,
+        //   use: 'awesome-typescript-loader',
+        //   exclude: '/node_modules/'
+        // },
         {
           test: /\.tsx?$/,
           use: 'ts-loader',
@@ -45,19 +53,7 @@
     },
     plugins: [
       new CleanWebpackPlugin(),
-      new MiniCssExtractPlugin(),
-      new HtmlWebpackPlugin({
-        chunks: ["app", "styles", "environment"],
-        filename: "index.html",
-        template: "./public/index.html",
-        inject: "head",
-      }),
-      // new webpack.ProvidePlugin({     // fix "process is not defined" error:
-      //   process: 'process/browser',
-      // }),
-      new ScriptExtHtmlWebpackPlugin({
-        defaultAttribute: "defer",
-      })
+      new MiniCssExtractPlugin()
     ],
     resolve: {
       extensions: [".ts", ".tsx", ".js", ".ttf"],

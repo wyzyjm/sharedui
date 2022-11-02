@@ -38,6 +38,15 @@ module.exports = {
       use: [MiniCssExtractPlugin.loader, "css-loader", "sass-loader"],
     });
 
+    // split into more chunks
+    config.optimization = {
+      splitChunks: {
+          chunks: "all",
+          minSize: 30 * 1024, // 30KB
+          maxSize: 1024 * 1024, // 1MB
+      }
+    };
+
     return config;
   }
 }

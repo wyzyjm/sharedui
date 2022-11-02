@@ -1,0 +1,97 @@
+#https://docs.microsoft.com/en-us/azure/devops/pipelines/tasks/utility/copy-files?view=azure-devops&tabs=yaml
+stages:
+- stage: build
+  jobs:
+  - job: main
+    pool:
+      type: windows
+
+    variables: # More settings at https://aka.ms/obpipelines/yaml/jobs
+      ob_outputDirectory: '$(Build.SourcesDirectory)/out' # this directory is uploaded to pipeline artifacts, reddog and cloudvault. More info at https://aka.ms/obpipelines/artifacts
+      ob_keepContainerOn: true
+      ob_sdl_codeSignValidation_excludes: -|**\*.js;-|**\gdn-OpenAIStudio.zip\**;-|**\packages\** # Excluding client side javascript and all gdn files
+      
+    steps: # These steps will be run in unrestricted container's network
+      - task: onebranch.pipeline.version@1
+        displayName: 'Setup BuildNumber'
+        inputs:
+          system: 'RevisionCounter'
+          major: '1'
+          minor: '0'
+          exclude_commit: true
+
+      - task: NodeTool@0
+        displayName: Pin Node.js version
+        inputs:
+          versionSpec: "16.16.0"
+
+      - task: npmAuthenticate@0
+        inputs:
+          workingFile: '$(Build.SourcesDirectory)\src\SharedUI.Studios\ClientApp\.npmrc'
+
+      - task: CmdLine@2
+        displayName: 'Restore'
+        inputs:
+          script: '$(Build.SourcesDirectory)\restore.cmd'
+          workingDirectory: '$(Build.SourcesDirectory)'
+
+      - task: ComponentGovernanceComponentDetection@0
+        displayName: Component Detection
+
+      - task: notice@0
+        displayName: Generate NOTICE file
+        inputs:
+          outputfile: '$(Build.SourcesDirectory)\src\SharedUI.Studios\ClientApp\src\NOTICE.txt'
+          outputformat: text
+
+      - task: CmdLine@2
+        displayName: 'Version'
+        inputs:
+          script: '$(Build.SourcesDirectory)\version.cmd'
+          workingDirectory: '$(Build.SourcesDirectory)'
+
+      - task: CmdLine@2
+        displayName: 'Build'
+        inputs:
+          script: '$(Build.SourcesDirectory)\build.cmd'
+          workingDirectory: '$(Build.SourcesDirectory)'
+      
+      - task: CopyFiles@2
+        displayName: 'Copy artifact ignore file'
+        inputs:
+          SourceFolder: '$(Build.SourcesDirectory)'
+          Contents: |              
+            **/\.artifactignore
+          TargetFolder: '$(Build.SourcesDirectory)\out'
+
+      - task: CopyFiles@2
+        displayName: 'Copy Build Files'
+        inputs:
+          SourceFolder: '$(Build.SourcesDirectory)\src\SharedUI.Studios\ClientApp\dist'
+          Contents: |
+            **/*
+            !**/node_modules/**/*
+          TargetFolder: '$(Build.SourcesDirectory)\out'
+
+      - task: CmdLine@2
+        displayName: 'Package'
+        inputs:
+          script: '$(Build.SourcesDirectory)\package.cmd'
+          workingDirectory: '$(Build.SourcesDirectory)'
+
+      - task: CopyFiles@2
+        displayName: 'Copy Package Files'
+        inputs:
+          SourceFolder: '$(Build.SourcesDirectory)\src\SharedUI.Studios\ClientApp\dist'
+          Contents: |
+            **/*
+            !**/node_modules/**/*
+            !**/build/**/*            
+          TargetFolder: '$(Build.SourcesDirectory)/out'
+
+      - task: onebranch.pipeline.signing@1
+        inputs:
+          command: 'sign' 
+          signing_profile: 'internal_azure_service'
+          files_to_sign: '!*.nd.dll;!*.gdn\**;!**/*lcl*\**;!**/*lcl*.*;!**/*gdn*\**;**/*.exe;**/*.dll;**/*.ps1;**/Ev2Artifacts/bin/OpenAIStudio.zip*\**;'
+          search_root: '$(Build.SourcesDirectory)\out'

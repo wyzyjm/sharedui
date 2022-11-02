@@ -26,10 +26,10 @@
   dependencies:
     "@babel/highlight" "^7.18.6"
 
-"@babel/compat-data@^7.17.7", "@babel/compat-data@^7.18.8", "@babel/compat-data@^7.19.3":
-  version "7.19.3"
-  resolved "https://msazure.pkgs.visualstudio.com/_packaging/AzurePortal/npm/registry/@babel/compat-data/-/compat-data-7.19.3.tgz#707b939793f867f5a73b2666e6d9a3396eb03151"
-  integrity sha1-cHuTl5P4Z/WnOyZm5tmjOW6wMVE=
+"@babel/compat-data@^7.17.7", "@babel/compat-data@^7.19.3", "@babel/compat-data@^7.19.4":
+  version "7.19.4"
+  resolved "https://msazure.pkgs.visualstudio.com/_packaging/AzurePortal/npm/registry/@babel/compat-data/-/compat-data-7.19.4.tgz#95c86de137bf0317f3a570e1b6e996b427299747"
+  integrity sha1-lcht4Te/AxfzpXDhtumWtCcpl0c=
 
 "@babel/core@7.12.9":
   version "7.12.9"
@@ -54,20 +54,20 @@
     source-map "^0.5.0"
 
 "@babel/core@^7.1.0", "@babel/core@^7.11.1", "@babel/core@^7.12.10", "@babel/core@^7.12.3", "@babel/core@^7.16.0", "@babel/core@^7.7.2", "@babel/core@^7.7.5", "@babel/core@^7.8.0":
-  version "7.19.3"
-  resolved "https://msazure.pkgs.visualstudio.com/_packaging/AzurePortal/npm/registry/@babel/core/-/core-7.19.3.tgz#2519f62a51458f43b682d61583c3810e7dcee64c"
-  integrity sha1-JRn2KlFFj0O2gtYVg8OBDn3O5kw=
+  version "7.19.6"
+  resolved "https://msazure.pkgs.visualstudio.com/_packaging/AzurePortal/npm/registry/@babel/core/-/core-7.19.6.tgz#7122ae4f5c5a37c0946c066149abd8e75f81540f"
+  integrity sha1-cSKuT1xaN8CUbAZhSavY51+BVA8=
   dependencies:
     "@ampproject/remapping" "^2.1.0"
     "@babel/code-frame" "^7.18.6"
-    "@babel/generator" "^7.19.3"
+    "@babel/generator" "^7.19.6"
     "@babel/helper-compilation-targets" "^7.19.3"
-    "@babel/helper-module-transforms" "^7.19.0"
-    "@babel/helpers" "^7.19.0"
-    "@babel/parser" "^7.19.3"
+    "@babel/helper-module-transforms" "^7.19.6"
+    "@babel/helpers" "^7.19.4"
+    "@babel/parser" "^7.19.6"
     "@babel/template" "^7.18.10"
-    "@babel/traverse" "^7.19.3"
-    "@babel/types" "^7.19.3"
+    "@babel/traverse" "^7.19.6"
+    "@babel/types" "^7.19.4"
     convert-source-map "^1.7.0"
     debug "^4.1.0"
     gensync "^1.0.0-beta.2"
@@ -83,12 +83,12 @@
     eslint-visitor-keys "^2.1.0"
     semver "^6.3.0"
 
-"@babel/generator@^7.12.11", "@babel/generator@^7.12.5", "@babel/generator@^7.19.3", "@babel/generator@^7.7.2":
-  version "7.19.3"
-  resolved "https://msazure.pkgs.visualstudio.com/_packaging/AzurePortal/npm/registry/@babel/generator/-/generator-7.19.3.tgz#d7f4d1300485b4547cb6f94b27d10d237b42bf59"
-  integrity sha1-1/TRMASFtFR8tvlLJ9ENI3tCv1k=
+"@babel/generator@^7.12.11", "@babel/generator@^7.12.5", "@babel/generator@^7.19.6", "@babel/generator@^7.7.2":
+  version "7.19.6"
+  resolved "https://msazure.pkgs.visualstudio.com/_packaging/AzurePortal/npm/registry/@babel/generator/-/generator-7.19.6.tgz#9e481a3fe9ca6261c972645ae3904ec0f9b34a1d"
+  integrity sha1-nkgaP+nKYmHJcmRa45BOwPmzSh0=
   dependencies:
-    "@babel/types" "^7.19.3"
+    "@babel/types" "^7.19.4"
     "@jridgewell/gen-mapping" "^0.3.2"
     jsesc "^2.5.1"
 
@@ -205,19 +205,19 @@
   dependencies:
     "@babel/types" "^7.18.6"
 
-"@babel/helper-module-transforms@^7.12.1", "@babel/helper-module-transforms@^7.18.6", "@babel/helper-module-transforms@^7.19.0":
-  version "7.19.0"
-  resolved "https://msazure.pkgs.visualstudio.com/_packaging/AzurePortal/npm/registry/@babel/helper-module-transforms/-/helper-module-transforms-7.19.0.tgz#309b230f04e22c58c6a2c0c0c7e50b216d350c30"
-  integrity sha1-MJsjDwTiLFjGosDAx+ULIW01DDA=
+"@babel/helper-module-transforms@^7.12.1", "@babel/helper-module-transforms@^7.18.6", "@babel/helper-module-transforms@^7.19.6":
+  version "7.19.6"
+  resolved "https://msazure.pkgs.visualstudio.com/_packaging/AzurePortal/npm/registry/@babel/helper-module-transforms/-/helper-module-transforms-7.19.6.tgz#6c52cc3ac63b70952d33ee987cbee1c9368b533f"
+  integrity sha1-bFLMOsY7cJUtM+6YfL7hyTaLUz8=
   dependencies:
     "@babel/helper-environment-visitor" "^7.18.9"
     "@babel/helper-module-imports" "^7.18.6"
-    "@babel/helper-simple-access" "^7.18.6"
+    "@babel/helper-simple-access" "^7.19.4"
     "@babel/helper-split-export-declaration" "^7.18.6"
-    "@babel/helper-validator-identifier" "^7.18.6"
+    "@babel/helper-validator-identifier" "^7.19.1"
     "@babel/template" "^7.18.10"
-    "@babel/traverse" "^7.19.0"
-    "@babel/types" "^7.19.0"
+    "@babel/traverse" "^7.19.6"
+    "@babel/types" "^7.19.4"
 
 "@babel/helper-optimise-call-expression@^7.18.6":
   version "7.18.6"
@@ -257,12 +257,12 @@
     "@babel/traverse" "^7.19.1"
     "@babel/types" "^7.19.0"
 
-"@babel/helper-simple-access@^7.18.6":
-  version "7.18.6"
-  resolved "https://msazure.pkgs.visualstudio.com/_packaging/AzurePortal/npm/registry/@babel/helper-simple-access/-/helper-simple-access-7.18.6.tgz#d6d8f51f4ac2978068df934b569f08f29788c7ea"
-  integrity sha1-1tj1H0rCl4Bo35NLVp8I8peIx+o=
+"@babel/helper-simple-access@^7.19.4":
+  version "7.19.4"
+  resolved "https://msazure.pkgs.visualstudio.com/_packaging/AzurePortal/npm/registry/@babel/helper-simple-access/-/helper-simple-access-7.19.4.tgz#be553f4951ac6352df2567f7daa19a0ee15668e7"
+  integrity sha1-vlU/SVGsY1LfJWf32qGaDuFWaOc=
   dependencies:
-    "@babel/types" "^7.18.6"
+    "@babel/types" "^7.19.4"
 
 "@babel/helper-skip-transparent-expression-wrappers@^7.18.9":
   version "7.18.9"
@@ -278,10 +278,10 @@
   dependencies:
     "@babel/types" "^7.18.6"
 
-"@babel/helper-string-parser@^7.18.10":
-  version "7.18.10"
-  resolved "https://msazure.pkgs.visualstudio.com/_packaging/AzurePortal/npm/registry/@babel/helper-string-parser/-/helper-string-parser-7.18.10.tgz#181f22d28ebe1b3857fa575f5c290b1aaf659b56"
-  integrity sha1-GB8i0o6+GzhX+ldfXCkLGq9lm1Y=
+"@babel/helper-string-parser@^7.19.4":
+  version "7.19.4"
+  resolved "https://msazure.pkgs.visualstudio.com/_packaging/AzurePortal/npm/registry/@babel/helper-string-parser/-/helper-string-parser-7.19.4.tgz#38d3acb654b4701a9b77fb0615a96f775c3a9e63"
+  integrity sha1-ONOstlS0cBqbd/sGFalvd1w6nmM=
 
 "@babel/helper-validator-identifier@^7.18.6", "@babel/helper-validator-identifier@^7.19.1":
   version "7.19.1"
@@ -303,14 +303,14 @@
     "@babel/traverse" "^7.19.0"
     "@babel/types" "^7.19.0"
 
-"@babel/helpers@^7.12.5", "@babel/helpers@^7.19.0":
-  version "7.19.0"
-  resolved "https://msazure.pkgs.visualstudio.com/_packaging/AzurePortal/npm/registry/@babel/helpers/-/helpers-7.19.0.tgz#f30534657faf246ae96551d88dd31e9d1fa1fc18"
-  integrity sha1-8wU0ZX+vJGrpZVHYjdMenR+h/Bg=
+"@babel/helpers@^7.12.5", "@babel/helpers@^7.19.4":
+  version "7.19.4"
+  resolved "https://msazure.pkgs.visualstudio.com/_packaging/AzurePortal/npm/registry/@babel/helpers/-/helpers-7.19.4.tgz#42154945f87b8148df7203a25c31ba9a73be46c5"
+  integrity sha1-QhVJRfh7gUjfcgOiXDG6mnO+RsU=
   dependencies:
     "@babel/template" "^7.18.10"
-    "@babel/traverse" "^7.19.0"
-    "@babel/types" "^7.19.0"
+    "@babel/traverse" "^7.19.4"
+    "@babel/types" "^7.19.4"
 
 "@babel/highlight@^7.18.6":
   version "7.18.6"
@@ -321,10 +321,10 @@
     chalk "^2.0.0"
     js-tokens "^4.0.0"
 
-"@babel/parser@^7.1.0", "@babel/parser@^7.12.11", "@babel/parser@^7.12.7", "@babel/parser@^7.14.7", "@babel/parser@^7.18.10", "@babel/parser@^7.19.3", "@babel/parser@^7.7.0":
-  version "7.19.3"
-  resolved "https://msazure.pkgs.visualstudio.com/_packaging/AzurePortal/npm/registry/@babel/parser/-/parser-7.19.3.tgz#8dd36d17c53ff347f9e55c328710321b49479a9a"
-  integrity sha1-jdNtF8U/80f55VwyhxAyG0lHmpo=
+"@babel/parser@^7.1.0", "@babel/parser@^7.12.11", "@babel/parser@^7.12.7", "@babel/parser@^7.14.7", "@babel/parser@^7.18.10", "@babel/parser@^7.19.6", "@babel/parser@^7.7.0":
+  version "7.19.6"
+  resolved "https://msazure.pkgs.visualstudio.com/_packaging/AzurePortal/npm/registry/@babel/parser/-/parser-7.19.6.tgz#b923430cb94f58a7eae8facbffa9efd19130e7f8"
+  integrity sha1-uSNDDLlPWKfq6PrL/6nv0ZEw5/g=
 
 "@babel/plugin-bugfix-safari-id-destructuring-collision-in-function-expression@^7.18.6":
   version "7.18.6"
@@ -370,9 +370,9 @@
     "@babel/plugin-syntax-class-static-block" "^7.14.5"
 
 "@babel/plugin-proposal-decorators@^7.12.12", "@babel/plugin-proposal-decorators@^7.16.4":
-  version "7.19.3"
-  resolved "https://msazure.pkgs.visualstudio.com/_packaging/AzurePortal/npm/registry/@babel/plugin-proposal-decorators/-/plugin-proposal-decorators-7.19.3.tgz#c1977e4902a18cdf9051bf7bf08d97db2fd8b110"
-  integrity sha1-wZd+SQKhjN+QUb978I2X2y/YsRA=
+  version "7.19.6"
+  resolved "https://msazure.pkgs.visualstudio.com/_packaging/AzurePortal/npm/registry/@babel/plugin-proposal-decorators/-/plugin-proposal-decorators-7.19.6.tgz#0f1af5c21957e9a438cc1d08d2a6a6858af127b7"
+  integrity sha1-Dxr1whlX6aQ4zB0I0qamhYrxJ7c=
   dependencies:
     "@babel/helper-create-class-features-plugin" "^7.19.0"
     "@babel/helper-plugin-utils" "^7.19.0"
@@ -445,14 +445,14 @@
     "@babel/plugin-syntax-object-rest-spread" "^7.8.0"
     "@babel/plugin-transform-parameters" "^7.12.1"
 
-"@babel/plugin-proposal-object-rest-spread@^7.12.1", "@babel/plugin-proposal-object-rest-spread@^7.18.9":
-  version "7.18.9"
-  resolved "https://msazure.pkgs.visualstudio.com/_packaging/AzurePortal/npm/registry/@babel/plugin-proposal-object-rest-spread/-/plugin-proposal-object-rest-spread-7.18.9.tgz#f9434f6beb2c8cae9dfcf97d2a5941bbbf9ad4e7"
-  integrity sha1-+UNPa+ssjK6d/Pl9KllBu7+a1Oc=
+"@babel/plugin-proposal-object-rest-spread@^7.12.1", "@babel/plugin-proposal-object-rest-spread@^7.19.4":
+  version "7.19.4"
+  resolved "https://msazure.pkgs.visualstudio.com/_packaging/AzurePortal/npm/registry/@babel/plugin-proposal-object-rest-spread/-/plugin-proposal-object-rest-spread-7.19.4.tgz#a8fc86e8180ff57290c91a75d83fe658189b642d"
+  integrity sha1-qPyG6BgP9XKQyRp12D/mWBibZC0=
   dependencies:
-    "@babel/compat-data" "^7.18.8"
-    "@babel/helper-compilation-targets" "^7.18.9"
-    "@babel/helper-plugin-utils" "^7.18.9"
+    "@babel/compat-data" "^7.19.4"
+    "@babel/helper-compilation-targets" "^7.19.3"
+    "@babel/helper-plugin-utils" "^7.19.0"
     "@babel/plugin-syntax-object-rest-spread" "^7.8.3"
     "@babel/plugin-transform-parameters" "^7.18.8"
 
@@ -683,12 +683,12 @@
   dependencies:
     "@babel/helper-plugin-utils" "^7.18.6"
 
-"@babel/plugin-transform-block-scoping@^7.12.12", "@babel/plugin-transform-block-scoping@^7.18.9":
-  version "7.18.9"
-  resolved "https://msazure.pkgs.visualstudio.com/_packaging/AzurePortal/npm/registry/@babel/plugin-transform-block-scoping/-/plugin-transform-block-scoping-7.18.9.tgz#f9b7e018ac3f373c81452d6ada8bd5a18928926d"
-  integrity sha1-+bfgGKw/NzyBRS1q2ovVoYkokm0=
+"@babel/plugin-transform-block-scoping@^7.12.12", "@babel/plugin-transform-block-scoping@^7.19.4":
+  version "7.19.4"
+  resolved "https://msazure.pkgs.visualstudio.com/_packaging/AzurePortal/npm/registry/@babel/plugin-transform-block-scoping/-/plugin-transform-block-scoping-7.19.4.tgz#315d70f68ce64426db379a3d830e7ac30be02e9b"
+  integrity sha1-MV1w9ozmRCbbN5o9gw56wwvgLps=
   dependencies:
-    "@babel/helper-plugin-utils" "^7.18.9"
+    "@babel/helper-plugin-utils" "^7.19.0"
 
 "@babel/plugin-transform-classes@^7.12.1", "@babel/plugin-transform-classes@^7.19.0":
   version "7.19.0"
@@ -712,12 +712,12 @@
   dependencies:
     "@babel/helper-plugin-utils" "^7.18.9"
 
-"@babel/plugin-transform-destructuring@^7.12.1", "@babel/plugin-transform-destructuring@^7.18.13":
-  version "7.18.13"
-  resolved "https://msazure.pkgs.visualstudio.com/_packaging/AzurePortal/npm/registry/@babel/plugin-transform-destructuring/-/plugin-transform-destructuring-7.18.13.tgz#9e03bc4a94475d62b7f4114938e6c5c33372cbf5"
-  integrity sha1-ngO8SpRHXWK39BFJOObFwzNyy/U=
+"@babel/plugin-transform-destructuring@^7.12.1", "@babel/plugin-transform-destructuring@^7.19.4":
+  version "7.19.4"
+  resolved "https://msazure.pkgs.visualstudio.com/_packaging/AzurePortal/npm/registry/@babel/plugin-transform-destructuring/-/plugin-transform-destructuring-7.19.4.tgz#46890722687b9b89e1369ad0bd8dc6c5a3b4319d"
+  integrity sha1-RokHImh7m4nhNprQvY3GxaO0MZ0=
   dependencies:
-    "@babel/helper-plugin-utils" "^7.18.9"
+    "@babel/helper-plugin-utils" "^7.19.0"
 
 "@babel/plugin-transform-dotall-regex@^7.18.6", "@babel/plugin-transform-dotall-regex@^7.4.4":
   version "7.18.6"
@@ -781,34 +781,31 @@
     "@babel/helper-plugin-utils" "^7.18.6"
 
 "@babel/plugin-transform-modules-amd@^7.18.6":
-  version "7.18.6"
-  resolved "https://msazure.pkgs.visualstudio.com/_packaging/AzurePortal/npm/registry/@babel/plugin-transform-modules-amd/-/plugin-transform-modules-amd-7.18.6.tgz#8c91f8c5115d2202f277549848874027d7172d21"
-  integrity sha1-jJH4xRFdIgLyd1SYSIdAJ9cXLSE=
+  version "7.19.6"
+  resolved "https://msazure.pkgs.visualstudio.com/_packaging/AzurePortal/npm/registry/@babel/plugin-transform-modules-amd/-/plugin-transform-modules-amd-7.19.6.tgz#aca391801ae55d19c4d8d2ebfeaa33df5f2a2cbd"
+  integrity sha1-rKORgBrlXRnE2NLr/qoz318qLL0=
   dependencies:
-    "@babel/helper-module-transforms" "^7.18.6"
-    "@babel/helper-plugin-utils" "^7.18.6"
-    babel-plugin-dynamic-import-node "^2.3.3"
+    "@babel/helper-module-transforms" "^7.19.6"
+    "@babel/helper-plugin-utils" "^7.19.0"
 
 "@babel/plugin-transform-modules-commonjs@^7.18.6":
-  version "7.18.6"
-  resolved "https://msazure.pkgs.visualstudio.com/_packaging/AzurePortal/npm/registry/@babel/plugin-transform-modules-commonjs/-/plugin-transform-modules-commonjs-7.18.6.tgz#afd243afba166cca69892e24a8fd8c9f2ca87883"
-  integrity sha1-r9JDr7oWbMppiS4kqP2MnyyoeIM=
+  version "7.19.6"
+  resolved "https://msazure.pkgs.visualstudio.com/_packaging/AzurePortal/npm/registry/@babel/plugin-transform-modules-commonjs/-/plugin-transform-modules-commonjs-7.19.6.tgz#25b32feef24df8038fc1ec56038917eacb0b730c"
+  integrity sha1-JbMv7vJN+AOPwexWA4kX6ssLcww=
   dependencies:
-    "@babel/helper-module-transforms" "^7.18.6"
-    "@babel/helper-plugin-utils" "^7.18.6"
-    "@babel/helper-simple-access" "^7.18.6"
-    babel-plugin-dynamic-import-node "^2.3.3"
+    "@babel/helper-module-transforms" "^7.19.6"
+    "@babel/helper-plugin-utils" "^7.19.0"
+    "@babel/helper-simple-access" "^7.19.4"
 
 "@babel/plugin-transform-modules-systemjs@^7.19.0":
-  version "7.19.0"
-  resolved "https://msazure.pkgs.visualstudio.com/_packaging/AzurePortal/npm/registry/@babel/plugin-transform-modules-systemjs/-/plugin-transform-modules-systemjs-7.19.0.tgz#5f20b471284430f02d9c5059d9b9a16d4b085a1f"
-  integrity sha1-XyC0cShEMPAtnFBZ2bmhbUsIWh8=
+  version "7.19.6"
+  resolved "https://msazure.pkgs.visualstudio.com/_packaging/AzurePortal/npm/registry/@babel/plugin-transform-modules-systemjs/-/plugin-transform-modules-systemjs-7.19.6.tgz#59e2a84064b5736a4471b1aa7b13d4431d327e0d"
+  integrity sha1-WeKoQGS1c2pEcbGqexPUQx0yfg0=
   dependencies:
     "@babel/helper-hoist-variables" "^7.18.6"
-    "@babel/helper-module-transforms" "^7.19.0"
+    "@babel/helper-module-transforms" "^7.19.6"
     "@babel/helper-plugin-utils" "^7.19.0"
-    "@babel/helper-validator-identifier" "^7.18.6"
-    babel-plugin-dynamic-import-node "^2.3.3"
+    "@babel/helper-validator-identifier" "^7.19.1"
 
 "@babel/plugin-transform-modules-umd@^7.18.6":
   version "7.18.6"
@@ -911,9 +908,9 @@
     "@babel/helper-plugin-utils" "^7.18.6"
 
 "@babel/plugin-transform-runtime@^7.16.4":
-  version "7.19.1"
-  resolved "https://msazure.pkgs.visualstudio.com/_packaging/AzurePortal/npm/registry/@babel/plugin-transform-runtime/-/plugin-transform-runtime-7.19.1.tgz#a3df2d7312eea624c7889a2dcd37fd1dfd25b2c6"
-  integrity sha1-o98tcxLupiTHiJotzTf9Hf0lssY=
+  version "7.19.6"
+  resolved "https://msazure.pkgs.visualstudio.com/_packaging/AzurePortal/npm/registry/@babel/plugin-transform-runtime/-/plugin-transform-runtime-7.19.6.tgz#9d2a9dbf4e12644d6f46e5e75bfbf02b5d6e9194"
+  integrity sha1-nSqdv04SZE1vRuXnW/vwK11ukZQ=
   dependencies:
     "@babel/helper-module-imports" "^7.18.6"
     "@babel/helper-plugin-utils" "^7.19.0"
@@ -983,11 +980,11 @@
     "@babel/helper-plugin-utils" "^7.18.6"
 
 "@babel/preset-env@^7.11.0", "@babel/preset-env@^7.12.1", "@babel/preset-env@^7.12.11", "@babel/preset-env@^7.16.4":
-  version "7.19.3"
-  resolved "https://msazure.pkgs.visualstudio.com/_packaging/AzurePortal/npm/registry/@babel/preset-env/-/preset-env-7.19.3.tgz#52cd19abaecb3f176a4ff9cc5e15b7bf06bec754"
-  integrity sha1-Us0Zq67LPxdqT/nMXhW3vwa+x1Q=
+  version "7.19.4"
+  resolved "https://msazure.pkgs.visualstudio.com/_packaging/AzurePortal/npm/registry/@babel/preset-env/-/preset-env-7.19.4.tgz#4c91ce2e1f994f717efb4237891c3ad2d808c94b"
+  integrity sha1-TJHOLh+ZT3F++0I3iRw60tgIyUs=
   dependencies:
-    "@babel/compat-data" "^7.19.3"
+    "@babel/compat-data" "^7.19.4"
     "@babel/helper-compilation-targets" "^7.19.3"
     "@babel/helper-plugin-utils" "^7.19.0"
     "@babel/helper-validator-option" "^7.18.6"
@@ -1002,7 +999,7 @@
     "@babel/plugin-proposal-logical-assignment-operators" "^7.18.9"
     "@babel/plugin-proposal-nullish-coalescing-operator" "^7.18.6"
     "@babel/plugin-proposal-numeric-separator" "^7.18.6"
-    "@babel/plugin-proposal-object-rest-spread" "^7.18.9"
+    "@babel/plugin-proposal-object-rest-spread" "^7.19.4"
     "@babel/plugin-proposal-optional-catch-binding" "^7.18.6"
     "@babel/plugin-proposal-optional-chaining" "^7.18.9"
     "@babel/plugin-proposal-private-methods" "^7.18.6"
@@ -1026,10 +1023,10 @@
     "@babel/plugin-transform-arrow-functions" "^7.18.6"
     "@babel/plugin-transform-async-to-generator" "^7.18.6"
     "@babel/plugin-transform-block-scoped-functions" "^7.18.6"
-    "@babel/plugin-transform-block-scoping" "^7.18.9"
+    "@babel/plugin-transform-block-scoping" "^7.19.4"
     "@babel/plugin-transform-classes" "^7.19.0"
     "@babel/plugin-transform-computed-properties" "^7.18.9"
-    "@babel/plugin-transform-destructuring" "^7.18.13"
+    "@babel/plugin-transform-destructuring" "^7.19.4"
     "@babel/plugin-transform-dotall-regex" "^7.18.6"
     "@babel/plugin-transform-duplicate-keys" "^7.18.9"
     "@babel/plugin-transform-exponentiation-operator" "^7.18.6"
@@ -1056,7 +1053,7 @@
     "@babel/plugin-transform-unicode-escapes" "^7.18.10"
     "@babel/plugin-transform-unicode-regex" "^7.18.6"
     "@babel/preset-modules" "^0.1.5"
-    "@babel/types" "^7.19.3"
+    "@babel/types" "^7.19.4"
     babel-plugin-polyfill-corejs2 "^0.3.3"
     babel-plugin-polyfill-corejs3 "^0.6.0"
     babel-plugin-polyfill-regenerator "^0.4.1"
@@ -1116,9 +1113,9 @@
     source-map-support "^0.5.16"
 
 "@babel/runtime-corejs3@^7.10.2":
-  version "7.19.1"
-  resolved "https://msazure.pkgs.visualstudio.com/_packaging/AzurePortal/npm/registry/@babel/runtime-corejs3/-/runtime-corejs3-7.19.1.tgz#f0cbbe7edda7c4109cd253bb1dee99aba4594ad9"
-  integrity sha1-8Mu+ft2nxBCc0lO7He6Zq6RZStk=
+  version "7.19.6"
+  resolved "https://msazure.pkgs.visualstudio.com/_packaging/AzurePortal/npm/registry/@babel/runtime-corejs3/-/runtime-corejs3-7.19.6.tgz#778471a71d915cf3b955a9201bebabfe924f872a"
+  integrity sha1-d4Rxpx2RXPO5VakgG+ur/pJPhyo=
   dependencies:
     core-js-pure "^3.25.1"
     regenerator-runtime "^0.13.4"
@@ -1131,9 +1128,9 @@
     regenerator-runtime "^0.13.2"
 
 "@babel/runtime@^7.0.0", "@babel/runtime@^7.1.2", "@babel/runtime@^7.10.2", "@babel/runtime@^7.11.2", "@babel/runtime@^7.12.5", "@babel/runtime@^7.16.3", "@babel/runtime@^7.17.8", "@babel/runtime@^7.18.9", "@babel/runtime@^7.5.0", "@babel/runtime@^7.7.6", "@babel/runtime@^7.8.4":
-  version "7.19.0"
-  resolved "https://msazure.pkgs.visualstudio.com/_packaging/AzurePortal/npm/registry/@babel/runtime/-/runtime-7.19.0.tgz#22b11c037b094d27a8a2504ea4dcff00f50e2259"
-  integrity sha1-IrEcA3sJTSeoolBOpNz/APUOIlk=
+  version "7.19.4"
+  resolved "https://msazure.pkgs.visualstudio.com/_packaging/AzurePortal/npm/registry/@babel/runtime/-/runtime-7.19.4.tgz#a42f814502ee467d55b38dd1c256f53a7b885c78"
+  integrity sha1-pC+BRQLuRn1Vs43Rwlb1OnuIXHg=
   dependencies:
     regenerator-runtime "^0.13.4"
 
@@ -1153,28 +1150,28 @@
     "@babel/parser" "^7.18.10"
     "@babel/types" "^7.18.10"
 
-"@babel/traverse@^7.1.6", "@babel/traverse@^7.12.11", "@babel/traverse@^7.12.9", "@babel/traverse@^7.13.0", "@babel/traverse@^7.19.0", "@babel/traverse@^7.19.1", "@babel/traverse@^7.19.3", "@babel/traverse@^7.4.5", "@babel/traverse@^7.7.0", "@babel/traverse@^7.7.2":
-  version "7.19.3"
-  resolved "https://msazure.pkgs.visualstudio.com/_packaging/AzurePortal/npm/registry/@babel/traverse/-/traverse-7.19.3.tgz#3a3c5348d4988ba60884e8494b0592b2f15a04b4"
-  integrity sha1-OjxTSNSYi6YIhOhJSwWSsvFaBLQ=
+"@babel/traverse@^7.1.6", "@babel/traverse@^7.12.11", "@babel/traverse@^7.12.9", "@babel/traverse@^7.13.0", "@babel/traverse@^7.19.0", "@babel/traverse@^7.19.1", "@babel/traverse@^7.19.4", "@babel/traverse@^7.19.6", "@babel/traverse@^7.4.5", "@babel/traverse@^7.7.0", "@babel/traverse@^7.7.2":
+  version "7.19.6"
+  resolved "https://msazure.pkgs.visualstudio.com/_packaging/AzurePortal/npm/registry/@babel/traverse/-/traverse-7.19.6.tgz#7b4c865611df6d99cb131eec2e8ac71656a490dc"
+  integrity sha1-e0yGVhHfbZnLEx7sLorHFlakkNw=
   dependencies:
     "@babel/code-frame" "^7.18.6"
-    "@babel/generator" "^7.19.3"
+    "@babel/generator" "^7.19.6"
     "@babel/helper-environment-visitor" "^7.18.9"
     "@babel/helper-function-name" "^7.19.0"
     "@babel/helper-hoist-variables" "^7.18.6"
     "@babel/helper-split-export-declaration" "^7.18.6"
-    "@babel/parser" "^7.19.3"
-    "@babel/types" "^7.19.3"
+    "@babel/parser" "^7.19.6"
+    "@babel/types" "^7.19.4"
     debug "^4.1.0"
     globals "^11.1.0"
 
-"@babel/types@^7.0.0", "@babel/types@^7.12.11", "@babel/types@^7.12.6", "@babel/types@^7.12.7", "@babel/types@^7.18.10", "@babel/types@^7.18.6", "@babel/types@^7.18.9", "@babel/types@^7.19.0", "@babel/types@^7.19.3", "@babel/types@^7.2.0", "@babel/types@^7.3.0", "@babel/types@^7.3.3", "@babel/types@^7.4.4", "@babel/types@^7.7.0":
-  version "7.19.3"
-  resolved "https://msazure.pkgs.visualstudio.com/_packaging/AzurePortal/npm/registry/@babel/types/-/types-7.19.3.tgz#fc420e6bbe54880bce6779ffaf315f5e43ec9624"
-  integrity sha1-/EIOa75UiAvOZ3n/rzFfXkPsliQ=
+"@babel/types@^7.0.0", "@babel/types@^7.12.11", "@babel/types@^7.12.6", "@babel/types@^7.12.7", "@babel/types@^7.18.10", "@babel/types@^7.18.6", "@babel/types@^7.18.9", "@babel/types@^7.19.0", "@babel/types@^7.19.4", "@babel/types@^7.2.0", "@babel/types@^7.3.0", "@babel/types@^7.3.3", "@babel/types@^7.4.4", "@babel/types@^7.7.0":
+  version "7.19.4"
+  resolved "https://msazure.pkgs.visualstudio.com/_packaging/AzurePortal/npm/registry/@babel/types/-/types-7.19.4.tgz#0dd5c91c573a202d600490a35b33246fed8a41c7"
+  integrity sha1-DdXJHFc6IC1gBJCjWzMkb+2KQcc=
   dependencies:
-    "@babel/helper-string-parser" "^7.18.10"
+    "@babel/helper-string-parser" "^7.19.4"
     "@babel/helper-validator-identifier" "^7.19.1"
     to-fast-properties "^2.0.0"
 
@@ -1641,10 +1638,10 @@
   resolved "https://msazure.pkgs.visualstudio.com/_packaging/AzurePortal/npm/registry/@emotion/unitless/-/unitless-0.7.5.tgz#77211291c1900a700b8a78cfafda3160d76949ed"
   integrity sha1-dyESkcGQCnALinjPr9oxYNdpSe0=
 
-"@eslint/eslintrc@^1.3.2":
-  version "1.3.2"
-  resolved "https://msazure.pkgs.visualstudio.com/_packaging/AzurePortal/npm/registry/@eslint/eslintrc/-/eslintrc-1.3.2.tgz#58b69582f3b7271d8fa67fe5251767a5b38ea356"
-  integrity sha1-WLaVgvO3Jx2Ppn/lJRdnpbOOo1Y=
+"@eslint/eslintrc@^1.3.3":
+  version "1.3.3"
+  resolved "https://msazure.pkgs.visualstudio.com/_packaging/AzurePortal/npm/registry/@eslint/eslintrc/-/eslintrc-1.3.3.tgz#2b044ab39fdfa75b4688184f9e573ce3c5b0ff95"
+  integrity sha1-KwRKs5/fp1tGiBhPnlc848Ww/5U=
   dependencies:
     ajv "^6.12.4"
     debug "^4.3.2"
@@ -1680,25 +1677,25 @@
     "@fluentui/set-version" "^8.2.2"
     tslib "^2.1.0"
 
-"@fluentui/font-icons-mdl2@^8.5.0":
-  version "8.5.0"
-  resolved "https://msazure.pkgs.visualstudio.com/_packaging/AzurePortal/npm/registry/@fluentui/font-icons-mdl2/-/font-icons-mdl2-8.5.0.tgz#b358ed57be5b52c921558be6535e70b68d4d4f1e"
-  integrity sha1-s1jtV75bUskhVYvmU15wto1NTx4=
+"@fluentui/font-icons-mdl2@^8.5.2":
+  version "8.5.2"
+  resolved "https://msazure.pkgs.visualstudio.com/_packaging/AzurePortal/npm/registry/@fluentui/font-icons-mdl2/-/font-icons-mdl2-8.5.2.tgz#f009a06d5f9e8a3486878218a097351ed6bcbd10"
+  integrity sha1-8AmgbV+eijSGh4IYoJc1Hta8vRA=
   dependencies:
     "@fluentui/set-version" "^8.2.2"
-    "@fluentui/style-utilities" "^8.7.12"
-    "@fluentui/utilities" "^8.13.1"
+    "@fluentui/style-utilities" "^8.8.1"
+    "@fluentui/utilities" "^8.13.2"
     tslib "^2.1.0"
 
-"@fluentui/foundation-legacy@^8.2.20":
-  version "8.2.20"
-  resolved "https://msazure.pkgs.visualstudio.com/_packaging/AzurePortal/npm/registry/@fluentui/foundation-legacy/-/foundation-legacy-8.2.20.tgz#a926d4a4535f0bececcbce3cec859abd439a3840"
-  integrity sha1-qSbUpFNfC+zsy8487IWavUOaOEA=
+"@fluentui/foundation-legacy@^8.2.22":
+  version "8.2.22"
+  resolved "https://msazure.pkgs.visualstudio.com/_packaging/AzurePortal/npm/registry/@fluentui/foundation-legacy/-/foundation-legacy-8.2.22.tgz#220bfc3f060ebfbd5a86e05c3b4736a3d388897b"
+  integrity sha1-Igv8PwYOv71ahuBcO0c2o9OIiXs=
   dependencies:
     "@fluentui/merge-styles" "^8.5.3"
     "@fluentui/set-version" "^8.2.2"
-    "@fluentui/style-utilities" "^8.7.12"
-    "@fluentui/utilities" "^8.13.1"
+    "@fluentui/style-utilities" "^8.8.1"
+    "@fluentui/utilities" "^8.13.2"
     tslib "^2.1.0"
 
 "@fluentui/keyboard-key@^0.4.2":
@@ -1727,32 +1724,32 @@
     classnames "^2.2.6"
     tslib "^1.10.0"
 
-"@fluentui/react-focus@^8.8.5":
-  version "8.8.5"
-  resolved "https://msazure.pkgs.visualstudio.com/_packaging/AzurePortal/npm/registry/@fluentui/react-focus/-/react-focus-8.8.5.tgz#6003ddadc914a2eaadb9d68d5feb793e6dc09a95"
-  integrity sha1-YAPdrckUouqtudaNX+t5Pm3AmpU=
+"@fluentui/react-focus@^8.8.7":
+  version "8.8.7"
+  resolved "https://msazure.pkgs.visualstudio.com/_packaging/AzurePortal/npm/registry/@fluentui/react-focus/-/react-focus-8.8.7.tgz#8625218484e8a755f05d223265089163a6d2443b"
+  integrity sha1-hiUhhITop1XwXSIyZQiRY6bSRDs=
   dependencies:
     "@fluentui/keyboard-key" "^0.4.2"
     "@fluentui/merge-styles" "^8.5.3"
     "@fluentui/set-version" "^8.2.2"
-    "@fluentui/style-utilities" "^8.7.12"
-    "@fluentui/utilities" "^8.13.1"
+    "@fluentui/style-utilities" "^8.8.1"
+    "@fluentui/utilities" "^8.13.2"
     tslib "^2.1.0"
 
-"@fluentui/react-hooks@^8.6.11":
-  version "8.6.11"
-  resolved "https://msazure.pkgs.visualstudio.com/_packaging/AzurePortal/npm/registry/@fluentui/react-hooks/-/react-hooks-8.6.11.tgz#791e3fd67a92a03b5b4c0fec183d03fb7cfcd0b9"
-  integrity sha1-eR4/1nqSoDtbTA/sGD0D+3z80Lk=
+"@fluentui/react-hooks@^8.6.12":
+  version "8.6.12"
+  resolved "https://msazure.pkgs.visualstudio.com/_packaging/AzurePortal/npm/registry/@fluentui/react-hooks/-/react-hooks-8.6.12.tgz#181e13da040f613afd6a57115478d4472ac41942"
+  integrity sha1-GB4T2gQPYTr9alcRVHjURyrEGUI=
   dependencies:
-    "@fluentui/react-window-provider" "^2.2.2"
+    "@fluentui/react-window-provider" "^2.2.3"
     "@fluentui/set-version" "^8.2.2"
-    "@fluentui/utilities" "^8.13.1"
+    "@fluentui/utilities" "^8.13.2"
     tslib "^2.1.0"
 
-"@fluentui/react-portal-compat-context@^9.0.2":
-  version "9.0.2"
-  resolved "https://msazure.pkgs.visualstudio.com/_packaging/AzurePortal/npm/registry/@fluentui/react-portal-compat-context/-/react-portal-compat-context-9.0.2.tgz#9c3659b74a3c60540ae8dad992d5e0b373ff92e2"
-  integrity sha1-nDZZt0o8YFQK6NrZktXgs3P/kuI=
+"@fluentui/react-portal-compat-context@^9.0.3":
+  version "9.0.3"
+  resolved "https://msazure.pkgs.visualstudio.com/_packaging/AzurePortal/npm/registry/@fluentui/react-portal-compat-context/-/react-portal-compat-context-9.0.3.tgz#fce9cca5e875e5269a748c5a6b646681e97c2656"
+  integrity sha1-/OnMpeh15SaadIxaa2Rmgel8JlY=
   dependencies:
     tslib "^2.1.0"
 
@@ -1788,31 +1785,31 @@
     "@uifabric/set-version" "^7.0.24"
     tslib "^1.10.0"
 
-"@fluentui/react-window-provider@^2.2.2":
-  version "2.2.2"
-  resolved "https://msazure.pkgs.visualstudio.com/_packaging/AzurePortal/npm/registry/@fluentui/react-window-provider/-/react-window-provider-2.2.2.tgz#ee428c6546a00198c97049771b74319f10da5e07"
-  integrity sha1-7kKMZUagAZjJcEl3G3QxnxDaXgc=
+"@fluentui/react-window-provider@^2.2.3":
+  version "2.2.3"
+  resolved "https://msazure.pkgs.visualstudio.com/_packaging/AzurePortal/npm/registry/@fluentui/react-window-provider/-/react-window-provider-2.2.3.tgz#f6c3c100f27c271ad79b5ee0748f509f56812ced"
+  integrity sha1-9sPBAPJ8JxrXm17gdI9Qn1aBLO0=
   dependencies:
     "@fluentui/set-version" "^8.2.2"
     tslib "^2.1.0"
 
 "@fluentui/react@^8.97.2":
-  version "8.97.2"
-  resolved "https://msazure.pkgs.visualstudio.com/_packaging/AzurePortal/npm/registry/@fluentui/react/-/react-8.97.2.tgz#486e8f76f27244de3f5405f2bf9cd8636f2fbc0c"
-  integrity sha1-SG6PdvJyRN4/VAXyv5zYY28vvAw=
+  version "8.98.5"
+  resolved "https://msazure.pkgs.visualstudio.com/_packaging/AzurePortal/npm/registry/@fluentui/react/-/react-8.98.5.tgz#6a013af2d5225aa96b5869c7a57271dac98e89f0"
+  integrity sha1-agE68tUiWqlrWGnHpXJx2smOifA=
   dependencies:
     "@fluentui/date-time-utilities" "^8.5.2"
-    "@fluentui/font-icons-mdl2" "^8.5.0"
-    "@fluentui/foundation-legacy" "^8.2.20"
+    "@fluentui/font-icons-mdl2" "^8.5.2"
+    "@fluentui/foundation-legacy" "^8.2.22"
     "@fluentui/merge-styles" "^8.5.3"
-    "@fluentui/react-focus" "^8.8.5"
-    "@fluentui/react-hooks" "^8.6.11"
-    "@fluentui/react-portal-compat-context" "^9.0.2"
-    "@fluentui/react-window-provider" "^2.2.2"
+    "@fluentui/react-focus" "^8.8.7"
+    "@fluentui/react-hooks" "^8.6.12"
+    "@fluentui/react-portal-compat-context" "^9.0.3"
+    "@fluentui/react-window-provider" "^2.2.3"
     "@fluentui/set-version" "^8.2.2"
-    "@fluentui/style-utilities" "^8.7.12"
-    "@fluentui/theme" "^2.6.16"
-    "@fluentui/utilities" "^8.13.1"
+    "@fluentui/style-utilities" "^8.8.1"
+    "@fluentui/theme" "^2.6.17"
+    "@fluentui/utilities" "^8.13.2"
     "@microsoft/load-themed-styles" "^1.10.26"
     tslib "^2.1.0"
 
@@ -1823,15 +1820,15 @@
   dependencies:
     tslib "^2.1.0"
 
-"@fluentui/style-utilities@^8.7.12":
-  version "8.7.12"
-  resolved "https://msazure.pkgs.visualstudio.com/_packaging/AzurePortal/npm/registry/@fluentui/style-utilities/-/style-utilities-8.7.12.tgz#f8ae3c2b850f38705c0556569a0d15d2ba4e6363"
-  integrity sha1-+K48K4UPOHBcBVZWmg0V0rpOY2M=
+"@fluentui/style-utilities@^8.8.1":
+  version "8.8.1"
+  resolved "https://msazure.pkgs.visualstudio.com/_packaging/AzurePortal/npm/registry/@fluentui/style-utilities/-/style-utilities-8.8.1.tgz#776a76a5c3cea635512b4ebe74d11ec9066762ad"
+  integrity sha1-d2p2pcPOpjVRK06+dNEeyQZnYq0=
   dependencies:
     "@fluentui/merge-styles" "^8.5.3"
     "@fluentui/set-version" "^8.2.2"
-    "@fluentui/theme" "^2.6.16"
-    "@fluentui/utilities" "^8.13.1"
+    "@fluentui/theme" "^2.6.17"
+    "@fluentui/utilities" "^8.13.2"
     "@microsoft/load-themed-styles" "^1.10.26"
     tslib "^2.1.0"
 
@@ -1845,20 +1842,20 @@
     "@uifabric/utilities" "^7.38.1"
     tslib "^1.10.0"
 
-"@fluentui/theme@^2.6.16":
-  version "2.6.16"
-  resolved "https://msazure.pkgs.visualstudio.com/_packaging/AzurePortal/npm/registry/@fluentui/theme/-/theme-2.6.16.tgz#a29c58bf16f765ba1b97a497e572fd1fdc469c44"
-  integrity sha1-opxYvxb3Zbobl6SX5XL9H9xGnEQ=
+"@fluentui/theme@^2.6.17":
+  version "2.6.17"
+  resolved "https://msazure.pkgs.visualstudio.com/_packaging/AzurePortal/npm/registry/@fluentui/theme/-/theme-2.6.17.tgz#8845698829531e3f1ff2be5834dd0198c5865d0f"
+  integrity sha1-iEVpiClTHj8f8r5YNN0BmMWGXQ8=
   dependencies:
     "@fluentui/merge-styles" "^8.5.3"
     "@fluentui/set-version" "^8.2.2"
-    "@fluentui/utilities" "^8.13.1"
+    "@fluentui/utilities" "^8.13.2"
     tslib "^2.1.0"
 
-"@fluentui/utilities@^8.13.1":
-  version "8.13.1"
-  resolved "https://msazure.pkgs.visualstudio.com/_packaging/AzurePortal/npm/registry/@fluentui/utilities/-/utilities-8.13.1.tgz#028fd2e93f68b5f386039970dce0ae642eb7e9da"
-  integrity sha1-Ao/S6T9otfOGA5lw3OCuZC636do=
+"@fluentui/utilities@^8.13.2":
+  version "8.13.2"
+  resolved "https://msazure.pkgs.visualstudio.com/_packaging/AzurePortal/npm/registry/@fluentui/utilities/-/utilities-8.13.2.tgz#d0b9649e63c9e87e1ef43aa8a3c6408a57bc46f0"
+  integrity sha1-0LlknmPJ6H4e9Dqoo8ZAile8RvA=
   dependencies:
     "@fluentui/dom-utilities" "^2.2.2"
     "@fluentui/merge-styles" "^8.5.3"
@@ -1895,11 +1892,6 @@
     "@humanwhocodes/object-schema" "^1.2.1"
     debug "^4.1.1"
     minimatch "^3.0.4"
-
-"@humanwhocodes/gitignore-to-minimatch@^1.0.2":
-  version "1.0.2"
-  resolved "https://msazure.pkgs.visualstudio.com/_packaging/AzurePortal/npm/registry/@humanwhocodes/gitignore-to-minimatch/-/gitignore-to-minimatch-1.0.2.tgz#316b0a63b91c10e53f242efb4ace5c3b34e8728d"
-  integrity sha1-MWsKY7kcEOU/JC77Ss5cOzToco0=
 
 "@humanwhocodes/module-importer@^1.0.1":
   version "1.0.1"
@@ -2199,7 +2191,7 @@
     "@jridgewell/sourcemap-codec" "^1.4.10"
     "@jridgewell/trace-mapping" "^0.3.9"
 
-"@jridgewell/resolve-uri@^3.0.3":
+"@jridgewell/resolve-uri@3.1.0":
   version "3.1.0"
   resolved "https://msazure.pkgs.visualstudio.com/_packaging/AzurePortal/npm/registry/@jridgewell/resolve-uri/-/resolve-uri-3.1.0.tgz#2203b118c157721addfe69d47b70465463066d78"
   integrity sha1-IgOxGMFXchrd/mnUe3BGVGMGbXg=
@@ -2217,18 +2209,18 @@
     "@jridgewell/gen-mapping" "^0.3.0"
     "@jridgewell/trace-mapping" "^0.3.9"
 
-"@jridgewell/sourcemap-codec@^1.4.10":
+"@jridgewell/sourcemap-codec@1.4.14", "@jridgewell/sourcemap-codec@^1.4.10":
   version "1.4.14"
   resolved "https://msazure.pkgs.visualstudio.com/_packaging/AzurePortal/npm/registry/@jridgewell/sourcemap-codec/-/sourcemap-codec-1.4.14.tgz#add4c98d341472a289190b424efbdb096991bb24"
   integrity sha1-rdTJjTQUcqKJGQtCTvvbCWmRuyQ=
 
 "@jridgewell/trace-mapping@^0.3.12", "@jridgewell/trace-mapping@^0.3.14", "@jridgewell/trace-mapping@^0.3.9":
-  version "0.3.15"
-  resolved "https://msazure.pkgs.visualstudio.com/_packaging/AzurePortal/npm/registry/@jridgewell/trace-mapping/-/trace-mapping-0.3.15.tgz#aba35c48a38d3fd84b37e66c9c0423f9744f9774"
-  integrity sha1-q6NcSKONP9hLN+ZsnAQj+XRPl3Q=
+  version "0.3.17"
+  resolved "https://msazure.pkgs.visualstudio.com/_packaging/AzurePortal/npm/registry/@jridgewell/trace-mapping/-/trace-mapping-0.3.17.tgz#793041277af9073b0951a7fe0f0d8c4c98c36985"
+  integrity sha1-eTBBJ3r5BzsJUaf+Dw2MTJjDaYU=
   dependencies:
-    "@jridgewell/resolve-uri" "^3.0.3"
-    "@jridgewell/sourcemap-codec" "^1.4.10"
+    "@jridgewell/resolve-uri" "3.1.0"
+    "@jridgewell/sourcemap-codec" "1.4.14"
 
 "@leichtgewicht/ip-codec@^2.0.1":
   version "2.0.4"
@@ -2364,13 +2356,13 @@
     source-map "^0.7.3"
 
 "@pmmmwh/react-refresh-webpack-plugin@^0.5.3":
-  version "0.5.7"
-  resolved "https://msazure.pkgs.visualstudio.com/_packaging/AzurePortal/npm/registry/@pmmmwh/react-refresh-webpack-plugin/-/react-refresh-webpack-plugin-0.5.7.tgz#58f8217ba70069cc6a73f5d7e05e85b458c150e2"
-  integrity sha1-WPghe6cAacxqc/XX4F6FtFjBUOI=
+  version "0.5.8"
+  resolved "https://msazure.pkgs.visualstudio.com/_packaging/AzurePortal/npm/registry/@pmmmwh/react-refresh-webpack-plugin/-/react-refresh-webpack-plugin-0.5.8.tgz#da3383761e2c0c440610819f3204769022a38d12"
+  integrity sha1-2jODdh4sDEQGEIGfMgR2kCKjjRI=
   dependencies:
     ansi-html-community "^0.0.8"
     common-path-prefix "^3.0.0"
-    core-js-pure "^3.8.1"
+    core-js-pure "^3.23.3"
     error-stack-parser "^2.0.6"
     find-up "^5.0.0"
     html-entities "^2.1.0"
@@ -2487,9 +2479,9 @@
   integrity sha1-i+NqH2bzJlOJ6QtfnJliFGdY9yg=
 
 "@sinclair/typebox@^0.24.1":
-  version "0.24.44"
-  resolved "https://msazure.pkgs.visualstudio.com/_packaging/AzurePortal/npm/registry/@sinclair/typebox/-/typebox-0.24.44.tgz#0a0aa3bf4a155a678418527342a3ee84bd8caa5c"
-  integrity sha1-Cgqjv0oVWmeEGFJzQqPuhL2Mqlw=
+  version "0.24.47"
+  resolved "https://msazure.pkgs.visualstudio.com/_packaging/AzurePortal/npm/registry/@sinclair/typebox/-/typebox-0.24.47.tgz#530b67163714356f93e82bdb871e7db4b7bc564e"
+  integrity sha1-UwtnFjcUNW+T6Cvbhx59tLe8Vk4=
 
 "@sinonjs/commons@^1.7.0":
   version "1.8.3"
@@ -3582,9 +3574,9 @@
     loader-utils "^2.0.0"
 
 "@testing-library/dom@^8.3.0":
-  version "8.18.1"
-  resolved "https://msazure.pkgs.visualstudio.com/_packaging/AzurePortal/npm/registry/@testing-library/dom/-/dom-8.18.1.tgz#80f91be02bc171fe5a3a7003f88207be31ac2cf3"
-  integrity sha1-gPkb4CvBcf5aOnAD+IIHvjGsLPM=
+  version "8.19.0"
+  resolved "https://msazure.pkgs.visualstudio.com/_packaging/AzurePortal/npm/registry/@testing-library/dom/-/dom-8.19.0.tgz#bd3f83c217ebac16694329e413d9ad5fdcfd785f"
+  integrity sha1-vT+DwhfrrBZpQynkE9mtX9z9eF8=
   dependencies:
     "@babel/code-frame" "^7.10.4"
     "@babel/runtime" "^7.12.5"
@@ -3696,9 +3688,9 @@
     "@types/estree" "*"
 
 "@types/eslint@*", "@types/eslint@^7.29.0 || ^8.4.1":
-  version "8.4.6"
-  resolved "https://msazure.pkgs.visualstudio.com/_packaging/AzurePortal/npm/registry/@types/eslint/-/eslint-8.4.6.tgz#7976f054c1bccfcf514bff0564c0c41df5c08207"
-  integrity sha1-eXbwVMG8z89RS/8FZMDEHfXAggc=
+  version "8.4.7"
+  resolved "https://msazure.pkgs.visualstudio.com/_packaging/AzurePortal/npm/registry/@types/eslint/-/eslint-8.4.7.tgz#0f05a2677d1a394ff70c21a964a32d3efa05f966"
+  integrity sha1-DwWiZ30aOU/3DCGpZKMtPvoF+WY=
   dependencies:
     "@types/estree" "*"
     "@types/json-schema" "*"
@@ -3881,14 +3873,14 @@
     form-data "^3.0.0"
 
 "@types/node@*":
-  version "18.8.3"
-  resolved "https://msazure.pkgs.visualstudio.com/_packaging/AzurePortal/npm/registry/@types/node/-/node-18.8.3.tgz#ce750ab4017effa51aed6a7230651778d54e327c"
-  integrity sha1-znUKtAF+/6Ua7WpyMGUXeNVOMnw=
+  version "18.11.3"
+  resolved "https://msazure.pkgs.visualstudio.com/_packaging/AzurePortal/npm/registry/@types/node/-/node-18.11.3.tgz#78a6d7ec962b596fc2d2ec102c4dd3ef073fea6a"
+  integrity sha1-eKbX7JYrWW/C0uwQLE3T7wc/6mo=
 
 "@types/node@^14.0.10 || ^16.0.0", "@types/node@^14.14.20 || ^16.0.0":
-  version "16.11.64"
-  resolved "https://msazure.pkgs.visualstudio.com/_packaging/AzurePortal/npm/registry/@types/node/-/node-16.11.64.tgz#9171f327298b619e2c52238b120c19056415d820"
-  integrity sha1-kXHzJymLYZ4sUiOLEgwZBWQV2CA=
+  version "16.11.68"
+  resolved "https://msazure.pkgs.visualstudio.com/_packaging/AzurePortal/npm/registry/@types/node/-/node-16.11.68.tgz#30ee923f4d940793e0380f5ce61c0bd4b7196b6c"
+  integrity sha1-MO6SP02UB5PgOA9c5hwL1LcZa2w=
 
 "@types/normalize-package-data@^2.4.0":
   version "2.4.1"
@@ -4041,9 +4033,9 @@
   integrity sha1-/CWtmUO8rBHM64Fo208nXg5y51Y=
 
 "@types/uglify-js@*":
-  version "3.17.0"
-  resolved "https://msazure.pkgs.visualstudio.com/_packaging/AzurePortal/npm/registry/@types/uglify-js/-/uglify-js-3.17.0.tgz#95271e7abe0bf7094c60284f76ee43232aef43b9"
-  integrity sha1-lSceer4L9wlMYChPdu5DIyrvQ7k=
+  version "3.17.1"
+  resolved "https://msazure.pkgs.visualstudio.com/_packaging/AzurePortal/npm/registry/@types/uglify-js/-/uglify-js-3.17.1.tgz#e0ffcef756476410e5bce2cb01384ed878a195b5"
+  integrity sha1-4P/O91ZHZBDlvOLLAThO2HihlbU=
   dependencies:
     source-map "^0.6.1"
 
@@ -4067,9 +4059,9 @@
     source-map "^0.7.3"
 
 "@types/webpack@^4.41.13", "@types/webpack@^4.41.26", "@types/webpack@^4.41.8":
-  version "4.41.32"
-  resolved "https://msazure.pkgs.visualstudio.com/_packaging/AzurePortal/npm/registry/@types/webpack/-/webpack-4.41.32.tgz#a7bab03b72904070162b2f169415492209e94212"
-  integrity sha1-p7qwO3KQQHAWKy8WlBVJIgnpQhI=
+  version "4.41.33"
+  resolved "https://msazure.pkgs.visualstudio.com/_packaging/AzurePortal/npm/registry/@types/webpack/-/webpack-4.41.33.tgz#16164845a5be6a306bcbe554a8e67f9cac215ffc"
+  integrity sha1-FhZIRaW+ajBry+VUqOZ/nKwhX/w=
   dependencies:
     "@types/node" "*"
     "@types/tapable" "^1"
@@ -4117,13 +4109,13 @@
   integrity sha1-ljkCDh+2USCi9Dh9uPHotj798ik=
 
 "@typescript-eslint/eslint-plugin@^5.4.0", "@typescript-eslint/eslint-plugin@^5.5.0":
-  version "5.39.0"
-  resolved "https://msazure.pkgs.visualstudio.com/_packaging/AzurePortal/npm/registry/@typescript-eslint/eslint-plugin/-/eslint-plugin-5.39.0.tgz#778b2d9e7f293502c7feeea6c74dca8eb3e67511"
-  integrity sha1-d4stnn8pNQLH/u6mx03KjrPmdRE=
+  version "5.40.1"
+  resolved "https://msazure.pkgs.visualstudio.com/_packaging/AzurePortal/npm/registry/@typescript-eslint/eslint-plugin/-/eslint-plugin-5.40.1.tgz#3203a6ff396b1194083faaa6e5110c401201d7d5"
+  integrity sha1-MgOm/zlrEZQIP6qm5REMQBIB19U=
   dependencies:
-    "@typescript-eslint/scope-manager" "5.39.0"
-    "@typescript-eslint/type-utils" "5.39.0"
-    "@typescript-eslint/utils" "5.39.0"
+    "@typescript-eslint/scope-manager" "5.40.1"
+    "@typescript-eslint/type-utils" "5.40.1"
+    "@typescript-eslint/utils" "5.40.1"
     debug "^4.3.4"
     ignore "^5.2.0"
     regexpp "^3.2.0"
@@ -4131,76 +4123,78 @@
     tsutils "^3.21.0"
 
 "@typescript-eslint/experimental-utils@^5.0.0":
-  version "5.39.0"
-  resolved "https://msazure.pkgs.visualstudio.com/_packaging/AzurePortal/npm/registry/@typescript-eslint/experimental-utils/-/experimental-utils-5.39.0.tgz#9263bb72b57449cc2f07ffb7fd4e12d0160b7f5e"
-  integrity sha1-kmO7crV0ScwvB/+3/U4S0BYLf14=
+  version "5.40.1"
+  resolved "https://msazure.pkgs.visualstudio.com/_packaging/AzurePortal/npm/registry/@typescript-eslint/experimental-utils/-/experimental-utils-5.40.1.tgz#2fa6b4f768d42fe7174c34cd02fa79717e4e2bfe"
+  integrity sha1-L6a092jUL+cXTDTNAvp5cX5OK/4=
   dependencies:
-    "@typescript-eslint/utils" "5.39.0"
+    "@typescript-eslint/utils" "5.40.1"
 
 "@typescript-eslint/parser@^5.4.0", "@typescript-eslint/parser@^5.5.0":
-  version "5.39.0"
-  resolved "https://msazure.pkgs.visualstudio.com/_packaging/AzurePortal/npm/registry/@typescript-eslint/parser/-/parser-5.39.0.tgz#93fa0bc980a3a501e081824f6097f7ca30aaa22b"
-  integrity sha1-k/oLyYCjpQHggYJPYJf3yjCqois=
+  version "5.40.1"
+  resolved "https://msazure.pkgs.visualstudio.com/_packaging/AzurePortal/npm/registry/@typescript-eslint/parser/-/parser-5.40.1.tgz#e7f8295dd8154d0d37d661ddd8e2f0ecfdee28dd"
+  integrity sha1-5/gpXdgVTQ031mHd2OLw7P3uKN0=
   dependencies:
-    "@typescript-eslint/scope-manager" "5.39.0"
-    "@typescript-eslint/types" "5.39.0"
-    "@typescript-eslint/typescript-estree" "5.39.0"
+    "@typescript-eslint/scope-manager" "5.40.1"
+    "@typescript-eslint/types" "5.40.1"
+    "@typescript-eslint/typescript-estree" "5.40.1"
     debug "^4.3.4"
 
-"@typescript-eslint/scope-manager@5.39.0":
-  version "5.39.0"
-  resolved "https://msazure.pkgs.visualstudio.com/_packaging/AzurePortal/npm/registry/@typescript-eslint/scope-manager/-/scope-manager-5.39.0.tgz#873e1465afa3d6c78d8ed2da68aed266a08008d0"
-  integrity sha1-hz4UZa+j1seNjtLaaK7SZqCACNA=
+"@typescript-eslint/scope-manager@5.40.1":
+  version "5.40.1"
+  resolved "https://msazure.pkgs.visualstudio.com/_packaging/AzurePortal/npm/registry/@typescript-eslint/scope-manager/-/scope-manager-5.40.1.tgz#a7a5197dfd234622a2421ea590ee0ccc02e18dfe"
+  integrity sha1-p6UZff0jRiKiQh6lkO4MzALhjf4=
   dependencies:
-    "@typescript-eslint/types" "5.39.0"
-    "@typescript-eslint/visitor-keys" "5.39.0"
+    "@typescript-eslint/types" "5.40.1"
+    "@typescript-eslint/visitor-keys" "5.40.1"
 
-"@typescript-eslint/type-utils@5.39.0":
-  version "5.39.0"
-  resolved "https://msazure.pkgs.visualstudio.com/_packaging/AzurePortal/npm/registry/@typescript-eslint/type-utils/-/type-utils-5.39.0.tgz#0a8c00f95dce4335832ad2dc6bc431c14e32a0a6"
-  integrity sha1-CowA+V3OQzWDKtLca8QxwU4yoKY=
+"@typescript-eslint/type-utils@5.40.1":
+  version "5.40.1"
+  resolved "https://msazure.pkgs.visualstudio.com/_packaging/AzurePortal/npm/registry/@typescript-eslint/type-utils/-/type-utils-5.40.1.tgz#091e4ce3bebbdb68f4980bae9dee2e4e1725f601"
+  integrity sha1-CR5M476722j0mAuune4uThcl9gE=
   dependencies:
-    "@typescript-eslint/typescript-estree" "5.39.0"
-    "@typescript-eslint/utils" "5.39.0"
+    "@typescript-eslint/typescript-estree" "5.40.1"
+    "@typescript-eslint/utils" "5.40.1"
     debug "^4.3.4"
     tsutils "^3.21.0"
 
-"@typescript-eslint/types@5.39.0":
-  version "5.39.0"
-  resolved "https://msazure.pkgs.visualstudio.com/_packaging/AzurePortal/npm/registry/@typescript-eslint/types/-/types-5.39.0.tgz#f4e9f207ebb4579fd854b25c0bf64433bb5ed78d"
-  integrity sha1-9OnyB+u0V5/YVLJcC/ZEM7te140=
+"@typescript-eslint/types@5.40.1":
+  version "5.40.1"
+  resolved "https://msazure.pkgs.visualstudio.com/_packaging/AzurePortal/npm/registry/@typescript-eslint/types/-/types-5.40.1.tgz#de37f4f64de731ee454bb2085d71030aa832f749"
+  integrity sha1-3jf09k3nMe5FS7IIXXEDCqgy90k=
 
-"@typescript-eslint/typescript-estree@5.39.0":
-  version "5.39.0"
-  resolved "https://msazure.pkgs.visualstudio.com/_packaging/AzurePortal/npm/registry/@typescript-eslint/typescript-estree/-/typescript-estree-5.39.0.tgz#c0316aa04a1a1f4f7f9498e3c13ef1d3dc4cf88b"
-  integrity sha1-wDFqoEoaH09/lJjjwT7x09xM+Is=
+"@typescript-eslint/typescript-estree@5.40.1":
+  version "5.40.1"
+  resolved "https://msazure.pkgs.visualstudio.com/_packaging/AzurePortal/npm/registry/@typescript-eslint/typescript-estree/-/typescript-estree-5.40.1.tgz#9a7d25492f02c69882ce5e0cd1857b0c55645d72"
+  integrity sha1-mn0lSS8CxpiCzl4M0YV7DFVkXXI=
   dependencies:
-    "@typescript-eslint/types" "5.39.0"
-    "@typescript-eslint/visitor-keys" "5.39.0"
+    "@typescript-eslint/types" "5.40.1"
+    "@typescript-eslint/visitor-keys" "5.40.1"
     debug "^4.3.4"
     globby "^11.1.0"
     is-glob "^4.0.3"
     semver "^7.3.7"
     tsutils "^3.21.0"
 
-"@typescript-eslint/utils@5.39.0", "@typescript-eslint/utils@^5.13.0":
-  version "5.39.0"
-  resolved "https://msazure.pkgs.visualstudio.com/_packaging/AzurePortal/npm/registry/@typescript-eslint/utils/-/utils-5.39.0.tgz#b7063cca1dcf08d1d21b0d91db491161ad0be110"
-  integrity sha1-twY8yh3PCNHSGw2R20kRYa0L4RA=
+"@typescript-eslint/utils@5.40.1", "@typescript-eslint/utils@^5.13.0":
+  version "5.40.1"
+  resolved "https://msazure.pkgs.visualstudio.com/_packaging/AzurePortal/npm/registry/@typescript-eslint/utils/-/utils-5.40.1.tgz#3204fb73a559d3b7bab7dc9d3c44487c2734a9ca"
+  integrity sha1-MgT7c6VZ07e6t9ydPERIfCc0qco=
   dependencies:
     "@types/json-schema" "^7.0.9"
-    "@typescript-eslint/scope-manager" "5.39.0"
-    "@typescript-eslint/types" "5.39.0"
-    "@typescript-eslint/typescript-estree" "5.39.0"
+    "@types/semver" "^7.3.12"
+    "@typescript-eslint/scope-manager" "5.40.1"
+    "@typescript-eslint/types" "5.40.1"
+    "@typescript-eslint/typescript-estree" "5.40.1"
     eslint-scope "^5.1.1"
     eslint-utils "^3.0.0"
+    semver "^7.3.7"
 
-"@typescript-eslint/visitor-keys@5.39.0":
-  version "5.39.0"
-  resolved "https://msazure.pkgs.visualstudio.com/_packaging/AzurePortal/npm/registry/@typescript-eslint/visitor-keys/-/visitor-keys-5.39.0.tgz#8f41f7d241b47257b081ddba5d3ce80deaae61e2"
-  integrity sha1-j0H30kG0clewgd26XTzoDequYeI=
+"@typescript-eslint/visitor-keys@5.40.1":
+  version "5.40.1"
+  resolved "https://msazure.pkgs.visualstudio.com/_packaging/AzurePortal/npm/registry/@typescript-eslint/visitor-keys/-/visitor-keys-5.40.1.tgz#f3d2bf5af192f4432b84cec6fdcb387193518754"
+  integrity sha1-89K/WvGS9EMrhM7G/cs4cZNRh1Q=
   dependencies:
-    "@typescript-eslint/types" "5.39.0"
+    "@typescript-eslint/types" "5.40.1"
     eslint-visitor-keys "^3.3.0"
 
 "@uifabric/merge-styles@^7.19.2", "@uifabric/merge-styles@^7.20.1":
@@ -5042,6 +5036,20 @@ available-typed-arrays@^1.0.5:
   resolved "https://msazure.pkgs.visualstudio.com/_packaging/AzurePortal/npm/registry/available-typed-arrays/-/available-typed-arrays-1.0.5.tgz#92f95616501069d07d10edb2fc37d3e1c65123b7"
   integrity sha1-kvlWFlAQadB9EO2y/DfT4cZRI7c=
 
+awesome-typescript-loader@^5.2.1:
+  version "5.2.1"
+  resolved "https://msazure.pkgs.visualstudio.com/_packaging/AzurePortal/npm/registry/awesome-typescript-loader/-/awesome-typescript-loader-5.2.1.tgz#a41daf7847515f4925cdbaa3075d61f289e913fc"
+  integrity sha1-pB2veEdRX0klzbqjB11h8onpE/w=
+  dependencies:
+    chalk "^2.4.1"
+    enhanced-resolve "^4.0.0"
+    loader-utils "^1.1.0"
+    lodash "^4.17.5"
+    micromatch "^3.1.9"
+    mkdirp "^0.5.1"
+    source-map-support "^0.5.3"
+    webpack-log "^1.2.0"
+
 axe-core@^4.4.3:
   version "4.4.3"
   resolved "https://msazure.pkgs.visualstudio.com/_packaging/AzurePortal/npm/registry/axe-core/-/axe-core-4.4.3.tgz#11c74d23d5013c0fa5d183796729bc3482bd2f6f"
@@ -5100,13 +5108,6 @@ babel-plugin-apply-mdx-type-prop@1.6.22:
   dependencies:
     "@babel/helper-plugin-utils" "7.10.4"
     "@mdx-js/util" "1.6.22"
-
-babel-plugin-dynamic-import-node@^2.3.3:
-  version "2.3.3"
-  resolved "https://msazure.pkgs.visualstudio.com/_packaging/AzurePortal/npm/registry/babel-plugin-dynamic-import-node/-/babel-plugin-dynamic-import-node-2.3.3.tgz#84fda19c976ec5c6defef57f9427b3def66e17a3"
-  integrity sha1-hP2hnJduxcbe/vV/lCez3vZuF6M=
-  dependencies:
-    object.assign "^4.1.0"
 
 babel-plugin-extract-import-names@1.6.22:
   version "1.6.22"
@@ -5383,10 +5384,10 @@ bn.js@^5.0.0, bn.js@^5.1.1:
   resolved "https://msazure.pkgs.visualstudio.com/_packaging/AzurePortal/npm/registry/bn.js/-/bn.js-5.2.1.tgz#0bc527a6a0d18d0aa8d5b0538ce4a77dccfa7b70"
   integrity sha1-C8UnpqDRjQqo1bBTjOSnfcz6e3A=
 
-body-parser@1.20.0:
-  version "1.20.0"
-  resolved "https://msazure.pkgs.visualstudio.com/_packaging/AzurePortal/npm/registry/body-parser/-/body-parser-1.20.0.tgz#3de69bd89011c11573d7bfee6a64f11b6bd27cc5"
-  integrity sha1-Peab2JARwRVz17/uamTxG2vSfMU=
+body-parser@1.20.1:
+  version "1.20.1"
+  resolved "https://msazure.pkgs.visualstudio.com/_packaging/AzurePortal/npm/registry/body-parser/-/body-parser-1.20.1.tgz#b1812a8912c195cd371a3ee5e66faa2338a5c668"
+  integrity sha1-sYEqiRLBlc03Gj7l5m+qIzilxmg=
   dependencies:
     bytes "3.1.2"
     content-type "~1.0.4"
@@ -5396,7 +5397,7 @@ body-parser@1.20.0:
     http-errors "2.0.0"
     iconv-lite "0.4.24"
     on-finished "2.4.1"
-    qs "6.10.3"
+    qs "6.11.0"
     raw-body "2.5.1"
     type-is "~1.6.18"
     unpipe "1.0.0"
@@ -5745,9 +5746,9 @@ camelcase@^6.2.0, camelcase@^6.2.1:
   integrity sha1-VoW5XrIJrJwMF3Rnd4ychN9Yupo=
 
 camelize@^1.0.0:
-  version "1.0.0"
-  resolved "https://msazure.pkgs.visualstudio.com/_packaging/AzurePortal/npm/registry/camelize/-/camelize-1.0.0.tgz#164a5483e630fa4321e5af07020e531831b2609b"
-  integrity sha1-FkpUg+Yw+kMh5a8HAg5TGDGyYJs=
+  version "1.0.1"
+  resolved "https://msazure.pkgs.visualstudio.com/_packaging/AzurePortal/npm/registry/camelize/-/camelize-1.0.1.tgz#89b7e16884056331a35d6b5ad064332c91daa6c3"
+  integrity sha1-ibfhaIQFYzGjXWta0GQzLJHapsM=
 
 caniuse-api@^3.0.0:
   version "3.0.0"
@@ -5760,9 +5761,9 @@ caniuse-api@^3.0.0:
     lodash.uniq "^4.5.0"
 
 caniuse-lite@^1.0.0, caniuse-lite@^1.0.30001109, caniuse-lite@^1.0.30001400, caniuse-lite@^1.0.30001407:
-  version "1.0.30001416"
-  resolved "https://msazure.pkgs.visualstudio.com/_packaging/AzurePortal/npm/registry/caniuse-lite/-/caniuse-lite-1.0.30001416.tgz#29692af8a6a11412f2d3cf9a59d588fcdd21ce4c"
-  integrity sha1-KWkq+KahFBLy08+aWdWI/N0hzkw=
+  version "1.0.30001423"
+  resolved "https://msazure.pkgs.visualstudio.com/_packaging/AzurePortal/npm/registry/caniuse-lite/-/caniuse-lite-1.0.30001423.tgz#57176d460aa8cd85ee1a72016b961eb9aca55d91"
+  integrity sha1-VxdtRgqozYXuGnIBa5YeuaylXZE=
 
 capture-exit@^2.0.0:
   version "2.0.0"
@@ -5781,7 +5782,7 @@ ccount@^1.0.0:
   resolved "https://msazure.pkgs.visualstudio.com/_packaging/AzurePortal/npm/registry/ccount/-/ccount-1.1.0.tgz#246687debb6014735131be8abab2d93898f8d043"
   integrity sha1-JGaH3rtgFHNRMb6KurLZOJj40EM=
 
-chalk@^2.0.0, chalk@^2.4.1:
+chalk@^2.0.0, chalk@^2.0.1, chalk@^2.1.0, chalk@^2.4.1:
   version "2.4.2"
   resolved "https://msazure.pkgs.visualstudio.com/_packaging/AzurePortal/npm/registry/chalk/-/chalk-2.4.2.tgz#cd42541677a54333cf541a49108c1432b44c9424"
   integrity sha1-zUJUFnelQzPPVBpJEIwUMrRMlCQ=
@@ -5799,9 +5800,9 @@ chalk@^4.0.0, chalk@^4.0.2, chalk@^4.1.0, chalk@^4.1.2:
     supports-color "^7.1.0"
 
 chalk@^5.0.1:
-  version "5.1.0"
-  resolved "https://msazure.pkgs.visualstudio.com/_packaging/AzurePortal/npm/registry/chalk/-/chalk-5.1.0.tgz#c4b4a62bfb6df0eeeb5dbc52e6a9ecaff14b9976"
-  integrity sha1-xLSmK/tt8O7rXbxS5qnsr/FLmXY=
+  version "5.1.2"
+  resolved "https://msazure.pkgs.visualstudio.com/_packaging/AzurePortal/npm/registry/chalk/-/chalk-5.1.2.tgz#d957f370038b75ac572471e83be4c5ca9f8e8c45"
+  integrity sha1-2VfzcAOLdaxXJHHoO+TFyp+OjEU=
 
 char-regex@^1.0.2:
   version "1.0.2"
@@ -5888,9 +5889,9 @@ ci-info@^2.0.0:
   integrity sha1-Z6npZL4xpR4V5QENWObxKDQAL0Y=
 
 ci-info@^3.2.0:
-  version "3.4.0"
-  resolved "https://msazure.pkgs.visualstudio.com/_packaging/AzurePortal/npm/registry/ci-info/-/ci-info-3.4.0.tgz#b28484fd436cbc267900364f096c9dc185efb251"
-  integrity sha1-soSE/UNsvCZ5ADZPCWydwYXvslE=
+  version "3.5.0"
+  resolved "https://msazure.pkgs.visualstudio.com/_packaging/AzurePortal/npm/registry/ci-info/-/ci-info-3.5.0.tgz#bfac2a29263de4c829d806b1ab478e35091e171f"
+  integrity sha1-v6wqKSY95Mgp2Aaxq0eONQkeFx8=
 
 cipher-base@^1.0.0, cipher-base@^1.0.1, cipher-base@^1.0.3:
   version "1.0.4"
@@ -6252,11 +6253,9 @@ content-type@~1.0.4:
   integrity sha1-4TjMdeBAxyexlm/l5fjJruJW/js=
 
 convert-source-map@^1.4.0, convert-source-map@^1.6.0, convert-source-map@^1.7.0:
-  version "1.8.0"
-  resolved "https://msazure.pkgs.visualstudio.com/_packaging/AzurePortal/npm/registry/convert-source-map/-/convert-source-map-1.8.0.tgz#f3373c32d21b4d780dd8004514684fb791ca4369"
-  integrity sha1-8zc8MtIbTXgN2ABFFGhPt5HKQ2k=
-  dependencies:
-    safe-buffer "~5.1.1"
+  version "1.9.0"
+  resolved "https://msazure.pkgs.visualstudio.com/_packaging/AzurePortal/npm/registry/convert-source-map/-/convert-source-map-1.9.0.tgz#7faae62353fb4213366d0ca98358d22e8368b05f"
+  integrity sha1-f6rmI1P7QhM2bQypg1jSLoNosF8=
 
 cookie-signature@1.0.6:
   version "1.0.6"
@@ -6292,7 +6291,7 @@ core-js-compat@^3.25.1, core-js-compat@^3.8.1:
   dependencies:
     browserslist "^4.21.4"
 
-core-js-pure@^3.25.1, core-js-pure@^3.8.1:
+core-js-pure@^3.23.3, core-js-pure@^3.25.1:
   version "3.25.5"
   resolved "https://msazure.pkgs.visualstudio.com/_packaging/AzurePortal/npm/registry/core-js-pure/-/core-js-pure-3.25.5.tgz#79716ba54240c6aa9ceba6eee08cf79471ba184d"
   integrity sha1-eXFrpUJAxqqc66bu4Iz3lHG6GE0=
@@ -6617,9 +6616,9 @@ css-what@^6.0.1:
   integrity sha1-+17/z3bx3eosgb36pN5E55uscPQ=
 
 cssdb@^7.0.1:
-  version "7.0.1"
-  resolved "https://msazure.pkgs.visualstudio.com/_packaging/AzurePortal/npm/registry/cssdb/-/cssdb-7.0.1.tgz#3810a0c67ae06362982dfe965dbedf57a0f26617"
-  integrity sha1-OBCgxnrgY2KYLf6WXb7fV6DyZhc=
+  version "7.0.2"
+  resolved "https://msazure.pkgs.visualstudio.com/_packaging/AzurePortal/npm/registry/cssdb/-/cssdb-7.0.2.tgz#e1cadfe2be318797bd02ca929d2b3c7bac332abc"
+  integrity sha1-4crf4r4xh5e9AsqSnSs8e6wzKrw=
 
 cssesc@^3.0.0:
   version "3.0.0"
@@ -6716,6 +6715,14 @@ cyclist@^1.0.1:
   resolved "https://msazure.pkgs.visualstudio.com/_packaging/AzurePortal/npm/registry/cyclist/-/cyclist-1.0.1.tgz#596e9698fd0c80e12038c2b82d6eb1b35b6224d9"
   integrity sha1-WW6WmP0MgOEgOMK4LW6xs1tiJNk=
 
+d@1, d@^1.0.1:
+  version "1.0.1"
+  resolved "https://msazure.pkgs.visualstudio.com/_packaging/AzurePortal/npm/registry/d/-/d-1.0.1.tgz#8698095372d58dbee346ffd0c7093f99f8f9eb5a"
+  integrity sha1-hpgJU3LVjb7jRv/Qxwk/mfj561o=
+  dependencies:
+    es5-ext "^0.10.50"
+    type "^1.0.1"
+
 damerau-levenshtein@^1.0.8:
   version "1.0.8"
   resolved "https://msazure.pkgs.visualstudio.com/_packaging/AzurePortal/npm/registry/damerau-levenshtein/-/damerau-levenshtein-1.0.8.tgz#b43d286ccbd36bc5b2f7ed41caf2d0aba1f8a6e7"
@@ -6757,9 +6764,9 @@ decamelize@^1.1.2:
   integrity sha1-9lNNFRSCabIDUue+4m9QH5oZEpA=
 
 decimal.js@^10.2.1:
-  version "10.4.1"
-  resolved "https://msazure.pkgs.visualstudio.com/_packaging/AzurePortal/npm/registry/decimal.js/-/decimal.js-10.4.1.tgz#be75eeac4a2281aace80c1a8753587c27ef053e7"
-  integrity sha1-vnXurEoigarOgMGodTWHwn7wU+c=
+  version "10.4.2"
+  resolved "https://msazure.pkgs.visualstudio.com/_packaging/AzurePortal/npm/registry/decimal.js/-/decimal.js-10.4.2.tgz#0341651d1d997d86065a2ce3a441fbd0d8e8b98e"
+  integrity sha1-A0FlHR2ZfYYGWizjpEH70NjouY4=
 
 decode-uri-component@^0.2.0:
   version "0.2.0"
@@ -6866,9 +6873,9 @@ define-property@^2.0.2:
     isobject "^3.0.1"
 
 defined@^1.0.0:
-  version "1.0.0"
-  resolved "https://msazure.pkgs.visualstudio.com/_packaging/AzurePortal/npm/registry/defined/-/defined-1.0.0.tgz#c98d9bcef75674188e110969151199e39b1fa693"
-  integrity sha1-yY2bzvdWdBiOEQlpFRGZ45sfppM=
+  version "1.0.1"
+  resolved "https://msazure.pkgs.visualstudio.com/_packaging/AzurePortal/npm/registry/defined/-/defined-1.0.1.tgz#c0b9db27bfaffd95d6f61399419b893df0f91ebf"
+  integrity sha1-wLnbJ7+v/ZXW9hOZQZuJPfD5Hr8=
 
 del@^4.1.1:
   version "4.1.1"
@@ -7172,9 +7179,9 @@ ejs@^3.1.6:
     jake "^10.8.5"
 
 electron-to-chromium@^1.4.251:
-  version "1.4.274"
-  resolved "https://msazure.pkgs.visualstudio.com/_packaging/AzurePortal/npm/registry/electron-to-chromium/-/electron-to-chromium-1.4.274.tgz#74369ac6f020c3cea7c77ec040ddf159fe226233"
-  integrity sha1-dDaaxvAgw86nx37AQN3xWf4iYjM=
+  version "1.4.284"
+  resolved "https://msazure.pkgs.visualstudio.com/_packaging/AzurePortal/npm/registry/electron-to-chromium/-/electron-to-chromium-1.4.284.tgz#61046d1e4cab3a25238f6bf7413795270f125592"
+  integrity sha1-YQRtHkyrOiUjj2v3QTeVJw8SVZI=
 
 elliptic@^6.5.3:
   version "6.5.4"
@@ -7235,7 +7242,7 @@ endent@^2.0.1:
     fast-json-parse "^1.0.3"
     objectorarray "^1.0.5"
 
-enhanced-resolve@^4.5.0:
+enhanced-resolve@^4.0.0, enhanced-resolve@^4.5.0:
   version "4.5.0"
   resolved "https://msazure.pkgs.visualstudio.com/_packaging/AzurePortal/npm/registry/enhanced-resolve/-/enhanced-resolve-4.5.0.tgz#2f3cfd84dbe3b487f18f2db2ef1e064a571ca5ec"
   integrity sha1-Lzz9hNvjtIfxjy2y7x4GSlccpew=
@@ -7358,15 +7365,41 @@ es-to-primitive@^1.2.1:
     is-date-object "^1.0.1"
     is-symbol "^1.0.2"
 
+es5-ext@^0.10.35, es5-ext@^0.10.50:
+  version "0.10.62"
+  resolved "https://msazure.pkgs.visualstudio.com/_packaging/AzurePortal/npm/registry/es5-ext/-/es5-ext-0.10.62.tgz#5e6adc19a6da524bf3d1e02bbc8960e5eb49a9a5"
+  integrity sha1-XmrcGabaUkvz0eArvIlg5etJqaU=
+  dependencies:
+    es6-iterator "^2.0.3"
+    es6-symbol "^3.1.3"
+    next-tick "^1.1.0"
+
 es5-shim@^4.5.13:
   version "4.6.7"
   resolved "https://msazure.pkgs.visualstudio.com/_packaging/AzurePortal/npm/registry/es5-shim/-/es5-shim-4.6.7.tgz#bc67ae0fc3dd520636e0a1601cc73b450ad3e955"
   integrity sha1-vGeuD8PdUgY24KFgHMc7RQrT6VU=
 
+es6-iterator@^2.0.3:
+  version "2.0.3"
+  resolved "https://msazure.pkgs.visualstudio.com/_packaging/AzurePortal/npm/registry/es6-iterator/-/es6-iterator-2.0.3.tgz#a7de889141a05a94b0854403b2d0a0fbfa98f3b7"
+  integrity sha1-p96IkUGgWpSwhUQDstCg+/qY87c=
+  dependencies:
+    d "1"
+    es5-ext "^0.10.35"
+    es6-symbol "^3.1.1"
+
 es6-shim@^0.35.5:
   version "0.35.6"
   resolved "https://msazure.pkgs.visualstudio.com/_packaging/AzurePortal/npm/registry/es6-shim/-/es6-shim-0.35.6.tgz#d10578301a83af2de58b9eadb7c2c9945f7388a0"
   integrity sha1-0QV4MBqDry3li56tt8LJlF9ziKA=
+
+es6-symbol@^3.1.1, es6-symbol@^3.1.3:
+  version "3.1.3"
+  resolved "https://msazure.pkgs.visualstudio.com/_packaging/AzurePortal/npm/registry/es6-symbol/-/es6-symbol-3.1.3.tgz#bad5d3c1bcdac28269f4cb331e431c78ac705d18"
+  integrity sha1-utXTwbzawoJp9MszHkMceKxwXRg=
+  dependencies:
+    d "^1.0.1"
+    ext "^1.1.2"
 
 escalade@^3.1.1:
   version "3.1.1"
@@ -7506,9 +7539,9 @@ eslint-plugin-react-hooks@^4.3.0:
   integrity sha1-TD5petlbd+k/hkaqoWMMG6YH7dM=
 
 eslint-plugin-react@^7.18.3, eslint-plugin-react@^7.27.1:
-  version "7.31.8"
-  resolved "https://msazure.pkgs.visualstudio.com/_packaging/AzurePortal/npm/registry/eslint-plugin-react/-/eslint-plugin-react-7.31.8.tgz#3a4f80c10be1bcbc8197be9e8b641b2a3ef219bf"
-  integrity sha1-Ok+AwQvhvLyBl76ei2QbKj7yGb8=
+  version "7.31.10"
+  resolved "https://msazure.pkgs.visualstudio.com/_packaging/AzurePortal/npm/registry/eslint-plugin-react/-/eslint-plugin-react-7.31.10.tgz#6782c2c7fe91c09e715d536067644bbb9491419a"
+  integrity sha1-Z4LCx/6RwJ5xXVNgZ2RLu5SRQZo=
   dependencies:
     array-includes "^3.1.5"
     array.prototype.flatmap "^1.3.0"
@@ -7526,9 +7559,9 @@ eslint-plugin-react@^7.18.3, eslint-plugin-react@^7.27.1:
     string.prototype.matchall "^4.0.7"
 
 eslint-plugin-testing-library@^5.0.1:
-  version "5.7.2"
-  resolved "https://msazure.pkgs.visualstudio.com/_packaging/AzurePortal/npm/registry/eslint-plugin-testing-library/-/eslint-plugin-testing-library-5.7.2.tgz#c1b2112a40aab61f93e10859e8b2d81e54f0ce84"
-  integrity sha1-wbIRKkCqth+T4QhZ6LLYHlTwzoQ=
+  version "5.9.1"
+  resolved "https://msazure.pkgs.visualstudio.com/_packaging/AzurePortal/npm/registry/eslint-plugin-testing-library/-/eslint-plugin-testing-library-5.9.1.tgz#12e4bd34c48683ee98af4df2e3318ec9f51dcf8a"
+  integrity sha1-EuS9NMSGg+6Yr03y4zGOyfUdz4o=
   dependencies:
     "@typescript-eslint/utils" "^5.13.0"
 
@@ -7590,13 +7623,12 @@ eslint-webpack-plugin@^3.1.1:
     schema-utils "^4.0.0"
 
 eslint@^8.3.0, eslint@^8.9.0:
-  version "8.24.0"
-  resolved "https://msazure.pkgs.visualstudio.com/_packaging/AzurePortal/npm/registry/eslint/-/eslint-8.24.0.tgz#489516c927a5da11b3979dbfb2679394523383c8"
-  integrity sha1-SJUWySel2hGzl52/smeTlFIzg8g=
+  version "8.25.0"
+  resolved "https://msazure.pkgs.visualstudio.com/_packaging/AzurePortal/npm/registry/eslint/-/eslint-8.25.0.tgz#00eb962f50962165d0c4ee3327708315eaa8058b"
+  integrity sha1-AOuWL1CWIWXQxO4zJ3CDFeqoBYs=
   dependencies:
-    "@eslint/eslintrc" "^1.3.2"
+    "@eslint/eslintrc" "^1.3.3"
     "@humanwhocodes/config-array" "^0.10.5"
-    "@humanwhocodes/gitignore-to-minimatch" "^1.0.2"
     "@humanwhocodes/module-importer" "^1.0.1"
     ajv "^6.10.0"
     chalk "^4.0.0"
@@ -7776,13 +7808,13 @@ expect@^27.5.1:
     jest-message-util "^27.5.1"
 
 express@^4.17.1, express@^4.17.3:
-  version "4.18.1"
-  resolved "https://msazure.pkgs.visualstudio.com/_packaging/AzurePortal/npm/registry/express/-/express-4.18.1.tgz#7797de8b9c72c857b9cd0e14a5eea80666267caf"
-  integrity sha1-d5fei5xyyFe5zQ4Upe6oBmYmfK8=
+  version "4.18.2"
+  resolved "https://msazure.pkgs.visualstudio.com/_packaging/AzurePortal/npm/registry/express/-/express-4.18.2.tgz#3fabe08296e930c796c19e3c516979386ba9fd59"
+  integrity sha1-P6vggpbpMMeWwZ48UWl5OGup/Vk=
   dependencies:
     accepts "~1.3.8"
     array-flatten "1.1.1"
-    body-parser "1.20.0"
+    body-parser "1.20.1"
     content-disposition "0.5.4"
     content-type "~1.0.4"
     cookie "0.5.0"
@@ -7801,7 +7833,7 @@ express@^4.17.1, express@^4.17.3:
     parseurl "~1.3.3"
     path-to-regexp "0.1.7"
     proxy-addr "~2.0.7"
-    qs "6.10.3"
+    qs "6.11.0"
     range-parser "~1.2.1"
     safe-buffer "5.2.1"
     send "0.18.0"
@@ -7811,6 +7843,13 @@ express@^4.17.1, express@^4.17.3:
     type-is "~1.6.18"
     utils-merge "1.0.1"
     vary "~1.1.2"
+
+ext@^1.1.2:
+  version "1.7.0"
+  resolved "https://msazure.pkgs.visualstudio.com/_packaging/AzurePortal/npm/registry/ext/-/ext-1.7.0.tgz#0ea4383c0103d60e70be99e9a7f11027a33c4f5f"
+  integrity sha1-DqQ4PAED1g5wvpnpp/EQJ6M8T18=
+  dependencies:
+    type "^2.7.2"
 
 extend-shallow@^2.0.1:
   version "2.0.1"
@@ -7863,7 +7902,7 @@ fast-glob@^2.2.6:
     merge2 "^1.2.3"
     micromatch "^3.1.10"
 
-fast-glob@^3.2.11, fast-glob@^3.2.9:
+fast-glob@^3.2.11, fast-glob@^3.2.12, fast-glob@^3.2.9:
   version "3.2.12"
   resolved "https://msazure.pkgs.visualstudio.com/_packaging/AzurePortal/npm/registry/fast-glob/-/fast-glob-3.2.12.tgz#7f39ec99c2e6ab030337142da9e0c18f37afae80"
   integrity sha1-fznsmcLmqwMDNxQtqeDBjzevroA=
@@ -9244,9 +9283,9 @@ is-color-stop@^1.1.0:
     rgba-regex "^1.0.0"
 
 is-core-module@^2.8.1, is-core-module@^2.9.0:
-  version "2.10.0"
-  resolved "https://msazure.pkgs.visualstudio.com/_packaging/AzurePortal/npm/registry/is-core-module/-/is-core-module-2.10.0.tgz#9012ede0a91c69587e647514e1d5277019e728ed"
-  integrity sha1-kBLt4KkcaVh+ZHUU4dUncBnnKO0=
+  version "2.11.0"
+  resolved "https://msazure.pkgs.visualstudio.com/_packaging/AzurePortal/npm/registry/is-core-module/-/is-core-module-2.11.0.tgz#ad4cb3e3863e814523c96f3f58d26cc570ff0144"
+  integrity sha1-rUyz44Y+gUUjyW8/WNJsxXD/AUQ=
   dependencies:
     has "^1.0.3"
 
@@ -10476,7 +10515,7 @@ loader-runner@^4.2.0:
   resolved "https://msazure.pkgs.visualstudio.com/_packaging/AzurePortal/npm/registry/loader-runner/-/loader-runner-4.3.0.tgz#c1b4a163b99f614830353b16755e7149ac2314e1"
   integrity sha1-wbShY7mfYUgwNTsWdV5xSawjFOE=
 
-loader-utils@^1.2.3:
+loader-utils@^1.1.0, loader-utils@^1.2.3:
   version "1.4.0"
   resolved "https://msazure.pkgs.visualstudio.com/_packaging/AzurePortal/npm/registry/loader-utils/-/loader-utils-1.4.0.tgz#c579b5e34cb34b1a74edc6c1fb36bfa371d5a613"
   integrity sha1-xXm140yzSxp07cbB+za/o3HVphM=
@@ -10486,9 +10525,9 @@ loader-utils@^1.2.3:
     json5 "^1.0.1"
 
 loader-utils@^2.0.0:
-  version "2.0.2"
-  resolved "https://msazure.pkgs.visualstudio.com/_packaging/AzurePortal/npm/registry/loader-utils/-/loader-utils-2.0.2.tgz#d6e3b4fb81870721ae4e0868ab11dd638368c129"
-  integrity sha1-1uO0+4GHByGuTghoqxHdY4NowSk=
+  version "2.0.3"
+  resolved "https://msazure.pkgs.visualstudio.com/_packaging/AzurePortal/npm/registry/loader-utils/-/loader-utils-2.0.3.tgz#d4b15b8504c63d1fc3f2ade52d41bc8459d6ede1"
+  integrity sha1-1LFbhQTGPR/D8q3lLUG8hFnW7eE=
   dependencies:
     big.js "^5.2.2"
     emojis-list "^3.0.0"
@@ -10568,10 +10607,25 @@ lodash.uniq@4.5.0, lodash.uniq@^4.5.0:
   resolved "https://msazure.pkgs.visualstudio.com/_packaging/AzurePortal/npm/registry/lodash.uniq/-/lodash.uniq-4.5.0.tgz#d0225373aeb652adc1bc82e4945339a842754773"
   integrity sha1-0CJTc662Uq3BvILklFM5qEJ1R3M=
 
-lodash@4.17.21, lodash@^4.0.1, lodash@^4.17.11, lodash@^4.17.15, lodash@^4.17.19, lodash@^4.17.20, lodash@^4.17.21, lodash@^4.7.0:
+lodash@4.17.21, lodash@^4.0.1, lodash@^4.17.11, lodash@^4.17.15, lodash@^4.17.19, lodash@^4.17.20, lodash@^4.17.21, lodash@^4.17.5, lodash@^4.7.0:
   version "4.17.21"
   resolved "https://msazure.pkgs.visualstudio.com/_packaging/AzurePortal/npm/registry/lodash/-/lodash-4.17.21.tgz#679591c564c3bffaae8454cf0b3df370c3d6911c"
   integrity sha1-Z5WRxWTDv/quhFTPCz3zcMPWkRw=
+
+log-symbols@^2.1.0:
+  version "2.2.0"
+  resolved "https://msazure.pkgs.visualstudio.com/_packaging/AzurePortal/npm/registry/log-symbols/-/log-symbols-2.2.0.tgz#5740e1c5d6f0dfda4ad9323b5332107ef6b4c40a"
+  integrity sha1-V0Dhxdbw39pK2TI7UzIQfva0xAo=
+  dependencies:
+    chalk "^2.0.1"
+
+loglevelnext@^1.0.1:
+  version "1.0.5"
+  resolved "https://msazure.pkgs.visualstudio.com/_packaging/AzurePortal/npm/registry/loglevelnext/-/loglevelnext-1.0.5.tgz#36fc4f5996d6640f539ff203ba819641680d75a2"
+  integrity sha1-NvxPWZbWZA9Tn/IDuoGWQWgNdaI=
+  dependencies:
+    es6-symbol "^3.1.1"
+    object.assign "^4.1.0"
 
 loose-envify@^1.0.0, loose-envify@^1.1.0, loose-envify@^1.4.0:
   version "1.4.0"
@@ -10836,7 +10890,7 @@ microevent.ts@~0.1.1:
   resolved "https://msazure.pkgs.visualstudio.com/_packaging/AzurePortal/npm/registry/microevent.ts/-/microevent.ts-0.1.1.tgz#70b09b83f43df5172d0205a63025bce0f7357fa0"
   integrity sha1-cLCbg/Q99RctAgWmMCW84Pc1f6A=
 
-micromatch@^3.1.10, micromatch@^3.1.4:
+micromatch@^3.1.10, micromatch@^3.1.4, micromatch@^3.1.9:
   version "3.1.10"
   resolved "https://msazure.pkgs.visualstudio.com/_packaging/AzurePortal/npm/registry/micromatch/-/micromatch-3.1.10.tgz#70859bc95c9840952f359a068a3fc49f9ecfac23"
   integrity sha1-cIWbyVyYQJUvNZoGij/En57PrCM=
@@ -10954,9 +11008,9 @@ minimatch@^5.0.1:
     brace-expansion "^2.0.1"
 
 minimist@^1.1.1, minimist@^1.1.3, minimist@^1.2.0, minimist@^1.2.5, minimist@^1.2.6:
-  version "1.2.6"
-  resolved "https://msazure.pkgs.visualstudio.com/_packaging/AzurePortal/npm/registry/minimist/-/minimist-1.2.6.tgz#8637a5b759ea0d6e98702cfb3a9283323c93af44"
-  integrity sha1-hjelt1nqDW6YcCz7OpKDMjyTr0Q=
+  version "1.2.7"
+  resolved "https://msazure.pkgs.visualstudio.com/_packaging/AzurePortal/npm/registry/minimist/-/minimist-1.2.7.tgz#daa1c4d91f507390437c6a8bc01078e7000c4d18"
+  integrity sha1-2qHE2R9Qc5BDfGqLwBB45wAMTRg=
 
 minipass-collect@^1.0.2:
   version "1.0.2"
@@ -11076,9 +11130,9 @@ multicast-dns@^7.2.5:
     thunky "^1.0.2"
 
 nan@^2.12.1, nan@^2.15.0:
-  version "2.16.0"
-  resolved "https://msazure.pkgs.visualstudio.com/_packaging/AzurePortal/npm/registry/nan/-/nan-2.16.0.tgz#664f43e45460fb98faf00edca0bb0d7b8dce7916"
-  integrity sha1-Zk9D5FRg+5j68A7coLsNe43OeRY=
+  version "2.17.0"
+  resolved "https://msazure.pkgs.visualstudio.com/_packaging/AzurePortal/npm/registry/nan/-/nan-2.17.0.tgz#c0150a2368a182f033e9aa5195ec76ea41a199cb"
+  integrity sha1-wBUKI2ihgvAz6apRlex26kGhmcs=
 
 nanoid@^3.3.1, nanoid@^3.3.4:
   version "3.3.4"
@@ -11133,6 +11187,11 @@ nested-error-stacks@^2.0.0, nested-error-stacks@^2.1.0:
   version "2.1.1"
   resolved "https://msazure.pkgs.visualstudio.com/_packaging/AzurePortal/npm/registry/nested-error-stacks/-/nested-error-stacks-2.1.1.tgz#26c8a3cee6cc05fbcf1e333cd2fc3e003326c0b5"
   integrity sha1-JsijzubMBfvPHjM80vw+ADMmwLU=
+
+next-tick@^1.1.0:
+  version "1.1.0"
+  resolved "https://msazure.pkgs.visualstudio.com/_packaging/AzurePortal/npm/registry/next-tick/-/next-tick-1.1.0.tgz#1836ee30ad56d67ef281b22bd199f709449b35eb"
+  integrity sha1-GDbuMK1W1n7ygbIr0Zn3CUSbNes=
 
 nice-try@^1.0.4:
   version "1.0.5"
@@ -12016,9 +12075,9 @@ postcss-custom-media@^8.0.2:
     postcss-value-parser "^4.2.0"
 
 postcss-custom-properties@^12.1.9:
-  version "12.1.9"
-  resolved "https://msazure.pkgs.visualstudio.com/_packaging/AzurePortal/npm/registry/postcss-custom-properties/-/postcss-custom-properties-12.1.9.tgz#0883429a7ef99f1ba239d1fea29ce84906daa8bd"
-  integrity sha1-CINCmn75nxuiOdH+opzoSQbaqL0=
+  version "12.1.10"
+  resolved "https://msazure.pkgs.visualstudio.com/_packaging/AzurePortal/npm/registry/postcss-custom-properties/-/postcss-custom-properties-12.1.10.tgz#624517179fd4cf50078a7a60f628d5782e7d4903"
+  integrity sha1-YkUXF5/Uz1AHinpg9ijVeC59SQM=
   dependencies:
     postcss-value-parser "^4.2.0"
 
@@ -12292,12 +12351,12 @@ postcss-modules-values@^4.0.0:
   dependencies:
     icss-utils "^5.0.0"
 
-postcss-nested@5.0.6:
-  version "5.0.6"
-  resolved "https://msazure.pkgs.visualstudio.com/_packaging/AzurePortal/npm/registry/postcss-nested/-/postcss-nested-5.0.6.tgz#466343f7fc8d3d46af3e7dba3fcd47d052a945bc"
-  integrity sha1-RmND9/yNPUavPn26P81H0FKpRbw=
+postcss-nested@6.0.0:
+  version "6.0.0"
+  resolved "https://msazure.pkgs.visualstudio.com/_packaging/AzurePortal/npm/registry/postcss-nested/-/postcss-nested-6.0.0.tgz#1572f1984736578f360cffc7eb7dca69e30d1735"
+  integrity sha1-FXLxmEc2V482DP/H633KaeMNFzU=
   dependencies:
-    postcss-selector-parser "^6.0.6"
+    postcss-selector-parser "^6.0.10"
 
 postcss-nesting@^10.2.0:
   version "10.2.0"
@@ -12500,7 +12559,7 @@ postcss-selector-not@^6.0.1:
   dependencies:
     postcss-selector-parser "^6.0.10"
 
-postcss-selector-parser@^6.0.0, postcss-selector-parser@^6.0.10, postcss-selector-parser@^6.0.2, postcss-selector-parser@^6.0.4, postcss-selector-parser@^6.0.5, postcss-selector-parser@^6.0.6, postcss-selector-parser@^6.0.9:
+postcss-selector-parser@^6.0.0, postcss-selector-parser@^6.0.10, postcss-selector-parser@^6.0.2, postcss-selector-parser@^6.0.4, postcss-selector-parser@^6.0.5, postcss-selector-parser@^6.0.9:
   version "6.0.10"
   resolved "https://msazure.pkgs.visualstudio.com/_packaging/AzurePortal/npm/registry/postcss-selector-parser/-/postcss-selector-parser-6.0.10.tgz#79b61e2c0d1bfc2602d549e11d0876256f8df88d"
   integrity sha1-ebYeLA0b/CYC1UnhHQh2JW+N+I0=
@@ -12536,10 +12595,10 @@ postcss@^7.0.14, postcss@^7.0.26, postcss@^7.0.32, postcss@^7.0.35, postcss@^7.0
     picocolors "^0.2.1"
     source-map "^0.6.1"
 
-postcss@^8.2.15, postcss@^8.3.5, postcss@^8.4.14, postcss@^8.4.4, postcss@^8.4.7:
-  version "8.4.17"
-  resolved "https://msazure.pkgs.visualstudio.com/_packaging/AzurePortal/npm/registry/postcss/-/postcss-8.4.17.tgz#f87863ec7cd353f81f7ab2dec5d67d861bbb1be5"
-  integrity sha1-+Hhj7HzTU/gferLexdZ9hhu7G+U=
+postcss@^8.2.15, postcss@^8.3.5, postcss@^8.4.17, postcss@^8.4.4, postcss@^8.4.7:
+  version "8.4.18"
+  resolved "https://msazure.pkgs.visualstudio.com/_packaging/AzurePortal/npm/registry/postcss/-/postcss-8.4.18.tgz#6d50046ea7d3d66a85e0e782074e7203bc7fbca2"
+  integrity sha1-bVAEbqfT1mqF4OeCB05yA7x/vKI=
   dependencies:
     nanoid "^3.3.4"
     picocolors "^1.0.0"
@@ -12769,14 +12828,7 @@ q@^1.1.2:
   resolved "https://msazure.pkgs.visualstudio.com/_packaging/AzurePortal/npm/registry/q/-/q-1.5.1.tgz#7e32f75b41381291d04611f1bf14109ac00651d7"
   integrity sha1-fjL3W0E4EpHQRhHxvxQQmsAGUdc=
 
-qs@6.10.3:
-  version "6.10.3"
-  resolved "https://msazure.pkgs.visualstudio.com/_packaging/AzurePortal/npm/registry/qs/-/qs-6.10.3.tgz#d6cde1b2ffca87b5aa57889816c5f81535e22e8e"
-  integrity sha1-1s3hsv/Kh7WqV4iYFsX4FTXiLo4=
-  dependencies:
-    side-channel "^1.0.4"
-
-qs@^6.10.0:
+qs@6.11.0, qs@^6.10.0:
   version "6.11.0"
   resolved "https://msazure.pkgs.visualstudio.com/_packaging/AzurePortal/npm/registry/qs/-/qs-6.11.0.tgz#fd0d963446f7a65e1367e01abd85429453f0c37a"
   integrity sha1-/Q2WNEb3pl4TZ+AavYVClFPww3o=
@@ -12929,25 +12981,20 @@ react-dev-utils@^12.0.1:
     text-table "^0.2.0"
 
 react-docgen-typescript-plugin@^1.0.0:
-  version "1.0.1"
-  resolved "https://msazure.pkgs.visualstudio.com/_packaging/AzurePortal/npm/registry/react-docgen-typescript-plugin/-/react-docgen-typescript-plugin-1.0.1.tgz#68383f567f09c42fe4a30e9d1168d6cdaa76664e"
-  integrity sha1-aDg/Vn8JxC/kow6dEWjWzap2Zk4=
+  version "1.0.2"
+  resolved "https://msazure.pkgs.visualstudio.com/_packaging/AzurePortal/npm/registry/react-docgen-typescript-plugin/-/react-docgen-typescript-plugin-1.0.2.tgz#79ad8eadb1b63e43575a1c75429dfdabbfd0d35d"
+  integrity sha1-ea2OrbG2PkNXWhx1Qp39q7/Q010=
   dependencies:
     debug "^4.1.1"
     endent "^2.0.1"
     find-cache-dir "^3.3.1"
     flat-cache "^3.0.4"
     micromatch "^4.0.2"
-    react-docgen-typescript "^1.22.0"
+    react-docgen-typescript "^2.2.2"
     tslib "^2.0.0"
     webpack-sources "^2.2.0"
 
-react-docgen-typescript@^1.22.0:
-  version "1.22.0"
-  resolved "https://msazure.pkgs.visualstudio.com/_packaging/AzurePortal/npm/registry/react-docgen-typescript/-/react-docgen-typescript-1.22.0.tgz#00232c8e8e47f4437cac133b879b3e9437284bee"
-  integrity sha1-ACMsjo5H9EN8rBM7h5s+lDcoS+4=
-
-react-docgen-typescript@^2.1.1:
+react-docgen-typescript@^2.1.1, react-docgen-typescript@^2.2.2:
   version "2.2.2"
   resolved "https://msazure.pkgs.visualstudio.com/_packaging/AzurePortal/npm/registry/react-docgen-typescript/-/react-docgen-typescript-2.2.2.tgz#4611055e569edc071204aadb20e1c93e1ab1659c"
   integrity sha1-RhEFXlae3AcSBKrbIOHJPhqxZZw=
@@ -13279,9 +13326,9 @@ regenerate@^1.4.2:
   integrity sha1-uTRtiCfo9aMve6KWN9OYtpAUhIo=
 
 regenerator-runtime@^0.13.2, regenerator-runtime@^0.13.4, regenerator-runtime@^0.13.7, regenerator-runtime@^0.13.9:
-  version "0.13.9"
-  resolved "https://msazure.pkgs.visualstudio.com/_packaging/AzurePortal/npm/registry/regenerator-runtime/-/regenerator-runtime-0.13.9.tgz#8925742a98ffd90814988d7566ad30ca3b263b52"
-  integrity sha1-iSV0Kpj/2QgUmI11Zq0wyjsmO1I=
+  version "0.13.10"
+  resolved "https://msazure.pkgs.visualstudio.com/_packaging/AzurePortal/npm/registry/regenerator-runtime/-/regenerator-runtime-0.13.10.tgz#ed07b19616bcbec5da6274ebc75ae95634bfc2ee"
+  integrity sha1-7Qexlha8vsXaYnTrx1rpVjS/wu4=
 
 regenerator-transform@^0.15.0:
   version "0.15.0"
@@ -13941,9 +13988,9 @@ shebang-regex@^3.0.0:
   integrity sha1-rhbxZE2HPsrYQ7AwexQzYtTEIXI=
 
 shell-quote@^1.7.3:
-  version "1.7.3"
-  resolved "https://msazure.pkgs.visualstudio.com/_packaging/AzurePortal/npm/registry/shell-quote/-/shell-quote-1.7.3.tgz#aa40edac170445b9a431e17bb62c0b881b9c4123"
-  integrity sha1-qkDtrBcERbmkMeF7tiwLiBucQSM=
+  version "1.7.4"
+  resolved "https://msazure.pkgs.visualstudio.com/_packaging/AzurePortal/npm/registry/shell-quote/-/shell-quote-1.7.4.tgz#33fe15dee71ab2a81fcbd3a52106c5cfb9fb75d8"
+  integrity sha1-M/4V3ucasqgfy9OlIQbFz7n7ddg=
 
 side-channel@^1.0.3, side-channel@^1.0.4:
   version "1.0.4"
@@ -14050,9 +14097,9 @@ source-list-map@^2.0.0, source-list-map@^2.0.1:
   integrity sha1-rbw2HZxi3zgBJefxYfccgm8eSQw=
 
 source-map-loader@^3.0.0:
-  version "3.0.1"
-  resolved "https://msazure.pkgs.visualstudio.com/_packaging/AzurePortal/npm/registry/source-map-loader/-/source-map-loader-3.0.1.tgz#9ae5edc7c2d42570934be4c95d1ccc6352eba52d"
-  integrity sha1-muXtx8LUJXCTS+TJXRzMY1LrpS0=
+  version "3.0.2"
+  resolved "https://msazure.pkgs.visualstudio.com/_packaging/AzurePortal/npm/registry/source-map-loader/-/source-map-loader-3.0.2.tgz#af23192f9b344daa729f6772933194cc5fa54fee"
+  integrity sha1-ryMZL5s0Tapyn2dykzGUzF+lT+4=
   dependencies:
     abab "^2.0.5"
     iconv-lite "^0.6.3"
@@ -14069,7 +14116,7 @@ source-map-resolve@^0.5.0:
     source-map-url "^0.4.0"
     urix "^0.1.0"
 
-source-map-support@^0.5.16, source-map-support@^0.5.6, source-map-support@~0.5.12, source-map-support@~0.5.20:
+source-map-support@^0.5.16, source-map-support@^0.5.3, source-map-support@^0.5.6, source-map-support@~0.5.12, source-map-support@~0.5.20:
   version "0.5.21"
   resolved "https://msazure.pkgs.visualstudio.com/_packaging/AzurePortal/npm/registry/source-map-support/-/source-map-support-0.5.21.tgz#04fe7c7f9e1ed2d662233c28cb2b35b9f63f6e4f"
   integrity sha1-BP58f54e0tZiIzwoyys1ufY/bk8=
@@ -14605,9 +14652,9 @@ synp@^1.9.10:
     sort-object-keys "^1.1.3"
 
 tailwindcss@^3.0.2:
-  version "3.1.8"
-  resolved "https://msazure.pkgs.visualstudio.com/_packaging/AzurePortal/npm/registry/tailwindcss/-/tailwindcss-3.1.8.tgz#4f8520550d67a835d32f2f4021580f9fddb7b741"
-  integrity sha1-T4UgVQ1nqDXTLy9AIVgPn923t0E=
+  version "3.2.1"
+  resolved "https://msazure.pkgs.visualstudio.com/_packaging/AzurePortal/npm/registry/tailwindcss/-/tailwindcss-3.2.1.tgz#1bd828fff3172489962357f8d531c184080a6786"
+  integrity sha1-G9go//MXJImWI1f41THBhAgKZ4Y=
   dependencies:
     arg "^5.0.2"
     chokidar "^3.5.3"
@@ -14615,18 +14662,19 @@ tailwindcss@^3.0.2:
     detective "^5.2.1"
     didyoumean "^1.2.2"
     dlv "^1.1.3"
-    fast-glob "^3.2.11"
+    fast-glob "^3.2.12"
     glob-parent "^6.0.2"
     is-glob "^4.0.3"
     lilconfig "^2.0.6"
+    micromatch "^4.0.5"
     normalize-path "^3.0.0"
     object-hash "^3.0.0"
     picocolors "^1.0.0"
-    postcss "^8.4.14"
+    postcss "^8.4.17"
     postcss-import "^14.1.0"
     postcss-js "^4.0.0"
     postcss-load-config "^3.1.4"
-    postcss-nested "5.0.6"
+    postcss-nested "6.0.0"
     postcss-selector-parser "^6.0.10"
     postcss-value-parser "^4.2.0"
     quick-lru "^5.1.1"
@@ -15010,6 +15058,16 @@ type-is@~1.6.18:
     media-typer "0.3.0"
     mime-types "~2.1.24"
 
+type@^1.0.1:
+  version "1.2.0"
+  resolved "https://msazure.pkgs.visualstudio.com/_packaging/AzurePortal/npm/registry/type/-/type-1.2.0.tgz#848dd7698dafa3e54a6c479e759c4bc3f18847a0"
+  integrity sha1-hI3XaY2vo+VKbEeedZxLw/GIR6A=
+
+type@^2.7.2:
+  version "2.7.2"
+  resolved "https://msazure.pkgs.visualstudio.com/_packaging/AzurePortal/npm/registry/type/-/type-2.7.2.tgz#2376a15a3a28b1efa0f5350dcf72d24df6ef98d0"
+  integrity sha1-I3ahWjoose+g9TUNz3LSTfbvmNA=
+
 typed-styles@^0.0.7:
   version "0.0.7"
   resolved "https://msazure.pkgs.visualstudio.com/_packaging/AzurePortal/npm/registry/typed-styles/-/typed-styles-0.0.7.tgz#93392a008794c4595119ff62dde6809dbc40a3d9"
@@ -15033,9 +15091,9 @@ typescript@^4.1.2:
   integrity sha1-xGSryhWWaVl75flriUNQCyOOYOY=
 
 ua-parser-js@^0.7.30:
-  version "0.7.31"
-  resolved "https://msazure.pkgs.visualstudio.com/_packaging/AzurePortal/npm/registry/ua-parser-js/-/ua-parser-js-0.7.31.tgz#649a656b191dffab4f21d5e053e27ca17cbff5c6"
-  integrity sha1-ZJplaxkd/6tPIdXgU+J8oXy/9cY=
+  version "0.7.32"
+  resolved "https://msazure.pkgs.visualstudio.com/_packaging/AzurePortal/npm/registry/ua-parser-js/-/ua-parser-js-0.7.32.tgz#cd8c639cdca949e30fa68c44b7813ef13e36d211"
+  integrity sha1-zYxjnNypSeMPpoxEt4E+8T420hE=
 
 uglify-js@^3.1.4:
   version "3.17.3"
@@ -15324,15 +15382,14 @@ util@^0.11.0:
     inherits "2.0.3"
 
 util@^0.12.4:
-  version "0.12.4"
-  resolved "https://msazure.pkgs.visualstudio.com/_packaging/AzurePortal/npm/registry/util/-/util-0.12.4.tgz#66121a31420df8f01ca0c464be15dfa1d1850253"
-  integrity sha1-ZhIaMUIN+PAcoMRkvhXfodGFAlM=
+  version "0.12.5"
+  resolved "https://msazure.pkgs.visualstudio.com/_packaging/AzurePortal/npm/registry/util/-/util-0.12.5.tgz#5f17a6059b73db61a875668781a1c2b136bd6fbc"
+  integrity sha1-XxemBZtz22GodWaHgaHCsTa9b7w=
   dependencies:
     inherits "^2.0.3"
     is-arguments "^1.0.4"
     is-generator-function "^1.0.7"
     is-typed-array "^1.1.3"
-    safe-buffer "^5.1.2"
     which-typed-array "^1.1.2"
 
 utila@~0.4:
@@ -15350,7 +15407,7 @@ uuid-browser@^3.1.0:
   resolved "https://msazure.pkgs.visualstudio.com/_packaging/AzurePortal/npm/registry/uuid-browser/-/uuid-browser-3.1.0.tgz#0f05a40aef74f9e5951e20efbf44b11871e56410"
   integrity sha1-DwWkCu90+eWVHiDvv0SxGHHlZBA=
 
-uuid@^3.3.2:
+uuid@^3.1.0, uuid@^3.3.2:
   version "3.4.0"
   resolved "https://msazure.pkgs.visualstudio.com/_packaging/AzurePortal/npm/registry/uuid/-/uuid-3.4.0.tgz#b23e4358afa8a202fe7a100af1f5f883f02007ee"
   integrity sha1-sj5DWK+oogL+ehAK8fX4g/AgB+4=
@@ -15625,6 +15682,16 @@ webpack-hot-middleware@^2.25.1:
     ansi-html-community "0.0.8"
     html-entities "^2.1.0"
     strip-ansi "^6.0.0"
+
+webpack-log@^1.2.0:
+  version "1.2.0"
+  resolved "https://msazure.pkgs.visualstudio.com/_packaging/AzurePortal/npm/registry/webpack-log/-/webpack-log-1.2.0.tgz#a4b34cda6b22b518dbb0ab32e567962d5c72a43d"
+  integrity sha1-pLNM2msitRjbsKsy5WeWLVxypD0=
+  dependencies:
+    chalk "^2.1.0"
+    log-symbols "^2.1.0"
+    loglevelnext "^1.0.1"
+    uuid "^3.1.0"
 
 webpack-log@^2.0.0:
   version "2.0.0"
