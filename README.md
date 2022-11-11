@@ -1,83 +1,54 @@
 ---
-ArtifactType: nupkg, executable, azure-web-app, azure-cloud-service, etc. More requirements for artifact type standardization may come later.
-Documentation: URL
-Language: typescript, csharp, java, js, python, golang, powershell, markdown, etc. More requirements for language names standardization may come later.
-Platform: windows, node, linux, ubuntu16, azure-function, etc. More requirements for platform standardization may come later.
+ArtifactType: nupkg, azure-web-app
+Documentation: URL  // TODO mukeshag: put the PPE storybook url here
+Language: typescript
+Platform: windows
 Stackoverflow: URL
-Tags: comma,separated,list,of,tags
+Tags: cognitive-services-studios
 ---
 
-# Project Title. MUST BE topmost header
+# Azure Cognitive Services Studios : Shared Components
 
-One Paragraph of project description goes here. Including links to other user docs or a project website is good here as well. This paragraph will be used as a blurb on CodeHub. Please make the first paragraph short and to the point.
+Build faster, more consistent experiences, with fewer distinct bug for the studio UX investments by delivering shared components that can be reused across the studios (e.g. authentication, sign-in, navigation, breadcrumbs, grid view, lists, etc.).​
 
-You can expand on project description in subsequent paragraphs. It is a good practice to explain how this project is used and what other projects depend on it.
+Eg: Reduce duplicate accessibility bugs across studios that have distinct resolutions (e.g. studio X uses button for some breadcrumbs, studio B uses link for breadcrumbs). Both get accessibility bugs and must be resolved independently to achieve our grade C goal.
 
 ## Getting Started
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
-
 ### Prerequisites
 
-What things you need to install the software and how to install them
-
-``` powershell
-Give examples
-```
+Visual Studio Code
+Access to the repo: TODO sharad - add the steps
 
 ### Installing
 
-A step by step series of examples that tell you how to get a development environment running
-
-1. Describe what needs to be done first
-
-    ``` batch
-    Give an example of performing step 1
-    ```
-
-2. And then repeat for each step
-
-    ``` sh
-    Another example, this time for step 2
-    ```
+'cd src/SharedUI.Studios/ClientApp'
+'yarn startup'
+'yarn start'
 
 ## Running the tests
 
-Explain how to run the tests for this project that are relevant to users. You can also link to the testing portion of [CONTRIBUTING.md](CONTRIBUTING.md) for tests relevant to contributors.
+Steps to test a component:
 
-### End-to-end tests
-
-Explain what these tests test and why
-
-```
-Give an example
-```
-
-### Unit tests
-
-Explain what these test and why
-
-```
-Give examples
-```
+* If adding a new test, write the tests in '<component-name>.spec.ts' under 'tests' folder.
+* Run 'npx playwright test <test-name>' to run a particular test.
+* 'npx playwright test' runs all tests.
+* 'npx playwright show-report' displays the HTML report.
+* 'npx playwright codegen <URL>' helps in generating the tests.
+* 'npx playwright test --trace on' helps in tracing the tests.
 
 ## Deployment
 
+TODO mukeshag
 Add additional notes about how to deploy this on a live system
 
 ## Built With
 
-Documenting some of the main tools used to build this project, manage dependencies, etc will help users get more information if they are trying to understand or having difficulties getting the project up and running.
-
-* Link to some dependency manager
-* Link to some framework or build tool
-* Link to some compiler, linting tool, bundler, etc
-
-## Contributing
-
-Please read our [CONTRIBUTING.md](CONTRIBUTING.md) which outlines all of our policies, procedures, and requirements for contributing to this project.
+- storybook
+- microsoft fluent ui
 
 ## Versioning and changelog
+TODO mukeshag
 
 We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](link-to-tags-or-other-release-location).
 
@@ -85,19 +56,7 @@ It is a good practice to keep `CHANGELOG.md` file in repository that can be upda
 
 ## Authors
 
-List main authors of this project with a couple of words about their contribution.
-
-Also insert a link to the `owners.txt` file if it exists as well as any other dashboard or other resources that lists all contributors to the project.
-
-## License
-
-This project is licensed under the < INSERT LICENSE NAME > - see the [LICENSE](LICENSE) file for details
-
-## Acknowledgments
-
-* Hat tip to anyone whose code was used
-* Inspiration
-* etc
+Refer [owners.txt](https://msazure.visualstudio.com/Cognitive%20Services/_git/Cognitive-Services-Shared-UI-Components?path=/owners.txt)
 
 ## Troubleshooting
 

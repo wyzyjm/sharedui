@@ -19,7 +19,7 @@ const path = require('path');
       rules: [
         {
           test: /\.(js|jsx)$/,
-          exclude: [/node_modules/, /\.stories\.tsx$/,],
+          exclude: [/node_modules/, /\.stories\.tsx$/, /\.spec\.ts$/],
           use: {
             loader: "babel-loader",
           },
