@@ -9,4 +9,5 @@ export type { LinkProps } from "./components/core/Link";
 export { StyledBreadcrumb } from "./components/core/Breadcrumb";
 export type { DefaultBreadcrumbProps } from "./components/core/Breadcrumb";
 export { Checkbox } from "./components/core/Checkbox";
-
+export { ChoiceGroup } from "./components/core/Choicegroup";
+export type { IChoiceGroupProps } from "./components/core/Choicegroup";
