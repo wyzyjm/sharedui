@@ -17,17 +17,26 @@ function buttonId(props: {interaction?:HaTSInteraction,autoFlyout:boolean,button
     return `hats-${analyticsComponent}-${autoFlyout ? 'autoflyout' : 'manual'}-${button}`;
 }
 
-export const HaTSArea = (props: { 
+export interface HatsProps {
     onClose: () => void; 
     interaction?: HaTSInteraction; 
-    autoFlyout?: boolean;
+    autoFlyout?: boolean | false;
     headerText:string;
     surveyLink:string;
- }) => {
-    const [loading, setLoading] = useState(true);
-    const { onClose, interaction, autoFlyout=false, headerText, surveyLink } = props; 
+    isOpen?: boolean | true;
+}
 
+export const HaTSArea = (props: HatsProps) => {
+    const [loading, setLoading] = useState(true);
+    const { onClose, interaction, autoFlyout=false, headerText, surveyLink, isOpen } = props;
+    const [isPanelOpen, setIsPanelOpen] = useState(isOpen)
+
+    if (!surveyLink || !surveyLink.length) {
+        throw new Error("Survey Link is not passed for the HaTSArea component");
+    }
+ 
     function onDismiss() {
+        setIsPanelOpen(false);
         onClose?.();
     }
     
@@ -36,12 +45,12 @@ export const HaTSArea = (props: {
     }
     
     return (
-        <Panel
+         <Panel
             className="profile-6te3ri77ie"
-            isOpen={true}
+            isOpen={isPanelOpen}
             onDismiss={onDismiss}
             type={PanelType.custom}
-            customWidth={"480px"}
+            customWidth={"380px"}
             style={{ top: "40px" }}
             isLightDismiss
             onLightDismissClick={onLightDismissClick}
@@ -68,6 +77,6 @@ export const HaTSArea = (props: {
                     setLoading(false);
                 }}
             />
-        </Panel>
+            </Panel>
     );
 };
