@@ -2505,6 +2505,28 @@
   dependencies:
     "@sinonjs/commons" "^1.7.0"
 
+"@storybook/addon-a11y@^6.5.12":
+  "integrity" "sha1-OTSxLcLzv3oaG8ZgqnuEuFa8K2w="
+  "resolved" "https://msazure.pkgs.visualstudio.com/_packaging/AzurePortal/npm/registry/@storybook/addon-a11y/-/addon-a11y-6.5.13.tgz"
+  "version" "6.5.13"
+  dependencies:
+    "@storybook/addons" "6.5.13"
+    "@storybook/api" "6.5.13"
+    "@storybook/channels" "6.5.13"
+    "@storybook/client-logger" "6.5.13"
+    "@storybook/components" "6.5.13"
+    "@storybook/core-events" "6.5.13"
+    "@storybook/csf" "0.0.2--canary.4566f4d.1"
+    "@storybook/theming" "6.5.13"
+    "axe-core" "^4.2.0"
+    "core-js" "^3.8.2"
+    "global" "^4.4.0"
+    "lodash" "^4.17.21"
+    "react-sizeme" "^3.0.1"
+    "regenerator-runtime" "^0.13.7"
+    "ts-dedent" "^2.0.0"
+    "util-deprecate" "^1.0.2"
+
 "@storybook/addon-actions@^6.5.12", "@storybook/addon-actions@6.5.12":
   "integrity" "sha1-nSvzv/pBz0+SxyIMj246P12lUBk="
   "resolved" "https://msazure.pkgs.visualstudio.com/_packaging/AzurePortal/npm/registry/@storybook/addon-actions/-/addon-actions-6.5.12.tgz"
@@ -2750,6 +2772,23 @@
     "global" "^4.4.0"
     "regenerator-runtime" "^0.13.7"
 
+"@storybook/addons@6.5.13":
+  "integrity" "sha1-YexeqweHlADUI9YLs5eIDRDuXnM="
+  "resolved" "https://msazure.pkgs.visualstudio.com/_packaging/AzurePortal/npm/registry/@storybook/addons/-/addons-6.5.13.tgz"
+  "version" "6.5.13"
+  dependencies:
+    "@storybook/api" "6.5.13"
+    "@storybook/channels" "6.5.13"
+    "@storybook/client-logger" "6.5.13"
+    "@storybook/core-events" "6.5.13"
+    "@storybook/csf" "0.0.2--canary.4566f4d.1"
+    "@storybook/router" "6.5.13"
+    "@storybook/theming" "6.5.13"
+    "@types/webpack-env" "^1.16.0"
+    "core-js" "^3.8.2"
+    "global" "^4.4.0"
+    "regenerator-runtime" "^0.13.7"
+
 "@storybook/api@6.5.12":
   "integrity" "sha1-fMggh/ySmL4D8Vv0q5xKqylLO6w="
   "resolved" "https://msazure.pkgs.visualstudio.com/_packaging/AzurePortal/npm/registry/@storybook/api/-/api-6.5.12.tgz"
@@ -2762,6 +2801,29 @@
     "@storybook/router" "6.5.12"
     "@storybook/semver" "^7.3.2"
     "@storybook/theming" "6.5.12"
+    "core-js" "^3.8.2"
+    "fast-deep-equal" "^3.1.3"
+    "global" "^4.4.0"
+    "lodash" "^4.17.21"
+    "memoizerific" "^1.11.3"
+    "regenerator-runtime" "^0.13.7"
+    "store2" "^2.12.0"
+    "telejson" "^6.0.8"
+    "ts-dedent" "^2.0.0"
+    "util-deprecate" "^1.0.2"
+
+"@storybook/api@6.5.13":
+  "integrity" "sha1-hnHlgHIf9o0gn83il1+WeuebfWQ="
+  "resolved" "https://msazure.pkgs.visualstudio.com/_packaging/AzurePortal/npm/registry/@storybook/api/-/api-6.5.13.tgz"
+  "version" "6.5.13"
+  dependencies:
+    "@storybook/channels" "6.5.13"
+    "@storybook/client-logger" "6.5.13"
+    "@storybook/core-events" "6.5.13"
+    "@storybook/csf" "0.0.2--canary.4566f4d.1"
+    "@storybook/router" "6.5.13"
+    "@storybook/semver" "^7.3.2"
+    "@storybook/theming" "6.5.13"
     "core-js" "^3.8.2"
     "fast-deep-equal" "^3.1.3"
     "global" "^4.4.0"
@@ -2903,6 +2965,15 @@
     "ts-dedent" "^2.0.0"
     "util-deprecate" "^1.0.2"
 
+"@storybook/channels@6.5.13":
+  "integrity" "sha1-8/hrkKeDJITuPcvGhF9aR/YvAo8="
+  "resolved" "https://msazure.pkgs.visualstudio.com/_packaging/AzurePortal/npm/registry/@storybook/channels/-/channels-6.5.13.tgz"
+  "version" "6.5.13"
+  dependencies:
+    "core-js" "^3.8.2"
+    "ts-dedent" "^2.0.0"
+    "util-deprecate" "^1.0.2"
+
 "@storybook/client-api@>=6.4.0", "@storybook/client-api@6.5.12":
   "integrity" "sha1-nQKyqPXUE3kYJXdC1yrhDGpwpHc="
   "resolved" "https://msazure.pkgs.visualstudio.com/_packaging/AzurePortal/npm/registry/@storybook/client-api/-/client-api-6.5.12.tgz"
@@ -2937,6 +3008,14 @@
     "core-js" "^3.8.2"
     "global" "^4.4.0"
 
+"@storybook/client-logger@6.5.13":
+  "integrity" "sha1-g/My3Zu0/xaW0WsMwkVh35CQUmQ="
+  "resolved" "https://msazure.pkgs.visualstudio.com/_packaging/AzurePortal/npm/registry/@storybook/client-logger/-/client-logger-6.5.13.tgz"
+  "version" "6.5.13"
+  dependencies:
+    "core-js" "^3.8.2"
+    "global" "^4.4.0"
+
 "@storybook/components@6.5.12":
   "integrity" "sha1-4TfwaD6pLiLeEWv6Ys/WXOTv4B0="
   "resolved" "https://msazure.pkgs.visualstudio.com/_packaging/AzurePortal/npm/registry/@storybook/components/-/components-6.5.12.tgz"
@@ -2945,6 +3024,20 @@
     "@storybook/client-logger" "6.5.12"
     "@storybook/csf" "0.0.2--canary.4566f4d.1"
     "@storybook/theming" "6.5.12"
+    "core-js" "^3.8.2"
+    "memoizerific" "^1.11.3"
+    "qs" "^6.10.0"
+    "regenerator-runtime" "^0.13.7"
+    "util-deprecate" "^1.0.2"
+
+"@storybook/components@6.5.13":
+  "integrity" "sha1-oF/JaUWHYLNI1kDybCytMQqzUDA="
+  "resolved" "https://msazure.pkgs.visualstudio.com/_packaging/AzurePortal/npm/registry/@storybook/components/-/components-6.5.13.tgz"
+  "version" "6.5.13"
+  dependencies:
+    "@storybook/client-logger" "6.5.13"
+    "@storybook/csf" "0.0.2--canary.4566f4d.1"
+    "@storybook/theming" "6.5.13"
     "core-js" "^3.8.2"
     "memoizerific" "^1.11.3"
     "qs" "^6.10.0"
@@ -3037,6 +3130,13 @@
   "integrity" "sha1-KL1yfMQhYBJAm/rEEvy3CDRsVrw="
   "resolved" "https://msazure.pkgs.visualstudio.com/_packaging/AzurePortal/npm/registry/@storybook/core-events/-/core-events-6.5.12.tgz"
   "version" "6.5.12"
+  dependencies:
+    "core-js" "^3.8.2"
+
+"@storybook/core-events@6.5.13":
+  "integrity" "sha1-qMDMkmlPCZgcplAdXF7zKNsY24o="
+  "resolved" "https://msazure.pkgs.visualstudio.com/_packaging/AzurePortal/npm/registry/@storybook/core-events/-/core-events-6.5.13.tgz"
+  "version" "6.5.13"
   dependencies:
     "core-js" "^3.8.2"
 
@@ -3371,6 +3471,17 @@
     "qs" "^6.10.0"
     "regenerator-runtime" "^0.13.7"
 
+"@storybook/router@6.5.13":
+  "integrity" "sha1-yL/tlvI0Owl9QWz8lRlAODZfzpQ="
+  "resolved" "https://msazure.pkgs.visualstudio.com/_packaging/AzurePortal/npm/registry/@storybook/router/-/router-6.5.13.tgz"
+  "version" "6.5.13"
+  dependencies:
+    "@storybook/client-logger" "6.5.13"
+    "core-js" "^3.8.2"
+    "memoizerific" "^1.11.3"
+    "qs" "^6.10.0"
+    "regenerator-runtime" "^0.13.7"
+
 "@storybook/semver@^7.3.2":
   "integrity" "sha1-87nEShyaC5M8BOZtAEj88voQ2sA="
   "resolved" "https://msazure.pkgs.visualstudio.com/_packaging/AzurePortal/npm/registry/@storybook/semver/-/semver-7.3.2.tgz"
@@ -3458,6 +3569,16 @@
   "version" "6.5.12"
   dependencies:
     "@storybook/client-logger" "6.5.12"
+    "core-js" "^3.8.2"
+    "memoizerific" "^1.11.3"
+    "regenerator-runtime" "^0.13.7"
+
+"@storybook/theming@6.5.13":
+  "integrity" "sha1-P5Beufct3CjQljhCkJmQV5h/MIM="
+  "resolved" "https://msazure.pkgs.visualstudio.com/_packaging/AzurePortal/npm/registry/@storybook/theming/-/theming-6.5.13.tgz"
+  "version" "6.5.13"
+  dependencies:
+    "@storybook/client-logger" "6.5.13"
     "core-js" "^3.8.2"
     "memoizerific" "^1.11.3"
     "regenerator-runtime" "^0.13.7"
@@ -5154,7 +5275,7 @@
     "source-map-support" "^0.5.3"
     "webpack-log" "^1.2.0"
 
-"axe-core@^4.4.3":
+"axe-core@^4.2.0", "axe-core@^4.4.3":
   "integrity" "sha1-EcdNI9UBPA+l0YN5Zym8NIK9L28="
   "resolved" "https://msazure.pkgs.visualstudio.com/_packaging/AzurePortal/npm/registry/axe-core/-/axe-core-4.4.3.tgz"
   "version" "4.4.3"
@@ -5423,6 +5544,11 @@
   dependencies:
     "arr-union" "^3.1.0"
     "is-windows" "^1.0.1"
+
+"batch-processor@1.0.0":
+  "integrity" "sha1-dclcMrdI4IUNEMKxaPa9vpiRrOg="
+  "resolved" "https://msazure.pkgs.visualstudio.com/_packaging/AzurePortal/npm/registry/batch-processor/-/batch-processor-1.0.0.tgz"
+  "version" "1.0.0"
 
 "batch@0.6.1":
   "integrity" "sha1-3DQxT05nkxgJP8dgJyUl+UvyXBY="
@@ -7428,6 +7554,13 @@
   "integrity" "sha1-YQRtHkyrOiUjj2v3QTeVJw8SVZI="
   "resolved" "https://msazure.pkgs.visualstudio.com/_packaging/AzurePortal/npm/registry/electron-to-chromium/-/electron-to-chromium-1.4.284.tgz"
   "version" "1.4.284"
+
+"element-resize-detector@^1.2.2":
+  "integrity" "sha1-PmxZgt13UItfp+bVwCFw4mMlybE="
+  "resolved" "https://msazure.pkgs.visualstudio.com/_packaging/AzurePortal/npm/registry/element-resize-detector/-/element-resize-detector-1.2.4.tgz"
+  "version" "1.2.4"
+  dependencies:
+    "batch-processor" "1.0.0"
 
 "elliptic@^6.5.3":
   "integrity" "sha1-2jfOvTHnmhNn6UG1ku0fvr1Yq7s="
@@ -9478,6 +9611,13 @@
   "integrity" "sha1-GnigtZZcQKVBbQB61vUK0nxBffk="
   "resolved" "https://msazure.pkgs.visualstudio.com/_packaging/AzurePortal/npm/registry/interpret/-/interpret-2.2.0.tgz"
   "version" "2.2.0"
+
+"invariant@^2.2.4":
+  "integrity" "sha1-YQ88ksk1nOHbYW5TgAjSP/NRWOY="
+  "resolved" "https://msazure.pkgs.visualstudio.com/_packaging/AzurePortal/npm/registry/invariant/-/invariant-2.2.4.tgz"
+  "version" "2.2.4"
+  dependencies:
+    "loose-envify" "^1.0.0"
 
 "ip-regex@^2.1.0":
   "integrity" "sha1-+ni/XS5pE8kRzp+BnuUUa7bYROk="
@@ -13675,6 +13815,16 @@
   optionalDependencies:
     "fsevents" "^2.3.2"
 
+"react-sizeme@^3.0.1":
+  "integrity" "sha1-Si8WeQW6j4uNkyqeNRZORZ+QIOQ="
+  "resolved" "https://msazure.pkgs.visualstudio.com/_packaging/AzurePortal/npm/registry/react-sizeme/-/react-sizeme-3.0.2.tgz"
+  "version" "3.0.2"
+  dependencies:
+    "element-resize-detector" "^1.2.2"
+    "invariant" "^2.2.4"
+    "shallowequal" "^1.1.0"
+    "throttle-debounce" "^3.0.1"
+
 "react-textarea-autosize@^6.1.0":
   "integrity" "sha1-35E4f4qPIgILd+ODPAmCnXBqCaU="
   "resolved" "https://msazure.pkgs.visualstudio.com/_packaging/AzurePortal/npm/registry/react-textarea-autosize/-/react-textarea-autosize-6.1.0.tgz"
@@ -15488,6 +15638,11 @@
   "integrity" "sha1-1RT+2tlXQMEsLX/HDqhj61Gt43U="
   "resolved" "https://msazure.pkgs.visualstudio.com/_packaging/AzurePortal/npm/registry/throat/-/throat-6.0.1.tgz"
   "version" "6.0.1"
+
+"throttle-debounce@^3.0.1":
+  "integrity" "sha1-MvlNhN+olPeGyaHykOemRbahmrs="
+  "resolved" "https://msazure.pkgs.visualstudio.com/_packaging/AzurePortal/npm/registry/throttle-debounce/-/throttle-debounce-3.0.1.tgz"
+  "version" "3.0.1"
 
 "through2@^2.0.0":
   "integrity" "sha1-AcHjnrMdB8t9A6lqcIIyYLIxMs0="
