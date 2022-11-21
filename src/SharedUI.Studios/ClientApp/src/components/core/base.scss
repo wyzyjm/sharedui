@@ -1,0 +1,80 @@
+/** Mobile support start **/
+
+// 1200px
+@media (max-width: 1200px) {
+    .container-inside-content,
+    .container-inside-header {
+      padding: 0 10px !important;
+    }
+  }
+  
+  // 768px
+  @media (max-width: 768px) {
+    .hidden_medium {
+      display: none !important;
+    }
+  }
+  
+  // 600px
+  @media (max-width: 600px) {
+    .hidden_little {
+      display: none !important;
+    }
+  }
+  // 600px
+  @media (max-width: 600px) {
+    .show_little {
+      display: block !important;
+    }
+  }
+  
+  // 500px
+  @media (max-width: 500px) {
+    .hidden_small {
+      display: none !important;
+    }
+  }
+  
+  // main
+  .container-content {
+    overflow-y: auto;
+    overflow-x: hidden;
+    flex: 1;
+  }
+  
+  // wrapped
+  .container-inside-wrap {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+  
+  .container-inside-header {
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+  }
+  
+  // body
+  .container-inside-content {
+    overflow-y: overlay;
+    flex: 1;
+  }
+  // content-body
+  .container-inside-content--body {
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+  }
+  
+  button.ms-Link {
+    &:focus {
+      outline: none;
+    }
+  }
+  
+  a {
+    &:focus {
+      text-decoration: underline;
+    }
+  }

@@ -14,5 +14,7 @@ export { Link } from "./components/core/Link";
 export type { LinkProps } from "./components/core/Link";
 export { ChoiceGroup } from "./components/core/Choicegroup";
 export type { IChoiceGroupProps } from "./components/core/Choicegroup";
+export { ThemedHeader } from "./components/core/Header/Header";
+export type { IHeaderProps } from "./components/core/Header/Header";
 export { SearchBox } from "./components/core/Searchbox";
 export type { ISearchBoxProps } from "./components/core/Searchbox";

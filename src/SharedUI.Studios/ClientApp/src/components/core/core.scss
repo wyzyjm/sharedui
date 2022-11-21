@@ -1,0 +1,272 @@
+@import "./colors.scss";
+
+// @font-face {
+//   font-family: winjs-symbols;
+//   src: url("./winjs-symbols.ttf");
+// }
+
+$font-family: "Segoe UI", SegoeUI, "Segoe WP", Tahoma, Arial, sans-serif;
+$font-family-icon: Full MDL2 Assets;
+$font-family-winjs-symbols: winjs-symbols;
+
+/* Small devices (tablets, 768px and up) */
+$screen-sm-min: 768px;
+
+/* Medium devices (desktops, 992px and up) */
+$screen-md-min: 992px;
+
+/* Large devices (large desktops, 1200px and up) */
+$screen-lg-min: 1200px;
+
+$modal-width: 40rem;
+
+$z-index-button: 30;
+$z-index-header: 100;
+$z-index-quick-start: 200;
+$z-index-bubble: 300;
+$z-index-modal-show: 999;
+
+html {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  color: $color-default;
+  font-family: $font-family;
+  overflow-x: hidden;
+}
+
+button.small-button {
+  min-width: 86px;
+  height: 37px;
+}
+
+button.medium-button {
+  min-width: 122px;
+  height: 37px;
+}
+
+button.large-button {
+  min-width: 158px;
+  height: 37px;
+}
+
+button.orange-button {
+  background-color: $color-sapphire;
+  border-color: $color-sapphire;
+
+  .inactive {
+    background-color: $color-gray;
+    border-color: $color-gray;
+  }
+}
+
+a {
+  color: inherit;
+
+  &:hover {
+    color: inherit;
+    text-decoration: unset;
+  }
+}
+
+a.underline {
+  text-decoration: underline;
+}
+
+a.medium-small-button {
+  min-width: 110px;
+  height: 35px;
+}
+
+a.orange-border-button {
+  border: 1px solid $color-sapphire;
+  box-sizing: border-box;
+  color: $color-sapphire !important;
+  background-color: $color-white !important;
+  cursor: pointer;
+
+  &:hover {
+    color: $color-white !important;
+    background-color: $color-sapphire !important;
+  }
+}
+
+.text-xlg {
+  font-size: 50px;
+  line-height: 60px;
+}
+
+@media (min-width: $screen-sm-min) {
+  .text-xlg {
+    font-size: 60px;
+    line-height: 70px;
+  }
+}
+
+@media all and (min-width: $screen-lg-min) {
+  .text-xlg {
+    font-size: 60px;
+    line-height: 70px;
+  }
+}
+
+.text-lg {
+  font-size: 36px;
+  line-height: 46px;
+}
+
+@media (min-width: $screen-sm-min) {
+  .text-lg {
+    font-size: 46px;
+    line-height: 56px;
+  }
+}
+
+@media all and (min-width: $screen-lg-min) {
+  .text-lg {
+    font-size: 46px;
+    line-height: 56px;
+  }
+}
+
+.text-xxmd {
+  font-size: 34px;
+  line-height: 48px;
+}
+
+.text-xmd {
+  font-size: 30px;
+}
+
+.text-md {
+  font-size: 26px;
+  line-height: 36px;
+}
+
+.btn {
+  border-radius: 0;
+}
+
+.form-control:focus {
+  box-shadow: none;
+}
+
+@media all and (min-width: $screen-sm-min) {
+  .text-md {
+    font-size: 30px;
+    line-height: 42px;
+  }
+}
+
+@media all and (min-width: $screen-lg-min) {
+  .text-md {
+    font-size: 30px;
+    line-height: 42px;
+  }
+}
+
+.text-smd {
+  font-size: 24px;
+  line-height: 36px;
+}
+
+@media all and (min-width: $screen-sm-min) {
+  .text-smd {
+    font-size: 24px;
+    line-height: 36px;
+  }
+}
+
+@media all and (min-width: $screen-lg-min) {
+  .text-smd {
+    font-size: 24px;
+    line-height: 36px;
+  }
+}
+
+.text-sm {
+  font-size: 18px;
+  line-height: 28px;
+}
+
+@media all and (min-width: $screen-sm-min) {
+  .text-sm {
+    font-size: 15px;
+    line-height: 28px;
+  }
+}
+
+@media all and (min-width: $screen-lg-min) {
+  .text-sm {
+    font-size: 15px;
+    line-height: 28px;
+  }
+}
+
+.text-xs {
+  font-size: 16px;
+  line-height: 24px;
+}
+
+@media all and (min-width: $screen-sm-min) {
+  .text-xs {
+    font-size: 16px;
+    line-height: 24px;
+  }
+}
+
+@media all and (min-width: $screen-lg-min) {
+  .text-xs {
+    font-size: 16px;
+    line-height: 24px;
+  }
+}
+
+.text-xxs {
+  font-size: 14px;
+  line-height: 18px;
+}
+
+@media all and (min-width: $screen-sm-min) {
+  .text-xxs {
+    font-size: 14px;
+    line-height: 18px;
+  }
+}
+
+@media all and (min-width: $screen-lg-min) {
+  .text-xxs {
+    font-size: 14px;
+    line-height: 18px;
+  }
+}
+
+@media screen and (-ms-high-contrast: active) {
+  button,
+  .button {
+    border: 1px solid !important;
+
+    &:focus {
+      border-color: highlight;
+    }
+  }
+
+  svg {
+    fill: currentColor;
+  }
+
+  button.ms-Dropdown-item {
+    &:hover,
+    &:active,
+    &:focus {
+      forced-color-adjust: none;
+      background-color: highlight;
+      color: highlighttext;
+      border-color: highlight;
+    }
+  }
+}

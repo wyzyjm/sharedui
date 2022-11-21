@@ -37,6 +37,11 @@ export class StorybookTestPOM {
         return this._frame.locator(selector);
     }
 
+    public async getByRole(elementType: string, obj: object) {
+        this._frame = this._frame || (await this._getPreviewFrame());
+        return this._frame.getByRole(elementType, obj);
+    }
+
     public async getComputedStyle(element: Locator, propertyName: string) {
         return element.evaluate((el, property)  => {
             return window.getComputedStyle(el).getPropertyValue(property);
