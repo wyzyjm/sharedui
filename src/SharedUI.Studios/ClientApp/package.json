@@ -1,10 +1,10 @@
 {
   "name": "sharedui.studios",
-  "version": "0.1.0",
-  "private": true,
-  "publishConfig": {
-    "registry": "https://msazure.pkgs.visualstudio.com/_packaging/CognitiveServices/npm/registry/"
-  },
+  "version": "0.1.1",
+  "private": false,
+  "files": [
+    "dist/package"
+  ],
   "dependencies": {
     "@fluentui/react": "^8.0.0",
     "@fluentui/react-theme-provider": "^0.18.5",

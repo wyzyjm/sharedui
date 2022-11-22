@@ -27,7 +27,7 @@ Banner.args = {
         onClose: ()=>{},
         autoFlyout: false,
         headerText: "Feedback",
-        surveyLink: "https://microsoft.qualtrics.com/jfe/form/SV_40zWLBFYILTkRWl?Kind=FormRecognizer&From=Studio",
+        surveyLink: "https://microsoft.qualtrics.com/jfe/form/SV_40zWLBFYILTkRWl?Kind=FormRecognizer&From=Preview",
         isOpen: true,
         interaction: HaTSInteraction.AutoFlyout
     }

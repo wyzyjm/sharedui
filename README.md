@@ -47,6 +47,16 @@ Add additional notes about how to deploy this on a live system
 - storybook
 - microsoft fluent ui
 
+## Process for publishing a package to NPM (typically DIF contributions)
+Run the command: 
+npm publish -registry https://msazure.pkgs.visualstudio.com/a531312f-ba7b-4573-ab4f-d468b740a319/_packaging/CognitiveIbizaPortalExtension/npm/registry/
+
+If the above doesnt work: This can be done from VSCode. Get the latest master branch for the repo/package you want to publish. Install all dependencies and ensure that it builds and passes all tests.
+1. `npm adduser` - add your NPM user details to the VSCode session, this should include entering 2FA.
+2. `npm version patch` - updates the version of the repo.
+3. `npm publish` - this publishes the package. You should be challenged for 2FA again. If not means you don't have 2FA enabled on your NPM account. Do so for next time.
+4. `git commit` version change.
+
 ## Versioning and changelog
 TODO mukeshag
 

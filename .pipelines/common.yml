@@ -95,3 +95,10 @@ stages:
           signing_profile: 'internal_azure_service'
           files_to_sign: '!*.nd.dll;!*.gdn\**;!**/*lcl*\**;!**/*lcl*.*;!**/*gdn*\**;**/*.exe;**/*.dll;**/*.ps1;**/Ev2Artifacts/bin/OpenAIStudio.zip*\**;'
           search_root: '$(Build.SourcesDirectory)\out'
+
+      # - task: npmAuthenticate@0
+      #   inputs:
+      #     workingFile: '$(Build.SourcesDirectory)\src\SharedUI.Studios\ClientApp\publishTools\.npmrc'
+
+      # - script: npm publish -registry https://msazure.pkgs.visualstudio.com/a531312f-ba7b-4573-ab4f-d468b740a319/_packaging/CognitiveIbizaPortalExtension/npm/registry/
+      #   workingDirectory: $(Build.SourcesDirectory)\src\SharedUI.Studios\ClientApp
