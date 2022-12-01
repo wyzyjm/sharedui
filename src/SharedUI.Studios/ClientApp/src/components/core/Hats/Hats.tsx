@@ -10,42 +10,46 @@ export enum HaTSInteraction {
     AutoFlyout = "AutoFlyout",
 }
 
-function buttonId(props: {interaction?:HaTSInteraction,autoFlyout:boolean,button:string}) {
-    const {interaction, autoFlyout, button } = props; 
+function buttonId(props: { interaction?: HaTSInteraction, autoFlyout: boolean, button: string }) {
+    const { interaction, autoFlyout, button } = props;
     const analyticsComponent = interaction === HaTSInteraction.Smiley ? "header" : "banner";
 
     return `hats-${analyticsComponent}-${autoFlyout ? 'autoflyout' : 'manual'}-${button}`;
 }
 
 export interface HatsProps {
-    onClose: () => void; 
-    interaction?: HaTSInteraction; 
+    onLoad?: () => void;
+    onClose?: () => void;
+    interaction?: HaTSInteraction;
     autoFlyout?: boolean | false;
-    headerText:string;
-    surveyLink:string;
+    headerText: string;
+    surveyLink: string;
     isOpen?: boolean | true;
+    openInANewWindowLocalizedText: string;
 }
 
 export const HaTSArea = (props: HatsProps) => {
     const [loading, setLoading] = useState(true);
-    const { onClose, interaction, autoFlyout=false, headerText, surveyLink, isOpen } = props;
-    const [isPanelOpen, setIsPanelOpen] = useState(isOpen)
+    const [isPanelOpen, setIsPanelOpen] = useState(props.isOpen);
+
+    const { onClose, onLoad, interaction, autoFlyout, headerText, surveyLink, isOpen, openInANewWindowLocalizedText } = props;
 
     if (!surveyLink || !surveyLink.length) {
         throw new Error("Survey Link is not passed for the HaTSArea component");
     }
- 
+
     function onDismiss() {
         setIsPanelOpen(false);
         onClose?.();
     }
-    
+
     function onLightDismissClick() {
+        setIsPanelOpen(false);
         onClose?.();
     }
-    
+
     return (
-         <Panel
+        <Panel
             className="profile-6te3ri77ie"
             isOpen={isPanelOpen}
             onDismiss={onDismiss}
@@ -61,9 +65,9 @@ export const HaTSArea = (props: HatsProps) => {
             <Link
                 href={surveyLink}
                 target="_blank"
-                data-bi-name={buttonId({interaction,autoFlyout,button:'openinanewwindow'})}
+                data-bi-name={buttonId({ interaction, autoFlyout, button: 'openinanewwindow' })}
             >
-                Open in a new window
+                { openInANewWindowLocalizedText }
             </Link>
             <Hr />
             {loading && (
@@ -71,12 +75,13 @@ export const HaTSArea = (props: HatsProps) => {
             )}
             <iframe
                 title="HaTS-egbi9redea"
-                style={{display: loading ? "none" : "", height: "calc(100% - 2rem)", width: "100%", border: "none" }}
+                style={{ display: loading ? "none" : "", height: "calc(100% - 2rem)", width: "100%", border: "none" }}
                 src={surveyLink}
                 onLoad={() => {
                     setLoading(false);
+                    onLoad?.();
                 }}
             />
-            </Panel>
+        </Panel>
     );
 };

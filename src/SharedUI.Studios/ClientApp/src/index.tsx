@@ -4,7 +4,7 @@ export { StyledBreadcrumb } from "./components/core/Breadcrumb";
 export type { DefaultBreadcrumbProps } from "./components/core/Breadcrumb";
 export { CircularLoadingIndicator, CircularLoadingIndicatorPageWide } from "./components/core/Spinners";
 export { Checkbox } from "./components/core/Checkbox";
-export { HaTSArea } from "./components/core/Hats/Hats";
+export { HaTSArea, HaTSInteraction } from "./components/core/Hats/Hats";
 export type { HatsProps } from "./components/core/Hats/Hats";
 export { BannerArea } from "./components/core/Banner";
 export type { BannerProps } from "./components/core/Banner";

@@ -11,7 +11,7 @@ export default {
     component: CS_Hats
 } as ComponentMeta<typeof CS_Hats>;
 
-const HatsTemplate: ComponentStory<typeof CS_Hats> = (args) => (
+const HatsTemplate: ComponentStory<typeof CS_Hats> = (args: HatsProps) => (
     <ThemeProvider theme={defaultTheme.body}>
         <CS_Hats {...args} />
     </ThemeProvider>
@@ -20,10 +20,12 @@ const HatsTemplate: ComponentStory<typeof CS_Hats> = (args) => (
 export const Hats = HatsTemplate.bind({});
 
 Hats.args = {
-    onClose: ()=>{},
+    onClose: () => { console.log("Hats survey closed"); },
+    onLoad: () => { console.log("Hats survey loaded"); }, 
     interaction: HaTSInteraction.Smiley,
     autoFlyout: false,
     headerText: "Feedback",
     surveyLink: "https://microsoft.qualtrics.com/jfe/form/SV_40zWLBFYILTkRWl?Kind=FormRecognizer&From=Preview",
-    isOpen: true 
+    isOpen: true,
+    openInANewWindowLocalizedText: "Open in a new window"
 } as HatsProps;
