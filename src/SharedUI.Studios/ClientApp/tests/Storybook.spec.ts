@@ -42,6 +42,26 @@ export class StorybookTestPOM {
         return this._frame.getByRole(elementType, obj);
     }
 
+    public async getByRoleIframe(elementType: string, obj: object) {
+        this._frame = this._frame || (await this._getPreviewIFrame());
+        return this._frame.getByRole(elementType, obj);
+    }
+
+    public async getByLabelIframe(elementType: string) {
+        this._frame = this._frame || (await this._getPreviewIFrame());
+        return this._frame.getByLabel(elementType);
+    }
+
+    public async getByTextIframe(elementType: string) {
+        this._frame = this._frame || (await this._getPreviewIFrame());
+        return this._frame.getByText(elementType);
+    }
+
+    public async getLocatorIframe(elementType: string) {
+        this._frame = this._frame || (await this._getPreviewIFrame());
+        return this._frame.locator(elementType);
+    }
+
     public async getComputedStyle(element: Locator, propertyName: string) {
         return element.evaluate((el, property)  => {
             return window.getComputedStyle(el).getPropertyValue(property);
@@ -50,5 +70,9 @@ export class StorybookTestPOM {
 
     private async _getPreviewFrame(): Promise<FrameLocator> { 
         return this.page.frameLocator("#storybook-preview-iframe");
+    }
+
+    private async _getPreviewIFrame(): Promise<FrameLocator> { 
+        return this.page.frameLocator("#storybook-preview-iframe").frameLocator('iframe');
     }
   }
