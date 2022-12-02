@@ -27,7 +27,7 @@ const ThemedHeaderButton = styled.button.attrs({})`
   }
 `;
 
-const ThemedHeaderIcon = styled(Icon).attrs({})`
+export const ThemedHeaderIcon: any = styled(Icon).attrs({})`
   &.white {
     color: ${(props) => props.theme.palette.themePrimary};
   }

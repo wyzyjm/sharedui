@@ -20,3 +20,5 @@ export { SearchBox } from "./components/core/Searchbox";
 export type { ISearchBoxProps } from "./components/core/Searchbox";
 export { LeftNav } from "./components/core/LeftNav/LeftNav";
 export type { ILeftNavProps } from "./components/core/LeftNav/LeftNav";
+export { NotificationPanel, getNotificationMessage, NotificationProcessingBar, NotificationPrompt, NotificationBoxListWrapped } from "./components/core/Notification/Notification";
+export type { INotificationPanelProps, NotificationProcessingBarProp, NotificationPromptProp, NotificationBoxListProp } from "./components/core/Notification/Notification";
