@@ -1,0 +1,113 @@
+@import "../colors.scss";
+
+.collapsed-nav-styles {
+  .nav-group-name {
+    display: none;
+  }
+
+  .ms-Button-flexContainer {
+    justify-content: center;
+  }
+
+  .ms-Nav-link {
+    padding: 0;
+  }
+
+  .ms-Nav-linkText {
+    display: none;
+  }
+}
+
+.group-content-margin {
+  .ms-Nav-groupContent {
+    margin: 0;
+  }
+}
+
+.sr {
+  display: unset;
+
+  b {
+    font-weight: bold;
+  }
+
+  .nav-link.active {
+    color: $color-blue !important;
+    border-bottom: 2.5px solid $color-blue !important;
+  }
+
+  .loading {
+    .ms-Spinner-circle {
+      border-color: $color-blue $color-gray_0_13 $color-gray_0_13;
+    }
+  }
+
+  .team-name a {
+    color: $color-blue !important;
+  }
+
+  .team-name a:hover {
+    color: $color-blue !important;
+  }
+  // For bootstrap modal
+  .modal {
+    .modal-header {
+      border-bottom: 0;
+      padding: 1.5rem 1.5rem 1rem 1.5rem;
+    }
+
+    .modal-body {
+      border-bottom: 0;
+      padding: 1rem 1.5rem;
+    }
+
+    .modal-footer {
+      border-top: 0;
+      padding: 1rem 1.5rem 1.5rem 1.5rem;
+    }
+
+    .modal-content {
+      border: 0;
+      border-radius: 0;
+    }
+
+    .modal-dialog {
+      max-width: none;
+    }
+
+    .modal-title {
+      font-weight: normal;
+      color: $color-default;
+      font-size: 1.3125rem;
+    }
+
+    .form-control {
+      border-radius: 0;
+      border: 1px solid $color-gray;
+    }
+
+    .form-control[type="text"]:focus {
+      border-radius: 0;
+      border: 1px solid $color-blue;
+    }
+
+    .hr {
+      height: 1px;
+      background-color: $color-gray;
+      margin-top: 20px;
+      margin-bottom: 5px;
+      opacity: 0.3;
+    }
+  }
+
+  .show {
+    position: fixed;
+    display: flex;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+  }
+}

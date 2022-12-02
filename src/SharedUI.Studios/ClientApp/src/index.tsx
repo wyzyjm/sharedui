@@ -18,3 +18,5 @@ export { ThemedHeader } from "./components/core/Header/Header";
 export type { IHeaderProps } from "./components/core/Header/Header";
 export { SearchBox } from "./components/core/Searchbox";
 export type { ISearchBoxProps } from "./components/core/Searchbox";
+export { LeftNav } from "./components/core/LeftNav/LeftNav";
+export type { ILeftNavProps } from "./components/core/LeftNav/LeftNav";
