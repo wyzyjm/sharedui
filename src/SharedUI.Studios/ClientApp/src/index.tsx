@@ -22,3 +22,5 @@ export { LeftNav } from "./components/core/LeftNav/LeftNav";
 export type { ILeftNavProps } from "./components/core/LeftNav/LeftNav";
 export { NotificationPanel, getNotificationMessage, NotificationProcessingBar, NotificationPrompt, NotificationBoxListWrapped } from "./components/core/Notification/Notification";
 export type { INotificationPanelProps, NotificationProcessingBarProp, NotificationPromptProp, NotificationBoxListProp } from "./components/core/Notification/Notification";
+export { HelpArea } from "./components/core/Help";
+export type { IHelpAreaProps } from "./components/core/Help";

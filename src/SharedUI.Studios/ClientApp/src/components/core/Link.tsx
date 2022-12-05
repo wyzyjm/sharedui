@@ -26,7 +26,7 @@ export const Link = (props: LinkProps): JSX.Element => {
     const target = props.openInANewWindow ? '_blank' : null;
     return (
         <div style={styles.linkWrapper}>
-            <a href={props.disabled ? null: props.href } rel="noreferrer" target={target} style={props.disabled ? styles.disabled: styles.underline} onClick={props.disabled ? null: props.onClick}>
+            <a href={props.disabled ? null : props.href} rel="noreferrer" target={target} style={props.disabled ? styles.disabled : styles.underline} onClick={props.disabled ? null : props.onClick}>
                 {props.displayText}
             </a>
         </div>
