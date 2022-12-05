@@ -3,7 +3,7 @@ import { StorybookTestPOM } from '../../StoryBook.spec';
 
 let storybookPOM: StorybookTestPOM;
 
-const hrClass = ".msDrb";
+const hrClass = ".sc-bcXHqe";
 
 test.beforeEach(async ({ page }) => {
   storybookPOM = new StorybookTestPOM(page);
