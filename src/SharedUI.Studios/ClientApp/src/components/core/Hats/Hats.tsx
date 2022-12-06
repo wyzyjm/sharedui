@@ -20,6 +20,7 @@ function buttonId(props: { interaction?: HaTSInteraction, autoFlyout: boolean, b
 export interface HatsProps {
     onLoad?: () => void;
     onClose?: () => void;
+    onLightDismissClick?: () => void;
     interaction?: HaTSInteraction;
     autoFlyout?: boolean | false;
     headerText: string;
@@ -45,7 +46,7 @@ export const HaTSArea = (props: HatsProps) => {
 
     function onLightDismissClick() {
         setIsPanelOpen(false);
-        onClose?.();
+        onLightDismissClick?.();
     }
 
     return (

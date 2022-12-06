@@ -2,7 +2,7 @@ import {
   IButtonStyles, Link as FabricLink, Panel, PanelType, IconButton as FabricIconButton,
   PrimaryButton, ProgressIndicator, Stack, useTheme
 } from "@fluentui/react";
-import _ from "lodash";
+import { values, sortBy } from "lodash";
 import React, { useEffect, useRef, useState } from "react";
 import { Hr } from '../Hr';
 import "./Notification.scss";
@@ -187,7 +187,7 @@ export function NotificationStatusIcon(props: { status: ClientNotificationStatus
 }
 
 export function NotificationProcessingBar(props: NotificationProcessingBarProp): JSX.Element {
-  const processingItems: ClientNotification[] = _.values(props.notifications).filter(
+  const processingItems: ClientNotification[] = values(props.notifications).filter(
     (p) => p.status === ClientNotificationStatus.Processing
   );
   return (
@@ -218,8 +218,8 @@ export interface NotificationPromptProp {
 
 export function NotificationPrompt(props: NotificationPromptProp): JSX.Element {
   const items: ClientNotification[] = props.lastViewedAt
-    ? _.values(props.notifications).filter((p) => p.updatedAt > props.lastViewedAt && !p.silent)
-    : _.values(props.notifications).filter((p) => !p.silent);
+    ? values(props.notifications).filter((p) => p.updatedAt > props.lastViewedAt && !p.silent)
+    : values(props.notifications).filter((p) => !p.silent);
   return (
     items.length > 0 && (
       <div className="notification-prompt">
@@ -238,7 +238,7 @@ export interface INotificationPanelProps {
 }
 
 export function NotificationPanel(props: INotificationPanelProps): JSX.Element {
-  const sortedItems = sortedNotifications(_.values(props.notifications));
+  const sortedItems = sortedNotifications(values(props.notifications));
   const { onClose, headerText, isOpen } = props;
   const [isPanelOpen, setIsPanelOpen] = useState(isOpen)
   function onDismiss() {
@@ -378,8 +378,8 @@ export interface NotificationBoxListProp {
 export function NotificationBoxListWrapped(props: NotificationBoxListProp): JSX.Element {
   // for the overlay layer, earlier items stay on top so that they may pop away
   // after a given period, recently inserted items push in from the bottom
-  const sortedItems: ClientNotification[] = _.sortBy(
-    _.values(props.notifications),
+  const sortedItems: ClientNotification[] = sortBy(
+    values(props.notifications),
     (notification) => -notification.createdAt
   );
 

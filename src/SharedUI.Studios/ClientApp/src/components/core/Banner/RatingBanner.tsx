@@ -1,26 +1,24 @@
-
 // \FormRecognizerStudio\FormRecognizerStudio\ClientApp\src\view\components\navMenu\navMenu.tsx
-
 import React, { useState } from "react";
 import { FontIcon, Text, DefaultButton } from "@fluentui/react";
 import { initializeIcons } from '@fluentui/react/lib/Icons';
 import "./Banner.scss"
-import { HaTSArea as CS_Hats, HatsProps, HaTSInteraction } from './Hats/Hats';
+import { HaTSArea as CS_Hats, HatsProps } from '../Hats/Hats';
 initializeIcons(undefined, { disableWarnings: true });
 
-export interface BannerProps {
+export interface RatingBannerProps {
     onClose: Function;
     headerText: string;
-    buttonText: string;
     hatsProp?: HatsProps;  // if hatsProp is passed, the hats panel would be shown on click of the banner.
     onClick: Function;
 }
 
-export const BannerArea = (props: BannerProps) => {
+export const RatingBannerArea = (props: RatingBannerProps) => {
 
-    function handleClick() {
+    function handleRatingClick(e: any) {
         setIsBannerVisible(false);
         if (props.hatsProp) {
+            props.hatsProp.surveyLink = props.hatsProp.surveyLink + '&hats_nps_score=' + e.target.innerText;
             setIsHatsVisible(true);
         }
         props.onClick && props.onClick();
@@ -39,23 +37,29 @@ export const BannerArea = (props: BannerProps) => {
             {isBannerVisible
                 && (<div className="studio-banner">
                     <div className="studio-banner-left">
-                        <FontIcon
-                            iconName="Info"
-                            title={"Info-icon"}
-                        />
                         <Text
-                            className="studio-banner-content"
+                            className="studio-banner-content studio-ratings-banner-span"
                             tabIndex={0}
                         >
                             {props.headerText}
                         </Text>
-                        <DefaultButton
-                            id="studio-banner-button"
-                            styles={{ root: { height: "auto", padding: 3 } }}
-                            onClick={handleClick}
-                        >
-                            {props.buttonText}
-                        </DefaultButton>
+                        <div className="studio-banner-left-align">
+                            <span className="studio-banner-content studio-ratings-banner-span">Not at all likely</span>
+                            <ul className="studio-ratings-banner">
+                                <li onClick={handleRatingClick}>0</li>
+                                <li onClick={handleRatingClick}>1</li>
+                                <li onClick={handleRatingClick}>2</li>
+                                <li onClick={handleRatingClick}>3</li>
+                                <li onClick={handleRatingClick}>4</li>
+                                <li onClick={handleRatingClick}>5</li>
+                                <li onClick={handleRatingClick}>6</li>
+                                <li onClick={handleRatingClick}>7</li>
+                                <li onClick={handleRatingClick}>8</li>
+                                <li onClick={handleRatingClick}>9</li>
+                                <li onClick={handleRatingClick}>10</li>
+                            </ul>
+                            <span className="studio-banner-content studio-ratings-banner-span">Extremely likely</span>
+                        </div>
                     </div>
                     <button
                         id="studio-banner-close-button"

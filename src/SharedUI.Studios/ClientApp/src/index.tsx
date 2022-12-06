@@ -6,8 +6,10 @@ export { CircularLoadingIndicator, CircularLoadingIndicatorPageWide } from "./co
 export { Checkbox } from "./components/core/Checkbox";
 export { HaTSArea, HaTSInteraction } from "./components/core/Hats/Hats";
 export type { HatsProps } from "./components/core/Hats/Hats";
-export { BannerArea } from "./components/core/Banner";
-export type { BannerProps } from "./components/core/Banner";
+export { BannerArea } from "./components/core/Banner/Banner";
+export type { BannerProps } from "./components/core/Banner/Banner";
+export { RatingBannerArea } from "./components/core/Banner/RatingBanner";
+export type { RatingBannerProps } from "./components/core/Banner/RatingBanner";
 export { Card } from "./components/core/Card";
 export type { ICardProp } from "./components/core/Card";
 export { Link } from "./components/core/Link";

@@ -1,3 +1,4 @@
+@import "~@fluentui/react/dist/sass/References";
 .studio-banner {
     width: 100%;
     height: 32px;
@@ -16,6 +17,7 @@
         display: flex;
         align-items: center;
         overflow: hidden;
+        width: 100%;
 
         .studio-banner-content,
         .azure-support-content {
@@ -40,3 +42,30 @@
         cursor: pointer;
     }
 }
+.studio-ratings-banner{
+    list-style-type: none;
+    margin: 0px;
+    padding: 0px;
+    display:inline-flex;
+  }
+  .studio-ratings-banner-span{
+    cursor:'pointer';
+    font-size: 12px;
+    vertical-align: middle;
+  }
+.studio-ratings-banner li{
+      margin-right: 10px;
+      border: 1px solid;
+      border-radius: 25px;
+      height: 20px;
+      width: 20px;
+      text-align: center;
+      cursor: pointer;   
+  }
+  .studio-ratings-banner li:hover {
+    background-color:grey;
+  }
+  .studio-bannerleft-align {
+    margin-left:5%;
+  }
+ 

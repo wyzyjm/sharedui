@@ -1,5 +1,5 @@
 import { ComponentStory, ComponentMeta } from '@storybook/react';
-import { BannerArea as CS_Banner, BannerProps } from './Banner';
+import { BannerArea as CS_Banner, BannerProps } from './Banner/Banner';
 import { defaultTheme } from "../../themes";
 import {
     ThemeProvider
