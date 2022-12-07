@@ -51,43 +51,7 @@ test.describe('Hats panel tests', () => {
         await expect(newPage).toHaveURL('https://microsoft.qualtrics.com/jfe/form/SV_40zWLBFYILTkRWl?Kind=FormRecognizer&From=Preview');
     });
 
-    test('the Hats survey should be completed', async ({ page }) => {
-        // Check sample survey flow
-        await (await (storybookPOM.getByRoleIframe('group', { name: 'How likely is it that you would recommend Form Recognizer to a friend or colleague? Please select one.' }))).getByText('10').click();
-        await (await storybookPOM.getByLabelIframe('(Optional) What, if anything, do you find frustrating or unappealing about Form Recognizer? What new capabilities would you like to see for Form Recognizer?')).click();
-        await (await storybookPOM.getByLabelIframe('(Optional) What, if anything, do you find frustrating or unappealing about Form Recognizer? What new capabilities would you like to see for Form Recognizer?')).fill('All good');
-        await (await storybookPOM.getByRoleIframe('button', { name: 'Next' })).click();
-        await (await storybookPOM.getByLabelIframe('(Optional) What do you like best about Form Recognizer?')).click();
-        await (await storybookPOM.getByLabelIframe('(Optional) What do you like best about Form Recognizer?')).fill('Form recognizer');
-        await (await storybookPOM.getByRoleIframe('button', { name: 'Next' })).click();
-        await (await storybookPOM.getByTextIframe('Large enterprise company (More than 25,000 people)')).click();
-        await (await storybookPOM.getByTextIframe('App Developer: You create software applications, build/write computer code or de')).click();
-        await (await storybookPOM.getLocatorIframe('label:has-text("Managing project timeline and resourcing")')).click();
-        await (await storybookPOM.getByRoleIframe('button', { name: 'Next' })).click();
-        await (await storybookPOM.getByTextIframe('Deploying a solution that uses Form Recognizer')).click();
-        await (await storybookPOM.getByRoleIframe('cell', { name: 'Ease of use Extremely satisfied' })).locator('label').first().click();
-        await (await storybookPOM.getByRoleIframe('cell', { name: 'Technical reliability Extremely satisfied' })).locator('label').first().click();
-        await (await storybookPOM.getByRoleIframe('cell', { name: 'Features & capabilities Extremely satisfied' })).locator('label').first().click();
-        await (await storybookPOM.getByRoleIframe('cell', { name: 'Visual appeal Extremely satisfied' })).locator('label').first().click();
-        await (await storybookPOM.getByRoleIframe('cell', { name: 'Speed Extremely satisfied' })).locator('label').first().click();
-        await (await storybookPOM.getByRoleIframe('cell', { name: 'Documentation Extremely satisfied' })).locator('label').first().click();
-        await (await storybookPOM.getByRoleIframe('button', { name: 'Next' })).click();
-        await (await storybookPOM.getByTextIframe('Education')).click();
-        await (await storybookPOM.getByTextIframe('Experienced, I have developed with AI services like this more than 10 times')).click();
-        await (await storybookPOM.getByRoleIframe('button', { name: 'Next' })).click();
-        await (await storybookPOM.getByRoleIframe('button', { name: 'Next' })).click();
-        await (await storybookPOM.getByTextIframe('We thank you for your time spent taking this survey. Your response has been reco'));
-    });
-
-    // Accessibility tests
-    test('to verify no accessibility checks are incomplete or needs review', async ({ page }) => {
-        // Check the Incomplete tab under Accessibility
-        await page.getByRole('tab', { name: 'Accessibility' }).click();
-        await page.locator('button', { hasText: 'Incomplete' }).click();
-        await expect(page.locator('.sto-1551xjo')).toHaveText('0 Incomplete');
-        await expect(page.locator('.sto-snh8f7')).toContainText('No accessibility checks incomplete.');
-    });
-
+    // Accessibility voilations check
     test('to verify no accessibility violations are found', async ({ page }) => {
         // Check the Voilations tab under Accessibility
         await page.getByRole('tab', { name: 'Accessibility' }).click();

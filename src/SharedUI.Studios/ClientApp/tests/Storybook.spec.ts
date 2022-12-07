@@ -42,6 +42,11 @@ export class StorybookTestPOM {
         return this._frame.getByRole(elementType, obj);
     }
 
+    public async getByText(elementType: string) {
+        this._frame = this._frame || (await this._getPreviewFrame());
+        return this._frame.getByText(elementType);
+    }
+
     public async getByRoleIframe(elementType: string, obj: object) {
         this._frame = this._frame || (await this._getPreviewIFrame());
         return this._frame.getByRole(elementType, obj);

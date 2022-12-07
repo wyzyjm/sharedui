@@ -15,44 +15,36 @@ test.beforeEach(async ({ page }) => {
 
 
 test.describe('Horizontal rule tests', () => {
-    test('should render the basic horizontal rule as per design', async ({ page }) => {
-      const hrElement = await storybookPOM.getElementFromPreview(hrClass);
-  
-      // Check height
-      const height = await storybookPOM.getComputedStyle(hrElement, "height");
-      await expect(height).toBe("1px");
+  test('should render the basic horizontal rule as per design', async ({ page }) => {
+    const hrElement = await storybookPOM.getElementFromPreview(hrClass);
 
-      // Check background color
-      const backgroundColor = await storybookPOM.getComputedStyle(hrElement, "background-color");
-      await expect(backgroundColor).toBe("rgb(0, 0, 0)");
-  
-      // Check margin top
-      const marginTop = await storybookPOM.getComputedStyle(hrElement, "margin-top");
-      await expect(marginTop).toBe("10px");
-  
-      // Check margin bottom
-      const marginBottom = await storybookPOM.getComputedStyle(hrElement, "margin-bottom");
-      await expect(marginBottom).toBe("10px");
+    // Check height
+    const height = await storybookPOM.getComputedStyle(hrElement, "height");
+    await expect(height).toBe("1px");
 
-      // Check opacity
-      const opacity = await storybookPOM.getComputedStyle(hrElement, "opacity");
-      await expect(opacity).toBe("0.3");
-    });
+    // Check background color
+    const backgroundColor = await storybookPOM.getComputedStyle(hrElement, "background-color");
+    await expect(backgroundColor).toBe("rgb(0, 0, 0)");
 
-    // Accessibility tests
-    test('to verify no accessibility checks are incomplete or needs review', async ({ page }) => {
-      // Check the Incomplete tab under Accessibility
-      await page.getByRole('tab', { name: 'Accessibility' }).click();
-      await page.locator('button', { hasText: 'Incomplete' }).click();
-      await expect(page.locator('.sto-1551xjo')).toHaveText('0 Incomplete');
-      await expect(page.locator('.sto-snh8f7')).toContainText('No accessibility checks incomplete.');
-    });
-  
-    test('to verify no accessibility violations are found', async ({ page }) => {
-      // Check the Voilations tab under Accessibility
-      await page.getByRole('tab', { name: 'Accessibility' }).click();
-      await page.locator('button', { hasText: 'Violations' }).click();
-      await expect(page.locator('.sto-1551xjo')).toHaveText('0 Violations');
-      await expect(page.locator('.sto-snh8f7')).toContainText('No accessibility violations found.');
-    });
+    // Check margin top
+    const marginTop = await storybookPOM.getComputedStyle(hrElement, "margin-top");
+    await expect(marginTop).toBe("10px");
+
+    // Check margin bottom
+    const marginBottom = await storybookPOM.getComputedStyle(hrElement, "margin-bottom");
+    await expect(marginBottom).toBe("10px");
+
+    // Check opacity
+    const opacity = await storybookPOM.getComputedStyle(hrElement, "opacity");
+    await expect(opacity).toBe("0.3");
+  });
+
+  // Accessibility voilations check
+  test('to verify no accessibility violations are found', async ({ page }) => {
+    // Check the Voilations tab under Accessibility
+    await page.getByRole('tab', { name: 'Accessibility' }).click();
+    await page.locator('button', { hasText: 'Violations' }).click();
+    await expect(page.locator('.sto-1551xjo')).toHaveText('0 Violations');
+    await expect(page.locator('.sto-snh8f7')).toContainText('No accessibility violations found.');
+  });
 });

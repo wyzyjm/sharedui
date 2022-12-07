@@ -106,13 +106,11 @@ stages:
         workingDirectory: $(Build.SourcesDirectory)\src\SharedUI.Studios\ClientApp
         continueOnError: true
 
-      - task: CopyFiles@2
-        displayName: 'Copy Test Results'
+      - task: CmdLine@2
+        displayName: 'Copy Failed Test Results and Fail Release'
         inputs:
-          SourceFolder: '$(Build.SourcesDirectory)\src\SharedUI.Studios\ClientApp\test-results'
-          Contents: |
-            **/*       
-          TargetFolder: '$(Build.SourcesDirectory)/out/test-results'
+          script: '$(Build.SourcesDirectory)\copy-test-results.cmd'
+          workingDirectory: '$(Build.SourcesDirectory)\src\SharedUI.Studios\ClientApp'
 
       # - task: PublishTestResults@2
       #   displayName: Publish Test Results

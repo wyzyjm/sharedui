@@ -49,15 +49,7 @@ test.describe('Searchbox tests', () => {
     expect(searchBoxValue).toBe("");
   });
 
-  // Accessibility tests
-  test('to verify no accessibility checks are incomplete or needs review', async ({ page }) => {
-    // Check the Incomplete tab under Accessibility
-    await page.getByRole('tab', { name: 'Accessibility' }).click();
-    await page.locator('button', { hasText: 'Incomplete' }).click();
-    await expect(page.locator('.sto-1551xjo')).toHaveText('0 Incomplete');
-    await expect(page.locator('.sto-snh8f7')).toContainText('No accessibility checks incomplete.');
-  });
-
+  // Accessibility voilations check
   test('to verify no accessibility violations are found', async ({ page }) => {
     // Check the Voilations tab under Accessibility
     await page.getByRole('tab', { name: 'Accessibility' }).click();

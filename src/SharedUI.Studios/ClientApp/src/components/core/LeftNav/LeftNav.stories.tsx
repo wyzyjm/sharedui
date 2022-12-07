@@ -5,8 +5,6 @@ import { INavLinkGroup, ThemeProvider } from "@fluentui/react";
 import { defaultTheme } from "../../../themes";
 import { Icons } from "../Icons";
 
-const defaultMenuSelectKey = "data";
-
 const navLinkGroups: INavLinkGroup[] = [
   {
     name: "rerewre",
@@ -59,7 +57,7 @@ export const LeftNav = LeftNavTemplate.bind({});
 
 LeftNav.args = {
   navItems: navLinkGroups,
-  defaultMenuSelectKey: defaultMenuSelectKey,
+  defaultMenuSelectKey: "",
   title: "Custom Speech",
   titleLink:
     "https://speech.microsoft.com/portal/aa1c5d8161814be7bbd5e0ffd21e5dac/customspeech",
