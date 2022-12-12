@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Panel, PanelType, Link } from "@fluentui/react";
-import { CircularLoadingIndicator as Spinner } from '../Spinners'
-import { Hr } from '../Hr'
+import { CircularLoadingIndicator as Spinner } from '../Spinners';
+import { Hr } from '../Hr';
 
 export enum HaTSInteraction {
     None = "",
@@ -52,6 +52,7 @@ export const HaTSArea = (props: HatsProps) => {
     return (
         <Panel
             className="profile-6te3ri77ie"
+            closeButtonAriaLabel="Close"
             isOpen={isPanelOpen}
             onDismiss={onDismiss}
             type={PanelType.custom}
@@ -60,6 +61,7 @@ export const HaTSArea = (props: HatsProps) => {
             isLightDismiss
             onLightDismissClick={onLightDismissClick}
             headerText={headerText || ""}
+            headerTextProps={{ 'aria-level': 2 }}
             layerProps={{ eventBubblingEnabled: true }}
             styles={{ content: { height: "100%" }, scrollableContent: { height: "100%" } }}
         >
@@ -68,7 +70,7 @@ export const HaTSArea = (props: HatsProps) => {
                 target="_blank"
                 data-bi-name={buttonId({ interaction, autoFlyout, button: 'openinanewwindow' })}
             >
-                { openInANewWindowLocalizedText }
+                {openInANewWindowLocalizedText}
             </Link>
             <Hr />
             {loading && (
