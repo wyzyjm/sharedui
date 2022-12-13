@@ -36,7 +36,6 @@ Banner.args = {
     headerText: "Kindly Provide your Valuable Feedback",
     buttonText: "Click Here To Start",
     hatsProp:{
-        openInANewWindowLocalizedText: "Open in a new window",
         onClose: ()=>{ console.log("onClose"); },
         autoFlyout: false,
         headerText: "Feedback",
@@ -51,7 +50,6 @@ RatingBanner.args = {
     onClose: ()=>{ console.log("banner closed"); },
     headerText: "How likely is it that you would recommend Speech Services to a friend or colleague",
     hatsProp:{
-        openInANewWindowLocalizedText: "Open in a new window",
         onClose: ()=>{},
         autoFlyout: false,
         headerText: "Feedback",

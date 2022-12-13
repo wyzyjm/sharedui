@@ -7,6 +7,8 @@ import React, { useEffect, useRef, useState } from "react";
 import { Hr } from '../Hr';
 import "./Notification.scss";
 import { StatusIcons } from "../themed-icons";
+import { INTL } from "../../../util/intlUtil";
+import { NotificationLocalizationFormatMessages } from "../../../clientResources";
 
 export enum ClientNotificationDomain {
   Subscription = "Subscription",
@@ -54,7 +56,7 @@ const CloseButton = (props: {
   return (
     <FabricIconButton
       iconProps={{ iconName: "Cancel" }}
-      ariaLabel="Close"
+      ariaLabel={INTL.formatMessage(NotificationLocalizationFormatMessages.Close)}
       onClick={props.onClick}
       autoFocus={!!props.autoFocus}
       data-bi-name={props.buttonId}
@@ -249,7 +251,7 @@ export function NotificationPanel(props: INotificationPanelProps): JSX.Element {
     <Panel
       className="notification-582m3vdw73"
       isOpen={isPanelOpen}
-      closeButtonAriaLabel="Close"
+      closeButtonAriaLabel={INTL.formatMessage(NotificationLocalizationFormatMessages.PanelClose)}
       onDismiss={onDismiss}
       type={PanelType.custom}
       customWidth={"380px"}
@@ -260,7 +262,7 @@ export function NotificationPanel(props: INotificationPanelProps): JSX.Element {
       <div>
         <FabricLink
           onClick={props.onClick}
-        >Dismiss all</FabricLink>
+        >{INTL.formatMessage(NotificationLocalizationFormatMessages.DismissAll)}</FabricLink>
       </div>
       <Hr />
       <Stack>

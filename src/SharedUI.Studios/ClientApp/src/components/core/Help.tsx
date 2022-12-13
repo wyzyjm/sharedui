@@ -2,6 +2,8 @@ import * as React from "react";
 import { Panel, PanelType, Stack } from "@fluentui/react";
 import { useState } from "react";
 import { Link, LinkProps } from "./Link";
+import { INTL } from "../../util/intlUtil";
+import { HelpLocalizationFormatMessages } from "../../clientResources";
 
 export interface IHelpAreaProps {
     helpBody: JSX.Element;
@@ -50,7 +52,7 @@ export const HelpArea = (props: IHelpAreaProps) => {
         <Panel
             isOpen={isPanelOpen}
             onDismiss={onDismiss}
-            closeButtonAriaLabel="Close"
+            closeButtonAriaLabel={INTL.formatMessage(HelpLocalizationFormatMessages.Close)}
             type={PanelType.custom}
             customWidth={"380px"}
             style={{ top: "40px" }}

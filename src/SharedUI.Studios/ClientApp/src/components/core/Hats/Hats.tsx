@@ -1,7 +1,9 @@
 import React, { useState } from "react";
 import { Panel, PanelType, Link } from "@fluentui/react";
-import { CircularLoadingIndicator as Spinner } from '../Spinners';
-import { Hr } from '../Hr';
+import { CircularLoadingIndicator as Spinner } from '../Spinners'
+import { Hr } from '../Hr'
+import { INTL } from "../../../util/intlUtil";
+import { HatsLocalizationFormatMessages } from "../../../clientResources";
 
 export enum HaTSInteraction {
     None = "",
@@ -26,14 +28,13 @@ export interface HatsProps {
     headerText: string;
     surveyLink: string;
     isOpen?: boolean | true;
-    openInANewWindowLocalizedText: string;
 }
 
 export const HaTSArea = (props: HatsProps) => {
     const [loading, setLoading] = useState(true);
     const [isPanelOpen, setIsPanelOpen] = useState(props.isOpen);
 
-    const { onClose, onLoad, interaction, autoFlyout, headerText, surveyLink, isOpen, openInANewWindowLocalizedText } = props;
+    const { onClose, onLoad, interaction, autoFlyout, headerText, surveyLink, isOpen } = props;
 
     if (!surveyLink || !surveyLink.length) {
         throw new Error("Survey Link is not passed for the HaTSArea component");
@@ -52,7 +53,7 @@ export const HaTSArea = (props: HatsProps) => {
     return (
         <Panel
             className="profile-6te3ri77ie"
-            closeButtonAriaLabel="Close"
+            closeButtonAriaLabel={INTL.formatMessage(HatsLocalizationFormatMessages.Close)}
             isOpen={isPanelOpen}
             onDismiss={onDismiss}
             type={PanelType.custom}
@@ -70,7 +71,7 @@ export const HaTSArea = (props: HatsProps) => {
                 target="_blank"
                 data-bi-name={buttonId({ interaction, autoFlyout, button: 'openinanewwindow' })}
             >
-                {openInANewWindowLocalizedText}
+                {INTL.formatMessage(HatsLocalizationFormatMessages.OpenInANewWindow)}
             </Link>
             <Hr />
             {loading && (

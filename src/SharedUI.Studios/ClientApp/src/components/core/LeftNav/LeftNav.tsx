@@ -15,6 +15,8 @@ import {
 import { CSSProperties, useState } from "react";
 import "./LeftNav.scss";
 import { Icons } from "../Icons";
+import { INTL } from "../../../util/intlUtil";
+import { LeftNavLocalizationFormatMessages } from "../../../clientResources";
 
 const menuPageContainerStyles: CSSProperties = {
   width: "100%",
@@ -165,7 +167,7 @@ const MenuPage: React.FunctionComponent<ILeftNavProps> = (
                 ? Icons.DoubleChevronLeft
                 : Icons.DoubleChevronRight
             }
-            ariaLabel={expanded ? "Opened" : "Hidden"}
+            ariaLabel={expanded ? INTL.formatMessage(LeftNavLocalizationFormatMessages.Opened) : INTL.formatMessage(LeftNavLocalizationFormatMessages.Hidden)}
             onClick={toggleExpanded}
           />
         </div>

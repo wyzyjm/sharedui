@@ -343,3 +343,5 @@ reports/
 **/storybook-static/*
 **/dist/*
 
+#Localization output
+out/loc/*

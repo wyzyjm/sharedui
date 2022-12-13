@@ -1,0 +1,1 @@
+yarn extract '**/*.{ts,tsx,vue}' --ignore='**/*.d.ts' --out-file src/translations/en/clientResources.json --id-interpolation-pattern '[sha512:contenthash:base64:6]' --format ../../../scripts/formatter.js

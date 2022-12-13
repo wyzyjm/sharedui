@@ -34,22 +34,22 @@ if "%errorlevel%" neq "0" (
     exit /b %errorlevel%
 )
 
-@REM echo Running localization build...
+echo Running localization build...
 
-@REM set XLocPath=%NUGET_PACKAGES%\Localization.XLoc.%LocalizationXLocPkgVer%
-@REM set LocProject=%RepoRoot%\LocProject.json
+set XLocPath=%NUGET_PACKAGES%\Localization.XLoc.%LocalizationXLocPkgVer%
+set LocProject=%RepoRoot%\LocProject.json
 
-@REM dotnet "%XLocPath%\tools\netcore\Microsoft.Localization.XLoc.dll" /f "%LocProject%"
+dotnet "%XLocPath%\tools\netcore\Microsoft.Localization.XLoc.dll" /f "%LocProject%"
 
-@REM echo Validating if the LocPayload.json file exists
-@REM if NOT EXIST "%OutDir%\loc\LocPayload.json" (
-@REM     echo Error - Localization build failed as LocPayload.json file didnt get generated. Check if you have removed packages and not updated the LocProject.json file
-@REM     exit /b %errorlevel%
-@REM )
+echo Validating if the LocPayload.json file exists
+if NOT EXIST "%OutDir%\loc\LocPayload.json" (
+    echo Error - Localization build failed as LocPayload.json file didnt get generated. Check if you have removed packages and not updated the LocProject.json file
+    exit /b %errorlevel%
+)
 
-@REM echo Localization build finished with exit code '%errorlevel%'.
+echo Localization build finished with exit code '%errorlevel%'.
 
-@REM popd
+popd
 
 cd /D "%~dp0"
 set RepoRoot=%OriginalRepoRoot%

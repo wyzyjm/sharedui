@@ -4,6 +4,8 @@ import { FontIcon, Text, DefaultButton } from "@fluentui/react";
 import { initializeIcons } from '@fluentui/react/lib/Icons';
 import "./Banner.scss"
 import { HaTSArea as CS_Hats, HatsProps } from '../Hats/Hats';
+import { INTL } from "../../../util/intlUtil";
+import { BannerLocalizationFormatMessages } from "../../../clientResources";
 initializeIcons(undefined, { disableWarnings: true });
 
 export interface RatingBannerProps {
@@ -44,7 +46,9 @@ export const RatingBannerArea = (props: RatingBannerProps) => {
                             {props.headerText}
                         </Text>
                         <div className="studio-banner-left-align">
-                            <span className="studio-banner-content studio-ratings-banner-span">Not at all likely</span>
+                            <span className="studio-banner-content studio-ratings-banner-span">
+                                {INTL.formatMessage(BannerLocalizationFormatMessages.NotAtAllLikely)}
+                            </span>
                             <ul className="studio-ratings-banner">
                                 <li onClick={handleRatingClick}>0</li>
                                 <li onClick={handleRatingClick}>1</li>
@@ -58,7 +62,9 @@ export const RatingBannerArea = (props: RatingBannerProps) => {
                                 <li onClick={handleRatingClick}>9</li>
                                 <li onClick={handleRatingClick}>10</li>
                             </ul>
-                            <span className="studio-banner-content studio-ratings-banner-span">Extremely likely</span>
+                            <span className="studio-banner-content studio-ratings-banner-span">
+                                {INTL.formatMessage(BannerLocalizationFormatMessages.ExtremelyLikely)}
+                            </span>
                         </div>
                     </div>
                     <button

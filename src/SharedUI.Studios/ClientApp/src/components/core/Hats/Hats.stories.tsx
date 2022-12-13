@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 import { HaTSArea as CS_Hats, HaTSInteraction, HatsProps } from './Hats';
 import { defaultTheme } from "../../../themes";
@@ -21,11 +21,10 @@ export const Hats = HatsTemplate.bind({});
 
 Hats.args = {
     onClose: () => { console.log("Hats survey closed"); },
-    onLoad: () => { console.log("Hats survey loaded"); }, 
+    onLoad: () => { console.log("Hats survey loaded"); },
     interaction: HaTSInteraction.Smiley,
     autoFlyout: false,
     headerText: "Feedback",
     surveyLink: "https://microsoft.qualtrics.com/jfe/form/SV_40zWLBFYILTkRWl?Kind=FormRecognizer&From=Preview",
     isOpen: true,
-    openInANewWindowLocalizedText: "Open in a new window"
 } as HatsProps;

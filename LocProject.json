@@ -1,0 +1,14 @@
+{
+    "Projects": [
+      {
+        "LanguageSet": "Azure_LanguagesExt",
+        "LocItems": [
+          {
+            "SourceFile": "src\\SharedUI.Studios\\ClientApp\\src\\translations\\en\\clientResources.json",
+            "CopyOption": "LangIDOnPath",
+            "OutputPath": "src\\SharedUI.Studios\\ClientApp\\src\\translations"
+          }
+        ]
+      }
+    ]
+  }
