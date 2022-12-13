@@ -1,30 +1,72 @@
 ---
-ArtifactType: nupkg, azure-web-app
-Documentation: URL  // TODO mukeshag: put the PPE storybook url here
-Language: typescript
-Platform: windows
-Stackoverflow: URL
-Tags: cognitive-services-studios
+ArtifactType: nupkg, azure-web-app  
+Documentation: https://aka.ms/csstudio   
+Language: typescript  
+Platform: windows  
+Stackoverflow: TBD  
+Tags: TBD  
 ---
 
 # Azure Cognitive Services Studios : Shared Components
 
-Build faster, more consistent experiences, with fewer distinct bug for the studio UX investments by delivering shared components that can be reused across the studios (e.g. authentication, sign-in, navigation, breadcrumbs, grid view, lists, etc.).​
+Build faster, more consistent experiences, with fewer distinct bugs for the studio UX investments by delivering shared components that can be reused across the studios (e.g. authentication, sign-in, navigation, breadcrumbs, grid view, lists, etc.).​
 
 Eg: Reduce duplicate accessibility bugs across studios that have distinct resolutions (e.g. studio X uses button for some breadcrumbs, studio B uses link for breadcrumbs). Both get accessibility bugs and must be resolved independently to achieve our grade C goal.
 
+## <u>For developers wanting to integrate the shared components into their repo</u>
+
+### Step 1: Update your artifact feed:
+Please add "CognitiveIbizaPortalExtension" feed as an upstream feed to your feed. 
+- Open your feed page from Azure devops and click on "Settings" button
+- Select "Upstream Sources" tab
+- Click on the "+ Add Upstream" button
+- If your feed stays in the "msazure" organization, select "Azure artifact feeds in this organization"
+    - select the "CognitiveIbizaPortalExtension" feed from the dropdown, "Local" as the view, "npm" as the package
+- If your feed isnt part of "msazure" organization, select "Azure artifact feed in a different organization"
+    - enter the feed locator as "azure-feed://msazure/CognitiveIbizaPortalExtension@Local", "npm" as the package
+
+[NOTE]: If npm package doesn't work, try choosing "Nuget" as the package.
+
+### Step 2: Install the npm package:
+Using your terminal navigate to the repository's ClientApp folder(or folder where you have your package.json file)
+Run: 'yarn install sharedui.studios' or 'npm install sharedui.studios'
+
+If you face authentication issues while running the install, please run 'vsts-npm-auth -config .npmrc' in the folder where you have .npmrc file.
+
+### Step 3: Integrate with your project: 
+The next step would be to use the component from the shared component repo. 
+Import the component in your TSX file as, for example: 
+
+'import { HaTSArea, HaTSInteraction, HatsProps } from "sharedui.studios/dist/package/index";'
+
+and then use the component as you would use any other Fluent UI component. 
+
+
+## <u>For developers wanting to contribute to the project</u> 
+
 ## Getting Started
 
-### Prerequisites
+### Built With
+
+- Storybook
+- Microsoft fluent ui
+- Typescript
+- React
+
+### Step 1: Prerequisites
 
 Visual Studio Code
-Access to the repo: TODO sharad - add the steps
+Access to the repo: myaccess (17811, 18072, 19352)
 
-### Installing
-
+### Step 2: Installing
+In your terminal/cmd: 
 'cd src/SharedUI.Studios/ClientApp'
 'yarn startup'
+
+### Step 3: Running the project
+In your terminal/cmd:
 'yarn start'
+
 
 ## Running the tests
 
@@ -39,13 +81,9 @@ Steps to test a component:
 
 ## Deployment
 
-TODO mukeshag
-Add additional notes about how to deploy this on a live system
-
-## Built With
-
-- storybook
-- microsoft fluent ui
+Currently, deployment is manually done from the dev machine. 
+We publish the storybook artifacts to our storage account.
+We run npm publish for publishing a new npm package.
 
 ## Process for publishing a package to NPM (typically DIF contributions)
 Run the command: 
@@ -58,11 +96,9 @@ If the above doesnt work: This can be done from VSCode. Get the latest master br
 4. `git commit` version change.
 
 ## Versioning and changelog
-TODO mukeshag
 
-We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](link-to-tags-or-other-release-location).
+We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [npm feed](https://msazure.visualstudio.com/Cognitive%20Services/_artifacts/feed/CognitiveIbizaPortalExtension/Npm/sharedui.studios/versions).
 
-It is a good practice to keep `CHANGELOG.md` file in repository that can be updated as part of a pull request.
 
 ## Authors
 
