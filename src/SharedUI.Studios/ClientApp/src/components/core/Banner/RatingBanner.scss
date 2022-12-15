@@ -1,0 +1,120 @@
+@import "~@fluentui/react/dist/sass/References";
+
+.message-bar {
+  position: absolute;
+  height: 63px;
+  left: 0px;
+  right: 0px;
+  top: 40px;
+}
+
+.inlineflex .ms-ChoiceField {
+  display: inline-block;
+  font-family: 'Segoe UI';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  text-align: center;
+}
+
+.ms-Label {
+  font-weight: 400;
+  text-align: center;
+  height: 20px;
+  margin-right: 4px;
+}
+
+.studio-rating-banner {
+  .studio-banner-left {
+    height: 100%;
+    display: flex;
+    overflow: hidden;
+    width: 100%;
+
+    .studio-banner-content,
+    .azure-support-content {
+      margin: 0 8px;
+    }
+  }
+
+  #studio-rating-banner-close-button {
+    position: absolute;
+    width: 32px;
+    height: 32px;
+    right: 0px;
+    top: 0px;
+    font-family: 'Fabric MDL2 Assets';
+    font-style: normal;
+    margin-right: -5px;
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 100%;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    border: none;
+    cursor: pointer;
+  }
+}
+
+.studio-ratings-banner {
+  list-style-type: none;
+  margin: 0px;
+  padding: 0px;
+  display: inline-flex;
+  font-weight: 400;
+  margin-top: -5px;
+}
+
+.studio-ratings-banner-span {
+  cursor: 'pointer';
+  font-size: 12px;
+  vertical-align: top;
+}
+
+.studio-bannerleft-align {
+  margin-left: 5%;
+}
+
+@media only screen and (max-width: 320px) {
+  .message-bar {
+    position: absolute;
+    height: 154px;
+    left: 0px;
+    right: 0px;
+    top: 40px;
+  }
+
+  .studio-banner-content {
+    position: absolute;
+    height: 60px;
+    left: 26px;
+    right: 29px;
+    top: 8px;
+  }
+
+  .studio-ratings-banner {
+    position: absolute;
+    width: 307px;
+    height: 50px;
+    left: 18px;
+    top: 91px;
+  }
+
+  .not-at-all-likely {
+    position: absolute;
+    height: 25px;
+    left: 12px;
+    right: 8px;
+    top: 69px;
+  }
+
+  .extremely-likely {
+    position: absolute;
+    height: 25px;
+    left: 210px;
+    right: 8px;
+    top: 69px;
+  }
+}

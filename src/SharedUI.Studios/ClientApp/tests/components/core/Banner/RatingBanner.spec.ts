@@ -3,7 +3,8 @@ import { StorybookTestPOM } from '../../../StoryBook.spec';
 
 let storybookPOM: StorybookTestPOM;
 
-const bannerClass = ".studio-banner";
+const bannerClass = ".ms-MessageBar";
+const bannerContentClass = ".studio-banner-left";
 
 test.beforeEach(async ({ page }) => {
   storybookPOM = new StorybookTestPOM(page);
@@ -15,16 +16,16 @@ test.beforeEach(async ({ page }) => {
 
 
 test.describe('Rating Banner tests', () => {
-
   test('should render the rating Banner as per design', async ({ page }) => {
     const bannerElement = await storybookPOM.getElementFromPreview(bannerClass);
+    const bannerContentElement = await storybookPOM.getElementFromPreview(bannerContentClass);
 
     // Check background color
     const backgroundColor = await storybookPOM.getComputedStyle(bannerElement, "background-color");
     await expect(backgroundColor).toBe("rgb(243, 242, 241)");
 
     // Check font-size
-    const fontSize = await storybookPOM.getComputedStyle(bannerElement, "font-size");
+    const fontSize = await storybookPOM.getComputedStyle(bannerContentElement, "font-size");
     await expect(fontSize).toBe("12px");
 
     // Check text color

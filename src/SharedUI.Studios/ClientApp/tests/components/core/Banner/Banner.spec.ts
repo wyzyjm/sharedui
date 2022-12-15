@@ -15,7 +15,6 @@ test.beforeEach(async ({ page }) => {
 
 
 test.describe('Banner tests', () => {
-
   test('should render the basic Banner as per design', async ({ page }) => {
     const bannerElement = await storybookPOM.getElementFromPreview(bannerClass);
 

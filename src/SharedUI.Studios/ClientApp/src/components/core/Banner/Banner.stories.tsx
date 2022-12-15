@@ -1,6 +1,6 @@
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 import { BannerArea as CS_Banner, BannerProps } from './Banner';
-import { RatingBannerArea as CS_RatingBanner, RatingBannerProps} from './RatingBanner';
+import { RatingBannerArea as CS_RatingBanner, RatingBannerProps } from './RatingBanner';
 import { defaultTheme } from "../../../themes";
 import {
     ThemeProvider
@@ -29,14 +29,13 @@ export const Banner = HatsTemplate.bind({});
 
 export const RatingBanner = RatingHatsTemplate.bind({});
 
-
 Banner.args = {
     onClick: () => { console.log("banner clicked"); },
-    onClose: ()=>{ console.log("banner closed"); },
+    onClose: () => { console.log("banner closed"); },
     headerText: "Kindly Provide your Valuable Feedback",
     buttonText: "Click Here To Start",
-    hatsProp:{
-        onClose: ()=>{ console.log("onClose"); },
+    hatsProp: {
+        onClose: () => { console.log("onClose"); },
         autoFlyout: false,
         headerText: "Feedback",
         surveyLink: "https://microsoft.qualtrics.com/jfe/form/SV_40zWLBFYILTkRWl?Kind=FormRecognizer&From=Preview",
@@ -47,10 +46,10 @@ Banner.args = {
 
 RatingBanner.args = {
     onClick: () => { console.log("banner clicked"); },
-    onClose: ()=>{ console.log("banner closed"); },
-    headerText: "How likely is it that you would recommend Speech Services to a friend or colleague",
-    hatsProp:{
-        onClose: ()=>{},
+    onClose: () => { console.log("banner closed"); },
+    headerText: "How likely is it that you would recommend Speech Services Studio to a friend or colleague? Please select one:",
+    hatsProp: {
+        onClose: () => { },
         autoFlyout: false,
         headerText: "Feedback",
         surveyLink: "https://microsoft.qualtrics.com/jfe/form/SV_40zWLBFYILTkRWl?Kind=FormRecognizer&From=Preview",

@@ -1,8 +1,8 @@
 // \FormRecognizerStudio\FormRecognizerStudio\ClientApp\src\view\components\navMenu\navMenu.tsx
 import React, { useState } from "react";
-import { FontIcon, Text, DefaultButton } from "@fluentui/react";
+import { FontIcon, Text, DefaultButton, MessageBar, MessageBarType, ChoiceGroup } from "@fluentui/react";
 import { initializeIcons } from '@fluentui/react/lib/Icons';
-import "./Banner.scss"
+import "./RatingBanner.scss"
 import { HaTSArea as CS_Hats, HatsProps } from '../Hats/Hats';
 import { INTL } from "../../../util/intlUtil";
 import { BannerLocalizationFormatMessages } from "../../../clientResources";
@@ -33,53 +33,60 @@ export const RatingBannerArea = (props: RatingBannerProps) => {
 
     const [isBannerVisible, setIsBannerVisible] = useState(true);
     const [isHatsVisible, setIsHatsVisible] = useState(false);
-
+    const ratings = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '10'];
     return (
         <div>
             {isBannerVisible
-                && (<div className="studio-banner">
-                    <div className="studio-banner-left">
-                        <Text
-                            className="studio-banner-content studio-ratings-banner-span"
-                            tabIndex={0}
+                && (
+                    <div className="studio-rating-banner">
+                        <MessageBar
+                            className="message-bar"
+                            dismissButtonAriaLabel="Close"
                         >
-                            {props.headerText}
-                        </Text>
-                        <div className="studio-banner-left-align">
-                            <span className="studio-banner-content studio-ratings-banner-span">
-                                {INTL.formatMessage(BannerLocalizationFormatMessages.NotAtAllLikely)}
-                            </span>
-                            <ul className="studio-ratings-banner">
-                                <li onClick={handleRatingClick}>0</li>
-                                <li onClick={handleRatingClick}>1</li>
-                                <li onClick={handleRatingClick}>2</li>
-                                <li onClick={handleRatingClick}>3</li>
-                                <li onClick={handleRatingClick}>4</li>
-                                <li onClick={handleRatingClick}>5</li>
-                                <li onClick={handleRatingClick}>6</li>
-                                <li onClick={handleRatingClick}>7</li>
-                                <li onClick={handleRatingClick}>8</li>
-                                <li onClick={handleRatingClick}>9</li>
-                                <li onClick={handleRatingClick}>10</li>
-                            </ul>
-                            <span className="studio-banner-content studio-ratings-banner-span">
-                                {INTL.formatMessage(BannerLocalizationFormatMessages.ExtremelyLikely)}
-                            </span>
-                        </div>
+                            <div className="studio-banner-left">
+                                <Text
+                                    className="studio-banner-content studio-ratings-banner-span"
+                                    tabIndex={0}
+                                >
+                                    {props.headerText}
+                                </Text>
+
+                                <div className="studio-banner-left-align">
+                                    <span className="studio-banner-content studio-ratings-banner-span not-at-all-likely">
+                                        {INTL.formatMessage(BannerLocalizationFormatMessages.NotAtAllLikely)}
+                                    </span>
+                                    <div className="studio-ratings-banner">
+                                        {ratings.map((e) => (
+                                            <label>
+                                                <ChoiceGroup
+                                                    className="inlineflex"
+                                                    aria-label="Rating"
+                                                    label={e}
+                                                    options={[{ key: e, text: "" }]}
+                                                    onClick={handleRatingClick}
+                                                />
+                                            </label>
+                                        ))}
+                                    </div>
+                                    <span className="studio-banner-content studio-ratings-banner-span extremely-likely">
+                                        {INTL.formatMessage(BannerLocalizationFormatMessages.ExtremelyLikely)}
+                                    </span>
+                                </div>
+                            </div>
+                            <button
+                                id="studio-rating-banner-close-button"
+                                onClick={handleCancel}
+                            >
+                                <FontIcon
+                                    title={"Close"}
+                                    iconName="CalculatorMultiply"
+                                />
+                            </button>
+                        </MessageBar>
                     </div>
-                    <button
-                        id="studio-banner-close-button"
-                        onClick={handleCancel}
-                    >
-                        <FontIcon
-                            title={"Close"}
-                            iconName="CalculatorMultiply"
-                        />
-                    </button>
-                </div>)}
+                )}
             {isHatsVisible && (<CS_Hats {...props.hatsProp} />)
             }
         </div>
     );
 };
-
