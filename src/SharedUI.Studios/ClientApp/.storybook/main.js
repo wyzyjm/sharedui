@@ -1,5 +1,6 @@
 const path = require("path");
 var MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const CaseSensitivePathsPlugin = require('case-sensitive-paths-webpack-plugin');
 
 module.exports = {
   stories: [
@@ -30,6 +31,7 @@ module.exports = {
   },
   webpackFinal: async (config) => {
     config.plugins.push(new MiniCssExtractPlugin());
+    config.plugins.push(new CaseSensitivePathsPlugin());
     
     // add SCSS support for CSS Modules
     config.module.rules.push(

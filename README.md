@@ -41,6 +41,9 @@ Import the component in your TSX file as, for example:
 
 and then use the component as you would use any other Fluent UI component. 
 
+### Sample PR: 
+https://msazure.visualstudio.com/Cognitive%20Services/_git/Platform-OpenAIPortal/commit/904a300dc2d8fda23e5feb271ded4af7862531ee?refName=refs/heads/main&path=/src/OpenAI.Portal/ClientApp/package.json&_a=compare
+
 
 ## <u>For developers wanting to contribute to the project</u> 
 

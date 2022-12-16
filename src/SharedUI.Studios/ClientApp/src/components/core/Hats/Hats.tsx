@@ -4,9 +4,10 @@ import { CircularLoadingIndicator as Spinner } from '../Spinners'
 import { Hr } from '../Hr'
 import { INTL } from "../../../util/intlUtil";
 import { HatsLocalizationFormatMessages } from "../../../clientResources";
+import { initializeComponent, useLocalization, withLocalization } from "../../../services/localization";
 
 export enum HaTSInteraction {
-    None = "",
+    None = "None",
     Banner = "Banner",
     Smiley = "Smiley",
     AutoFlyout = "AutoFlyout",
@@ -28,9 +29,9 @@ export interface HatsProps {
     headerText: string;
     surveyLink: string;
     isOpen?: boolean | true;
-}
+};
 
-export const HaTSArea = (props: HatsProps) => {
+export const HatsInternal = (props: HatsProps) => {
     const [loading, setLoading] = useState(true);
     const [isPanelOpen, setIsPanelOpen] = useState(props.isOpen);
 
@@ -89,3 +90,5 @@ export const HaTSArea = (props: HatsProps) => {
         </Panel>
     );
 };
+
+export const HaTSArea = withLocalization(initializeComponent(HatsInternal));

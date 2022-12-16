@@ -3,8 +3,9 @@ const path = require('path');
 (function () {
   "use strict";
   const { CleanWebpackPlugin } = require('clean-webpack-plugin');
-  var MiniCssExtractPlugin = require("mini-css-extract-plugin");
-  var webpack = require("webpack");
+  const CaseSensitivePathsPlugin = require('case-sensitive-paths-webpack-plugin');
+  const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+  const webpack = require("webpack");
 
   module.exports = {
     entry: path.resolve(__dirname, 'src/index.tsx'),
@@ -67,7 +68,8 @@ const path = require('path');
     },
     plugins: [
       new CleanWebpackPlugin(),
-      new MiniCssExtractPlugin()
+      new MiniCssExtractPlugin(),
+      new CaseSensitivePathsPlugin()
     ],
     resolve: {
       extensions: [".ts", ".tsx", ".js", ".ttf"],
