@@ -17,6 +17,7 @@ import "./LeftNav.scss";
 import { Icons } from "../Icons";
 import { INTL } from "../../../util/intlUtil";
 import { LeftNavLocalizationFormatMessages } from "../../../clientResources";
+import { initializeComponent, useLocalization, withLocalization } from "../../../services/localization";
 
 const menuPageContainerStyles: CSSProperties = {
   width: "100%",
@@ -88,7 +89,7 @@ export interface ILeftNavProps {
   onLinkClick?: () => void;
   selectedKey?: string;
   defaultMenuSelectKey?: string;
-}
+};
 
 const FabricNav: React.FunctionComponent<ILeftNavProps> = (props) => {
   const theme = useTheme();
@@ -200,7 +201,7 @@ const MenuPage: React.FunctionComponent<ILeftNavProps> = (
   );
 };
 
-export const LeftNav = (props: ILeftNavProps): JSX.Element => {
+export const LeftNavInternal = (props: ILeftNavProps): JSX.Element => {
   return (
     <div className="sr">
       <MenuPage
@@ -217,3 +218,5 @@ export const LeftNav = (props: ILeftNavProps): JSX.Element => {
     </div>
   );
 };
+
+export const LeftNav = withLocalization(initializeComponent(LeftNavInternal));

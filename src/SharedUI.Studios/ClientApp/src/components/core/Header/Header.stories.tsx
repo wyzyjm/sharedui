@@ -8,6 +8,7 @@ import {
 } from "@fluentui/react";
 import { defaultTheme } from "../../../themes";
 import { ClientNotification, ClientNotificationDomain, ClientNotificationStatus, getNotificationMessage, NotificationProcessingBar, NotificationPrompt } from "../Notification/Notification";
+import { SharedComponentsContext } from '../SharedComponentsContext';
 
 const notification: ClientNotification = {
   id: "ID",
@@ -69,11 +70,15 @@ export default {
   component: CS_Header,
 } as ComponentMeta<typeof CS_Header>;
 
-const HeaderTemplate: ComponentStory<typeof CS_Header> = (args) => (
-  <ThemeProvider theme={defaultTheme.body}>
-    <CS_Header {...args} />
-  </ThemeProvider>
-);
+const HeaderTemplate: ComponentStory<typeof CS_Header> = (args) => {
+  return (
+    <ThemeProvider theme={defaultTheme.body}>
+      <SharedComponentsContext.Provider value={{ locale: 'en' }}>
+        <CS_Header {...args} />
+      </SharedComponentsContext.Provider>
+    </ThemeProvider>
+  );
+}
 
 export const Header = HeaderTemplate.bind({});
 

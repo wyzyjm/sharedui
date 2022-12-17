@@ -5,16 +5,22 @@ import { defaultTheme } from "../../../themes";
 import {
     ThemeProvider
 } from "@fluentui/react";
+import { SharedComponentsContext } from '../SharedComponentsContext';
 
 export default {
     title: 'Button',
     subcomponents: { PrimaryButton, SecondaryButton }
 } as ComponentMeta<any>;
 
-const PrimaryButtonTemplate: ComponentStory<typeof PrimaryButton> = (args) => (
-    <ThemeProvider theme={defaultTheme.body}>
-        <PrimaryButton {...args} />
-    </ThemeProvider>);
+const PrimaryButtonTemplate: ComponentStory<typeof PrimaryButton> = (args) => {
+    return (
+        <ThemeProvider theme={defaultTheme.body}>
+            <SharedComponentsContext.Provider value={{ locale: 'en' }}>
+                <PrimaryButton {...args} />
+            </SharedComponentsContext.Provider>
+        </ThemeProvider>
+    );
+}
 export const Primary = PrimaryButtonTemplate.bind({});
 Primary.args = {
     ariaLabel: "",
@@ -24,10 +30,15 @@ Primary.args = {
     disabled: false
 } as CSButtonProps;
 
-const SecondaryButtonTemplate: ComponentStory<typeof SecondaryButton> = (args) => (
-    <ThemeProvider theme={defaultTheme.body}>
-        <SecondaryButton {...args} />
-    </ThemeProvider>);
+const SecondaryButtonTemplate: ComponentStory<typeof SecondaryButton> = (args) => {
+    return (
+        <ThemeProvider theme={defaultTheme.body}>
+            <SharedComponentsContext.Provider value={{ locale: 'en' }}>
+                <SecondaryButton {...args} />
+            </SharedComponentsContext.Provider>
+        </ThemeProvider>
+    );
+}
 export const Secondary = SecondaryButtonTemplate.bind({});
 Secondary.args = {
     ariaLabel: "",

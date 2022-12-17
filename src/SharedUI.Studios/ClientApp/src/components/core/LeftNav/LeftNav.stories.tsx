@@ -4,6 +4,7 @@ import { ILeftNavProps, LeftNav as CS_LeftNav } from "./LeftNav";
 import { INavLinkGroup, ThemeProvider } from "@fluentui/react";
 import { defaultTheme } from "../../../themes";
 import { Icons } from "../Icons";
+import { SharedComponentsContext } from '../SharedComponentsContext';
 
 const navLinkGroups: INavLinkGroup[] = [
   {
@@ -47,11 +48,15 @@ export default {
   component: CS_LeftNav,
 } as ComponentMeta<typeof CS_LeftNav>;
 
-const LeftNavTemplate: ComponentStory<typeof CS_LeftNav> = (args) => (
-  <ThemeProvider theme={defaultTheme.body}>
-    <CS_LeftNav {...args} />
-  </ThemeProvider>
-);
+const LeftNavTemplate: ComponentStory<typeof CS_LeftNav> = (args) => {
+  return (
+    <ThemeProvider theme={defaultTheme.body}>
+      <SharedComponentsContext.Provider value={{ locale: 'en' }}>
+        <CS_LeftNav {...args} />
+      </SharedComponentsContext.Provider>
+    </ThemeProvider>
+  );
+}
 
 export const LeftNav = LeftNavTemplate.bind({});
 

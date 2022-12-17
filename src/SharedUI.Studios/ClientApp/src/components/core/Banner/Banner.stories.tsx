@@ -6,24 +6,32 @@ import {
     ThemeProvider
 } from "@fluentui/react";
 import { HaTSInteraction, HatsProps } from '../Hats/Hats';
-
+import { SharedComponentsContext } from '../SharedComponentsContext';
 
 export default {
     title: 'Banner',
     subcomponents: { CS_Banner, CS_RatingBanner }
 } as ComponentMeta<any>;
 
-const HatsTemplate: ComponentStory<typeof CS_Banner> = (args: BannerProps) => (
-    <ThemeProvider theme={defaultTheme.body}>
-        <CS_Banner {...args} />
-    </ThemeProvider>
-);
+const HatsTemplate: ComponentStory<typeof CS_Banner> = (args: BannerProps) => {
+    return (
+        <ThemeProvider theme={defaultTheme.body}>
+            <SharedComponentsContext.Provider value={{ locale: 'en' }}>
+                <CS_Banner {...args} />
+            </SharedComponentsContext.Provider>
+        </ThemeProvider>
+    );
+}
 
-const RatingHatsTemplate: ComponentStory<typeof CS_RatingBanner> = (args: RatingBannerProps) => (
-    <ThemeProvider theme={defaultTheme.body}>
-        <CS_RatingBanner {...args} />
-    </ThemeProvider>
-);
+const RatingHatsTemplate: ComponentStory<typeof CS_RatingBanner> = (args: RatingBannerProps) => {
+    return (
+        <ThemeProvider theme={defaultTheme.body}>
+            <SharedComponentsContext.Provider value={{ locale: 'en' }}>
+                <CS_RatingBanner {...args} />
+            </SharedComponentsContext.Provider>
+        </ThemeProvider>
+    );
+}
 
 export const Banner = HatsTemplate.bind({});
 

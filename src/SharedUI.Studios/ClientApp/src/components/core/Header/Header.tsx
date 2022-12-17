@@ -14,6 +14,7 @@ import styled, { ThemeProvider as ReactThemeProvider } from "styled-components";
 import "./header.scss";
 import "../core.scss";
 import "../base.scss";
+import { initializeComponent, useLocalization, withLocalization } from "../../../services/localization";
 
 const itemAlignmentsStackStyles: IStackStyles = {
   root: {
@@ -37,9 +38,9 @@ export interface IHeaderProps {
   headerText: string;
   headerLinkClickUrl: string;
   commandBarItems: ICommandBarItemProps[];
-}
+};
 
-export function ThemedHeader(props: IHeaderProps) {
+export function ThemedHeaderInternal(props: IHeaderProps) {
   const itemAlignmentsStackTokens: IStackTokens = {
     padding: "0 0 0 10px",
   };
@@ -124,3 +125,5 @@ export function ThemedHeader(props: IHeaderProps) {
     </div>
   );
 }
+
+export const ThemedHeader = withLocalization(initializeComponent(ThemedHeaderInternal));

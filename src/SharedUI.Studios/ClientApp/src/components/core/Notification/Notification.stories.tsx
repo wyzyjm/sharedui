@@ -10,17 +10,22 @@ import {
 } from "./Notification";
 import { ThemeProvider } from "@fluentui/react";
 import { defaultTheme } from "../../../themes";
+import { SharedComponentsContext } from '../SharedComponentsContext';
 
 export default {
   title: "Notification",
   component: CS_Notification,
 } as ComponentMeta<typeof CS_Notification>;
 
-const NotificationTemplate: ComponentStory<typeof CS_Notification> = (args) => (
-  <ThemeProvider theme={defaultTheme.body}>
-    <CS_Notification {...args} />
-  </ThemeProvider>
-);
+const NotificationTemplate: ComponentStory<typeof CS_Notification> = (args) => {
+  return (
+    <ThemeProvider theme={defaultTheme.body}>
+      <SharedComponentsContext.Provider value={{ locale: 'en' }}>
+        <CS_Notification {...args} />
+      </SharedComponentsContext.Provider>
+    </ThemeProvider>
+  );
+}
 
 const notification: ClientNotification = {
   id: "ID",

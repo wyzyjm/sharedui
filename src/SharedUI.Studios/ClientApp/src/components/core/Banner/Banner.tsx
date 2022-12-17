@@ -7,6 +7,7 @@ import { initializeIcons } from '@fluentui/react/lib/Icons';
 import "./Banner.scss"
 import { HaTSArea as CS_Hats, HatsProps, HaTSInteraction } from '../Hats/Hats';
 initializeIcons(undefined, { disableWarnings: true });
+import { initializeComponent, useLocalization, withLocalization } from "../../../services/localization";
 
 export interface BannerProps {
     onClose: Function;
@@ -14,9 +15,9 @@ export interface BannerProps {
     buttonText: string;
     hatsProp?: HatsProps;  // if hatsProp is passed, the hats panel would be shown on click of the banner.
     onClick: Function;
-}
+};
 
-export const BannerArea = (props: BannerProps) => {
+export const BannerInternal = (props: BannerProps) => {
     function handleClick() {
         setIsBannerVisible(false);
         if (props.hatsProp) {
@@ -71,3 +72,5 @@ export const BannerArea = (props: BannerProps) => {
         </div>
     );
 };
+
+export const BannerArea = withLocalization(initializeComponent(BannerInternal));

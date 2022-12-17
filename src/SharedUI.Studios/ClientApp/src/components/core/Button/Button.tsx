@@ -16,6 +16,7 @@ import {
 import { useTheme } from "@fluentui/react-theme-provider";
 import React from "react";
 import styled, { ThemedStyledProps } from "styled-components";
+import { initializeComponent, useLocalization, withLocalization } from "../../../services/localization";
 
 const iconThemedStyles = (props: CSButtonProps) => `
     color: ${props.disabled ? props.theme.palette.neutralTertiary : props.theme.palette.themePrimary};
@@ -115,12 +116,15 @@ const Button = styled(DefaultButton) <DefaultButtonProps>`
     }`}
 `;
 
-export const PrimaryButton = styled(Button)`
+export const PrimaryButtonInternal = styled(Button)`
     min-width: 5.375rem;
     box-shadow: none;
     ${props => themedStylesWithSplitButton(props, primaryButtonThemedStyles)}
   `;
 
-export const SecondaryButton = styled(Button)`
+export const SecondaryButtonInternal = styled(Button)`
     ${props => themedStylesWithSplitButton(props, secondaryButtonThemedStyles)}
   `;
+
+export const PrimaryButton = withLocalization(initializeComponent(PrimaryButtonInternal));
+export const SecondaryButton = withLocalization(initializeComponent(SecondaryButtonInternal));

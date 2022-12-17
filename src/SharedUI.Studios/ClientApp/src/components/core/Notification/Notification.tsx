@@ -9,6 +9,7 @@ import "./Notification.scss";
 import { StatusIcons } from "../themed-icons";
 import { INTL } from "../../../util/intlUtil";
 import { NotificationLocalizationFormatMessages } from "../../../clientResources";
+import { initializeComponent, useLocalization, withLocalization } from "../../../services/localization";
 
 export enum ClientNotificationDomain {
   Subscription = "Subscription",
@@ -239,7 +240,7 @@ export interface INotificationPanelProps {
   onClose: () => void;
 }
 
-export function NotificationPanel(props: INotificationPanelProps): JSX.Element {
+export function NotificationPanelInternal(props: INotificationPanelProps): JSX.Element {
   const sortedItems = sortedNotifications(values(props.notifications));
   const { onClose, headerText, isOpen } = props;
   const [isPanelOpen, setIsPanelOpen] = useState(isOpen)
@@ -393,3 +394,5 @@ export function NotificationBoxListWrapped(props: NotificationBoxListProp): JSX.
     </div>
   );
 }
+
+export const NotificationPanel = withLocalization(initializeComponent(NotificationPanelInternal));

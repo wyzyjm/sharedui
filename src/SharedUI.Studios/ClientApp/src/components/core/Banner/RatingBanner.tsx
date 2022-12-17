@@ -7,15 +7,16 @@ import { HaTSArea as CS_Hats, HatsProps } from '../Hats/Hats';
 import { INTL } from "../../../util/intlUtil";
 import { BannerLocalizationFormatMessages } from "../../../clientResources";
 initializeIcons(undefined, { disableWarnings: true });
+import { initializeComponent, useLocalization, withLocalization } from "../../../services/localization";
 
 export interface RatingBannerProps {
     onClose: Function;
     headerText: string;
     hatsProp?: HatsProps;  // if hatsProp is passed, the hats panel would be shown on click of the banner.
     onClick: Function;
-}
+};
 
-export const RatingBannerArea = (props: RatingBannerProps) => {
+export const RatingBannerInternal = (props: RatingBannerProps) => {
 
     function handleRatingClick(e: any) {
         setIsBannerVisible(false);
@@ -90,3 +91,5 @@ export const RatingBannerArea = (props: RatingBannerProps) => {
         </div>
     );
 };
+
+export const RatingBannerArea = withLocalization(initializeComponent(RatingBannerInternal));
