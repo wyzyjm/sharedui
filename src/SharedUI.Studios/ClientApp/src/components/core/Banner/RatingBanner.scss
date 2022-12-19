@@ -17,12 +17,21 @@
   text-align: center;
 }
 
-.ms-Label {
-  font-weight: 400;
-  text-align: center;
-}
-
 .studio-rating-banner {
+  .rating-number-label:last-child {
+    .ms-Label {
+      font-weight: 400;
+      padding-left: 2px;
+    }
+  }
+
+  .rating-number-label:not(:last-child) {
+    .ms-Label {
+      font-weight: 400;
+      padding-left: 5px;
+    }
+  }
+
   .studio-banner-left {
     height: 100%;
     display: flex;

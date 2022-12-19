@@ -58,7 +58,7 @@ export const RatingBannerInternal = (props: RatingBannerProps) => {
                                     </span>
                                     <div className="studio-ratings-banner">
                                         {ratings.map((e) => (
-                                            <label>
+                                            <label className="rating-number-label">
                                                 <ChoiceGroup
                                                     className="inlineflex"
                                                     aria-label="Rating"

@@ -7,6 +7,13 @@ export const LocationLocalizationFormatMessages = defineMessages({
 
 });
 
+export const FilterableComboBoxFormatMessages = defineMessages({
+    All: {
+        id: "All",
+        defaultMessage: "All",
+    }
+});
+
 export const HatsLocalizationFormatMessages = defineMessages({
     OpenInANewWindow: {
         id: "Hats.OpenInANewWindow",
