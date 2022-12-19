@@ -18,10 +18,6 @@ test.describe('Circular loading spinner page wide tests', () => {
   test('should render the basic spinner with circular loading page wide as per design', async ({ page }) => {
     const circularLoadingSpinnerElement = await storybookPOM.getElementFromPreview(circularLoadingSpinnerClass);
 
-    // Check border width
-    const borderWidth = await storybookPOM.getComputedStyle(circularLoadingSpinnerElement, "border-width");
-    await expect(borderWidth).toBe("1.5px");
-
     // Check border style
     const borderStyle = await storybookPOM.getComputedStyle(circularLoadingSpinnerElement, "border-style");
     await expect(borderStyle).toBe("solid");

@@ -11,7 +11,7 @@ call npm install -g yarn
 
 echo yarn install packages
 cd "src\SharedUI.Studios\ClientApp"
-yarn install --registry https://msazure.pkgs.visualstudio.com/_packaging/AzurePortal/npm/registry/ || exit /b 1
+yarn install --registry https://msazure.pkgs.visualstudio.com/a531312f-ba7b-4573-ab4f-d468b740a319/_packaging/CognitiveServicesSharedComponents/npm/registry/ || exit /b 1
 
 echo Installed yarn packages
 

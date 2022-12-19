@@ -26,3 +26,4 @@ export { NotificationPanel, getNotificationMessage, NotificationProcessingBar, N
 export type { INotificationPanelProps, NotificationProcessingBarProp, NotificationPromptProp, NotificationBoxListProp } from "./components/core/Notification/Notification";
 export { HelpArea } from "./components/core/Help";
 export type { IHelpAreaProps } from "./components/core/Help";
+export { VariantService } from "./services/flighting/variantService";

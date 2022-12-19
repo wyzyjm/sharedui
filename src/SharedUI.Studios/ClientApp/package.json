@@ -6,6 +6,7 @@
     "dist/package"
   ],
   "dependencies": {
+    "@azure/exp-variant-assignment": "^3.0.211947-573f097b",
     "@fluentui/react": "^8.0.0",
     "@fluentui/react-theme-provider": "^0.19.16",
     "bootstrap": "~4.6.1",
@@ -101,7 +102,7 @@
     ]
   },
   "scripts": {
-    "startup": "yarn add vsts-npm-auth && npx vsts-npm-auth -config .npmrc && yarn install --registry https://msazure.pkgs.visualstudio.com/_packaging/AzurePortal/npm/registry/",
+    "startup": "yarn add vsts-npm-auth && npx vsts-npm-auth -config .npmrc && yarn install --registry https://msazure.pkgs.visualstudio.com/a531312f-ba7b-4573-ab4f-d468b740a319/_packaging/CognitiveServicesSharedComponents/npm/registry/",
     "start": "start-storybook -p 6006 -s public",
     "test": "npx playwright test",
     "production": "set NODE_OPTIONS=--max_old_space_size=2048 && webpack --config webpack.production.js && build-storybook -s public -o dist/storybook",
