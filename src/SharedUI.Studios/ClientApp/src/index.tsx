@@ -26,4 +26,6 @@ export { NotificationPanel, getNotificationMessage, NotificationProcessingBar, N
 export type { INotificationPanelProps, NotificationProcessingBarProp, NotificationPromptProp, NotificationBoxListProp } from "./components/core/Notification/Notification";
 export { HelpArea } from "./components/core/Help";
 export type { IHelpAreaProps } from "./components/core/Help";
+export { WizardFlow } from "./components/core/WizardFlow/WizardFlow";
+export type { IWizardFlowMenuItem, WizardFlowProps, IWizardFlow, IWizardFlowStatus  } from "./components/core/WizardFlow/WizardFlow";
 export { VariantService } from "./services/flighting/variantService";
