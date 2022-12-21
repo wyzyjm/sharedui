@@ -46,17 +46,16 @@ export const RatingBannerInternal = (props: RatingBannerProps) => {
                         >
                             <div className="studio-banner-left">
                                 <Text
-                                    className="studio-banner-content studio-ratings-banner-span"
+                                    className="studio-banner-content"
                                     tabIndex={0}
                                 >
                                     {props.headerText}
                                 </Text>
-
-                                <div className="studio-banner-left-align">
-                                    <span className="studio-banner-content studio-ratings-banner-span not-at-all-likely">
-                                        {INTL.formatMessage(BannerLocalizationFormatMessages.NotAtAllLikely)}
-                                    </span>
-                                    <div className="studio-ratings-banner">
+                                <div className="studio-ratings">
+                                    <div className="negative">
+                                        {INTL.formatMessage(BannerLocalizationFormatMessages.NotAtAll)}
+                                    </div>
+                                    <div className="ratings">
                                         {ratings.map((e) => (
                                             <label className="rating-number-label">
                                                 <ChoiceGroup
@@ -69,9 +68,9 @@ export const RatingBannerInternal = (props: RatingBannerProps) => {
                                             </label>
                                         ))}
                                     </div>
-                                    <span className="studio-banner-content studio-ratings-banner-span extremely-likely">
+                                    <div className="positive">
                                         {INTL.formatMessage(BannerLocalizationFormatMessages.ExtremelyLikely)}
-                                    </span>
+                                    </div>
                                 </div>
                             </div>
                             <button

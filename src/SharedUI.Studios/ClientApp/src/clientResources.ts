@@ -26,9 +26,9 @@ export const HatsLocalizationFormatMessages = defineMessages({
 });
 
 export const BannerLocalizationFormatMessages = defineMessages({
-    NotAtAllLikely: {
-        id: "Banner.NotAtAllLikely",
-        defaultMessage: "Not at all likely",
+    NotAtAll: {
+        id: "Banner.NotAtAll",
+        defaultMessage: "Not at all",
     },
     ExtremelyLikely: {
         id: "Banner.ExtremelyLikely",
