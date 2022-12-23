@@ -31,3 +31,5 @@ export type { IFilterableComboBoxOption, IFilterableComboBoxProps } from "./comp
 export { WizardFlow } from "./components/core/WizardFlow/WizardFlow";
 export type { IWizardFlowMenuItem, WizardFlowProps, IWizardFlow, IWizardFlowStatus  } from "./components/core/WizardFlow/WizardFlow";
 export { VariantService } from "./services/flighting/variantService";
+export type { ICustomColumn, ICustomColumnWithHeader, ICustomColumnWithoutHeader, ICustomColumnsList, ICustomShimmeredDetailsListProp } from "./components/core/ItemList/ItemList";
+export { CustomShimmeredDetailsList } from "./components/core/ItemList/ItemList";

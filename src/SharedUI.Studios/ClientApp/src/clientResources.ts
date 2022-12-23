@@ -1,16 +1,68 @@
 import { defineMessages } from "react-intl";
-export const FormatMessagePlaceholders = {
-
-};
-
-export const LocationLocalizationFormatMessages = defineMessages({
-
-});
+export const FormatMessagePlaceholder = "NamePlaceholderDoNotTranslate";
 
 export const FilterableComboBoxFormatMessages = defineMessages({
     All: {
         id: "All",
         defaultMessage: "All",
+    }
+});
+
+export const DetailsListLocalizedFormatMessages = defineMessages({
+    CommonCustomShimmeredDetailsListSortedByInDesc: {
+        id: "DetailsListLocalizedFormatMessages.CommonCustomShimmeredDetailsListSortedByInDesc",
+        defaultMessage: "Sorted by '{NamePlaceholderDoNotTranslate}' column in descending order."
+    },
+    CommonCustomShimmeredDetailsListSortedByInAsc: {
+        id: "DetailsListLocalizedFormatMessages.CommonCustomShimmeredDetailsListSortedByInAsc",
+        defaultMessage: "Sorted by '{NamePlaceholderDoNotTranslate}' column in ascending order.",
+    },
+    CountSelected: {
+        id: "DetailsListLocalizedFormatMessages.CountSelected",
+        defaultMessage: "{NamePlaceholderDoNotTranslate} selected",
+    },
+    ToggleSelectionForAllItems: {
+        id: "DetailsListLocalizedFormatMessages.ToggleSelectionForAllItems",
+        defaultMessage: "Toggle selection for all items",
+    },
+    ToggleSelection: {
+        id: "DetailsListLocalizedFormatMessages.ToggleSelection",
+        defaultMessage: "Toggle selection",
+    },
+    SelectRow: {
+        id: "DetailsListLocalizedFormatMessages.SelectRow",
+        defaultMessage: "select row",
+    },
+    ResizeColumn: {
+        id: "DetailsListLocalizedFormatMessages.ResizeColumn",
+        defaultMessage: "Resize column"
+    },
+    Resize: {
+        id: "DetailsListLocalizedFormatMessages.Resize",
+        defaultMessage: "Resize"
+    },
+    TableNotSorted: {
+        id: "DetailsListLocalizedFormatMessages.TableNotSorted",
+        defaultMessage: "Table is not sorted."
+    },
+    Sort: {
+        id: "DetailsListLocalizedFormatMessages.Sort",
+        defaultMessage: "Sort"
+    },
+    Cancel: {
+        id: "DetailsListLocalizedFormatMessages.Cancel",
+        defaultMessage: "Cancel"
+    },
+    EnterDesiredWidth: {
+        id: "DetailsListLocalizedFormatMessages.EnterDesiredWidth",
+        defaultMessage: "Enter desired column width (px):"
+    }
+});
+
+export const ButtonLocalizationFormatMessages = defineMessages({
+    More: {
+        id: "ButtonLocalizationFormatMessages.More",
+        defaultMessage: "Open in a new window",
     }
 });
 

@@ -17,6 +17,9 @@ import { useTheme } from "@fluentui/react-theme-provider";
 import React from "react";
 import styled, { ThemedStyledProps } from "styled-components";
 import { initializeComponent, useLocalization, withLocalization } from "../../../services/localization";
+import { Icons } from "../Icons";
+import { ButtonLocalizationFormatMessages } from "../../../clientResources";
+import { INTL } from "../../../util/intlUtil";
 
 const iconThemedStyles = (props: CSButtonProps) => `
     color: ${props.disabled ? props.theme.palette.neutralTertiary : props.theme.palette.themePrimary};
@@ -128,3 +131,27 @@ export const SecondaryButtonInternal = styled(Button)`
 
 export const PrimaryButton = withLocalization(initializeComponent(PrimaryButtonInternal));
 export const SecondaryButton = withLocalization(initializeComponent(SecondaryButtonInternal));
+
+export function MoreActionsButtonInternal(props: IButtonProps): JSX.Element {
+  return (
+    <CommandBarButton
+      title={INTL.formatMessage(ButtonLocalizationFormatMessages.More)}
+      styles={{
+        root: {
+          float: "right",
+          margin: "-0.625rem",
+          marginLeft: "0.25rem",
+          marginRight: "-0.5rem",
+          height: "2.5rem",
+          width: "2.25rem",
+          minWidth: "2.25rem",
+          backgroundColor: "inherit",
+        },
+      }}
+      menuIconProps={Icons.MoreVertical}
+      {...props}
+    />
+  );
+}
+
+export const MoreActionsButton = withLocalization(initializeComponent(MoreActionsButtonInternal));
