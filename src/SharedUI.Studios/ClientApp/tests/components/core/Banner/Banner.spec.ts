@@ -33,7 +33,7 @@ test.describe('Banner tests', () => {
   });
 
   test('the banner should update on properties updates', async ({ page }) => {
-    (await storybookPOM.getByRole('button', { name: 'Click Here To Start' })).click();
+    (await storybookPOM.getByRole('button', { name: 'Submit feedback' })).click();
 
     // Check panel width
     const panelClass = ".ms-Panel-main";

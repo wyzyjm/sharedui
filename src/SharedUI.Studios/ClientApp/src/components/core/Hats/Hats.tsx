@@ -54,6 +54,8 @@ export const HatsInternal = (props: HatsProps) => {
     return (
         <Panel
             className="profile-6te3ri77ie"
+            role="dialog"
+            aria-labelledby="Feedback"
             closeButtonAriaLabel={INTL.formatMessage(HatsLocalizationFormatMessages.Close)}
             isOpen={isPanelOpen}
             onDismiss={onDismiss}

@@ -40,8 +40,8 @@ export const RatingBanner = RatingHatsTemplate.bind({});
 Banner.args = {
     onClick: () => { console.log("banner clicked"); },
     onClose: () => { console.log("banner closed"); },
-    headerText: "Kindly Provide your Valuable Feedback",
-    buttonText: "Click Here To Start",
+    headerText: "Kindly provide your valuable feedback",
+    buttonText: "Submit feedback",
     hatsProp: {
         onClose: () => { console.log("onClose"); },
         autoFlyout: false,

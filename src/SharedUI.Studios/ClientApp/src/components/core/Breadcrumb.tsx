@@ -27,7 +27,7 @@ export const StyledBreadcrumb = (props: DefaultBreadcrumbProps) => {
   return !props.items ? null : (
     <Breadcrumb
       items={breadcrumbs}
-      ariaLabel="Breadcrumb"
+      ariaLabel="Navigation history"
       styles={{
         root: { margin: "0px" },
         itemLink: {
