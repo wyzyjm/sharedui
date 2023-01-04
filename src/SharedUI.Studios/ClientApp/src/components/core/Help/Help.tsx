@@ -1,10 +1,10 @@
 import * as React from "react";
 import { Panel, PanelType, Stack } from "@fluentui/react";
 import { useState } from "react";
-import { Link, LinkProps } from "./Link";
-import { INTL } from "../../util/intlUtil";
-import { HelpLocalizationFormatMessages } from "../../clientResources";
-import { initializeComponent, useLocalization, withLocalization } from "../../services/localization";
+import { Link, LinkProps } from "../Link/Link";
+import { INTL } from "../../../util/intlUtil";
+import { HelpLocalizationFormatMessages } from "../../../clientResources";
+import { initializeComponent, useLocalization, withLocalization } from "../../../services/localization";
 
 export interface IHelpAreaProps {
     helpBody: JSX.Element;

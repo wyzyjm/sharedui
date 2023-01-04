@@ -1,4 +1,4 @@
-import { initializeComponent, useLocalization, withLocalization } from "../../services/localization";
+import { initializeComponent, useLocalization, withLocalization } from "../../../services/localization";
 
 export interface LinkProps {
     href: string,

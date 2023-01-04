@@ -1,9 +1,9 @@
 import React from "react";
 import { ComponentStory, ComponentMeta } from "@storybook/react";
 import { ISearchBoxProps, SearchBox as CS_SearchBox } from "./Searchbox";
-import { defaultTheme } from "../../themes";
+import { defaultTheme } from "../../../themes";
 import { ThemeProvider } from "@fluentui/react";
-import { SharedComponentsContext } from './SharedComponentsContext';
+import { SharedComponentsContext } from '../SharedComponentsContext';
 
 export default {
   title: "SearchBox",

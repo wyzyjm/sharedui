@@ -2,8 +2,8 @@ import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 import { CircularLoadingIndicator, CircularLoadingIndicatorPageWide } from './Spinners';
 import { ThemeProvider } from '@fluentui/react-theme-provider';
-import { defaultTheme } from "../../themes";
-import { SharedComponentsContext } from './SharedComponentsContext';
+import { defaultTheme } from "../../../themes";
+import { SharedComponentsContext } from '../SharedComponentsContext';
 
 // More on default export: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
 export default {

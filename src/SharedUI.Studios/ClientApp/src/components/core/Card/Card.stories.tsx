@@ -1,10 +1,10 @@
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 import { Card, ICardProp } from './Card';
-import { defaultTheme } from "../../themes";
+import { defaultTheme } from "../../../themes";
 import {
     ThemeProvider
 } from "@fluentui/react";
-import { SharedComponentsContext } from './SharedComponentsContext';
+import { SharedComponentsContext } from '../SharedComponentsContext';
 
 export default {
     title: 'Card',

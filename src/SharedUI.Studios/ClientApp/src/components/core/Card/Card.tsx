@@ -5,8 +5,8 @@ import {
     Stack,
     Text,
 } from "@fluentui/react";
-import {  Link  } from "./Link"
-import { initializeComponent, useLocalization, withLocalization } from "../../services/localization";
+import {  Link  } from "../Link/Link"
+import { initializeComponent, useLocalization, withLocalization } from "../../../services/localization";
 
 export interface ICardProp {
     title: string;

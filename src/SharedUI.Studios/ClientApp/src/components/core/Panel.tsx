@@ -2,7 +2,7 @@
 import { Panel, PanelType } from "@fluentui/react";
 import { initializeComponent, useLocalization, withLocalization } from "../../services/localization";
 
-const SharedPannelInternal = (props: {
+const SharedPanelInternal = (props: {
     onClose?: () => void;
     headerText: string;
 }) => {
@@ -34,4 +34,4 @@ const SharedPannelInternal = (props: {
     );
 };
 
-export const SharedPannel = withLocalization(initializeComponent(SharedPannelInternal));
+export const SharedPanel = withLocalization(initializeComponent(SharedPanelInternal));

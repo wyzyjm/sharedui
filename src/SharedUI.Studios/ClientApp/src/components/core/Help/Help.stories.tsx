@@ -5,9 +5,9 @@ import {
     HelpArea as CS_HelpArea,
 } from "./Help";
 import { ThemeProvider } from "@fluentui/react";
-import { defaultTheme } from "../../themes";
-import { LinkProps } from "./Link";
-import { SharedComponentsContext } from './SharedComponentsContext';
+import { defaultTheme } from "../../../themes";
+import { LinkProps } from "../Link/Link";
+import { SharedComponentsContext } from '../SharedComponentsContext';
 
 export default {
     title: "HelpArea",

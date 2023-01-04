@@ -2,8 +2,8 @@ import { ComponentStory, ComponentMeta } from '@storybook/react';
 import { Checkbox as SharedCheckbox, CheckboxProps } from './Checkbox';
 import { initializeIcons } from '@fluentui/react/lib/Icons';
 import { ThemeProvider } from '@fluentui/react';
-import { defaultTheme } from '../../themes';
-import { SharedComponentsContext } from './SharedComponentsContext';
+import { defaultTheme } from '../../../themes';
+import { SharedComponentsContext } from '../SharedComponentsContext';
 initializeIcons(undefined, { disableWarnings: true });
 
 export default {

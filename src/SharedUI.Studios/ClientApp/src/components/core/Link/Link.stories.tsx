@@ -1,7 +1,7 @@
 import { ThemeProvider } from '@fluentui/react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
-import { SharedComponentsContext } from './SharedComponentsContext';
-import { defaultTheme } from '../../themes';
+import { SharedComponentsContext } from '../SharedComponentsContext';
+import { defaultTheme } from '../../../themes';
 import { LinkProps, Link as SharedComponentLink } from './Link';
 
 export default {

@@ -1,8 +1,8 @@
 import { ISearchBoxStyles, SearchBox as FluentSearchBox } from "@fluentui/react/lib/SearchBox";
 import { initializeIcons } from "@fluentui/react";
-import { INTL } from "../../util/intlUtil";
-import { SearchboxLocalizationFormatMessages } from "../../clientResources";
-import { initializeComponent, useLocalization, withLocalization } from "../../services/localization";
+import { INTL } from "../../../util/intlUtil";
+import { SearchboxLocalizationFormatMessages } from "../../../clientResources";
+import { initializeComponent, useLocalization, withLocalization } from "../../../services/localization";
 
 // Registers a map of icon names, which define how to render icons
 initializeIcons();

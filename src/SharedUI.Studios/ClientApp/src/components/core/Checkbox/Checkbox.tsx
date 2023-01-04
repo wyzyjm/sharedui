@@ -1,5 +1,5 @@
 import { Checkbox as FluentCheckbox } from "@fluentui/react";
-import { initializeComponent, useLocalization, withLocalization } from "../../services/localization";
+import { initializeComponent, useLocalization, withLocalization } from "../../../services/localization";
 
 export interface CheckboxProps {
   checked: boolean,

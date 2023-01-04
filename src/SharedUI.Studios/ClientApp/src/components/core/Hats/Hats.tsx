@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Panel, PanelType, Link, Separator } from "@fluentui/react";
-import { CircularLoadingIndicator as Spinner } from '../Spinners';
+import { CircularLoadingIndicator as Spinner } from '../Spinners/Spinners';
 import { INTL } from "../../../util/intlUtil";
 import { HatsLocalizationFormatMessages } from "../../../clientResources";
 import { initializeComponent, useLocalization, withLocalization } from "../../../services/localization";
