@@ -51,14 +51,16 @@ export const HelpArea = (props: IHelpAreaProps) => {
     return (
         <Panel
             isOpen={isPanelOpen}
+            role="dialog"
+            aria-labelledby="Help"
             onDismiss={onDismiss}
             closeButtonAriaLabel={INTL.formatMessage(HelpLocalizationFormatMessages.Close)}
             type={PanelType.custom}
             customWidth={"380px"}
             style={{ top: "40px" }}
-            styles={{ content: { overflow: "auto" } }}
             isLightDismiss
             headerText={headerText || ""}
+            headerTextProps={{ 'aria-level': 2 }}
             onRenderFooterContent={onRenderFooterContent}
             isFooterAtBottom={true}
         >

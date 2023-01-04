@@ -251,6 +251,8 @@ export function NotificationPanelInternal(props: INotificationPanelProps): JSX.E
   return (
     <Panel
       className="notification-582m3vdw73"
+      role="dialog"
+      aria-labelledby="Notifications"
       isOpen={isPanelOpen}
       closeButtonAriaLabel={INTL.formatMessage(NotificationLocalizationFormatMessages.PanelClose)}
       onDismiss={onDismiss}
@@ -259,6 +261,7 @@ export function NotificationPanelInternal(props: INotificationPanelProps): JSX.E
       style={{ top: "40px" }}
       isLightDismiss
       headerText={headerText || ""}
+      headerTextProps={{ 'aria-level': 2 }}
     >
       <div>
         <FabricLink
