@@ -5,8 +5,8 @@ import { ThemeProvider } from '@fluentui/react-theme-provider';
 import { defaultTheme } from "../../themes";
 
 export default {
-  title: 'Breadcrumb',
-  component:  StyledBreadcrumb 
+  title: 'BreadCrumb',
+  component: StyledBreadcrumb
 } as ComponentMeta<typeof StyledBreadcrumb>;
 
 const Breadcrumb: ComponentStory<typeof StyledBreadcrumb> = (args) => (
@@ -17,31 +17,27 @@ const Breadcrumb: ComponentStory<typeof StyledBreadcrumb> = (args) => (
   </ThemeProvider>
 );
 
+const breadcrumbItems = [{
+  key: 'Home',
+  text: 'Home',
+  href: 'https://www.google.com/',
+  onClick: () => { }
+},
+{
+  key: 'About',
+  text: 'About',
+  href: 'https://www.microsoft.com/',
+  onClick: () => { }
+},
+{
+  key: 'Contact Us',
+  text: 'Contact Us',
+  href: '',
+  onClick: () => { }
+}]
 
 export const BreadCrumb = Breadcrumb.bind({});
+
 BreadCrumb.args = {
-  items:[{
-    key: 'Home',
-    text: 'Home',
-    href: 'https://www.google.com/',
-    onClick: () => {
-  
-    }
-  },
-  {
-    key: 'About',
-    text: 'About',
-    href: 'https://www.google.com/',
-    onClick: () => {
-  
-    }
-  },
-  {
-    key: 'Contact Us',
-    text: 'Contact Us',
-    href: '',
-    onClick: () => {
-  
-    }
-  }]
+  items: breadcrumbItems
 };

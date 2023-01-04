@@ -1,10 +1,8 @@
 import {
-  Breadcrumb,
-  ITooltipHostStyles,
-  TooltipOverflowMode,
-  useTheme
+  Breadcrumb, IBreadcrumbItem, ITooltipHostStyles, TooltipOverflowMode, useTheme
 } from "@fluentui/react";
 import { initializeIcons } from '@fluentui/react/lib/Icons';
+import _ from "lodash";
 
 initializeIcons(undefined, { disableWarnings: true });
 
@@ -13,43 +11,45 @@ const breadcrumbTooltipHostStyles: Partial<ITooltipHostStyles> = {
 };
 
 export interface DefaultBreadcrumbProps {
-  items: BreadcrumbItem[];
-}
-
-export interface BreadcrumbItem {
-  key:string,
-  text:string,
-  href?:string,
-  onClick?: () => void;
+  items: IBreadcrumbItem[];
 }
 
 export const StyledBreadcrumb = (props: DefaultBreadcrumbProps) => {
-  const theme = useTheme();
+  const defaultTheme = useTheme();
+
+  const breadcrumbs = _.map(props.items, (readcrumb) => {
+    if (!readcrumb?.href) {
+      readcrumb.style = { color: "black", fontSize: "0.875rem", fontWeight: 400 };
+    }
+    return readcrumb;
+  });
+
   return !props.items ? null : (
     <Breadcrumb
-    ariaLabel="Breadcrumb"
-    styles={{
-      root: { margin: "0px" },
-      itemLink: {
-        fontSize: "0.875rem",
-        color: theme.palette.themePrimary,
-      },
-      listItem: {
-        selectors: {
-          ":last-child .ms-Breadcrumb-itemLink": {
-            color: theme.palette.themePrimary,
-            fontWeight: 400,
-            pointerEvents: 'none',
-            cursor:'pointer'
+      items={breadcrumbs}
+      ariaLabel="Breadcrumb"
+      styles={{
+        root: { margin: "0px" },
+        itemLink: {
+          fontSize: "0.875rem",
+          color: defaultTheme.palette.themePrimary,
+        },
+        listItem: {
+          selectors: {
+            ":last-child .ms-Breadcrumb-itemLink": {
+              color: defaultTheme.palette.themePrimary,
+              fontWeight: 400,
+              pointerEvents: 'none',
+              cursor: 'pointer'
+            },
           },
         },
-      },
-    }}
+      }}
       tooltipHostProps={{
         overflowMode: TooltipOverflowMode.Self,
         styles: breadcrumbTooltipHostStyles,
       }}
-      {...props}    />
+      {...props} />
 
   );
 };
