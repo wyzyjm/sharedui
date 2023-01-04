@@ -4,6 +4,7 @@ import { useBoolean } from '@fluentui/react-hooks';
 import "./WizardFlow.scss";
 import "../core.scss";
 import "../common.scss";
+import { initializeComponent, useLocalization, withLocalization } from "../../../services/localization";
 
 type ReactElementChildren = ReactElement<WizardFlowProps, FunctionComponent>;
 
@@ -56,7 +57,7 @@ export interface WizardFlowProps extends IDialogProps {
    * @deprecated Due to adapting to the screen environment, this attribute is obsolete, please use innerWidth
    */
   maxWidth?: number | string;
-}
+};
 
 export interface IWizardFlow extends FunctionComponent<WizardFlowProps> {
   Header: FunctionComponent;
@@ -338,3 +339,5 @@ WizardFlow.Header = Header;
 WizardFlow.Subheader = Subheader;
 WizardFlow.Content = Content;
 WizardFlow.Footer = Footer;
+
+export const WizardFlowComp = withLocalization(initializeComponent(WizardFlow));

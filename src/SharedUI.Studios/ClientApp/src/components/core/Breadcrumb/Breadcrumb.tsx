@@ -3,6 +3,9 @@ import {
 } from "@fluentui/react";
 import { initializeIcons } from '@fluentui/react/lib/Icons';
 import _ from "lodash";
+import { BreadcrumbLocalizationFormatMessages } from "../../../clientResources";
+import { initializeComponent, useLocalization, withLocalization } from "../../../services/localization";
+import { INTL } from "../../../util/intlUtil";
 
 initializeIcons(undefined, { disableWarnings: true });
 
@@ -12,9 +15,9 @@ const breadcrumbTooltipHostStyles: Partial<ITooltipHostStyles> = {
 
 export interface DefaultBreadcrumbProps {
   items: IBreadcrumbItem[];
-}
+};
 
-export const StyledBreadcrumb = (props: DefaultBreadcrumbProps) => {
+const StyledBreadcrumbInternal = (props: DefaultBreadcrumbProps) => {
   const defaultTheme = useTheme();
 
   const breadcrumbs = _.map(props.items, (readcrumb) => {
@@ -27,7 +30,7 @@ export const StyledBreadcrumb = (props: DefaultBreadcrumbProps) => {
   return !props.items ? null : (
     <Breadcrumb
       items={breadcrumbs}
-      ariaLabel="Navigation history"
+      ariaLabel={INTL.formatMessage(BreadcrumbLocalizationFormatMessages.NavigationHistory)}
       styles={{
         root: { margin: "0px" },
         itemLink: {
@@ -53,3 +56,5 @@ export const StyledBreadcrumb = (props: DefaultBreadcrumbProps) => {
 
   );
 };
+
+export const StyledBreadcrumb = withLocalization(initializeComponent(StyledBreadcrumbInternal));

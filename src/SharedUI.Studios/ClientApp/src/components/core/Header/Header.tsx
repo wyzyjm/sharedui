@@ -40,7 +40,7 @@ export interface IHeaderProps {
   commandBarItems: ICommandBarItemProps[];
 };
 
-export function ThemedHeaderInternal(props: IHeaderProps) {
+function ThemedHeaderInternal(props: IHeaderProps) {
   const itemAlignmentsStackTokens: IStackTokens = {
     padding: "0 0 0 10px",
   };

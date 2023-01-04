@@ -239,7 +239,7 @@ export interface INotificationPanelProps {
   onClose: () => void;
 }
 
-export function NotificationPanelInternal(props: INotificationPanelProps): JSX.Element {
+function NotificationPanelInternal(props: INotificationPanelProps): JSX.Element {
   const sortedItems = sortedNotifications(values(props.notifications));
   const { onClose, headerText, isOpen } = props;
   const [isPanelOpen, setIsPanelOpen] = useState(isOpen)

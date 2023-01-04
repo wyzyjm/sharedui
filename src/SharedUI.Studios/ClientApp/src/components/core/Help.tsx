@@ -4,6 +4,7 @@ import { useState } from "react";
 import { Link, LinkProps } from "./Link";
 import { INTL } from "../../util/intlUtil";
 import { HelpLocalizationFormatMessages } from "../../clientResources";
+import { initializeComponent, useLocalization, withLocalization } from "../../services/localization";
 
 export interface IHelpAreaProps {
     helpBody: JSX.Element;
@@ -12,8 +13,9 @@ export interface IHelpAreaProps {
     onClose: () => void;
     helpItems: LinkProps[];
     footerItems: LinkProps[];
-}
-export const HelpArea = (props: IHelpAreaProps) => {
+};
+
+const HelpAreaInternal = (props: IHelpAreaProps) => {
     const { onClose, isOpen, headerText } = props;
     const [isPanelOpen, setIsPanelOpen] = useState(isOpen);
 
@@ -83,3 +85,5 @@ export const HelpArea = (props: IHelpAreaProps) => {
         </Panel>
     );
 };
+
+export const HelpArea = withLocalization(initializeComponent(HelpAreaInternal));

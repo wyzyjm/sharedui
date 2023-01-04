@@ -30,7 +30,7 @@ export interface HatsProps {
     isOpen?: boolean | true;
 };
 
-export const HatsInternal = (props: HatsProps) => {
+const HatsInternal = (props: HatsProps) => {
     const [loading, setLoading] = useState(true);
     const [isPanelOpen, setIsPanelOpen] = useState(props.isOpen);
 

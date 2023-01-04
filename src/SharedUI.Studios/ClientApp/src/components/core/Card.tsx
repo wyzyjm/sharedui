@@ -5,7 +5,8 @@ import {
     Stack,
     Text,
 } from "@fluentui/react";
-import { Link } from "./Link"
+import {  Link  } from "./Link"
+import { initializeComponent, useLocalization, withLocalization } from "../../services/localization";
 
 export interface ICardProp {
     title: string;
@@ -16,7 +17,7 @@ export interface ICardProp {
     href?: string;
     openInANewWindow?: boolean;
     onClick?: () => void
-}
+};
 
 export interface IStyledDocumentCardProp {
     onClick?: () => void;
@@ -26,7 +27,7 @@ export interface IStyledDocumentCardProp {
     selected?: boolean;
 }
 
-export const Card = (props: ICardProp) => {
+const CardInternal = (props: ICardProp) => {
     const theme = useTheme();
     const styles = {
         headerWrapper: {
@@ -132,3 +133,5 @@ export function StyledDocumentCard(props: IStyledDocumentCardProp): JSX.Element 
         </DocumentCard>
     );
 }
+
+export const Card = withLocalization(initializeComponent(CardInternal));

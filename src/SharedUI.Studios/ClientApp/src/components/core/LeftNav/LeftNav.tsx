@@ -201,7 +201,7 @@ const MenuPage: React.FunctionComponent<ILeftNavProps> = (
   );
 };
 
-export const LeftNavInternal = (props: ILeftNavProps): JSX.Element => {
+const LeftNavInternal = (props: ILeftNavProps): JSX.Element => {
   return (
     <div className="sr">
       <MenuPage

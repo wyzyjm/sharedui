@@ -7,17 +7,22 @@ import {
 import { ThemeProvider } from "@fluentui/react";
 import { defaultTheme } from "../../themes";
 import { LinkProps } from "./Link";
+import { SharedComponentsContext } from './SharedComponentsContext';
 
 export default {
     title: "HelpArea",
     component: CS_HelpArea,
 } as ComponentMeta<typeof CS_HelpArea>;
 
-const ChoiceGroupTemplate: ComponentStory<typeof CS_HelpArea> = (args) => (
-    <ThemeProvider theme={defaultTheme.body}>
-        <CS_HelpArea {...args} />
-    </ThemeProvider>
-);
+const HelpTemplate: ComponentStory<typeof CS_HelpArea> = (args) => {
+    return (
+        <ThemeProvider theme={defaultTheme.body}>
+            <SharedComponentsContext.Provider value={{ locale: 'en' }}>
+                <CS_HelpArea {...args} />
+            </SharedComponentsContext.Provider>
+        </ThemeProvider>
+    );
+}
 
 const HelpBody = () => {
     return <div><h5>Help Body</h5></div>
@@ -53,7 +58,7 @@ const footerItems: LinkProps[] = [{
     href: 'https://go.microsoft.com/fwlink/?linkid=2085431',
 }]
 
-export const HelpArea = ChoiceGroupTemplate.bind({});
+export const HelpArea = HelpTemplate.bind({});
 
 HelpArea.args = {
     headerText: "Help",

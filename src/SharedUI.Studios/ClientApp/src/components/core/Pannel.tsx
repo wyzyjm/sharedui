@@ -1,20 +1,21 @@
 
 import { Panel, PanelType } from "@fluentui/react";
+import { initializeComponent, useLocalization, withLocalization } from "../../services/localization";
 
-export const SharedPannel= (props: { 
-    onClose?: () => void; 
-    headerText:string;
- }) => {
-    const { onClose, headerText } = props; 
+const SharedPannelInternal = (props: {
+    onClose?: () => void;
+    headerText: string;
+}) => {
+    const { onClose, headerText } = props;
 
     function onDismiss() {
         onClose?.();
     }
-    
+
     function onLightDismissClick() {
         onClose?.();
     }
-    
+
     return (
         <Panel
             className="profile-6te3ri77ie"
@@ -32,3 +33,5 @@ export const SharedPannel= (props: {
         </Panel>
     );
 };
+
+export const SharedPannel = withLocalization(initializeComponent(SharedPannelInternal));

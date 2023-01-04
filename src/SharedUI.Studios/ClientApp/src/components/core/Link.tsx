@@ -1,3 +1,5 @@
+import { initializeComponent, useLocalization, withLocalization } from "../../services/localization";
+
 export interface LinkProps {
     href: string,
     displayText: any
@@ -5,7 +7,7 @@ export interface LinkProps {
     disabled?: boolean
     onClick?: () => void
     tabIndex?: number;
-}
+};
 
 const styles = {
     linkWrapper: {
@@ -23,7 +25,7 @@ const styles = {
     }
 };
 
-export const Link = (props: LinkProps): JSX.Element => {
+const LinkInternal = (props: LinkProps): JSX.Element => {
     const target = props.openInANewWindow ? '_blank' : null;
     return (
         <div style={styles.linkWrapper}>
@@ -33,3 +35,5 @@ export const Link = (props: LinkProps): JSX.Element => {
         </div>
     )
 };
+
+export const Link = withLocalization(initializeComponent(LinkInternal));

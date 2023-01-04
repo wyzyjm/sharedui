@@ -1,6 +1,13 @@
 import { defineMessages } from "react-intl";
 export const FormatMessagePlaceholder = "NamePlaceholderDoNotTranslate";
 
+export const BreadcrumbLocalizationFormatMessages = defineMessages({
+    NavigationHistory: {
+        id: "Breadcrumb.NavigationHistory",
+        defaultMessage: "Navigation history",
+    }
+});
+
 export const FilterableComboBoxFormatMessages = defineMessages({
     All: {
         id: "All",

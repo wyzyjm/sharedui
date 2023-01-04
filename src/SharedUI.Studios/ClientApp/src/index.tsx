@@ -1,5 +1,5 @@
-export { StyledBreadcrumb } from "./components/core/Breadcrumb";
-export type { DefaultBreadcrumbProps } from "./components/core/Breadcrumb";
+export { StyledBreadcrumb } from "./components/core/Breadcrumb/Breadcrumb";
+export type { DefaultBreadcrumbProps } from "./components/core/Breadcrumb/Breadcrumb";
 export { CircularLoadingIndicator, CircularLoadingIndicatorPageWide } from "./components/core/Spinners";
 export { Checkbox } from "./components/core/Checkbox";
 export { HaTSArea, HaTSInteraction } from "./components/core/Hats/Hats";

@@ -17,7 +17,7 @@ export interface BannerProps {
     onClick: Function;
 };
 
-export const BannerInternal = (props: BannerProps) => {
+const BannerInternal = (props: BannerProps) => {
     function handleClick() {
         setIsBannerVisible(false);
         if (props.hatsProp) {

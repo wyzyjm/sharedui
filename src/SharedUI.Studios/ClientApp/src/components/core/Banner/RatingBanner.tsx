@@ -16,7 +16,7 @@ export interface RatingBannerProps {
     onClick: Function;
 };
 
-export const RatingBannerInternal = (props: RatingBannerProps) => {
+const RatingBannerInternal = (props: RatingBannerProps) => {
 
     function handleRatingClick(e: any) {
         setIsBannerVisible(false);

@@ -1,21 +1,23 @@
-
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 import { StyledBreadcrumb } from './Breadcrumb';
 import { ThemeProvider } from '@fluentui/react-theme-provider';
-import { defaultTheme } from "../../themes";
+import { defaultTheme } from "../../../themes";
+import { SharedComponentsContext } from '../SharedComponentsContext';
 
 export default {
   title: 'BreadCrumb',
   component: StyledBreadcrumb
 } as ComponentMeta<typeof StyledBreadcrumb>;
 
-const Breadcrumb: ComponentStory<typeof StyledBreadcrumb> = (args) => (
-  <ThemeProvider theme={defaultTheme.body}>
-    <StyledBreadcrumb
-      {...args}
-    />
-  </ThemeProvider>
-);
+const Breadcrumb: ComponentStory<typeof StyledBreadcrumb> = (args) => {
+  return (
+    <ThemeProvider theme={defaultTheme.body}>
+      <SharedComponentsContext.Provider value={{ locale: 'en' }}>
+        <StyledBreadcrumb{...args} />
+      </SharedComponentsContext.Provider>
+    </ThemeProvider>
+  );
+}
 
 const breadcrumbItems = [{
   key: 'Home',

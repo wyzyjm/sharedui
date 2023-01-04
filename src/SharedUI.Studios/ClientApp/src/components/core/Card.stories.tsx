@@ -4,18 +4,22 @@ import { defaultTheme } from "../../themes";
 import {
     ThemeProvider
 } from "@fluentui/react";
-
+import { SharedComponentsContext } from './SharedComponentsContext';
 
 export default {
     title: 'Card',
     component: Card
 } as ComponentMeta<typeof Card>;
 
-const DefaultCard: ComponentStory<typeof Card> = (args) => (
-    <ThemeProvider theme={defaultTheme.body}>
-        <Card {...args} />
-    </ThemeProvider>
-);
+const DefaultCard: ComponentStory<typeof Card> = (args) => {
+    return (
+        <ThemeProvider theme={defaultTheme.body}>
+            <SharedComponentsContext.Provider value={{ locale: 'en' }}>
+                <Card {...args} />
+            </SharedComponentsContext.Provider>
+        </ThemeProvider>
+    );
+}
 
 export const card = DefaultCard.bind({});
 card.args = {

@@ -2,6 +2,7 @@ import { ISearchBoxStyles, SearchBox as FluentSearchBox } from "@fluentui/react/
 import { initializeIcons } from "@fluentui/react";
 import { INTL } from "../../util/intlUtil";
 import { SearchboxLocalizationFormatMessages } from "../../clientResources";
+import { initializeComponent, useLocalization, withLocalization } from "../../services/localization";
 
 // Registers a map of icon names, which define how to render icons
 initializeIcons();
@@ -11,9 +12,9 @@ export interface ISearchBoxProps {
   onClear: Function;
   onChange: Function;
   onSearch: Function;
-}
+};
 
-export function SearchBox(props: ISearchBoxProps): JSX.Element {
+function SearchBoxInternal(props: ISearchBoxProps): JSX.Element {
   const searchBoxStyles: Partial<ISearchBoxStyles> = {
     root: {
       width: 200,
@@ -33,3 +34,5 @@ export function SearchBox(props: ISearchBoxProps): JSX.Element {
     </div>
   );
 };
+
+export const SearchBox = withLocalization(initializeComponent(SearchBoxInternal));
