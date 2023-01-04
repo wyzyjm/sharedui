@@ -5,7 +5,7 @@ import {
     Stack,
     Text,
 } from "@fluentui/react";
-import {Link} from "./Link"
+import { Link } from "./Link"
 
 export interface ICardProp {
     title: string;
@@ -14,7 +14,7 @@ export interface ICardProp {
     linkTitle: string;
     isCompactMode?: boolean;
     href?: string;
-    openInANewWindow?:boolean;
+    openInANewWindow?: boolean;
     onClick?: () => void
 }
 
@@ -65,11 +65,12 @@ export const Card = (props: ICardProp) => {
             lineHeight: "16px",
         },
     };
-     const linkProps ={
-        href : props.href,
+    const linkProps = {
+        href: props.href,
         displayText: props.linkTitle,
         openInANewWindow: props.openInANewWindow,
-     }
+        tabIndex: 0
+    }
 
     return (
         <StyledDocumentCard onClick={props.onClick} width={260}>
@@ -109,6 +110,7 @@ export function StyledDocumentCard(props: IStyledDocumentCardProp): JSX.Element 
                 width: "100%",
                 height: "100%",
                 position: "absolute",
+                outline: "2px solid transparent",
                 boxShadow: `0px 2px 4px ${theme.palette.neutralQuaternary}, 0px 0px 2px ${theme.palette.neutralLight}`,
                 border: props.selected ? `solid 2px ${theme.palette.themePrimary} !important` : "none !important",
                 borderRadius: "8px",

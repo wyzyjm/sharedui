@@ -45,7 +45,7 @@ export const BannerInternal = (props: BannerProps) => {
                         />
                         <Text
                             className="studio-banner-content"
-                            tabIndex={0}
+                            tabIndex={-1}
                         >
                             {props.headerText}
                         </Text>
