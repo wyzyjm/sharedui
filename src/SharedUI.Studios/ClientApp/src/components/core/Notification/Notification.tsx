@@ -1,10 +1,9 @@
 import {
   IButtonStyles, Link as FabricLink, Panel, PanelType, IconButton as FabricIconButton,
-  PrimaryButton, ProgressIndicator, Stack, useTheme
+  PrimaryButton, ProgressIndicator, Stack, useTheme, Separator
 } from "@fluentui/react";
 import { values, sortBy } from "lodash";
 import React, { useEffect, useRef, useState } from "react";
-import { Hr } from '../Hr';
 import "./Notification.scss";
 import { StatusIcons } from "../themed-icons";
 import { INTL } from "../../../util/intlUtil";
@@ -268,7 +267,7 @@ export function NotificationPanelInternal(props: INotificationPanelProps): JSX.E
           onClick={props.onClick}
         >{INTL.formatMessage(NotificationLocalizationFormatMessages.DismissAll)}</FabricLink>
       </div>
-      <Hr />
+      <Separator />
       <Stack>
         {sortedItems.map((item) => (
           <Stack.Item key={item.id}>
@@ -309,7 +308,7 @@ export function NotificationPanelInternal(props: INotificationPanelProps): JSX.E
                 />
               </Stack>
             </Stack>
-            <Hr />
+            <Separator />
           </Stack.Item>
         ))}
       </Stack>

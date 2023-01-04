@@ -1,7 +1,6 @@
 import React, { useState } from "react";
-import { Panel, PanelType, Link } from "@fluentui/react";
-import { CircularLoadingIndicator as Spinner } from '../Spinners'
-import { Hr } from '../Hr'
+import { Panel, PanelType, Link, Separator } from "@fluentui/react";
+import { CircularLoadingIndicator as Spinner } from '../Spinners';
 import { INTL } from "../../../util/intlUtil";
 import { HatsLocalizationFormatMessages } from "../../../clientResources";
 import { initializeComponent, useLocalization, withLocalization } from "../../../services/localization";
@@ -11,7 +10,7 @@ export enum HaTSInteraction {
     Banner = "Banner",
     Smiley = "Smiley",
     AutoFlyout = "AutoFlyout",
-}
+};
 
 function buttonId(props: { interaction?: HaTSInteraction, autoFlyout: boolean, button: string }) {
     const { interaction, autoFlyout, button } = props;
@@ -76,7 +75,7 @@ export const HatsInternal = (props: HatsProps) => {
             >
                 {INTL.formatMessage(HatsLocalizationFormatMessages.OpenInANewWindow)}
             </Link>
-            <Hr />
+            <Separator />
             {loading && (
                 <Spinner />
             )}

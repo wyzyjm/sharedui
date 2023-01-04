@@ -1,4 +1,3 @@
-export { Hr } from "./components/core/Hr";
 export { StyledBreadcrumb } from "./components/core/Breadcrumb";
 export type { DefaultBreadcrumbProps } from "./components/core/Breadcrumb";
 export { CircularLoadingIndicator, CircularLoadingIndicatorPageWide } from "./components/core/Spinners";
