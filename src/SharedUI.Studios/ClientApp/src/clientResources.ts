@@ -127,10 +127,3 @@ export const NotificationLocalizationFormatMessages = defineMessages({
         defaultMessage: "Dismiss all",
     },
 });
-
-export const SearchboxLocalizationFormatMessages = defineMessages({
-    Close: {
-        id: "Searchbox.Close",
-        defaultMessage: "Close",
-    },
-});

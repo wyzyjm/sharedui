@@ -14,8 +14,6 @@ export { Link } from "./components/core/Link/Link";
 export type { LinkProps } from "./components/core/Link/Link";
 export { ThemedHeader } from "./components/core/Header/Header";
 export type { IHeaderProps } from "./components/core/Header/Header";
-export { SearchBox } from "./components/core/Searchbox/Searchbox";
-export type { ISearchBoxProps } from "./components/core/Searchbox/Searchbox";
 export { LeftNav } from "./components/core/LeftNav/LeftNav";
 export type { ILeftNavProps } from "./components/core/LeftNav/LeftNav";
 export { NotificationPanel, getNotificationMessage, NotificationProcessingBar, NotificationPrompt, NotificationBoxListWrapped } from "./components/core/Notification/Notification";
