@@ -75,12 +75,14 @@ In your terminal/cmd:
 
 Steps to test a component:
 
-* If adding a new test, write the tests in '<component-name>.spec.ts' under 'tests' folder.
-* Run 'npx playwright test <test-name>' to run a particular test.
+* If adding a new test, write the tests in '<component-name>.spec.ts' under 'tests' folder. 
+From the `ClientApp` folder, run: 
+* 'npx playwright test <test-name>' to run a particular test.
 * 'npx playwright test' runs all tests.
 * 'npx playwright show-report' displays the HTML report.
 * 'npx playwright codegen <URL>' helps in generating the tests.
 * 'npx playwright test --trace on' helps in tracing the tests.
+* 'npx playwright test tests/components/core/ItemList/ItemList.spec.tsx' runs tests only in the ItemList.spec.tsx file
 
 ## Deployment
 
