@@ -4,9 +4,8 @@ import {
     IHelpAreaProps,
     HelpArea as CS_HelpArea,
 } from "./Help";
-import { ThemeProvider } from "@fluentui/react";
+import { ILinkProps, ThemeProvider } from "@fluentui/react";
 import { defaultTheme } from "../../../themes";
-import { LinkProps } from "../Link/Link";
 import { SharedComponentsContext } from '../SharedComponentsContext';
 
 export default {
@@ -28,7 +27,7 @@ const HelpBody = () => {
     return <div><h5>Help Body</h5></div>
 }
 
-const helpItems: LinkProps[] = [{
+const helpItems: ILinkProps[] = [{
     displayText: 'Custom speech document',
     href: 'https://go.microsoft.com/fwlink/?linkid=2085429'
 },
@@ -45,7 +44,7 @@ const helpItems: LinkProps[] = [{
     href: 'https://go.microsoft.com/fwlink/?linkid=2162894',
 }]
 
-const footerItems: LinkProps[] = [{
+const footerItems: ILinkProps[] = [{
     displayText: "Privacy & cookies",
     href: 'https://go.microsoft.com/fwlink/?linkid=521839'
 },

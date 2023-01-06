@@ -10,8 +10,6 @@ export { RatingBannerArea } from "./components/core/Banner/RatingBanner";
 export type { RatingBannerProps } from "./components/core/Banner/RatingBanner";
 export { Card } from "./components/core/Card/Card";
 export type { ICardProp } from "./components/core/Card/Card";
-export { Link } from "./components/core/Link/Link";
-export type { LinkProps } from "./components/core/Link/Link";
 export { ThemedHeader } from "./components/core/Header/Header";
 export type { IHeaderProps } from "./components/core/Header/Header";
 export { LeftNav } from "./components/core/LeftNav/LeftNav";

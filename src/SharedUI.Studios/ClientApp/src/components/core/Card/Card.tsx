@@ -1,11 +1,10 @@
-import { useTheme, IDocumentCardStyles, DocumentCard } from "@fluentui/react";
+import { useTheme, IDocumentCardStyles, DocumentCard, Link } from "@fluentui/react";
 import React from "react";
 import { CSSProperties, ReactNode } from "react";
 import {
     Stack,
     Text,
 } from "@fluentui/react";
-import {  Link  } from "../Link/Link"
 import { initializeComponent, useLocalization, withLocalization } from "../../../services/localization";
 
 export interface ICardProp {
@@ -15,7 +14,6 @@ export interface ICardProp {
     linkTitle: string;
     isCompactMode?: boolean;
     href?: string;
-    openInANewWindow?: boolean;
     onClick?: () => void
 };
 
@@ -68,8 +66,6 @@ const CardInternal = (props: ICardProp) => {
     };
     const linkProps = {
         href: props.href,
-        displayText: props.linkTitle,
-        openInANewWindow: props.openInANewWindow,
         tabIndex: 0
     }
 
@@ -88,7 +84,10 @@ const CardInternal = (props: ICardProp) => {
                 <Text style={styles.description}>{props.description}</Text>
             </Stack>
             <Stack style={styles.linkWrapper}>
-                <Link {...linkProps}> </Link>
+                <Link {...linkProps}
+                >
+                    {props.linkTitle}
+                </Link>
             </Stack>
         </StyledDocumentCard>
     );

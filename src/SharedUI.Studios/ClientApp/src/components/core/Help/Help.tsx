@@ -1,7 +1,6 @@
 import * as React from "react";
-import { Panel, PanelType, Stack } from "@fluentui/react";
+import { Link, ILinkProps, Panel, PanelType, Stack } from "@fluentui/react";
 import { useState } from "react";
-import { Link, LinkProps } from "../Link/Link";
 import { INTL } from "../../../util/intlUtil";
 import { HelpLocalizationFormatMessages } from "../../../clientResources";
 import { initializeComponent, useLocalization, withLocalization } from "../../../services/localization";
@@ -11,8 +10,8 @@ export interface IHelpAreaProps {
     headerText: string;
     isOpen?: boolean | true;
     onClose: () => void;
-    helpItems: LinkProps[];
-    footerItems: LinkProps[];
+    helpItems: ILinkProps[];
+    footerItems: ILinkProps[];
 };
 
 const HelpAreaInternal = (props: IHelpAreaProps) => {
@@ -32,9 +31,10 @@ const HelpAreaInternal = (props: IHelpAreaProps) => {
                         <Stack.Item>
                             <Link
                                 href={item.href}
-                                displayText={item.displayText}
-                                openInANewWindow={true}
-                            ></Link>
+                                target='_blank'
+                            >
+                                {item.displayText}
+                            </Link>
                         </Stack.Item>
                         <Stack.Item>
                             {index != (props.footerItems.length - 1) && (
@@ -72,9 +72,10 @@ const HelpAreaInternal = (props: IHelpAreaProps) => {
                         <Stack.Item >
                             <Link
                                 href={item.href}
-                                displayText={item.displayText}
-                                openInANewWindow={true}
-                            ></Link>
+                                target='_blank'
+                            >
+                                {item.displayText}
+                            </Link>
                         </Stack.Item>
                     ))}
                 </Stack>
