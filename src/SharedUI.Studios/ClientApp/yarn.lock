@@ -34,10 +34,10 @@
   dependencies:
     "@babel/highlight" "^7.18.6"
 
-"@babel/compat-data@^7.17.7", "@babel/compat-data@^7.20.0", "@babel/compat-data@^7.20.1":
-  version "7.20.5"
-  resolved "https://msazure.pkgs.visualstudio.com/a531312f-ba7b-4573-ab4f-d468b740a319/_packaging/CognitiveServicesSharedComponents/npm/registry/@babel/compat-data/-/compat-data-7.20.5.tgz#86f172690b093373a933223b4745deeb6049e733"
-  integrity sha1-hvFyaQsJM3OpMyI7R0Xe62BJ5zM=
+"@babel/compat-data@^7.17.7", "@babel/compat-data@^7.20.1", "@babel/compat-data@^7.20.5":
+  version "7.20.10"
+  resolved "https://msazure.pkgs.visualstudio.com/a531312f-ba7b-4573-ab4f-d468b740a319/_packaging/CognitiveServicesSharedComponents/npm/registry/@babel/compat-data/-/compat-data-7.20.10.tgz#9d92fa81b87542fff50e848ed585b4212c1d34ec"
+  integrity sha1-nZL6gbh1Qv/1DoSO1YW0ISwdNOw=
 
 "@babel/core@7.12.9":
   version "7.12.9"
@@ -62,24 +62,24 @@
     source-map "^0.5.0"
 
 "@babel/core@^7.1.0", "@babel/core@^7.11.1", "@babel/core@^7.12.10", "@babel/core@^7.12.3", "@babel/core@^7.16.0", "@babel/core@^7.7.2", "@babel/core@^7.7.5", "@babel/core@^7.8.0":
-  version "7.20.5"
-  resolved "https://msazure.pkgs.visualstudio.com/a531312f-ba7b-4573-ab4f-d468b740a319/_packaging/CognitiveServicesSharedComponents/npm/registry/@babel/core/-/core-7.20.5.tgz#45e2114dc6cd4ab167f81daf7820e8fa1250d113"
-  integrity sha1-ReIRTcbNSrFn+B2veCDo+hJQ0RM=
+  version "7.20.12"
+  resolved "https://msazure.pkgs.visualstudio.com/a531312f-ba7b-4573-ab4f-d468b740a319/_packaging/CognitiveServicesSharedComponents/npm/registry/@babel/core/-/core-7.20.12.tgz#7930db57443c6714ad216953d1356dac0eb8496d"
+  integrity sha1-eTDbV0Q8ZxStIWlT0TVtrA64SW0=
   dependencies:
     "@ampproject/remapping" "^2.1.0"
     "@babel/code-frame" "^7.18.6"
-    "@babel/generator" "^7.20.5"
-    "@babel/helper-compilation-targets" "^7.20.0"
-    "@babel/helper-module-transforms" "^7.20.2"
-    "@babel/helpers" "^7.20.5"
-    "@babel/parser" "^7.20.5"
-    "@babel/template" "^7.18.10"
-    "@babel/traverse" "^7.20.5"
-    "@babel/types" "^7.20.5"
+    "@babel/generator" "^7.20.7"
+    "@babel/helper-compilation-targets" "^7.20.7"
+    "@babel/helper-module-transforms" "^7.20.11"
+    "@babel/helpers" "^7.20.7"
+    "@babel/parser" "^7.20.7"
+    "@babel/template" "^7.20.7"
+    "@babel/traverse" "^7.20.12"
+    "@babel/types" "^7.20.7"
     convert-source-map "^1.7.0"
     debug "^4.1.0"
     gensync "^1.0.0-beta.2"
-    json5 "^2.2.1"
+    json5 "^2.2.2"
     semver "^6.3.0"
 
 "@babel/eslint-parser@^7.16.3":
@@ -91,12 +91,12 @@
     eslint-visitor-keys "^2.1.0"
     semver "^6.3.0"
 
-"@babel/generator@^7.12.11", "@babel/generator@^7.12.5", "@babel/generator@^7.20.5", "@babel/generator@^7.7.2":
-  version "7.20.5"
-  resolved "https://msazure.pkgs.visualstudio.com/a531312f-ba7b-4573-ab4f-d468b740a319/_packaging/CognitiveServicesSharedComponents/npm/registry/@babel/generator/-/generator-7.20.5.tgz#cb25abee3178adf58d6814b68517c62bdbfdda95"
-  integrity sha1-yyWr7jF4rfWNaBS2hRfGK9v92pU=
+"@babel/generator@^7.12.11", "@babel/generator@^7.12.5", "@babel/generator@^7.20.7", "@babel/generator@^7.7.2":
+  version "7.20.7"
+  resolved "https://msazure.pkgs.visualstudio.com/a531312f-ba7b-4573-ab4f-d468b740a319/_packaging/CognitiveServicesSharedComponents/npm/registry/@babel/generator/-/generator-7.20.7.tgz#f8ef57c8242665c5929fe2e8d82ba75460187b4a"
+  integrity sha1-+O9XyCQmZcWSn+Lo2CunVGAYe0o=
   dependencies:
-    "@babel/types" "^7.20.5"
+    "@babel/types" "^7.20.7"
     "@jridgewell/gen-mapping" "^0.3.2"
     jsesc "^2.5.1"
 
@@ -115,27 +115,29 @@
     "@babel/helper-explode-assignable-expression" "^7.18.6"
     "@babel/types" "^7.18.9"
 
-"@babel/helper-compilation-targets@^7.13.0", "@babel/helper-compilation-targets@^7.17.7", "@babel/helper-compilation-targets@^7.18.9", "@babel/helper-compilation-targets@^7.20.0":
-  version "7.20.0"
-  resolved "https://msazure.pkgs.visualstudio.com/a531312f-ba7b-4573-ab4f-d468b740a319/_packaging/CognitiveServicesSharedComponents/npm/registry/@babel/helper-compilation-targets/-/helper-compilation-targets-7.20.0.tgz#6bf5374d424e1b3922822f1d9bdaa43b1a139d0a"
-  integrity sha1-a/U3TUJOGzkigi8dm9qkOxoTnQo=
+"@babel/helper-compilation-targets@^7.13.0", "@babel/helper-compilation-targets@^7.17.7", "@babel/helper-compilation-targets@^7.18.9", "@babel/helper-compilation-targets@^7.20.0", "@babel/helper-compilation-targets@^7.20.7":
+  version "7.20.7"
+  resolved "https://msazure.pkgs.visualstudio.com/a531312f-ba7b-4573-ab4f-d468b740a319/_packaging/CognitiveServicesSharedComponents/npm/registry/@babel/helper-compilation-targets/-/helper-compilation-targets-7.20.7.tgz#a6cd33e93629f5eb473b021aac05df62c4cd09bb"
+  integrity sha1-ps0z6TYp9etHOwIarAXfYsTNCbs=
   dependencies:
-    "@babel/compat-data" "^7.20.0"
+    "@babel/compat-data" "^7.20.5"
     "@babel/helper-validator-option" "^7.18.6"
     browserslist "^4.21.3"
+    lru-cache "^5.1.1"
     semver "^6.3.0"
 
-"@babel/helper-create-class-features-plugin@^7.18.6", "@babel/helper-create-class-features-plugin@^7.20.2", "@babel/helper-create-class-features-plugin@^7.20.5":
-  version "7.20.5"
-  resolved "https://msazure.pkgs.visualstudio.com/a531312f-ba7b-4573-ab4f-d468b740a319/_packaging/CognitiveServicesSharedComponents/npm/registry/@babel/helper-create-class-features-plugin/-/helper-create-class-features-plugin-7.20.5.tgz#327154eedfb12e977baa4ecc72e5806720a85a06"
-  integrity sha1-MnFU7t+xLpd7qk7McuWAZyCoWgY=
+"@babel/helper-create-class-features-plugin@^7.18.6", "@babel/helper-create-class-features-plugin@^7.20.5", "@babel/helper-create-class-features-plugin@^7.20.7":
+  version "7.20.12"
+  resolved "https://msazure.pkgs.visualstudio.com/a531312f-ba7b-4573-ab4f-d468b740a319/_packaging/CognitiveServicesSharedComponents/npm/registry/@babel/helper-create-class-features-plugin/-/helper-create-class-features-plugin-7.20.12.tgz#4349b928e79be05ed2d1643b20b99bb87c503819"
+  integrity sha1-Q0m5KOeb4F7S0WQ7ILmbuHxQOBk=
   dependencies:
     "@babel/helper-annotate-as-pure" "^7.18.6"
     "@babel/helper-environment-visitor" "^7.18.9"
     "@babel/helper-function-name" "^7.19.0"
-    "@babel/helper-member-expression-to-functions" "^7.18.9"
+    "@babel/helper-member-expression-to-functions" "^7.20.7"
     "@babel/helper-optimise-call-expression" "^7.18.6"
-    "@babel/helper-replace-supers" "^7.19.1"
+    "@babel/helper-replace-supers" "^7.20.7"
+    "@babel/helper-skip-transparent-expression-wrappers" "^7.20.0"
     "@babel/helper-split-export-declaration" "^7.18.6"
 
 "@babel/helper-create-regexp-features-plugin@^7.18.6", "@babel/helper-create-regexp-features-plugin@^7.20.5":
@@ -199,12 +201,12 @@
   dependencies:
     "@babel/types" "^7.18.6"
 
-"@babel/helper-member-expression-to-functions@^7.18.9":
-  version "7.18.9"
-  resolved "https://msazure.pkgs.visualstudio.com/a531312f-ba7b-4573-ab4f-d468b740a319/_packaging/CognitiveServicesSharedComponents/npm/registry/@babel/helper-member-expression-to-functions/-/helper-member-expression-to-functions-7.18.9.tgz#1531661e8375af843ad37ac692c132841e2fd815"
-  integrity sha1-FTFmHoN1r4Q603rGksEyhB4v2BU=
+"@babel/helper-member-expression-to-functions@^7.20.7":
+  version "7.20.7"
+  resolved "https://msazure.pkgs.visualstudio.com/a531312f-ba7b-4573-ab4f-d468b740a319/_packaging/CognitiveServicesSharedComponents/npm/registry/@babel/helper-member-expression-to-functions/-/helper-member-expression-to-functions-7.20.7.tgz#a6f26e919582275a93c3aa6594756d71b0bb7f05"
+  integrity sha1-pvJukZWCJ1qTw6pllHVtcbC7fwU=
   dependencies:
-    "@babel/types" "^7.18.9"
+    "@babel/types" "^7.20.7"
 
 "@babel/helper-module-imports@^7.0.0", "@babel/helper-module-imports@^7.10.4", "@babel/helper-module-imports@^7.12.13", "@babel/helper-module-imports@^7.16.0", "@babel/helper-module-imports@^7.18.6":
   version "7.18.6"
@@ -213,19 +215,19 @@
   dependencies:
     "@babel/types" "^7.18.6"
 
-"@babel/helper-module-transforms@^7.12.1", "@babel/helper-module-transforms@^7.18.6", "@babel/helper-module-transforms@^7.19.6", "@babel/helper-module-transforms@^7.20.2":
-  version "7.20.2"
-  resolved "https://msazure.pkgs.visualstudio.com/a531312f-ba7b-4573-ab4f-d468b740a319/_packaging/CognitiveServicesSharedComponents/npm/registry/@babel/helper-module-transforms/-/helper-module-transforms-7.20.2.tgz#ac53da669501edd37e658602a21ba14c08748712"
-  integrity sha1-rFPaZpUB7dN+ZYYCohuhTAh0hxI=
+"@babel/helper-module-transforms@^7.12.1", "@babel/helper-module-transforms@^7.18.6", "@babel/helper-module-transforms@^7.20.11":
+  version "7.20.11"
+  resolved "https://msazure.pkgs.visualstudio.com/a531312f-ba7b-4573-ab4f-d468b740a319/_packaging/CognitiveServicesSharedComponents/npm/registry/@babel/helper-module-transforms/-/helper-module-transforms-7.20.11.tgz#df4c7af713c557938c50ea3ad0117a7944b2f1b0"
+  integrity sha1-30x69xPFV5OMUOo60BF6eUSy8bA=
   dependencies:
     "@babel/helper-environment-visitor" "^7.18.9"
     "@babel/helper-module-imports" "^7.18.6"
     "@babel/helper-simple-access" "^7.20.2"
     "@babel/helper-split-export-declaration" "^7.18.6"
     "@babel/helper-validator-identifier" "^7.19.1"
-    "@babel/template" "^7.18.10"
-    "@babel/traverse" "^7.20.1"
-    "@babel/types" "^7.20.2"
+    "@babel/template" "^7.20.7"
+    "@babel/traverse" "^7.20.10"
+    "@babel/types" "^7.20.7"
 
 "@babel/helper-optimise-call-expression@^7.18.6":
   version "7.18.6"
@@ -244,7 +246,7 @@
   resolved "https://msazure.pkgs.visualstudio.com/a531312f-ba7b-4573-ab4f-d468b740a319/_packaging/CognitiveServicesSharedComponents/npm/registry/@babel/helper-plugin-utils/-/helper-plugin-utils-7.20.2.tgz#d1b9000752b18d0877cff85a5c376ce5c3121629"
   integrity sha1-0bkAB1KxjQh3z/haXDds5cMSFik=
 
-"@babel/helper-remap-async-to-generator@^7.18.6", "@babel/helper-remap-async-to-generator@^7.18.9":
+"@babel/helper-remap-async-to-generator@^7.18.9":
   version "7.18.9"
   resolved "https://msazure.pkgs.visualstudio.com/a531312f-ba7b-4573-ab4f-d468b740a319/_packaging/CognitiveServicesSharedComponents/npm/registry/@babel/helper-remap-async-to-generator/-/helper-remap-async-to-generator-7.18.9.tgz#997458a0e3357080e54e1d79ec347f8a8cd28519"
   integrity sha1-mXRYoOM1cIDlTh157DR/iozShRk=
@@ -254,25 +256,26 @@
     "@babel/helper-wrap-function" "^7.18.9"
     "@babel/types" "^7.18.9"
 
-"@babel/helper-replace-supers@^7.18.6", "@babel/helper-replace-supers@^7.19.1":
-  version "7.19.1"
-  resolved "https://msazure.pkgs.visualstudio.com/a531312f-ba7b-4573-ab4f-d468b740a319/_packaging/CognitiveServicesSharedComponents/npm/registry/@babel/helper-replace-supers/-/helper-replace-supers-7.19.1.tgz#e1592a9b4b368aa6bdb8784a711e0bcbf0612b78"
-  integrity sha1-4Vkqm0s2iqa9uHhKcR4Ly/BhK3g=
+"@babel/helper-replace-supers@^7.18.6", "@babel/helper-replace-supers@^7.20.7":
+  version "7.20.7"
+  resolved "https://msazure.pkgs.visualstudio.com/a531312f-ba7b-4573-ab4f-d468b740a319/_packaging/CognitiveServicesSharedComponents/npm/registry/@babel/helper-replace-supers/-/helper-replace-supers-7.20.7.tgz#243ecd2724d2071532b2c8ad2f0f9f083bcae331"
+  integrity sha1-JD7NJyTSBxUyssitLw+fCDvK4zE=
   dependencies:
     "@babel/helper-environment-visitor" "^7.18.9"
-    "@babel/helper-member-expression-to-functions" "^7.18.9"
+    "@babel/helper-member-expression-to-functions" "^7.20.7"
     "@babel/helper-optimise-call-expression" "^7.18.6"
-    "@babel/traverse" "^7.19.1"
-    "@babel/types" "^7.19.0"
+    "@babel/template" "^7.20.7"
+    "@babel/traverse" "^7.20.7"
+    "@babel/types" "^7.20.7"
 
-"@babel/helper-simple-access@^7.19.4", "@babel/helper-simple-access@^7.20.2":
+"@babel/helper-simple-access@^7.20.2":
   version "7.20.2"
   resolved "https://msazure.pkgs.visualstudio.com/a531312f-ba7b-4573-ab4f-d468b740a319/_packaging/CognitiveServicesSharedComponents/npm/registry/@babel/helper-simple-access/-/helper-simple-access-7.20.2.tgz#0ab452687fe0c2cfb1e2b9e0015de07fc2d62dd9"
   integrity sha1-CrRSaH/gws+x4rngAV3gf8LWLdk=
   dependencies:
     "@babel/types" "^7.20.2"
 
-"@babel/helper-skip-transparent-expression-wrappers@^7.18.9":
+"@babel/helper-skip-transparent-expression-wrappers@^7.20.0":
   version "7.20.0"
   resolved "https://msazure.pkgs.visualstudio.com/a531312f-ba7b-4573-ab4f-d468b740a319/_packaging/CognitiveServicesSharedComponents/npm/registry/@babel/helper-skip-transparent-expression-wrappers/-/helper-skip-transparent-expression-wrappers-7.20.0.tgz#fbe4c52f60518cab8140d77101f0e63a8a230684"
   integrity sha1-++TFL2BRjKuBQNdxAfDmOoojBoQ=
@@ -311,14 +314,14 @@
     "@babel/traverse" "^7.20.5"
     "@babel/types" "^7.20.5"
 
-"@babel/helpers@^7.12.5", "@babel/helpers@^7.20.5":
-  version "7.20.6"
-  resolved "https://msazure.pkgs.visualstudio.com/a531312f-ba7b-4573-ab4f-d468b740a319/_packaging/CognitiveServicesSharedComponents/npm/registry/@babel/helpers/-/helpers-7.20.6.tgz#e64778046b70e04779dfbdf924e7ebb45992c763"
-  integrity sha1-5kd4BGtw4Ed53735JOfrtFmSx2M=
+"@babel/helpers@^7.12.5", "@babel/helpers@^7.20.7":
+  version "7.20.7"
+  resolved "https://msazure.pkgs.visualstudio.com/a531312f-ba7b-4573-ab4f-d468b740a319/_packaging/CognitiveServicesSharedComponents/npm/registry/@babel/helpers/-/helpers-7.20.7.tgz#04502ff0feecc9f20ecfaad120a18f011a8e6dce"
+  integrity sha1-BFAv8P7syfIOz6rRIKGPARqObc4=
   dependencies:
-    "@babel/template" "^7.18.10"
-    "@babel/traverse" "^7.20.5"
-    "@babel/types" "^7.20.5"
+    "@babel/template" "^7.20.7"
+    "@babel/traverse" "^7.20.7"
+    "@babel/types" "^7.20.7"
 
 "@babel/highlight@^7.18.6":
   version "7.18.6"
@@ -329,10 +332,10 @@
     chalk "^2.0.0"
     js-tokens "^4.0.0"
 
-"@babel/parser@^7.1.0", "@babel/parser@^7.12.11", "@babel/parser@^7.12.7", "@babel/parser@^7.14.7", "@babel/parser@^7.18.10", "@babel/parser@^7.20.5", "@babel/parser@^7.7.0":
-  version "7.20.5"
-  resolved "https://msazure.pkgs.visualstudio.com/a531312f-ba7b-4573-ab4f-d468b740a319/_packaging/CognitiveServicesSharedComponents/npm/registry/@babel/parser/-/parser-7.20.5.tgz#7f3c7335fe417665d929f34ae5dceae4c04015e8"
-  integrity sha1-fzxzNf5BdmXZKfNK5dzq5MBAFeg=
+"@babel/parser@^7.1.0", "@babel/parser@^7.12.11", "@babel/parser@^7.12.7", "@babel/parser@^7.14.7", "@babel/parser@^7.20.7", "@babel/parser@^7.7.0":
+  version "7.20.7"
+  resolved "https://msazure.pkgs.visualstudio.com/a531312f-ba7b-4573-ab4f-d468b740a319/_packaging/CognitiveServicesSharedComponents/npm/registry/@babel/parser/-/parser-7.20.7.tgz#66fe23b3c8569220817d5feb8b9dcdc95bb4f71b"
+  integrity sha1-Zv4js8hWkiCBfV/ri53NyVu09xs=
 
 "@babel/plugin-bugfix-safari-id-destructuring-collision-in-function-expression@^7.18.6":
   version "7.18.6"
@@ -342,21 +345,21 @@
     "@babel/helper-plugin-utils" "^7.18.6"
 
 "@babel/plugin-bugfix-v8-spread-parameters-in-optional-chaining@^7.18.9":
-  version "7.18.9"
-  resolved "https://msazure.pkgs.visualstudio.com/a531312f-ba7b-4573-ab4f-d468b740a319/_packaging/CognitiveServicesSharedComponents/npm/registry/@babel/plugin-bugfix-v8-spread-parameters-in-optional-chaining/-/plugin-bugfix-v8-spread-parameters-in-optional-chaining-7.18.9.tgz#a11af19aa373d68d561f08e0a57242350ed0ec50"
-  integrity sha1-oRrxmqNz1o1WHwjgpXJCNQ7Q7FA=
+  version "7.20.7"
+  resolved "https://msazure.pkgs.visualstudio.com/a531312f-ba7b-4573-ab4f-d468b740a319/_packaging/CognitiveServicesSharedComponents/npm/registry/@babel/plugin-bugfix-v8-spread-parameters-in-optional-chaining/-/plugin-bugfix-v8-spread-parameters-in-optional-chaining-7.20.7.tgz#d9c85589258539a22a901033853101a6198d4ef1"
+  integrity sha1-2chViSWFOaIqkBAzhTEBphmNTvE=
   dependencies:
-    "@babel/helper-plugin-utils" "^7.18.9"
-    "@babel/helper-skip-transparent-expression-wrappers" "^7.18.9"
-    "@babel/plugin-proposal-optional-chaining" "^7.18.9"
+    "@babel/helper-plugin-utils" "^7.20.2"
+    "@babel/helper-skip-transparent-expression-wrappers" "^7.20.0"
+    "@babel/plugin-proposal-optional-chaining" "^7.20.7"
 
 "@babel/plugin-proposal-async-generator-functions@^7.20.1":
-  version "7.20.1"
-  resolved "https://msazure.pkgs.visualstudio.com/a531312f-ba7b-4573-ab4f-d468b740a319/_packaging/CognitiveServicesSharedComponents/npm/registry/@babel/plugin-proposal-async-generator-functions/-/plugin-proposal-async-generator-functions-7.20.1.tgz#352f02baa5d69f4e7529bdac39aaa02d41146af9"
-  integrity sha1-NS8CuqXWn051Kb2sOaqgLUEUavk=
+  version "7.20.7"
+  resolved "https://msazure.pkgs.visualstudio.com/a531312f-ba7b-4573-ab4f-d468b740a319/_packaging/CognitiveServicesSharedComponents/npm/registry/@babel/plugin-proposal-async-generator-functions/-/plugin-proposal-async-generator-functions-7.20.7.tgz#bfb7276d2d573cb67ba379984a2334e262ba5326"
+  integrity sha1-v7cnbS1XPLZ7o3mYSiM04mK6UyY=
   dependencies:
     "@babel/helper-environment-visitor" "^7.18.9"
-    "@babel/helper-plugin-utils" "^7.19.0"
+    "@babel/helper-plugin-utils" "^7.20.2"
     "@babel/helper-remap-async-to-generator" "^7.18.9"
     "@babel/plugin-syntax-async-generators" "^7.8.4"
 
@@ -369,22 +372,22 @@
     "@babel/helper-plugin-utils" "^7.18.6"
 
 "@babel/plugin-proposal-class-static-block@^7.18.6":
-  version "7.18.6"
-  resolved "https://msazure.pkgs.visualstudio.com/a531312f-ba7b-4573-ab4f-d468b740a319/_packaging/CognitiveServicesSharedComponents/npm/registry/@babel/plugin-proposal-class-static-block/-/plugin-proposal-class-static-block-7.18.6.tgz#8aa81d403ab72d3962fc06c26e222dacfc9b9020"
-  integrity sha1-iqgdQDq3LTli/AbCbiItrPybkCA=
+  version "7.20.7"
+  resolved "https://msazure.pkgs.visualstudio.com/a531312f-ba7b-4573-ab4f-d468b740a319/_packaging/CognitiveServicesSharedComponents/npm/registry/@babel/plugin-proposal-class-static-block/-/plugin-proposal-class-static-block-7.20.7.tgz#92592e9029b13b15be0f7ce6a7aedc2879ca45a7"
+  integrity sha1-klkukCmxOxW+D3zmp67cKHnKRac=
   dependencies:
-    "@babel/helper-create-class-features-plugin" "^7.18.6"
-    "@babel/helper-plugin-utils" "^7.18.6"
+    "@babel/helper-create-class-features-plugin" "^7.20.7"
+    "@babel/helper-plugin-utils" "^7.20.2"
     "@babel/plugin-syntax-class-static-block" "^7.14.5"
 
 "@babel/plugin-proposal-decorators@^7.12.12", "@babel/plugin-proposal-decorators@^7.16.4":
-  version "7.20.5"
-  resolved "https://msazure.pkgs.visualstudio.com/a531312f-ba7b-4573-ab4f-d468b740a319/_packaging/CognitiveServicesSharedComponents/npm/registry/@babel/plugin-proposal-decorators/-/plugin-proposal-decorators-7.20.5.tgz#28ba1a0e5044664a512967a19407d7fc26925394"
-  integrity sha1-KLoaDlBEZkpRKWehlAfX/CaSU5Q=
+  version "7.20.7"
+  resolved "https://msazure.pkgs.visualstudio.com/a531312f-ba7b-4573-ab4f-d468b740a319/_packaging/CognitiveServicesSharedComponents/npm/registry/@babel/plugin-proposal-decorators/-/plugin-proposal-decorators-7.20.7.tgz#05d37453c2ce818f3e47bbeda9468c8de947eecc"
+  integrity sha1-BdN0U8LOgY8+R7vtqUaMjelH7sw=
   dependencies:
-    "@babel/helper-create-class-features-plugin" "^7.20.5"
+    "@babel/helper-create-class-features-plugin" "^7.20.7"
     "@babel/helper-plugin-utils" "^7.20.2"
-    "@babel/helper-replace-supers" "^7.19.1"
+    "@babel/helper-replace-supers" "^7.20.7"
     "@babel/helper-split-export-declaration" "^7.18.6"
     "@babel/plugin-syntax-decorators" "^7.19.0"
 
@@ -421,11 +424,11 @@
     "@babel/plugin-syntax-json-strings" "^7.8.3"
 
 "@babel/plugin-proposal-logical-assignment-operators@^7.18.9":
-  version "7.18.9"
-  resolved "https://msazure.pkgs.visualstudio.com/a531312f-ba7b-4573-ab4f-d468b740a319/_packaging/CognitiveServicesSharedComponents/npm/registry/@babel/plugin-proposal-logical-assignment-operators/-/plugin-proposal-logical-assignment-operators-7.18.9.tgz#8148cbb350483bf6220af06fa6db3690e14b2e23"
-  integrity sha1-gUjLs1BIO/YiCvBvpts2kOFLLiM=
+  version "7.20.7"
+  resolved "https://msazure.pkgs.visualstudio.com/a531312f-ba7b-4573-ab4f-d468b740a319/_packaging/CognitiveServicesSharedComponents/npm/registry/@babel/plugin-proposal-logical-assignment-operators/-/plugin-proposal-logical-assignment-operators-7.20.7.tgz#dfbcaa8f7b4d37b51e8bfb46d94a5aea2bb89d83"
+  integrity sha1-37yqj3tNN7Uei/tG2Upa6iu4nYM=
   dependencies:
-    "@babel/helper-plugin-utils" "^7.18.9"
+    "@babel/helper-plugin-utils" "^7.20.2"
     "@babel/plugin-syntax-logical-assignment-operators" "^7.10.4"
 
 "@babel/plugin-proposal-nullish-coalescing-operator@^7.12.1", "@babel/plugin-proposal-nullish-coalescing-operator@^7.16.0", "@babel/plugin-proposal-nullish-coalescing-operator@^7.18.6":
@@ -454,15 +457,15 @@
     "@babel/plugin-transform-parameters" "^7.12.1"
 
 "@babel/plugin-proposal-object-rest-spread@^7.12.1", "@babel/plugin-proposal-object-rest-spread@^7.20.2":
-  version "7.20.2"
-  resolved "https://msazure.pkgs.visualstudio.com/a531312f-ba7b-4573-ab4f-d468b740a319/_packaging/CognitiveServicesSharedComponents/npm/registry/@babel/plugin-proposal-object-rest-spread/-/plugin-proposal-object-rest-spread-7.20.2.tgz#a556f59d555f06961df1e572bb5eca864c84022d"
-  integrity sha1-pVb1nVVfBpYd8eVyu17KhkyEAi0=
+  version "7.20.7"
+  resolved "https://msazure.pkgs.visualstudio.com/a531312f-ba7b-4573-ab4f-d468b740a319/_packaging/CognitiveServicesSharedComponents/npm/registry/@babel/plugin-proposal-object-rest-spread/-/plugin-proposal-object-rest-spread-7.20.7.tgz#aa662940ef425779c75534a5c41e9d936edc390a"
+  integrity sha1-qmYpQO9CV3nHVTSlxB6dk27cOQo=
   dependencies:
-    "@babel/compat-data" "^7.20.1"
-    "@babel/helper-compilation-targets" "^7.20.0"
+    "@babel/compat-data" "^7.20.5"
+    "@babel/helper-compilation-targets" "^7.20.7"
     "@babel/helper-plugin-utils" "^7.20.2"
     "@babel/plugin-syntax-object-rest-spread" "^7.8.3"
-    "@babel/plugin-transform-parameters" "^7.20.1"
+    "@babel/plugin-transform-parameters" "^7.20.7"
 
 "@babel/plugin-proposal-optional-catch-binding@^7.18.6":
   version "7.18.6"
@@ -472,13 +475,13 @@
     "@babel/helper-plugin-utils" "^7.18.6"
     "@babel/plugin-syntax-optional-catch-binding" "^7.8.3"
 
-"@babel/plugin-proposal-optional-chaining@^7.12.7", "@babel/plugin-proposal-optional-chaining@^7.16.0", "@babel/plugin-proposal-optional-chaining@^7.18.9":
-  version "7.18.9"
-  resolved "https://msazure.pkgs.visualstudio.com/a531312f-ba7b-4573-ab4f-d468b740a319/_packaging/CognitiveServicesSharedComponents/npm/registry/@babel/plugin-proposal-optional-chaining/-/plugin-proposal-optional-chaining-7.18.9.tgz#e8e8fe0723f2563960e4bf5e9690933691915993"
-  integrity sha1-6Oj+ByPyVjlg5L9elpCTNpGRWZM=
+"@babel/plugin-proposal-optional-chaining@^7.12.7", "@babel/plugin-proposal-optional-chaining@^7.16.0", "@babel/plugin-proposal-optional-chaining@^7.18.9", "@babel/plugin-proposal-optional-chaining@^7.20.7":
+  version "7.20.7"
+  resolved "https://msazure.pkgs.visualstudio.com/a531312f-ba7b-4573-ab4f-d468b740a319/_packaging/CognitiveServicesSharedComponents/npm/registry/@babel/plugin-proposal-optional-chaining/-/plugin-proposal-optional-chaining-7.20.7.tgz#49f2b372519ab31728cc14115bb0998b15bfda55"
+  integrity sha1-SfKzclGasxcozBQRW7CZixW/2lU=
   dependencies:
-    "@babel/helper-plugin-utils" "^7.18.9"
-    "@babel/helper-skip-transparent-expression-wrappers" "^7.18.9"
+    "@babel/helper-plugin-utils" "^7.20.2"
+    "@babel/helper-skip-transparent-expression-wrappers" "^7.20.0"
     "@babel/plugin-syntax-optional-chaining" "^7.8.3"
 
 "@babel/plugin-proposal-private-methods@^7.12.1", "@babel/plugin-proposal-private-methods@^7.16.0", "@babel/plugin-proposal-private-methods@^7.18.6":
@@ -669,20 +672,20 @@
     "@babel/helper-plugin-utils" "^7.19.0"
 
 "@babel/plugin-transform-arrow-functions@^7.12.1", "@babel/plugin-transform-arrow-functions@^7.18.6":
-  version "7.18.6"
-  resolved "https://msazure.pkgs.visualstudio.com/a531312f-ba7b-4573-ab4f-d468b740a319/_packaging/CognitiveServicesSharedComponents/npm/registry/@babel/plugin-transform-arrow-functions/-/plugin-transform-arrow-functions-7.18.6.tgz#19063fcf8771ec7b31d742339dac62433d0611fe"
-  integrity sha1-GQY/z4dx7Hsx10IznaxiQz0GEf4=
+  version "7.20.7"
+  resolved "https://msazure.pkgs.visualstudio.com/a531312f-ba7b-4573-ab4f-d468b740a319/_packaging/CognitiveServicesSharedComponents/npm/registry/@babel/plugin-transform-arrow-functions/-/plugin-transform-arrow-functions-7.20.7.tgz#bea332b0e8b2dab3dafe55a163d8227531ab0551"
+  integrity sha1-vqMysOiy2rPa/lWhY9gidTGrBVE=
   dependencies:
-    "@babel/helper-plugin-utils" "^7.18.6"
+    "@babel/helper-plugin-utils" "^7.20.2"
 
 "@babel/plugin-transform-async-to-generator@^7.18.6":
-  version "7.18.6"
-  resolved "https://msazure.pkgs.visualstudio.com/a531312f-ba7b-4573-ab4f-d468b740a319/_packaging/CognitiveServicesSharedComponents/npm/registry/@babel/plugin-transform-async-to-generator/-/plugin-transform-async-to-generator-7.18.6.tgz#ccda3d1ab9d5ced5265fdb13f1882d5476c71615"
-  integrity sha1-zNo9GrnVztUmX9sT8YgtVHbHFhU=
+  version "7.20.7"
+  resolved "https://msazure.pkgs.visualstudio.com/a531312f-ba7b-4573-ab4f-d468b740a319/_packaging/CognitiveServicesSharedComponents/npm/registry/@babel/plugin-transform-async-to-generator/-/plugin-transform-async-to-generator-7.20.7.tgz#dfee18623c8cb31deb796aa3ca84dda9cea94354"
+  integrity sha1-3+4YYjyMsx3reWqjyoTdqc6pQ1Q=
   dependencies:
     "@babel/helper-module-imports" "^7.18.6"
-    "@babel/helper-plugin-utils" "^7.18.6"
-    "@babel/helper-remap-async-to-generator" "^7.18.6"
+    "@babel/helper-plugin-utils" "^7.20.2"
+    "@babel/helper-remap-async-to-generator" "^7.18.9"
 
 "@babel/plugin-transform-block-scoped-functions@^7.18.6":
   version "7.18.6"
@@ -692,38 +695,39 @@
     "@babel/helper-plugin-utils" "^7.18.6"
 
 "@babel/plugin-transform-block-scoping@^7.12.12", "@babel/plugin-transform-block-scoping@^7.20.2":
-  version "7.20.5"
-  resolved "https://msazure.pkgs.visualstudio.com/a531312f-ba7b-4573-ab4f-d468b740a319/_packaging/CognitiveServicesSharedComponents/npm/registry/@babel/plugin-transform-block-scoping/-/plugin-transform-block-scoping-7.20.5.tgz#401215f9dc13dc5262940e2e527c9536b3d7f237"
-  integrity sha1-QBIV+dwT3FJilA4uUnyVNrPX8jc=
+  version "7.20.11"
+  resolved "https://msazure.pkgs.visualstudio.com/a531312f-ba7b-4573-ab4f-d468b740a319/_packaging/CognitiveServicesSharedComponents/npm/registry/@babel/plugin-transform-block-scoping/-/plugin-transform-block-scoping-7.20.11.tgz#9f5a3424bd112a3f32fe0cf9364fbb155cff262a"
+  integrity sha1-n1o0JL0RKj8y/gz5Nk+7FVz/Jio=
   dependencies:
     "@babel/helper-plugin-utils" "^7.20.2"
 
 "@babel/plugin-transform-classes@^7.12.1", "@babel/plugin-transform-classes@^7.20.2":
-  version "7.20.2"
-  resolved "https://msazure.pkgs.visualstudio.com/a531312f-ba7b-4573-ab4f-d468b740a319/_packaging/CognitiveServicesSharedComponents/npm/registry/@babel/plugin-transform-classes/-/plugin-transform-classes-7.20.2.tgz#c0033cf1916ccf78202d04be4281d161f6709bb2"
-  integrity sha1-wAM88ZFsz3ggLQS+QoHRYfZwm7I=
+  version "7.20.7"
+  resolved "https://msazure.pkgs.visualstudio.com/a531312f-ba7b-4573-ab4f-d468b740a319/_packaging/CognitiveServicesSharedComponents/npm/registry/@babel/plugin-transform-classes/-/plugin-transform-classes-7.20.7.tgz#f438216f094f6bb31dc266ebfab8ff05aecad073"
+  integrity sha1-9DghbwlPa7Mdwmbr+rj/Ba7K0HM=
   dependencies:
     "@babel/helper-annotate-as-pure" "^7.18.6"
-    "@babel/helper-compilation-targets" "^7.20.0"
+    "@babel/helper-compilation-targets" "^7.20.7"
     "@babel/helper-environment-visitor" "^7.18.9"
     "@babel/helper-function-name" "^7.19.0"
     "@babel/helper-optimise-call-expression" "^7.18.6"
     "@babel/helper-plugin-utils" "^7.20.2"
-    "@babel/helper-replace-supers" "^7.19.1"
+    "@babel/helper-replace-supers" "^7.20.7"
     "@babel/helper-split-export-declaration" "^7.18.6"
     globals "^11.1.0"
 
 "@babel/plugin-transform-computed-properties@^7.18.9":
-  version "7.18.9"
-  resolved "https://msazure.pkgs.visualstudio.com/a531312f-ba7b-4573-ab4f-d468b740a319/_packaging/CognitiveServicesSharedComponents/npm/registry/@babel/plugin-transform-computed-properties/-/plugin-transform-computed-properties-7.18.9.tgz#2357a8224d402dad623caf6259b611e56aec746e"
-  integrity sha1-I1eoIk1ALa1iPK9iWbYR5WrsdG4=
+  version "7.20.7"
+  resolved "https://msazure.pkgs.visualstudio.com/a531312f-ba7b-4573-ab4f-d468b740a319/_packaging/CognitiveServicesSharedComponents/npm/registry/@babel/plugin-transform-computed-properties/-/plugin-transform-computed-properties-7.20.7.tgz#704cc2fd155d1c996551db8276d55b9d46e4d0aa"
+  integrity sha1-cEzC/RVdHJllUduCdtVbnUbk0Ko=
   dependencies:
-    "@babel/helper-plugin-utils" "^7.18.9"
+    "@babel/helper-plugin-utils" "^7.20.2"
+    "@babel/template" "^7.20.7"
 
 "@babel/plugin-transform-destructuring@^7.12.1", "@babel/plugin-transform-destructuring@^7.20.2":
-  version "7.20.2"
-  resolved "https://msazure.pkgs.visualstudio.com/a531312f-ba7b-4573-ab4f-d468b740a319/_packaging/CognitiveServicesSharedComponents/npm/registry/@babel/plugin-transform-destructuring/-/plugin-transform-destructuring-7.20.2.tgz#c23741cfa44ddd35f5e53896e88c75331b8b2792"
-  integrity sha1-wjdBz6RN3TX15TiW6Ix1MxuLJ5I=
+  version "7.20.7"
+  resolved "https://msazure.pkgs.visualstudio.com/a531312f-ba7b-4573-ab4f-d468b740a319/_packaging/CognitiveServicesSharedComponents/npm/registry/@babel/plugin-transform-destructuring/-/plugin-transform-destructuring-7.20.7.tgz#8bda578f71620c7de7c93af590154ba331415454"
+  integrity sha1-i9pXj3FiDH3nyTr1kBVLozFBVFQ=
   dependencies:
     "@babel/helper-plugin-utils" "^7.20.2"
 
@@ -789,30 +793,30 @@
     "@babel/helper-plugin-utils" "^7.18.6"
 
 "@babel/plugin-transform-modules-amd@^7.19.6":
-  version "7.19.6"
-  resolved "https://msazure.pkgs.visualstudio.com/a531312f-ba7b-4573-ab4f-d468b740a319/_packaging/CognitiveServicesSharedComponents/npm/registry/@babel/plugin-transform-modules-amd/-/plugin-transform-modules-amd-7.19.6.tgz#aca391801ae55d19c4d8d2ebfeaa33df5f2a2cbd"
-  integrity sha1-rKORgBrlXRnE2NLr/qoz318qLL0=
+  version "7.20.11"
+  resolved "https://msazure.pkgs.visualstudio.com/a531312f-ba7b-4573-ab4f-d468b740a319/_packaging/CognitiveServicesSharedComponents/npm/registry/@babel/plugin-transform-modules-amd/-/plugin-transform-modules-amd-7.20.11.tgz#3daccca8e4cc309f03c3a0c4b41dc4b26f55214a"
+  integrity sha1-PazMqOTMMJ8Dw6DEtB3Esm9VIUo=
   dependencies:
-    "@babel/helper-module-transforms" "^7.19.6"
-    "@babel/helper-plugin-utils" "^7.19.0"
+    "@babel/helper-module-transforms" "^7.20.11"
+    "@babel/helper-plugin-utils" "^7.20.2"
 
 "@babel/plugin-transform-modules-commonjs@^7.19.6":
-  version "7.19.6"
-  resolved "https://msazure.pkgs.visualstudio.com/a531312f-ba7b-4573-ab4f-d468b740a319/_packaging/CognitiveServicesSharedComponents/npm/registry/@babel/plugin-transform-modules-commonjs/-/plugin-transform-modules-commonjs-7.19.6.tgz#25b32feef24df8038fc1ec56038917eacb0b730c"
-  integrity sha1-JbMv7vJN+AOPwexWA4kX6ssLcww=
+  version "7.20.11"
+  resolved "https://msazure.pkgs.visualstudio.com/a531312f-ba7b-4573-ab4f-d468b740a319/_packaging/CognitiveServicesSharedComponents/npm/registry/@babel/plugin-transform-modules-commonjs/-/plugin-transform-modules-commonjs-7.20.11.tgz#8cb23010869bf7669fd4b3098598b6b2be6dc607"
+  integrity sha1-jLIwEIab92af1LMJhZi2sr5txgc=
   dependencies:
-    "@babel/helper-module-transforms" "^7.19.6"
-    "@babel/helper-plugin-utils" "^7.19.0"
-    "@babel/helper-simple-access" "^7.19.4"
+    "@babel/helper-module-transforms" "^7.20.11"
+    "@babel/helper-plugin-utils" "^7.20.2"
+    "@babel/helper-simple-access" "^7.20.2"
 
 "@babel/plugin-transform-modules-systemjs@^7.19.6":
-  version "7.19.6"
-  resolved "https://msazure.pkgs.visualstudio.com/a531312f-ba7b-4573-ab4f-d468b740a319/_packaging/CognitiveServicesSharedComponents/npm/registry/@babel/plugin-transform-modules-systemjs/-/plugin-transform-modules-systemjs-7.19.6.tgz#59e2a84064b5736a4471b1aa7b13d4431d327e0d"
-  integrity sha1-WeKoQGS1c2pEcbGqexPUQx0yfg0=
+  version "7.20.11"
+  resolved "https://msazure.pkgs.visualstudio.com/a531312f-ba7b-4573-ab4f-d468b740a319/_packaging/CognitiveServicesSharedComponents/npm/registry/@babel/plugin-transform-modules-systemjs/-/plugin-transform-modules-systemjs-7.20.11.tgz#467ec6bba6b6a50634eea61c9c232654d8a4696e"
+  integrity sha1-Rn7Gu6a2pQY07qYcnCMmVNikaW4=
   dependencies:
     "@babel/helper-hoist-variables" "^7.18.6"
-    "@babel/helper-module-transforms" "^7.19.6"
-    "@babel/helper-plugin-utils" "^7.19.0"
+    "@babel/helper-module-transforms" "^7.20.11"
+    "@babel/helper-plugin-utils" "^7.20.2"
     "@babel/helper-validator-identifier" "^7.19.1"
 
 "@babel/plugin-transform-modules-umd@^7.18.6":
@@ -846,10 +850,10 @@
     "@babel/helper-plugin-utils" "^7.18.6"
     "@babel/helper-replace-supers" "^7.18.6"
 
-"@babel/plugin-transform-parameters@^7.12.1", "@babel/plugin-transform-parameters@^7.20.1":
-  version "7.20.5"
-  resolved "https://msazure.pkgs.visualstudio.com/a531312f-ba7b-4573-ab4f-d468b740a319/_packaging/CognitiveServicesSharedComponents/npm/registry/@babel/plugin-transform-parameters/-/plugin-transform-parameters-7.20.5.tgz#f8f9186c681d10c3de7620c916156d893c8a019e"
-  integrity sha1-+PkYbGgdEMPediDJFhVtiTyKAZ4=
+"@babel/plugin-transform-parameters@^7.12.1", "@babel/plugin-transform-parameters@^7.20.1", "@babel/plugin-transform-parameters@^7.20.7":
+  version "7.20.7"
+  resolved "https://msazure.pkgs.visualstudio.com/a531312f-ba7b-4573-ab4f-d468b740a319/_packaging/CognitiveServicesSharedComponents/npm/registry/@babel/plugin-transform-parameters/-/plugin-transform-parameters-7.20.7.tgz#0ee349e9d1bc96e78e3b37a7af423a4078a7083f"
+  integrity sha1-DuNJ6dG8lueOOzenr0I6QHinCD8=
   dependencies:
     "@babel/helper-plugin-utils" "^7.20.2"
 
@@ -882,15 +886,15 @@
     "@babel/plugin-transform-react-jsx" "^7.18.6"
 
 "@babel/plugin-transform-react-jsx@^7.12.12", "@babel/plugin-transform-react-jsx@^7.18.6":
-  version "7.19.0"
-  resolved "https://msazure.pkgs.visualstudio.com/a531312f-ba7b-4573-ab4f-d468b740a319/_packaging/CognitiveServicesSharedComponents/npm/registry/@babel/plugin-transform-react-jsx/-/plugin-transform-react-jsx-7.19.0.tgz#b3cbb7c3a00b92ec8ae1027910e331ba5c500eb9"
-  integrity sha1-s8u3w6ALkuyK4QJ5EOMxulxQDrk=
+  version "7.20.7"
+  resolved "https://msazure.pkgs.visualstudio.com/a531312f-ba7b-4573-ab4f-d468b740a319/_packaging/CognitiveServicesSharedComponents/npm/registry/@babel/plugin-transform-react-jsx/-/plugin-transform-react-jsx-7.20.7.tgz#025d85a1935fd7e19dfdcb1b1d4df34d4da484f7"
+  integrity sha1-Al2FoZNf1+Gd/csbHU3zTU2khPc=
   dependencies:
     "@babel/helper-annotate-as-pure" "^7.18.6"
     "@babel/helper-module-imports" "^7.18.6"
-    "@babel/helper-plugin-utils" "^7.19.0"
+    "@babel/helper-plugin-utils" "^7.20.2"
     "@babel/plugin-syntax-jsx" "^7.18.6"
-    "@babel/types" "^7.19.0"
+    "@babel/types" "^7.20.7"
 
 "@babel/plugin-transform-react-pure-annotations@^7.18.6":
   version "7.18.6"
@@ -935,12 +939,12 @@
     "@babel/helper-plugin-utils" "^7.18.6"
 
 "@babel/plugin-transform-spread@^7.12.1", "@babel/plugin-transform-spread@^7.19.0":
-  version "7.19.0"
-  resolved "https://msazure.pkgs.visualstudio.com/a531312f-ba7b-4573-ab4f-d468b740a319/_packaging/CognitiveServicesSharedComponents/npm/registry/@babel/plugin-transform-spread/-/plugin-transform-spread-7.19.0.tgz#dd60b4620c2fec806d60cfaae364ec2188d593b6"
-  integrity sha1-3WC0Ygwv7IBtYM+q42TsIYjVk7Y=
+  version "7.20.7"
+  resolved "https://msazure.pkgs.visualstudio.com/a531312f-ba7b-4573-ab4f-d468b740a319/_packaging/CognitiveServicesSharedComponents/npm/registry/@babel/plugin-transform-spread/-/plugin-transform-spread-7.20.7.tgz#c2d83e0b99d3bf83e07b11995ee24bf7ca09401e"
+  integrity sha1-wtg+C5nTv4PgexGZXuJL98oJQB4=
   dependencies:
-    "@babel/helper-plugin-utils" "^7.19.0"
-    "@babel/helper-skip-transparent-expression-wrappers" "^7.18.9"
+    "@babel/helper-plugin-utils" "^7.20.2"
+    "@babel/helper-skip-transparent-expression-wrappers" "^7.20.0"
 
 "@babel/plugin-transform-sticky-regex@^7.18.6":
   version "7.18.6"
@@ -964,11 +968,11 @@
     "@babel/helper-plugin-utils" "^7.18.9"
 
 "@babel/plugin-transform-typescript@^7.18.6":
-  version "7.20.2"
-  resolved "https://msazure.pkgs.visualstudio.com/a531312f-ba7b-4573-ab4f-d468b740a319/_packaging/CognitiveServicesSharedComponents/npm/registry/@babel/plugin-transform-typescript/-/plugin-transform-typescript-7.20.2.tgz#91515527b376fc122ba83b13d70b01af8fe98f3f"
-  integrity sha1-kVFVJ7N2/BIrqDsT1wsBr4/pjz8=
+  version "7.20.7"
+  resolved "https://msazure.pkgs.visualstudio.com/a531312f-ba7b-4573-ab4f-d468b740a319/_packaging/CognitiveServicesSharedComponents/npm/registry/@babel/plugin-transform-typescript/-/plugin-transform-typescript-7.20.7.tgz#673f49499cd810ae32a1ea5f3f8fab370987e055"
+  integrity sha1-Zz9JSZzYEK4yoepfP4+rNwmH4FU=
   dependencies:
-    "@babel/helper-create-class-features-plugin" "^7.20.2"
+    "@babel/helper-create-class-features-plugin" "^7.20.7"
     "@babel/helper-plugin-utils" "^7.20.2"
     "@babel/plugin-syntax-typescript" "^7.20.0"
 
@@ -1121,9 +1125,9 @@
     source-map-support "^0.5.16"
 
 "@babel/runtime-corejs3@^7.10.2":
-  version "7.20.6"
-  resolved "https://msazure.pkgs.visualstudio.com/a531312f-ba7b-4573-ab4f-d468b740a319/_packaging/CognitiveServicesSharedComponents/npm/registry/@babel/runtime-corejs3/-/runtime-corejs3-7.20.6.tgz#63dae945963539ab0ad578efbf3eff271e7067ae"
-  integrity sha1-Y9rpRZY1OasK1Xjvvz7/Jx5wZ64=
+  version "7.20.7"
+  resolved "https://msazure.pkgs.visualstudio.com/a531312f-ba7b-4573-ab4f-d468b740a319/_packaging/CognitiveServicesSharedComponents/npm/registry/@babel/runtime-corejs3/-/runtime-corejs3-7.20.7.tgz#a1e5ea3d758ba6beb715210142912e3f29981d84"
+  integrity sha1-oeXqPXWLpr63FSEBQpEuPymYHYQ=
   dependencies:
     core-js-pure "^3.25.1"
     regenerator-runtime "^0.13.11"
@@ -1136,9 +1140,9 @@
     regenerator-runtime "^0.13.2"
 
 "@babel/runtime@^7.0.0", "@babel/runtime@^7.1.2", "@babel/runtime@^7.10.2", "@babel/runtime@^7.11.2", "@babel/runtime@^7.12.5", "@babel/runtime@^7.16.3", "@babel/runtime@^7.17.8", "@babel/runtime@^7.18.9", "@babel/runtime@^7.5.0", "@babel/runtime@^7.7.6", "@babel/runtime@^7.8.4":
-  version "7.20.6"
-  resolved "https://msazure.pkgs.visualstudio.com/a531312f-ba7b-4573-ab4f-d468b740a319/_packaging/CognitiveServicesSharedComponents/npm/registry/@babel/runtime/-/runtime-7.20.6.tgz#facf4879bfed9b5326326273a64220f099b0fce3"
-  integrity sha1-+s9Ieb/tm1MmMmJzpkIg8Jmw/OM=
+  version "7.20.7"
+  resolved "https://msazure.pkgs.visualstudio.com/a531312f-ba7b-4573-ab4f-d468b740a319/_packaging/CognitiveServicesSharedComponents/npm/registry/@babel/runtime/-/runtime-7.20.7.tgz#fcb41a5a70550e04a7b708037c7c32f7f356d8fd"
+  integrity sha1-/LQaWnBVDgSntwgDfHwy9/NW2P0=
   dependencies:
     regenerator-runtime "^0.13.11"
 
@@ -1149,35 +1153,35 @@
   dependencies:
     regenerator-runtime "^0.13.2"
 
-"@babel/template@^7.12.7", "@babel/template@^7.18.10", "@babel/template@^7.3.3":
-  version "7.18.10"
-  resolved "https://msazure.pkgs.visualstudio.com/a531312f-ba7b-4573-ab4f-d468b740a319/_packaging/CognitiveServicesSharedComponents/npm/registry/@babel/template/-/template-7.18.10.tgz#6f9134835970d1dbf0835c0d100c9f38de0c5e71"
-  integrity sha1-b5E0g1lw0dvwg1wNEAyfON4MXnE=
+"@babel/template@^7.12.7", "@babel/template@^7.18.10", "@babel/template@^7.20.7", "@babel/template@^7.3.3":
+  version "7.20.7"
+  resolved "https://msazure.pkgs.visualstudio.com/a531312f-ba7b-4573-ab4f-d468b740a319/_packaging/CognitiveServicesSharedComponents/npm/registry/@babel/template/-/template-7.20.7.tgz#a15090c2839a83b02aa996c0b4994005841fd5a8"
+  integrity sha1-oVCQwoOag7AqqZbAtJlABYQf1ag=
   dependencies:
     "@babel/code-frame" "^7.18.6"
-    "@babel/parser" "^7.18.10"
-    "@babel/types" "^7.18.10"
+    "@babel/parser" "^7.20.7"
+    "@babel/types" "^7.20.7"
 
-"@babel/traverse@^7.1.6", "@babel/traverse@^7.12.11", "@babel/traverse@^7.12.9", "@babel/traverse@^7.13.0", "@babel/traverse@^7.19.1", "@babel/traverse@^7.20.1", "@babel/traverse@^7.20.5", "@babel/traverse@^7.4.5", "@babel/traverse@^7.7.0", "@babel/traverse@^7.7.2":
-  version "7.20.5"
-  resolved "https://msazure.pkgs.visualstudio.com/a531312f-ba7b-4573-ab4f-d468b740a319/_packaging/CognitiveServicesSharedComponents/npm/registry/@babel/traverse/-/traverse-7.20.5.tgz#78eb244bea8270fdda1ef9af22a5d5e5b7e57133"
-  integrity sha1-eOskS+qCcP3aHvmvIqXV5bflcTM=
+"@babel/traverse@^7.1.6", "@babel/traverse@^7.12.11", "@babel/traverse@^7.12.9", "@babel/traverse@^7.13.0", "@babel/traverse@^7.20.10", "@babel/traverse@^7.20.12", "@babel/traverse@^7.20.5", "@babel/traverse@^7.20.7", "@babel/traverse@^7.4.5", "@babel/traverse@^7.7.0", "@babel/traverse@^7.7.2":
+  version "7.20.12"
+  resolved "https://msazure.pkgs.visualstudio.com/a531312f-ba7b-4573-ab4f-d468b740a319/_packaging/CognitiveServicesSharedComponents/npm/registry/@babel/traverse/-/traverse-7.20.12.tgz#7f0f787b3a67ca4475adef1f56cb94f6abd4a4b5"
+  integrity sha1-fw94ezpnykR1re8fVsuU9qvUpLU=
   dependencies:
     "@babel/code-frame" "^7.18.6"
-    "@babel/generator" "^7.20.5"
+    "@babel/generator" "^7.20.7"
     "@babel/helper-environment-visitor" "^7.18.9"
     "@babel/helper-function-name" "^7.19.0"
     "@babel/helper-hoist-variables" "^7.18.6"
     "@babel/helper-split-export-declaration" "^7.18.6"
-    "@babel/parser" "^7.20.5"
-    "@babel/types" "^7.20.5"
+    "@babel/parser" "^7.20.7"
+    "@babel/types" "^7.20.7"
     debug "^4.1.0"
     globals "^11.1.0"
 
-"@babel/types@^7.0.0", "@babel/types@^7.12.11", "@babel/types@^7.12.6", "@babel/types@^7.12.7", "@babel/types@^7.18.10", "@babel/types@^7.18.6", "@babel/types@^7.18.9", "@babel/types@^7.19.0", "@babel/types@^7.2.0", "@babel/types@^7.20.0", "@babel/types@^7.20.2", "@babel/types@^7.20.5", "@babel/types@^7.3.0", "@babel/types@^7.3.3", "@babel/types@^7.4.4", "@babel/types@^7.7.0":
-  version "7.20.5"
-  resolved "https://msazure.pkgs.visualstudio.com/a531312f-ba7b-4573-ab4f-d468b740a319/_packaging/CognitiveServicesSharedComponents/npm/registry/@babel/types/-/types-7.20.5.tgz#e206ae370b5393d94dfd1d04cd687cace53efa84"
-  integrity sha1-4gauNwtTk9lN/R0EzWh8rOU++oQ=
+"@babel/types@^7.0.0", "@babel/types@^7.12.11", "@babel/types@^7.12.6", "@babel/types@^7.12.7", "@babel/types@^7.18.6", "@babel/types@^7.18.9", "@babel/types@^7.19.0", "@babel/types@^7.2.0", "@babel/types@^7.20.0", "@babel/types@^7.20.2", "@babel/types@^7.20.5", "@babel/types@^7.20.7", "@babel/types@^7.3.0", "@babel/types@^7.3.3", "@babel/types@^7.4.4", "@babel/types@^7.7.0":
+  version "7.20.7"
+  resolved "https://msazure.pkgs.visualstudio.com/a531312f-ba7b-4573-ab4f-d468b740a319/_packaging/CognitiveServicesSharedComponents/npm/registry/@babel/types/-/types-7.20.7.tgz#54ec75e252318423fc07fb644dc6a58a64c09b7f"
+  integrity sha1-VOx14lIxhCP8B/tkTcalimTAm38=
   dependencies:
     "@babel/helper-string-parser" "^7.19.4"
     "@babel/helper-validator-identifier" "^7.19.1"
@@ -1584,39 +1588,39 @@
     react-merge-refs "^1.0.0"
 
 "@devtools-ds/object-inspector@^1.1.2":
-  version "1.2.0"
-  resolved "https://msazure.pkgs.visualstudio.com/a531312f-ba7b-4573-ab4f-d468b740a319/_packaging/CognitiveServicesSharedComponents/npm/registry/@devtools-ds/object-inspector/-/object-inspector-1.2.0.tgz#64a132fbd4159affa5a87c8cf6cf8540c337aed2"
-  integrity sha1-ZKEy+9QVmv+lqHyM9s+FQMM3rtI=
+  version "1.2.1"
+  resolved "https://msazure.pkgs.visualstudio.com/a531312f-ba7b-4573-ab4f-d468b740a319/_packaging/CognitiveServicesSharedComponents/npm/registry/@devtools-ds/object-inspector/-/object-inspector-1.2.1.tgz#2b380ed475d898d2828e7855c2dc2c82f091d326"
+  integrity sha1-KzgO1HXYmNKCjnhVwtwsgvCR0yY=
   dependencies:
     "@babel/runtime" "7.7.2"
-    "@devtools-ds/object-parser" "^1.2.0"
-    "@devtools-ds/themes" "^1.2.0"
-    "@devtools-ds/tree" "^1.2.0"
+    "@devtools-ds/object-parser" "^1.2.1"
+    "@devtools-ds/themes" "^1.2.1"
+    "@devtools-ds/tree" "^1.2.1"
     clsx "1.1.0"
 
-"@devtools-ds/object-parser@^1.2.0":
-  version "1.2.0"
-  resolved "https://msazure.pkgs.visualstudio.com/a531312f-ba7b-4573-ab4f-d468b740a319/_packaging/CognitiveServicesSharedComponents/npm/registry/@devtools-ds/object-parser/-/object-parser-1.2.0.tgz#8da39bf481687afdf113c78dbac5ced6fd8e30d1"
-  integrity sha1-jaOb9IFoev3xE8eNusXO1v2OMNE=
+"@devtools-ds/object-parser@^1.2.1":
+  version "1.2.1"
+  resolved "https://msazure.pkgs.visualstudio.com/a531312f-ba7b-4573-ab4f-d468b740a319/_packaging/CognitiveServicesSharedComponents/npm/registry/@devtools-ds/object-parser/-/object-parser-1.2.1.tgz#5ab709a2db807ce99cb12bf35511379d6e47a3b8"
+  integrity sha1-WrcJotuAfOmcsSvzVRE3nW5Ho7g=
   dependencies:
     "@babel/runtime" "~7.5.4"
 
-"@devtools-ds/themes@^1.2.0":
-  version "1.2.0"
-  resolved "https://msazure.pkgs.visualstudio.com/a531312f-ba7b-4573-ab4f-d468b740a319/_packaging/CognitiveServicesSharedComponents/npm/registry/@devtools-ds/themes/-/themes-1.2.0.tgz#2fda60af9741e97bc09257b512e49a7aecf6f4bc"
-  integrity sha1-L9pgr5dB6XvAkle1EuSaeuz29Lw=
+"@devtools-ds/themes@^1.2.1":
+  version "1.2.1"
+  resolved "https://msazure.pkgs.visualstudio.com/a531312f-ba7b-4573-ab4f-d468b740a319/_packaging/CognitiveServicesSharedComponents/npm/registry/@devtools-ds/themes/-/themes-1.2.1.tgz#060a0a1a2b38f68b01deca62240d2c94585f00dd"
+  integrity sha1-BgoKGis49osB3spiJA0slFhfAN0=
   dependencies:
     "@babel/runtime" "~7.5.4"
     "@design-systems/utils" "2.12.0"
     clsx "1.1.0"
 
-"@devtools-ds/tree@^1.2.0":
-  version "1.2.0"
-  resolved "https://msazure.pkgs.visualstudio.com/a531312f-ba7b-4573-ab4f-d468b740a319/_packaging/CognitiveServicesSharedComponents/npm/registry/@devtools-ds/tree/-/tree-1.2.0.tgz#e882d10ae13a30f2aa02e75c3eeb6c44a47a80c3"
-  integrity sha1-6ILRCuE6MPKqAudcPutsRKR6gMM=
+"@devtools-ds/tree@^1.2.1":
+  version "1.2.1"
+  resolved "https://msazure.pkgs.visualstudio.com/a531312f-ba7b-4573-ab4f-d468b740a319/_packaging/CognitiveServicesSharedComponents/npm/registry/@devtools-ds/tree/-/tree-1.2.1.tgz#88d44dbbf96101fd8f18af92e514ed9dd00c8ceb"
+  integrity sha1-iNRNu/lhAf2PGK+S5RTtndAMjOs=
   dependencies:
     "@babel/runtime" "7.7.2"
-    "@devtools-ds/themes" "^1.2.0"
+    "@devtools-ds/themes" "^1.2.1"
     clsx "1.1.0"
 
 "@discoveryjs/json-ext@^0.5.0", "@discoveryjs/json-ext@^0.5.3":
@@ -1646,10 +1650,10 @@
   resolved "https://msazure.pkgs.visualstudio.com/a531312f-ba7b-4573-ab4f-d468b740a319/_packaging/CognitiveServicesSharedComponents/npm/registry/@emotion/unitless/-/unitless-0.7.5.tgz#77211291c1900a700b8a78cfafda3160d76949ed"
   integrity sha1-dyESkcGQCnALinjPr9oxYNdpSe0=
 
-"@eslint/eslintrc@^1.4.0":
-  version "1.4.0"
-  resolved "https://msazure.pkgs.visualstudio.com/a531312f-ba7b-4573-ab4f-d468b740a319/_packaging/CognitiveServicesSharedComponents/npm/registry/@eslint/eslintrc/-/eslintrc-1.4.0.tgz#8ec64e0df3e7a1971ee1ff5158da87389f167a63"
-  integrity sha1-jsZODfPnoZce4f9RWNqHOJ8WemM=
+"@eslint/eslintrc@^1.4.1":
+  version "1.4.1"
+  resolved "https://msazure.pkgs.visualstudio.com/a531312f-ba7b-4573-ab4f-d468b740a319/_packaging/CognitiveServicesSharedComponents/npm/registry/@eslint/eslintrc/-/eslintrc-1.4.1.tgz#af58772019a2d271b7e2d4c23ff4ddcba3ccfb3e"
+  integrity sha1-r1h3IBmi0nG34tTCP/Tdy6PM+z4=
   dependencies:
     ajv "^6.12.4"
     debug "^4.3.2"
@@ -1685,24 +1689,24 @@
     "@fluentui/set-version" "^8.2.3"
     tslib "^2.1.0"
 
-"@fluentui/font-icons-mdl2@^8.5.4":
-  version "8.5.4"
-  resolved "https://msazure.pkgs.visualstudio.com/a531312f-ba7b-4573-ab4f-d468b740a319/_packaging/CognitiveServicesSharedComponents/npm/registry/@fluentui/font-icons-mdl2/-/font-icons-mdl2-8.5.4.tgz#6cd02ce49d7bbc67215e196ba4e1b8f1de847a98"
-  integrity sha1-bNAs5J17vGchXhlrpOG48d6Eepg=
+"@fluentui/font-icons-mdl2@^8.5.5":
+  version "8.5.5"
+  resolved "https://msazure.pkgs.visualstudio.com/a531312f-ba7b-4573-ab4f-d468b740a319/_packaging/CognitiveServicesSharedComponents/npm/registry/@fluentui/font-icons-mdl2/-/font-icons-mdl2-8.5.5.tgz#03e38de34371679d437333eef9b5e7f47cece4dc"
+  integrity sha1-A+ON40NxZ51DczPu+bXn9Hzs5Nw=
   dependencies:
     "@fluentui/set-version" "^8.2.3"
-    "@fluentui/style-utilities" "^8.8.3"
+    "@fluentui/style-utilities" "^8.8.4"
     "@fluentui/utilities" "^8.13.4"
     tslib "^2.1.0"
 
-"@fluentui/foundation-legacy@^8.2.24":
-  version "8.2.24"
-  resolved "https://msazure.pkgs.visualstudio.com/a531312f-ba7b-4573-ab4f-d468b740a319/_packaging/CognitiveServicesSharedComponents/npm/registry/@fluentui/foundation-legacy/-/foundation-legacy-8.2.24.tgz#a8dcfa945bcac844dde54cf1b9bb4b4383c6cbcc"
-  integrity sha1-qNz6lFvKyETd5UzxubtLQ4PGy8w=
+"@fluentui/foundation-legacy@^8.2.25":
+  version "8.2.25"
+  resolved "https://msazure.pkgs.visualstudio.com/a531312f-ba7b-4573-ab4f-d468b740a319/_packaging/CognitiveServicesSharedComponents/npm/registry/@fluentui/foundation-legacy/-/foundation-legacy-8.2.25.tgz#e4e4bfc4faa6b51b7fd42ece7a371d505d70ef9c"
+  integrity sha1-5OS/xPqmtRt/1C7OejcdUF1w75w=
   dependencies:
     "@fluentui/merge-styles" "^8.5.4"
     "@fluentui/set-version" "^8.2.3"
-    "@fluentui/style-utilities" "^8.8.3"
+    "@fluentui/style-utilities" "^8.8.4"
     "@fluentui/utilities" "^8.13.4"
     tslib "^2.1.0"
 
@@ -1732,15 +1736,15 @@
     classnames "^2.2.6"
     tslib "^1.10.0"
 
-"@fluentui/react-focus@^8.8.10":
-  version "8.8.10"
-  resolved "https://msazure.pkgs.visualstudio.com/a531312f-ba7b-4573-ab4f-d468b740a319/_packaging/CognitiveServicesSharedComponents/npm/registry/@fluentui/react-focus/-/react-focus-8.8.10.tgz#06772ae5cb70b3e38f77ff157e345c8ca0cb4ec1"
-  integrity sha1-Bncq5ctws+OPd/8VfjRcjKDLTsE=
+"@fluentui/react-focus@^8.8.11":
+  version "8.8.11"
+  resolved "https://msazure.pkgs.visualstudio.com/a531312f-ba7b-4573-ab4f-d468b740a319/_packaging/CognitiveServicesSharedComponents/npm/registry/@fluentui/react-focus/-/react-focus-8.8.11.tgz#bd40753ca4233d9c067277e9f8a75479ae000fd3"
+  integrity sha1-vUB1PKQjPZwGcnfp+KdUea4AD9M=
   dependencies:
     "@fluentui/keyboard-key" "^0.4.3"
     "@fluentui/merge-styles" "^8.5.4"
     "@fluentui/set-version" "^8.2.3"
-    "@fluentui/style-utilities" "^8.8.3"
+    "@fluentui/style-utilities" "^8.8.4"
     "@fluentui/utilities" "^8.13.4"
     tslib "^2.1.0"
 
@@ -1802,21 +1806,21 @@
     tslib "^2.1.0"
 
 "@fluentui/react@^8.0.0":
-  version "8.103.9"
-  resolved "https://msazure.pkgs.visualstudio.com/a531312f-ba7b-4573-ab4f-d468b740a319/_packaging/CognitiveServicesSharedComponents/npm/registry/@fluentui/react/-/react-8.103.9.tgz#209d0fc70319d0360a8c0b0dd032c47859766fd3"
-  integrity sha1-IJ0PxwMZ0DYKjAsN0DLEeFl2b9M=
+  version "8.104.2"
+  resolved "https://msazure.pkgs.visualstudio.com/a531312f-ba7b-4573-ab4f-d468b740a319/_packaging/CognitiveServicesSharedComponents/npm/registry/@fluentui/react/-/react-8.104.2.tgz#0a8771be9c46fb727d9c97dd72c9ad703579bb6e"
+  integrity sha1-CodxvpxG+3J9nJfdcsmtcDV5u24=
   dependencies:
     "@fluentui/date-time-utilities" "^8.5.3"
-    "@fluentui/font-icons-mdl2" "^8.5.4"
-    "@fluentui/foundation-legacy" "^8.2.24"
+    "@fluentui/font-icons-mdl2" "^8.5.5"
+    "@fluentui/foundation-legacy" "^8.2.25"
     "@fluentui/merge-styles" "^8.5.4"
-    "@fluentui/react-focus" "^8.8.10"
+    "@fluentui/react-focus" "^8.8.11"
     "@fluentui/react-hooks" "^8.6.14"
     "@fluentui/react-portal-compat-context" "^9.0.4"
     "@fluentui/react-window-provider" "^2.2.4"
     "@fluentui/set-version" "^8.2.3"
-    "@fluentui/style-utilities" "^8.8.3"
-    "@fluentui/theme" "^2.6.19"
+    "@fluentui/style-utilities" "^8.8.4"
+    "@fluentui/theme" "^2.6.20"
     "@fluentui/utilities" "^8.13.4"
     "@microsoft/load-themed-styles" "^1.10.26"
     tslib "^2.1.0"
@@ -1828,14 +1832,14 @@
   dependencies:
     tslib "^2.1.0"
 
-"@fluentui/style-utilities@^8.8.3":
-  version "8.8.3"
-  resolved "https://msazure.pkgs.visualstudio.com/a531312f-ba7b-4573-ab4f-d468b740a319/_packaging/CognitiveServicesSharedComponents/npm/registry/@fluentui/style-utilities/-/style-utilities-8.8.3.tgz#6ab8e332482e9698a637036f438f67e13878da1a"
-  integrity sha1-arjjMkgulpimNwNvQ49n4Th42ho=
+"@fluentui/style-utilities@^8.8.4":
+  version "8.8.4"
+  resolved "https://msazure.pkgs.visualstudio.com/a531312f-ba7b-4573-ab4f-d468b740a319/_packaging/CognitiveServicesSharedComponents/npm/registry/@fluentui/style-utilities/-/style-utilities-8.8.4.tgz#652e66914b613819104504deda22fd85634bca15"
+  integrity sha1-ZS5mkUthOBkQRQTe2iL9hWNLyhU=
   dependencies:
     "@fluentui/merge-styles" "^8.5.4"
     "@fluentui/set-version" "^8.2.3"
-    "@fluentui/theme" "^2.6.19"
+    "@fluentui/theme" "^2.6.20"
     "@fluentui/utilities" "^8.13.4"
     "@microsoft/load-themed-styles" "^1.10.26"
     tslib "^2.1.0"
@@ -1850,10 +1854,10 @@
     "@uifabric/utilities" "^7.38.2"
     tslib "^1.10.0"
 
-"@fluentui/theme@^2.6.19":
-  version "2.6.19"
-  resolved "https://msazure.pkgs.visualstudio.com/a531312f-ba7b-4573-ab4f-d468b740a319/_packaging/CognitiveServicesSharedComponents/npm/registry/@fluentui/theme/-/theme-2.6.19.tgz#1a8254452eefcb7322ae3a5d60b466b32b30c7fb"
-  integrity sha1-GoJURS7vy3MirjpdYLRmsyswx/s=
+"@fluentui/theme@^2.6.20":
+  version "2.6.20"
+  resolved "https://msazure.pkgs.visualstudio.com/a531312f-ba7b-4573-ab4f-d468b740a319/_packaging/CognitiveServicesSharedComponents/npm/registry/@fluentui/theme/-/theme-2.6.20.tgz#2dc44be49d8db07cccc4ae38e757625056a243be"
+  integrity sha1-LcRL5J2NsHzMxK4451diUFaiQ74=
   dependencies:
     "@fluentui/merge-styles" "^8.5.4"
     "@fluentui/set-version" "^8.2.3"
@@ -2422,12 +2426,12 @@
     rimraf "^3.0.2"
 
 "@playwright/test@^1.27.1":
-  version "1.29.0"
-  resolved "https://msazure.pkgs.visualstudio.com/a531312f-ba7b-4573-ab4f-d468b740a319/_packaging/CognitiveServicesSharedComponents/npm/registry/@playwright/test/-/test-1.29.0.tgz#c41155e6c43561653b235c32493aaeb0858df773"
-  integrity sha1-xBFV5sQ1YWU7I1wySTqusIWN93M=
+  version "1.29.1"
+  resolved "https://msazure.pkgs.visualstudio.com/a531312f-ba7b-4573-ab4f-d468b740a319/_packaging/CognitiveServicesSharedComponents/npm/registry/@playwright/test/-/test-1.29.1.tgz#f2ed4dc143b9c7825a7ad2703b2f1ac4354e1145"
+  integrity sha1-8u1NwUO5x4JaetJwOy8axDVOEUU=
   dependencies:
     "@types/node" "*"
-    playwright-core "1.29.0"
+    playwright-core "1.29.1"
 
 "@pmmmwh/react-refresh-webpack-plugin@^0.4.3":
   version "0.4.3"
@@ -2584,18 +2588,18 @@
     "@sinonjs/commons" "^1.7.0"
 
 "@storybook/addon-a11y@^6.5.12":
-  version "6.5.14"
-  resolved "https://msazure.pkgs.visualstudio.com/a531312f-ba7b-4573-ab4f-d468b740a319/_packaging/CognitiveServicesSharedComponents/npm/registry/@storybook/addon-a11y/-/addon-a11y-6.5.14.tgz#3095f87396955f64d86110636e6e2fdf603dd10e"
-  integrity sha1-MJX4c5aVX2TYYRBjbm4v32A90Q4=
+  version "6.5.15"
+  resolved "https://msazure.pkgs.visualstudio.com/a531312f-ba7b-4573-ab4f-d468b740a319/_packaging/CognitiveServicesSharedComponents/npm/registry/@storybook/addon-a11y/-/addon-a11y-6.5.15.tgz#2e36fdadf2b1e0fd68d19a24c537bd2d73ad7cca"
+  integrity sha1-Ljb9rfKx4P1o0ZokxTe9LXOtfMo=
   dependencies:
-    "@storybook/addons" "6.5.14"
-    "@storybook/api" "6.5.14"
-    "@storybook/channels" "6.5.14"
-    "@storybook/client-logger" "6.5.14"
-    "@storybook/components" "6.5.14"
-    "@storybook/core-events" "6.5.14"
+    "@storybook/addons" "6.5.15"
+    "@storybook/api" "6.5.15"
+    "@storybook/channels" "6.5.15"
+    "@storybook/client-logger" "6.5.15"
+    "@storybook/components" "6.5.15"
+    "@storybook/core-events" "6.5.15"
     "@storybook/csf" "0.0.2--canary.4566f4d.1"
-    "@storybook/theming" "6.5.14"
+    "@storybook/theming" "6.5.15"
     axe-core "^4.2.0"
     core-js "^3.8.2"
     global "^4.4.0"
@@ -2605,18 +2609,18 @@
     ts-dedent "^2.0.0"
     util-deprecate "^1.0.2"
 
-"@storybook/addon-actions@6.5.14", "@storybook/addon-actions@^6.5.12":
-  version "6.5.14"
-  resolved "https://msazure.pkgs.visualstudio.com/a531312f-ba7b-4573-ab4f-d468b740a319/_packaging/CognitiveServicesSharedComponents/npm/registry/@storybook/addon-actions/-/addon-actions-6.5.14.tgz#29dd6a27e4b373513190ffd8bc89c7a89a7e071c"
-  integrity sha1-Kd1qJ+Szc1ExkP/YvInHqJp+Bxw=
+"@storybook/addon-actions@6.5.15", "@storybook/addon-actions@^6.5.12":
+  version "6.5.15"
+  resolved "https://msazure.pkgs.visualstudio.com/a531312f-ba7b-4573-ab4f-d468b740a319/_packaging/CognitiveServicesSharedComponents/npm/registry/@storybook/addon-actions/-/addon-actions-6.5.15.tgz#ba737561dbf8a358ea8bc588f3da9fddd1a4267e"
+  integrity sha1-unN1Ydv4o1jqi8WI89qf3dGkJn4=
   dependencies:
-    "@storybook/addons" "6.5.14"
-    "@storybook/api" "6.5.14"
-    "@storybook/client-logger" "6.5.14"
-    "@storybook/components" "6.5.14"
-    "@storybook/core-events" "6.5.14"
+    "@storybook/addons" "6.5.15"
+    "@storybook/api" "6.5.15"
+    "@storybook/client-logger" "6.5.15"
+    "@storybook/components" "6.5.15"
+    "@storybook/core-events" "6.5.15"
     "@storybook/csf" "0.0.2--canary.4566f4d.1"
-    "@storybook/theming" "6.5.14"
+    "@storybook/theming" "6.5.15"
     core-js "^3.8.2"
     fast-deep-equal "^3.1.3"
     global "^4.4.0"
@@ -2630,18 +2634,18 @@
     util-deprecate "^1.0.2"
     uuid-browser "^3.1.0"
 
-"@storybook/addon-backgrounds@6.5.14":
-  version "6.5.14"
-  resolved "https://msazure.pkgs.visualstudio.com/a531312f-ba7b-4573-ab4f-d468b740a319/_packaging/CognitiveServicesSharedComponents/npm/registry/@storybook/addon-backgrounds/-/addon-backgrounds-6.5.14.tgz#de34ae41d2700d05acff2929b6b421ee78be417a"
-  integrity sha1-3jSuQdJwDQWs/ykptrQh7ni+QXo=
+"@storybook/addon-backgrounds@6.5.15":
+  version "6.5.15"
+  resolved "https://msazure.pkgs.visualstudio.com/a531312f-ba7b-4573-ab4f-d468b740a319/_packaging/CognitiveServicesSharedComponents/npm/registry/@storybook/addon-backgrounds/-/addon-backgrounds-6.5.15.tgz#bb97df61a9436f6f5a61f751f4f3fedcfe19fb84"
+  integrity sha1-u5ffYalDb29aYfdR9PP+3P4Z+4Q=
   dependencies:
-    "@storybook/addons" "6.5.14"
-    "@storybook/api" "6.5.14"
-    "@storybook/client-logger" "6.5.14"
-    "@storybook/components" "6.5.14"
-    "@storybook/core-events" "6.5.14"
+    "@storybook/addons" "6.5.15"
+    "@storybook/api" "6.5.15"
+    "@storybook/client-logger" "6.5.15"
+    "@storybook/components" "6.5.15"
+    "@storybook/core-events" "6.5.15"
     "@storybook/csf" "0.0.2--canary.4566f4d.1"
-    "@storybook/theming" "6.5.14"
+    "@storybook/theming" "6.5.15"
     core-js "^3.8.2"
     global "^4.4.0"
     memoizerific "^1.11.3"
@@ -2649,20 +2653,20 @@
     ts-dedent "^2.0.0"
     util-deprecate "^1.0.2"
 
-"@storybook/addon-controls@6.5.14":
-  version "6.5.14"
-  resolved "https://msazure.pkgs.visualstudio.com/a531312f-ba7b-4573-ab4f-d468b740a319/_packaging/CognitiveServicesSharedComponents/npm/registry/@storybook/addon-controls/-/addon-controls-6.5.14.tgz#c3ad5f716a43032cb982f7b863d5a453ba73c788"
-  integrity sha1-w61fcWpDAyy5gve4Y9WkU7pzx4g=
+"@storybook/addon-controls@6.5.15":
+  version "6.5.15"
+  resolved "https://msazure.pkgs.visualstudio.com/a531312f-ba7b-4573-ab4f-d468b740a319/_packaging/CognitiveServicesSharedComponents/npm/registry/@storybook/addon-controls/-/addon-controls-6.5.15.tgz#2a1f590d5624f658561b8e0ff144667248baf907"
+  integrity sha1-Kh9ZDVYk9lhWG44P8URmcki6+Qc=
   dependencies:
-    "@storybook/addons" "6.5.14"
-    "@storybook/api" "6.5.14"
-    "@storybook/client-logger" "6.5.14"
-    "@storybook/components" "6.5.14"
-    "@storybook/core-common" "6.5.14"
+    "@storybook/addons" "6.5.15"
+    "@storybook/api" "6.5.15"
+    "@storybook/client-logger" "6.5.15"
+    "@storybook/components" "6.5.15"
+    "@storybook/core-common" "6.5.15"
     "@storybook/csf" "0.0.2--canary.4566f4d.1"
-    "@storybook/node-logger" "6.5.14"
-    "@storybook/store" "6.5.14"
-    "@storybook/theming" "6.5.14"
+    "@storybook/node-logger" "6.5.15"
+    "@storybook/store" "6.5.15"
+    "@storybook/theming" "6.5.15"
     core-js "^3.8.2"
     lodash "^4.17.21"
     ts-dedent "^2.0.0"
@@ -2679,29 +2683,29 @@
     deep-equal "^2.0.2"
     prop-types "^15.6.2"
 
-"@storybook/addon-docs@6.5.14":
-  version "6.5.14"
-  resolved "https://msazure.pkgs.visualstudio.com/a531312f-ba7b-4573-ab4f-d468b740a319/_packaging/CognitiveServicesSharedComponents/npm/registry/@storybook/addon-docs/-/addon-docs-6.5.14.tgz#5df8bd132890828320cfb5b4769f098142e57a4c"
-  integrity sha1-Xfi9EyiQgoMgz7W0dp8JgULlekw=
+"@storybook/addon-docs@6.5.15":
+  version "6.5.15"
+  resolved "https://msazure.pkgs.visualstudio.com/a531312f-ba7b-4573-ab4f-d468b740a319/_packaging/CognitiveServicesSharedComponents/npm/registry/@storybook/addon-docs/-/addon-docs-6.5.15.tgz#d5f4b991636953f30daea6aa89d5bfdfa97b9116"
+  integrity sha1-1fS5kWNpU/MNrqaqidW/36l7kRY=
   dependencies:
     "@babel/plugin-transform-react-jsx" "^7.12.12"
     "@babel/preset-env" "^7.12.11"
     "@jest/transform" "^26.6.2"
     "@mdx-js/react" "^1.6.22"
-    "@storybook/addons" "6.5.14"
-    "@storybook/api" "6.5.14"
-    "@storybook/components" "6.5.14"
-    "@storybook/core-common" "6.5.14"
-    "@storybook/core-events" "6.5.14"
+    "@storybook/addons" "6.5.15"
+    "@storybook/api" "6.5.15"
+    "@storybook/components" "6.5.15"
+    "@storybook/core-common" "6.5.15"
+    "@storybook/core-events" "6.5.15"
     "@storybook/csf" "0.0.2--canary.4566f4d.1"
-    "@storybook/docs-tools" "6.5.14"
+    "@storybook/docs-tools" "6.5.15"
     "@storybook/mdx1-csf" "^0.0.1"
-    "@storybook/node-logger" "6.5.14"
-    "@storybook/postinstall" "6.5.14"
-    "@storybook/preview-web" "6.5.14"
-    "@storybook/source-loader" "6.5.14"
-    "@storybook/store" "6.5.14"
-    "@storybook/theming" "6.5.14"
+    "@storybook/node-logger" "6.5.15"
+    "@storybook/postinstall" "6.5.15"
+    "@storybook/preview-web" "6.5.15"
+    "@storybook/source-loader" "6.5.15"
+    "@storybook/store" "6.5.15"
+    "@storybook/theming" "6.5.15"
     babel-loader "^8.0.0"
     core-js "^3.8.2"
     fast-deep-equal "^3.1.3"
@@ -2714,41 +2718,41 @@
     util-deprecate "^1.0.2"
 
 "@storybook/addon-essentials@^6.5.12":
-  version "6.5.14"
-  resolved "https://msazure.pkgs.visualstudio.com/a531312f-ba7b-4573-ab4f-d468b740a319/_packaging/CognitiveServicesSharedComponents/npm/registry/@storybook/addon-essentials/-/addon-essentials-6.5.14.tgz#f0fb5738878e62d58dc9ce0e9305aa7b4488ff8c"
-  integrity sha1-8PtXOIeOYtWNyc4OkwWqe0SI/4w=
+  version "6.5.15"
+  resolved "https://msazure.pkgs.visualstudio.com/a531312f-ba7b-4573-ab4f-d468b740a319/_packaging/CognitiveServicesSharedComponents/npm/registry/@storybook/addon-essentials/-/addon-essentials-6.5.15.tgz#cfbf6cacfbc7d14ac30aab118efcac818f0814ba"
+  integrity sha1-z79srPvH0UrDCqsRjvysgY8IFLo=
   dependencies:
-    "@storybook/addon-actions" "6.5.14"
-    "@storybook/addon-backgrounds" "6.5.14"
-    "@storybook/addon-controls" "6.5.14"
-    "@storybook/addon-docs" "6.5.14"
-    "@storybook/addon-measure" "6.5.14"
-    "@storybook/addon-outline" "6.5.14"
-    "@storybook/addon-toolbars" "6.5.14"
-    "@storybook/addon-viewport" "6.5.14"
-    "@storybook/addons" "6.5.14"
-    "@storybook/api" "6.5.14"
-    "@storybook/core-common" "6.5.14"
-    "@storybook/node-logger" "6.5.14"
+    "@storybook/addon-actions" "6.5.15"
+    "@storybook/addon-backgrounds" "6.5.15"
+    "@storybook/addon-controls" "6.5.15"
+    "@storybook/addon-docs" "6.5.15"
+    "@storybook/addon-measure" "6.5.15"
+    "@storybook/addon-outline" "6.5.15"
+    "@storybook/addon-toolbars" "6.5.15"
+    "@storybook/addon-viewport" "6.5.15"
+    "@storybook/addons" "6.5.15"
+    "@storybook/api" "6.5.15"
+    "@storybook/core-common" "6.5.15"
+    "@storybook/node-logger" "6.5.15"
     core-js "^3.8.2"
     regenerator-runtime "^0.13.7"
     ts-dedent "^2.0.0"
 
 "@storybook/addon-interactions@^6.5.12":
-  version "6.5.14"
-  resolved "https://msazure.pkgs.visualstudio.com/a531312f-ba7b-4573-ab4f-d468b740a319/_packaging/CognitiveServicesSharedComponents/npm/registry/@storybook/addon-interactions/-/addon-interactions-6.5.14.tgz#a0f1cda23364e8cea326a0ccf178fe16bffb3ec8"
-  integrity sha1-oPHNojNk6M6jJqDM8Xj+Fr/7Psg=
+  version "6.5.15"
+  resolved "https://msazure.pkgs.visualstudio.com/a531312f-ba7b-4573-ab4f-d468b740a319/_packaging/CognitiveServicesSharedComponents/npm/registry/@storybook/addon-interactions/-/addon-interactions-6.5.15.tgz#d176a47fa45bbc41cd9ecd4f672bdd19af49bbe5"
+  integrity sha1-0Xakf6RbvEHNns1PZyvdGa9Ju+U=
   dependencies:
     "@devtools-ds/object-inspector" "^1.1.2"
-    "@storybook/addons" "6.5.14"
-    "@storybook/api" "6.5.14"
-    "@storybook/client-logger" "6.5.14"
-    "@storybook/components" "6.5.14"
-    "@storybook/core-common" "6.5.14"
-    "@storybook/core-events" "6.5.14"
+    "@storybook/addons" "6.5.15"
+    "@storybook/api" "6.5.15"
+    "@storybook/client-logger" "6.5.15"
+    "@storybook/components" "6.5.15"
+    "@storybook/core-common" "6.5.15"
+    "@storybook/core-events" "6.5.15"
     "@storybook/csf" "0.0.2--canary.4566f4d.1"
-    "@storybook/instrumenter" "6.5.14"
-    "@storybook/theming" "6.5.14"
+    "@storybook/instrumenter" "6.5.15"
+    "@storybook/theming" "6.5.15"
     core-js "^3.8.2"
     global "^4.4.0"
     jest-mock "^27.0.6"
@@ -2756,15 +2760,15 @@
     ts-dedent "^2.2.0"
 
 "@storybook/addon-links@^6.5.12":
-  version "6.5.14"
-  resolved "https://msazure.pkgs.visualstudio.com/a531312f-ba7b-4573-ab4f-d468b740a319/_packaging/CognitiveServicesSharedComponents/npm/registry/@storybook/addon-links/-/addon-links-6.5.14.tgz#cf2fd95394d1c344391470d9937db7e127b6d754"
-  integrity sha1-zy/ZU5TRw0Q5FHDZk3234Se211Q=
+  version "6.5.15"
+  resolved "https://msazure.pkgs.visualstudio.com/a531312f-ba7b-4573-ab4f-d468b740a319/_packaging/CognitiveServicesSharedComponents/npm/registry/@storybook/addon-links/-/addon-links-6.5.15.tgz#97508726090a006f6c042a687ec89496c96436c4"
+  integrity sha1-l1CHJgkKAG9sBCpofsiUlslkNsQ=
   dependencies:
-    "@storybook/addons" "6.5.14"
-    "@storybook/client-logger" "6.5.14"
-    "@storybook/core-events" "6.5.14"
+    "@storybook/addons" "6.5.15"
+    "@storybook/client-logger" "6.5.15"
+    "@storybook/core-events" "6.5.15"
     "@storybook/csf" "0.0.2--canary.4566f4d.1"
-    "@storybook/router" "6.5.14"
+    "@storybook/router" "6.5.15"
     "@types/qs" "^6.9.5"
     core-js "^3.8.2"
     global "^4.4.0"
@@ -2773,95 +2777,95 @@
     regenerator-runtime "^0.13.7"
     ts-dedent "^2.0.0"
 
-"@storybook/addon-measure@6.5.14":
-  version "6.5.14"
-  resolved "https://msazure.pkgs.visualstudio.com/a531312f-ba7b-4573-ab4f-d468b740a319/_packaging/CognitiveServicesSharedComponents/npm/registry/@storybook/addon-measure/-/addon-measure-6.5.14.tgz#3dc5989dd540d23992eadc35e91e6d3a5122c97e"
-  integrity sha1-PcWYndVA0jmS6tw16R5tOlEiyX4=
+"@storybook/addon-measure@6.5.15":
+  version "6.5.15"
+  resolved "https://msazure.pkgs.visualstudio.com/a531312f-ba7b-4573-ab4f-d468b740a319/_packaging/CognitiveServicesSharedComponents/npm/registry/@storybook/addon-measure/-/addon-measure-6.5.15.tgz#a174bf498168e52469f602a8d6ba6160d4b8a9d6"
+  integrity sha1-oXS/SYFo5SRp9gKo1rphYNS4qdY=
   dependencies:
-    "@storybook/addons" "6.5.14"
-    "@storybook/api" "6.5.14"
-    "@storybook/client-logger" "6.5.14"
-    "@storybook/components" "6.5.14"
-    "@storybook/core-events" "6.5.14"
+    "@storybook/addons" "6.5.15"
+    "@storybook/api" "6.5.15"
+    "@storybook/client-logger" "6.5.15"
+    "@storybook/components" "6.5.15"
+    "@storybook/core-events" "6.5.15"
     "@storybook/csf" "0.0.2--canary.4566f4d.1"
     core-js "^3.8.2"
     global "^4.4.0"
 
-"@storybook/addon-outline@6.5.14":
-  version "6.5.14"
-  resolved "https://msazure.pkgs.visualstudio.com/a531312f-ba7b-4573-ab4f-d468b740a319/_packaging/CognitiveServicesSharedComponents/npm/registry/@storybook/addon-outline/-/addon-outline-6.5.14.tgz#b14fe67e90efc2757f406f01841f63686b8f3c41"
-  integrity sha1-sU/mfpDvwnV/QG8BhB9jaGuPPEE=
+"@storybook/addon-outline@6.5.15":
+  version "6.5.15"
+  resolved "https://msazure.pkgs.visualstudio.com/a531312f-ba7b-4573-ab4f-d468b740a319/_packaging/CognitiveServicesSharedComponents/npm/registry/@storybook/addon-outline/-/addon-outline-6.5.15.tgz#7cf9127f3d321136d6780ea2db525b4fd2678281"
+  integrity sha1-fPkSfz0yETbWeA6i21JbT9JngoE=
   dependencies:
-    "@storybook/addons" "6.5.14"
-    "@storybook/api" "6.5.14"
-    "@storybook/client-logger" "6.5.14"
-    "@storybook/components" "6.5.14"
-    "@storybook/core-events" "6.5.14"
+    "@storybook/addons" "6.5.15"
+    "@storybook/api" "6.5.15"
+    "@storybook/client-logger" "6.5.15"
+    "@storybook/components" "6.5.15"
+    "@storybook/core-events" "6.5.15"
     "@storybook/csf" "0.0.2--canary.4566f4d.1"
     core-js "^3.8.2"
     global "^4.4.0"
     regenerator-runtime "^0.13.7"
     ts-dedent "^2.0.0"
 
-"@storybook/addon-toolbars@6.5.14":
-  version "6.5.14"
-  resolved "https://msazure.pkgs.visualstudio.com/a531312f-ba7b-4573-ab4f-d468b740a319/_packaging/CognitiveServicesSharedComponents/npm/registry/@storybook/addon-toolbars/-/addon-toolbars-6.5.14.tgz#200bb8cfc771bb8d14c61d7810b02765a473458e"
-  integrity sha1-IAu4z8dxu40Uxh14ELAnZaRzRY4=
+"@storybook/addon-toolbars@6.5.15":
+  version "6.5.15"
+  resolved "https://msazure.pkgs.visualstudio.com/a531312f-ba7b-4573-ab4f-d468b740a319/_packaging/CognitiveServicesSharedComponents/npm/registry/@storybook/addon-toolbars/-/addon-toolbars-6.5.15.tgz#6c11c9cbcc958ffe881c04cd5f04c2f47ed22f44"
+  integrity sha1-bBHJy8yVj/6IHATNXwTC9H7SL0Q=
   dependencies:
-    "@storybook/addons" "6.5.14"
-    "@storybook/api" "6.5.14"
-    "@storybook/client-logger" "6.5.14"
-    "@storybook/components" "6.5.14"
-    "@storybook/theming" "6.5.14"
+    "@storybook/addons" "6.5.15"
+    "@storybook/api" "6.5.15"
+    "@storybook/client-logger" "6.5.15"
+    "@storybook/components" "6.5.15"
+    "@storybook/theming" "6.5.15"
     core-js "^3.8.2"
     regenerator-runtime "^0.13.7"
 
-"@storybook/addon-viewport@6.5.14":
-  version "6.5.14"
-  resolved "https://msazure.pkgs.visualstudio.com/a531312f-ba7b-4573-ab4f-d468b740a319/_packaging/CognitiveServicesSharedComponents/npm/registry/@storybook/addon-viewport/-/addon-viewport-6.5.14.tgz#992cc3a61cd231a6c5cdb76c9c206aad8d1ffdfb"
-  integrity sha1-mSzDphzSMabFzbdsnCBqrY0f/fs=
+"@storybook/addon-viewport@6.5.15":
+  version "6.5.15"
+  resolved "https://msazure.pkgs.visualstudio.com/a531312f-ba7b-4573-ab4f-d468b740a319/_packaging/CognitiveServicesSharedComponents/npm/registry/@storybook/addon-viewport/-/addon-viewport-6.5.15.tgz#c30d0f865d86658c380d31f1ae3589392046e23b"
+  integrity sha1-ww0Phl2GZYw4DTHxrjWJOSBG4js=
   dependencies:
-    "@storybook/addons" "6.5.14"
-    "@storybook/api" "6.5.14"
-    "@storybook/client-logger" "6.5.14"
-    "@storybook/components" "6.5.14"
-    "@storybook/core-events" "6.5.14"
-    "@storybook/theming" "6.5.14"
+    "@storybook/addons" "6.5.15"
+    "@storybook/api" "6.5.15"
+    "@storybook/client-logger" "6.5.15"
+    "@storybook/components" "6.5.15"
+    "@storybook/core-events" "6.5.15"
+    "@storybook/theming" "6.5.15"
     core-js "^3.8.2"
     global "^4.4.0"
     memoizerific "^1.11.3"
     prop-types "^15.7.2"
     regenerator-runtime "^0.13.7"
 
-"@storybook/addons@6.5.14", "@storybook/addons@^6.1.18":
-  version "6.5.14"
-  resolved "https://msazure.pkgs.visualstudio.com/a531312f-ba7b-4573-ab4f-d468b740a319/_packaging/CognitiveServicesSharedComponents/npm/registry/@storybook/addons/-/addons-6.5.14.tgz#855ddd85533ffa596b7684f3df7b91b833fdf3f7"
-  integrity sha1-hV3dhVM/+llrdoTz33uRuDP98/c=
+"@storybook/addons@6.5.15", "@storybook/addons@^6.1.18":
+  version "6.5.15"
+  resolved "https://msazure.pkgs.visualstudio.com/a531312f-ba7b-4573-ab4f-d468b740a319/_packaging/CognitiveServicesSharedComponents/npm/registry/@storybook/addons/-/addons-6.5.15.tgz#3c3fafbf3c9ce2182d652cb6682f6581ba6580e1"
+  integrity sha1-PD+vvzyc4hgtZSy2aC9lgbplgOE=
   dependencies:
-    "@storybook/api" "6.5.14"
-    "@storybook/channels" "6.5.14"
-    "@storybook/client-logger" "6.5.14"
-    "@storybook/core-events" "6.5.14"
+    "@storybook/api" "6.5.15"
+    "@storybook/channels" "6.5.15"
+    "@storybook/client-logger" "6.5.15"
+    "@storybook/core-events" "6.5.15"
     "@storybook/csf" "0.0.2--canary.4566f4d.1"
-    "@storybook/router" "6.5.14"
-    "@storybook/theming" "6.5.14"
+    "@storybook/router" "6.5.15"
+    "@storybook/theming" "6.5.15"
     "@types/webpack-env" "^1.16.0"
     core-js "^3.8.2"
     global "^4.4.0"
     regenerator-runtime "^0.13.7"
 
-"@storybook/api@6.5.14":
-  version "6.5.14"
-  resolved "https://msazure.pkgs.visualstudio.com/a531312f-ba7b-4573-ab4f-d468b740a319/_packaging/CognitiveServicesSharedComponents/npm/registry/@storybook/api/-/api-6.5.14.tgz#e0caaee2d8634857ac428acc93db62aba744c1c1"
-  integrity sha1-4Mqu4thjSFesQorMk9tiq6dEwcE=
+"@storybook/api@6.5.15":
+  version "6.5.15"
+  resolved "https://msazure.pkgs.visualstudio.com/a531312f-ba7b-4573-ab4f-d468b740a319/_packaging/CognitiveServicesSharedComponents/npm/registry/@storybook/api/-/api-6.5.15.tgz#a189dac82a57ae9cfac43c887207b1075a2a2e96"
+  integrity sha1-oYnayCpXrpz6xDyIcgexB1oqLpY=
   dependencies:
-    "@storybook/channels" "6.5.14"
-    "@storybook/client-logger" "6.5.14"
-    "@storybook/core-events" "6.5.14"
+    "@storybook/channels" "6.5.15"
+    "@storybook/client-logger" "6.5.15"
+    "@storybook/core-events" "6.5.15"
     "@storybook/csf" "0.0.2--canary.4566f4d.1"
-    "@storybook/router" "6.5.14"
+    "@storybook/router" "6.5.15"
     "@storybook/semver" "^7.3.2"
-    "@storybook/theming" "6.5.14"
+    "@storybook/theming" "6.5.15"
     core-js "^3.8.2"
     fast-deep-equal "^3.1.3"
     global "^4.4.0"
@@ -2873,28 +2877,28 @@
     ts-dedent "^2.0.0"
     util-deprecate "^1.0.2"
 
-"@storybook/builder-webpack4@6.5.14":
-  version "6.5.14"
-  resolved "https://msazure.pkgs.visualstudio.com/a531312f-ba7b-4573-ab4f-d468b740a319/_packaging/CognitiveServicesSharedComponents/npm/registry/@storybook/builder-webpack4/-/builder-webpack4-6.5.14.tgz#ff9e1f7b08c112462596ca9a30ce935669147894"
-  integrity sha1-/54fewjBEkYllsqaMM6TVmkUeJQ=
+"@storybook/builder-webpack4@6.5.15":
+  version "6.5.15"
+  resolved "https://msazure.pkgs.visualstudio.com/a531312f-ba7b-4573-ab4f-d468b740a319/_packaging/CognitiveServicesSharedComponents/npm/registry/@storybook/builder-webpack4/-/builder-webpack4-6.5.15.tgz#8050b2eec84e055eee9b181e067d9a8aa76e252a"
+  integrity sha1-gFCy7shOBV7umxgeBn2aiqduJSo=
   dependencies:
     "@babel/core" "^7.12.10"
-    "@storybook/addons" "6.5.14"
-    "@storybook/api" "6.5.14"
-    "@storybook/channel-postmessage" "6.5.14"
-    "@storybook/channels" "6.5.14"
-    "@storybook/client-api" "6.5.14"
-    "@storybook/client-logger" "6.5.14"
-    "@storybook/components" "6.5.14"
-    "@storybook/core-common" "6.5.14"
-    "@storybook/core-events" "6.5.14"
-    "@storybook/node-logger" "6.5.14"
-    "@storybook/preview-web" "6.5.14"
-    "@storybook/router" "6.5.14"
+    "@storybook/addons" "6.5.15"
+    "@storybook/api" "6.5.15"
+    "@storybook/channel-postmessage" "6.5.15"
+    "@storybook/channels" "6.5.15"
+    "@storybook/client-api" "6.5.15"
+    "@storybook/client-logger" "6.5.15"
+    "@storybook/components" "6.5.15"
+    "@storybook/core-common" "6.5.15"
+    "@storybook/core-events" "6.5.15"
+    "@storybook/node-logger" "6.5.15"
+    "@storybook/preview-web" "6.5.15"
+    "@storybook/router" "6.5.15"
     "@storybook/semver" "^7.3.2"
-    "@storybook/store" "6.5.14"
-    "@storybook/theming" "6.5.14"
-    "@storybook/ui" "6.5.14"
+    "@storybook/store" "6.5.15"
+    "@storybook/theming" "6.5.15"
+    "@storybook/ui" "6.5.15"
     "@types/node" "^14.0.10 || ^16.0.0"
     "@types/webpack" "^4.41.26"
     autoprefixer "^9.8.6"
@@ -2927,26 +2931,26 @@
     webpack-virtual-modules "^0.2.2"
 
 "@storybook/builder-webpack5@^6.5.12":
-  version "6.5.14"
-  resolved "https://msazure.pkgs.visualstudio.com/a531312f-ba7b-4573-ab4f-d468b740a319/_packaging/CognitiveServicesSharedComponents/npm/registry/@storybook/builder-webpack5/-/builder-webpack5-6.5.14.tgz#d200bfed3f45b631e417299024e335905429fb2c"
-  integrity sha1-0gC/7T9FtjHkFymQJOM1kFQp+yw=
+  version "6.5.15"
+  resolved "https://msazure.pkgs.visualstudio.com/a531312f-ba7b-4573-ab4f-d468b740a319/_packaging/CognitiveServicesSharedComponents/npm/registry/@storybook/builder-webpack5/-/builder-webpack5-6.5.15.tgz#0c45ed6699d88a9d51f00c8c312750fcd707c37d"
+  integrity sha1-DEXtZpnYip1R8AyMMSdQ/NcHw30=
   dependencies:
     "@babel/core" "^7.12.10"
-    "@storybook/addons" "6.5.14"
-    "@storybook/api" "6.5.14"
-    "@storybook/channel-postmessage" "6.5.14"
-    "@storybook/channels" "6.5.14"
-    "@storybook/client-api" "6.5.14"
-    "@storybook/client-logger" "6.5.14"
-    "@storybook/components" "6.5.14"
-    "@storybook/core-common" "6.5.14"
-    "@storybook/core-events" "6.5.14"
-    "@storybook/node-logger" "6.5.14"
-    "@storybook/preview-web" "6.5.14"
-    "@storybook/router" "6.5.14"
+    "@storybook/addons" "6.5.15"
+    "@storybook/api" "6.5.15"
+    "@storybook/channel-postmessage" "6.5.15"
+    "@storybook/channels" "6.5.15"
+    "@storybook/client-api" "6.5.15"
+    "@storybook/client-logger" "6.5.15"
+    "@storybook/components" "6.5.15"
+    "@storybook/core-common" "6.5.15"
+    "@storybook/core-events" "6.5.15"
+    "@storybook/node-logger" "6.5.15"
+    "@storybook/preview-web" "6.5.15"
+    "@storybook/router" "6.5.15"
     "@storybook/semver" "^7.3.2"
-    "@storybook/store" "6.5.14"
-    "@storybook/theming" "6.5.14"
+    "@storybook/store" "6.5.15"
+    "@storybook/theming" "6.5.15"
     "@types/node" "^14.0.10 || ^16.0.0"
     babel-loader "^8.0.0"
     babel-plugin-named-exports-order "^0.0.2"
@@ -2970,51 +2974,51 @@
     webpack-hot-middleware "^2.25.1"
     webpack-virtual-modules "^0.4.1"
 
-"@storybook/channel-postmessage@6.5.14":
-  version "6.5.14"
-  resolved "https://msazure.pkgs.visualstudio.com/a531312f-ba7b-4573-ab4f-d468b740a319/_packaging/CognitiveServicesSharedComponents/npm/registry/@storybook/channel-postmessage/-/channel-postmessage-6.5.14.tgz#17d6071b3563819092ef3e18f8ca7946c2532823"
-  integrity sha1-F9YHGzVjgZCS7z4Y+Mp5RsJTKCM=
+"@storybook/channel-postmessage@6.5.15":
+  version "6.5.15"
+  resolved "https://msazure.pkgs.visualstudio.com/a531312f-ba7b-4573-ab4f-d468b740a319/_packaging/CognitiveServicesSharedComponents/npm/registry/@storybook/channel-postmessage/-/channel-postmessage-6.5.15.tgz#a9d614be56bededf7cec41b833c46d35958b6d2b"
+  integrity sha1-qdYUvla+3t987EG4M8RtNZWLbSs=
   dependencies:
-    "@storybook/channels" "6.5.14"
-    "@storybook/client-logger" "6.5.14"
-    "@storybook/core-events" "6.5.14"
+    "@storybook/channels" "6.5.15"
+    "@storybook/client-logger" "6.5.15"
+    "@storybook/core-events" "6.5.15"
     core-js "^3.8.2"
     global "^4.4.0"
     qs "^6.10.0"
     telejson "^6.0.8"
 
-"@storybook/channel-websocket@6.5.14":
-  version "6.5.14"
-  resolved "https://msazure.pkgs.visualstudio.com/a531312f-ba7b-4573-ab4f-d468b740a319/_packaging/CognitiveServicesSharedComponents/npm/registry/@storybook/channel-websocket/-/channel-websocket-6.5.14.tgz#8b24fcf61a32623f2d03c6f3f962fc24855cff6e"
-  integrity sha1-iyT89hoyYj8tA8bz+WL8JIVc/24=
+"@storybook/channel-websocket@6.5.15":
+  version "6.5.15"
+  resolved "https://msazure.pkgs.visualstudio.com/a531312f-ba7b-4573-ab4f-d468b740a319/_packaging/CognitiveServicesSharedComponents/npm/registry/@storybook/channel-websocket/-/channel-websocket-6.5.15.tgz#3fa090412d122428a7bc3d622e4cd36fdac7dd78"
+  integrity sha1-P6CQQS0SJCinvD1iLkzTb9rH3Xg=
   dependencies:
-    "@storybook/channels" "6.5.14"
-    "@storybook/client-logger" "6.5.14"
+    "@storybook/channels" "6.5.15"
+    "@storybook/client-logger" "6.5.15"
     core-js "^3.8.2"
     global "^4.4.0"
     telejson "^6.0.8"
 
-"@storybook/channels@6.5.14":
-  version "6.5.14"
-  resolved "https://msazure.pkgs.visualstudio.com/a531312f-ba7b-4573-ab4f-d468b740a319/_packaging/CognitiveServicesSharedComponents/npm/registry/@storybook/channels/-/channels-6.5.14.tgz#dcb73496a771dafb77a9e25dce2ba1adaa352df9"
-  integrity sha1-3Lc0lqdx2vt3qeJdziuhrao1Lfk=
+"@storybook/channels@6.5.15":
+  version "6.5.15"
+  resolved "https://msazure.pkgs.visualstudio.com/a531312f-ba7b-4573-ab4f-d468b740a319/_packaging/CognitiveServicesSharedComponents/npm/registry/@storybook/channels/-/channels-6.5.15.tgz#586681b6ec458124da084c39bc8c518d9e96b10b"
+  integrity sha1-WGaBtuxFgSTaCEw5vIxRjZ6WsQs=
   dependencies:
     core-js "^3.8.2"
     ts-dedent "^2.0.0"
     util-deprecate "^1.0.2"
 
-"@storybook/client-api@6.5.14":
-  version "6.5.14"
-  resolved "https://msazure.pkgs.visualstudio.com/a531312f-ba7b-4573-ab4f-d468b740a319/_packaging/CognitiveServicesSharedComponents/npm/registry/@storybook/client-api/-/client-api-6.5.14.tgz#57a660810165126cdf3380cd04bf6c5f027eab5c"
-  integrity sha1-V6ZggQFlEmzfM4DNBL9sXwJ+q1w=
+"@storybook/client-api@6.5.15":
+  version "6.5.15"
+  resolved "https://msazure.pkgs.visualstudio.com/a531312f-ba7b-4573-ab4f-d468b740a319/_packaging/CognitiveServicesSharedComponents/npm/registry/@storybook/client-api/-/client-api-6.5.15.tgz#70f3ced6d0fcc7b71217cae858bf81c3b2c50eba"
+  integrity sha1-cPPO1tD8x7cSF8roWL+Bw7LFDro=
   dependencies:
-    "@storybook/addons" "6.5.14"
-    "@storybook/channel-postmessage" "6.5.14"
-    "@storybook/channels" "6.5.14"
-    "@storybook/client-logger" "6.5.14"
-    "@storybook/core-events" "6.5.14"
+    "@storybook/addons" "6.5.15"
+    "@storybook/channel-postmessage" "6.5.15"
+    "@storybook/channels" "6.5.15"
+    "@storybook/client-logger" "6.5.15"
+    "@storybook/core-events" "6.5.15"
     "@storybook/csf" "0.0.2--canary.4566f4d.1"
-    "@storybook/store" "6.5.14"
+    "@storybook/store" "6.5.15"
     "@types/qs" "^6.9.5"
     "@types/webpack-env" "^1.16.0"
     core-js "^3.8.2"
@@ -3029,43 +3033,43 @@
     ts-dedent "^2.0.0"
     util-deprecate "^1.0.2"
 
-"@storybook/client-logger@6.5.14", "@storybook/client-logger@^6.4.0":
-  version "6.5.14"
-  resolved "https://msazure.pkgs.visualstudio.com/a531312f-ba7b-4573-ab4f-d468b740a319/_packaging/CognitiveServicesSharedComponents/npm/registry/@storybook/client-logger/-/client-logger-6.5.14.tgz#ec178f31e70969ae22399ce4207c05e4f1d480a8"
-  integrity sha1-7BePMecJaa4iOZzkIHwF5PHUgKg=
+"@storybook/client-logger@6.5.15", "@storybook/client-logger@^6.4.0":
+  version "6.5.15"
+  resolved "https://msazure.pkgs.visualstudio.com/a531312f-ba7b-4573-ab4f-d468b740a319/_packaging/CognitiveServicesSharedComponents/npm/registry/@storybook/client-logger/-/client-logger-6.5.15.tgz#0d9878af893a3493b6ee108cc097ae1436d7da4d"
+  integrity sha1-DZh4r4k6NJO27hCMwJeuFDbX2k0=
   dependencies:
     core-js "^3.8.2"
     global "^4.4.0"
 
-"@storybook/components@6.5.14":
-  version "6.5.14"
-  resolved "https://msazure.pkgs.visualstudio.com/a531312f-ba7b-4573-ab4f-d468b740a319/_packaging/CognitiveServicesSharedComponents/npm/registry/@storybook/components/-/components-6.5.14.tgz#e4d35b689674a16d88d0d16f50319865387497dd"
-  integrity sha1-5NNbaJZ0oW2I0NFvUDGYZTh0l90=
+"@storybook/components@6.5.15":
+  version "6.5.15"
+  resolved "https://msazure.pkgs.visualstudio.com/a531312f-ba7b-4573-ab4f-d468b740a319/_packaging/CognitiveServicesSharedComponents/npm/registry/@storybook/components/-/components-6.5.15.tgz#8145be807bf48c1d010f29114411f390a9e3228f"
+  integrity sha1-gUW+gHv0jB0BDykRRBHzkKnjIo8=
   dependencies:
-    "@storybook/client-logger" "6.5.14"
+    "@storybook/client-logger" "6.5.15"
     "@storybook/csf" "0.0.2--canary.4566f4d.1"
-    "@storybook/theming" "6.5.14"
+    "@storybook/theming" "6.5.15"
     core-js "^3.8.2"
     memoizerific "^1.11.3"
     qs "^6.10.0"
     regenerator-runtime "^0.13.7"
     util-deprecate "^1.0.2"
 
-"@storybook/core-client@6.5.14":
-  version "6.5.14"
-  resolved "https://msazure.pkgs.visualstudio.com/a531312f-ba7b-4573-ab4f-d468b740a319/_packaging/CognitiveServicesSharedComponents/npm/registry/@storybook/core-client/-/core-client-6.5.14.tgz#ff8bd155750ca4644dba7e8ac53ed3ad1c414bda"
-  integrity sha1-/4vRVXUMpGRNun6KxT7TrRxBS9o=
+"@storybook/core-client@6.5.15":
+  version "6.5.15"
+  resolved "https://msazure.pkgs.visualstudio.com/a531312f-ba7b-4573-ab4f-d468b740a319/_packaging/CognitiveServicesSharedComponents/npm/registry/@storybook/core-client/-/core-client-6.5.15.tgz#57d86a07f920ab0cb058820dbcb1f48cc9dc6257"
+  integrity sha1-V9hqB/kgqwywWIINvLH0jMncYlc=
   dependencies:
-    "@storybook/addons" "6.5.14"
-    "@storybook/channel-postmessage" "6.5.14"
-    "@storybook/channel-websocket" "6.5.14"
-    "@storybook/client-api" "6.5.14"
-    "@storybook/client-logger" "6.5.14"
-    "@storybook/core-events" "6.5.14"
+    "@storybook/addons" "6.5.15"
+    "@storybook/channel-postmessage" "6.5.15"
+    "@storybook/channel-websocket" "6.5.15"
+    "@storybook/client-api" "6.5.15"
+    "@storybook/client-logger" "6.5.15"
+    "@storybook/core-events" "6.5.15"
     "@storybook/csf" "0.0.2--canary.4566f4d.1"
-    "@storybook/preview-web" "6.5.14"
-    "@storybook/store" "6.5.14"
-    "@storybook/ui" "6.5.14"
+    "@storybook/preview-web" "6.5.15"
+    "@storybook/store" "6.5.15"
+    "@storybook/ui" "6.5.15"
     airbnb-js-shims "^2.2.1"
     ansi-to-html "^0.6.11"
     core-js "^3.8.2"
@@ -3077,10 +3081,10 @@
     unfetch "^4.2.0"
     util-deprecate "^1.0.2"
 
-"@storybook/core-common@6.5.14":
-  version "6.5.14"
-  resolved "https://msazure.pkgs.visualstudio.com/a531312f-ba7b-4573-ab4f-d468b740a319/_packaging/CognitiveServicesSharedComponents/npm/registry/@storybook/core-common/-/core-common-6.5.14.tgz#162f321d0c3011ece84b324f584c641c474e20d9"
-  integrity sha1-Fi8yHQwwEezoSzJPWExkHEdOINk=
+"@storybook/core-common@6.5.15":
+  version "6.5.15"
+  resolved "https://msazure.pkgs.visualstudio.com/a531312f-ba7b-4573-ab4f-d468b740a319/_packaging/CognitiveServicesSharedComponents/npm/registry/@storybook/core-common/-/core-common-6.5.15.tgz#3ab524c7abdae52024caeb5c0349a764cb08769f"
+  integrity sha1-OrUkx6va5SAkyutcA0mnZMsIdp8=
   dependencies:
     "@babel/core" "^7.12.10"
     "@babel/plugin-proposal-class-properties" "^7.12.1"
@@ -3104,7 +3108,7 @@
     "@babel/preset-react" "^7.12.10"
     "@babel/preset-typescript" "^7.12.7"
     "@babel/register" "^7.12.1"
-    "@storybook/node-logger" "6.5.14"
+    "@storybook/node-logger" "6.5.15"
     "@storybook/semver" "^7.3.2"
     "@types/node" "^14.0.10 || ^16.0.0"
     "@types/pretty-hrtime" "^1.0.0"
@@ -3133,30 +3137,30 @@
     util-deprecate "^1.0.2"
     webpack "4"
 
-"@storybook/core-events@6.5.14", "@storybook/core-events@^6.1.18":
-  version "6.5.14"
-  resolved "https://msazure.pkgs.visualstudio.com/a531312f-ba7b-4573-ab4f-d468b740a319/_packaging/CognitiveServicesSharedComponents/npm/registry/@storybook/core-events/-/core-events-6.5.14.tgz#5b4f94d336cd14f0e8e213a0f3cf9a098c45d1dc"
-  integrity sha1-W0+U0zbNFPDo4hOg88+aCYxF0dw=
+"@storybook/core-events@6.5.15", "@storybook/core-events@^6.1.18":
+  version "6.5.15"
+  resolved "https://msazure.pkgs.visualstudio.com/a531312f-ba7b-4573-ab4f-d468b740a319/_packaging/CognitiveServicesSharedComponents/npm/registry/@storybook/core-events/-/core-events-6.5.15.tgz#c12f645b50231c50eb9b26038aa67ab92b1ba24e"
+  integrity sha1-wS9kW1AjHFDrmyYDiqZ6uSsbok4=
   dependencies:
     core-js "^3.8.2"
 
-"@storybook/core-server@6.5.14":
-  version "6.5.14"
-  resolved "https://msazure.pkgs.visualstudio.com/a531312f-ba7b-4573-ab4f-d468b740a319/_packaging/CognitiveServicesSharedComponents/npm/registry/@storybook/core-server/-/core-server-6.5.14.tgz#ba9ca39b41879aa657c524e3c0ac4c7b1abe9bbd"
-  integrity sha1-upyjm0GHmqZXxSTjwKxMexq+m70=
+"@storybook/core-server@6.5.15":
+  version "6.5.15"
+  resolved "https://msazure.pkgs.visualstudio.com/a531312f-ba7b-4573-ab4f-d468b740a319/_packaging/CognitiveServicesSharedComponents/npm/registry/@storybook/core-server/-/core-server-6.5.15.tgz#217c40d7a33708b9ac69f73dd51ed9d2f031d19d"
+  integrity sha1-IXxA16M3CLmsafc91R7Z0vAx0Z0=
   dependencies:
     "@discoveryjs/json-ext" "^0.5.3"
-    "@storybook/builder-webpack4" "6.5.14"
-    "@storybook/core-client" "6.5.14"
-    "@storybook/core-common" "6.5.14"
-    "@storybook/core-events" "6.5.14"
+    "@storybook/builder-webpack4" "6.5.15"
+    "@storybook/core-client" "6.5.15"
+    "@storybook/core-common" "6.5.15"
+    "@storybook/core-events" "6.5.15"
     "@storybook/csf" "0.0.2--canary.4566f4d.1"
-    "@storybook/csf-tools" "6.5.14"
-    "@storybook/manager-webpack4" "6.5.14"
-    "@storybook/node-logger" "6.5.14"
+    "@storybook/csf-tools" "6.5.15"
+    "@storybook/manager-webpack4" "6.5.15"
+    "@storybook/node-logger" "6.5.15"
     "@storybook/semver" "^7.3.2"
-    "@storybook/store" "6.5.14"
-    "@storybook/telemetry" "6.5.14"
+    "@storybook/store" "6.5.15"
+    "@storybook/telemetry" "6.5.15"
     "@types/node" "^14.0.10 || ^16.0.0"
     "@types/node-fetch" "^2.5.7"
     "@types/pretty-hrtime" "^1.0.0"
@@ -3191,18 +3195,18 @@
     ws "^8.2.3"
     x-default-browser "^0.4.0"
 
-"@storybook/core@6.5.14":
-  version "6.5.14"
-  resolved "https://msazure.pkgs.visualstudio.com/a531312f-ba7b-4573-ab4f-d468b740a319/_packaging/CognitiveServicesSharedComponents/npm/registry/@storybook/core/-/core-6.5.14.tgz#8fa21c7539e2ffe8f9601d9542b0e627f7f9a349"
-  integrity sha1-j6IcdTni/+j5YB2VQrDmJ/f5o0k=
+"@storybook/core@6.5.15":
+  version "6.5.15"
+  resolved "https://msazure.pkgs.visualstudio.com/a531312f-ba7b-4573-ab4f-d468b740a319/_packaging/CognitiveServicesSharedComponents/npm/registry/@storybook/core/-/core-6.5.15.tgz#82e0998d908fc9e66a659e1217072c425d63f9b6"
+  integrity sha1-guCZjZCPyeZqZZ4SFwcsQl1j+bY=
   dependencies:
-    "@storybook/core-client" "6.5.14"
-    "@storybook/core-server" "6.5.14"
+    "@storybook/core-client" "6.5.15"
+    "@storybook/core-server" "6.5.15"
 
-"@storybook/csf-tools@6.5.14":
-  version "6.5.14"
-  resolved "https://msazure.pkgs.visualstudio.com/a531312f-ba7b-4573-ab4f-d468b740a319/_packaging/CognitiveServicesSharedComponents/npm/registry/@storybook/csf-tools/-/csf-tools-6.5.14.tgz#fe36c8570c1f9e27aa4536f09a729a61598a1255"
-  integrity sha1-/jbIVwwfnieqRTbwmnKaYVmKElU=
+"@storybook/csf-tools@6.5.15":
+  version "6.5.15"
+  resolved "https://msazure.pkgs.visualstudio.com/a531312f-ba7b-4573-ab4f-d468b740a319/_packaging/CognitiveServicesSharedComponents/npm/registry/@storybook/csf-tools/-/csf-tools-6.5.15.tgz#dc5d0fe946c25d60bf201e5180c4fc81b24f763b"
+  integrity sha1-3F0P6UbCXWC/IB5RgMT8gbJPdjs=
   dependencies:
     "@babel/core" "^7.12.10"
     "@babel/generator" "^7.12.11"
@@ -3233,44 +3237,44 @@
   dependencies:
     lodash "^4.17.15"
 
-"@storybook/docs-tools@6.5.14":
-  version "6.5.14"
-  resolved "https://msazure.pkgs.visualstudio.com/a531312f-ba7b-4573-ab4f-d468b740a319/_packaging/CognitiveServicesSharedComponents/npm/registry/@storybook/docs-tools/-/docs-tools-6.5.14.tgz#68d9c156cdc80a906570807f1d116be103032656"
-  integrity sha1-aNnBVs3ICpBlcIB/HRFr4QMDJlY=
+"@storybook/docs-tools@6.5.15":
+  version "6.5.15"
+  resolved "https://msazure.pkgs.visualstudio.com/a531312f-ba7b-4573-ab4f-d468b740a319/_packaging/CognitiveServicesSharedComponents/npm/registry/@storybook/docs-tools/-/docs-tools-6.5.15.tgz#c9a3954719c45c3748abd6aaa735e33f5c961912"
+  integrity sha1-yaOVRxnEXDdIq9aqpzXjP1yWGRI=
   dependencies:
     "@babel/core" "^7.12.10"
     "@storybook/csf" "0.0.2--canary.4566f4d.1"
-    "@storybook/store" "6.5.14"
+    "@storybook/store" "6.5.15"
     core-js "^3.8.2"
     doctrine "^3.0.0"
     lodash "^4.17.21"
     regenerator-runtime "^0.13.7"
 
-"@storybook/instrumenter@6.5.14", "@storybook/instrumenter@^6.4.0":
-  version "6.5.14"
-  resolved "https://msazure.pkgs.visualstudio.com/a531312f-ba7b-4573-ab4f-d468b740a319/_packaging/CognitiveServicesSharedComponents/npm/registry/@storybook/instrumenter/-/instrumenter-6.5.14.tgz#a73419cb59af16cef7bca3cf5522704dbad2f212"
-  integrity sha1-pzQZy1mvFs73vKPPVSJwTbrS8hI=
+"@storybook/instrumenter@6.5.15", "@storybook/instrumenter@^6.4.0":
+  version "6.5.15"
+  resolved "https://msazure.pkgs.visualstudio.com/a531312f-ba7b-4573-ab4f-d468b740a319/_packaging/CognitiveServicesSharedComponents/npm/registry/@storybook/instrumenter/-/instrumenter-6.5.15.tgz#4dcb826201fcc09465fd5d6e37bd9147ec1dcfd0"
+  integrity sha1-TcuCYgH8wJRl/V1uN72RR+wdz9A=
   dependencies:
-    "@storybook/addons" "6.5.14"
-    "@storybook/client-logger" "6.5.14"
-    "@storybook/core-events" "6.5.14"
+    "@storybook/addons" "6.5.15"
+    "@storybook/client-logger" "6.5.15"
+    "@storybook/core-events" "6.5.15"
     core-js "^3.8.2"
     global "^4.4.0"
 
-"@storybook/manager-webpack4@6.5.14":
-  version "6.5.14"
-  resolved "https://msazure.pkgs.visualstudio.com/a531312f-ba7b-4573-ab4f-d468b740a319/_packaging/CognitiveServicesSharedComponents/npm/registry/@storybook/manager-webpack4/-/manager-webpack4-6.5.14.tgz#92cd3d34b9e28d7edd215b1e79b1f0757fb66eba"
-  integrity sha1-ks09NLnijX7dIVseebHwdX+2bro=
+"@storybook/manager-webpack4@6.5.15":
+  version "6.5.15"
+  resolved "https://msazure.pkgs.visualstudio.com/a531312f-ba7b-4573-ab4f-d468b740a319/_packaging/CognitiveServicesSharedComponents/npm/registry/@storybook/manager-webpack4/-/manager-webpack4-6.5.15.tgz#09808b87b510591390765af708ab511ff63a1e5c"
+  integrity sha1-CYCLh7UQWROQdlr3CKtRH/Y6Hlw=
   dependencies:
     "@babel/core" "^7.12.10"
     "@babel/plugin-transform-template-literals" "^7.12.1"
     "@babel/preset-react" "^7.12.10"
-    "@storybook/addons" "6.5.14"
-    "@storybook/core-client" "6.5.14"
-    "@storybook/core-common" "6.5.14"
-    "@storybook/node-logger" "6.5.14"
-    "@storybook/theming" "6.5.14"
-    "@storybook/ui" "6.5.14"
+    "@storybook/addons" "6.5.15"
+    "@storybook/core-client" "6.5.15"
+    "@storybook/core-common" "6.5.15"
+    "@storybook/node-logger" "6.5.15"
+    "@storybook/theming" "6.5.15"
+    "@storybook/ui" "6.5.15"
     "@types/node" "^14.0.10 || ^16.0.0"
     "@types/webpack" "^4.41.26"
     babel-loader "^8.0.0"
@@ -3299,19 +3303,19 @@
     webpack-virtual-modules "^0.2.2"
 
 "@storybook/manager-webpack5@^6.5.12":
-  version "6.5.14"
-  resolved "https://msazure.pkgs.visualstudio.com/a531312f-ba7b-4573-ab4f-d468b740a319/_packaging/CognitiveServicesSharedComponents/npm/registry/@storybook/manager-webpack5/-/manager-webpack5-6.5.14.tgz#a45e9400ff9e8af96e989bedcf2a68c78b4c55cd"
-  integrity sha1-pF6UAP+eivlumJvtzypox4tMVc0=
+  version "6.5.15"
+  resolved "https://msazure.pkgs.visualstudio.com/a531312f-ba7b-4573-ab4f-d468b740a319/_packaging/CognitiveServicesSharedComponents/npm/registry/@storybook/manager-webpack5/-/manager-webpack5-6.5.15.tgz#e17ae2538c7bd013e77597f20a3843e448d1cb5b"
+  integrity sha1-4XriU4x70BPndZfyCjhD5EjRy1s=
   dependencies:
     "@babel/core" "^7.12.10"
     "@babel/plugin-transform-template-literals" "^7.12.1"
     "@babel/preset-react" "^7.12.10"
-    "@storybook/addons" "6.5.14"
-    "@storybook/core-client" "6.5.14"
-    "@storybook/core-common" "6.5.14"
-    "@storybook/node-logger" "6.5.14"
-    "@storybook/theming" "6.5.14"
-    "@storybook/ui" "6.5.14"
+    "@storybook/addons" "6.5.15"
+    "@storybook/core-client" "6.5.15"
+    "@storybook/core-common" "6.5.15"
+    "@storybook/node-logger" "6.5.15"
+    "@storybook/theming" "6.5.15"
+    "@storybook/ui" "6.5.15"
     "@types/node" "^14.0.10 || ^16.0.0"
     babel-loader "^8.0.0"
     case-sensitive-paths-webpack-plugin "^2.3.0"
@@ -3353,10 +3357,10 @@
     prettier ">=2.2.1 <=2.3.0"
     ts-dedent "^2.0.0"
 
-"@storybook/node-logger@6.5.14", "@storybook/node-logger@^6.5.12":
-  version "6.5.14"
-  resolved "https://msazure.pkgs.visualstudio.com/a531312f-ba7b-4573-ab4f-d468b740a319/_packaging/CognitiveServicesSharedComponents/npm/registry/@storybook/node-logger/-/node-logger-6.5.14.tgz#5d85c475c0afd4124f86fae559bcb35db92f35b2"
-  integrity sha1-XYXEdcCv1BJPhvrlWbyzXbkvNbI=
+"@storybook/node-logger@6.5.15", "@storybook/node-logger@^6.5.12":
+  version "6.5.15"
+  resolved "https://msazure.pkgs.visualstudio.com/a531312f-ba7b-4573-ab4f-d468b740a319/_packaging/CognitiveServicesSharedComponents/npm/registry/@storybook/node-logger/-/node-logger-6.5.15.tgz#d99695e8d5f8cf434e8fdcca719b5b5fa5c88e2e"
+  integrity sha1-2ZaV6NX4z0NOj9zKcZtbX6XIji4=
   dependencies:
     "@types/npmlog" "^4.1.2"
     chalk "^4.1.0"
@@ -3364,10 +3368,10 @@
     npmlog "^5.0.1"
     pretty-hrtime "^1.0.3"
 
-"@storybook/postinstall@6.5.14":
-  version "6.5.14"
-  resolved "https://msazure.pkgs.visualstudio.com/a531312f-ba7b-4573-ab4f-d468b740a319/_packaging/CognitiveServicesSharedComponents/npm/registry/@storybook/postinstall/-/postinstall-6.5.14.tgz#492d45008c39c4274dfc1a69ef5f31981e913f99"
-  integrity sha1-SS1FAIw5xCdN/Bpp718xmB6RP5k=
+"@storybook/postinstall@6.5.15":
+  version "6.5.15"
+  resolved "https://msazure.pkgs.visualstudio.com/a531312f-ba7b-4573-ab4f-d468b740a319/_packaging/CognitiveServicesSharedComponents/npm/registry/@storybook/postinstall/-/postinstall-6.5.15.tgz#90989c8049357a6df6f38c933172210c9c6caf8c"
+  integrity sha1-kJicgEk1em3284yTMXIhDJxsr4w=
   dependencies:
     core-js "^3.8.2"
 
@@ -3384,17 +3388,17 @@
     react-docgen-typescript-plugin "^1.0.0"
     semver "^7.3.5"
 
-"@storybook/preview-web@6.5.14":
-  version "6.5.14"
-  resolved "https://msazure.pkgs.visualstudio.com/a531312f-ba7b-4573-ab4f-d468b740a319/_packaging/CognitiveServicesSharedComponents/npm/registry/@storybook/preview-web/-/preview-web-6.5.14.tgz#acfd5e3ba72a00405f9ad5925a9a7844b36602c4"
-  integrity sha1-rP1eO6cqAEBfmtWSWpp4RLNmAsQ=
+"@storybook/preview-web@6.5.15":
+  version "6.5.15"
+  resolved "https://msazure.pkgs.visualstudio.com/a531312f-ba7b-4573-ab4f-d468b740a319/_packaging/CognitiveServicesSharedComponents/npm/registry/@storybook/preview-web/-/preview-web-6.5.15.tgz#5f47899dff1580ed3dc1b5a7bfdf67d6574536fc"
+  integrity sha1-X0eJnf8VgO09wbWnv99n1ldFNvw=
   dependencies:
-    "@storybook/addons" "6.5.14"
-    "@storybook/channel-postmessage" "6.5.14"
-    "@storybook/client-logger" "6.5.14"
-    "@storybook/core-events" "6.5.14"
+    "@storybook/addons" "6.5.15"
+    "@storybook/channel-postmessage" "6.5.15"
+    "@storybook/client-logger" "6.5.15"
+    "@storybook/core-events" "6.5.15"
     "@storybook/csf" "0.0.2--canary.4566f4d.1"
-    "@storybook/store" "6.5.14"
+    "@storybook/store" "6.5.15"
     ansi-to-html "^0.6.11"
     core-js "^3.8.2"
     global "^4.4.0"
@@ -3420,23 +3424,23 @@
     tslib "^2.0.0"
 
 "@storybook/react@^6.5.12":
-  version "6.5.14"
-  resolved "https://msazure.pkgs.visualstudio.com/a531312f-ba7b-4573-ab4f-d468b740a319/_packaging/CognitiveServicesSharedComponents/npm/registry/@storybook/react/-/react-6.5.14.tgz#9e5a93958c410c3f9d21374e30f68ac2960a9c91"
-  integrity sha1-nlqTlYxBDD+dITdOMPaKwpYKnJE=
+  version "6.5.15"
+  resolved "https://msazure.pkgs.visualstudio.com/a531312f-ba7b-4573-ab4f-d468b740a319/_packaging/CognitiveServicesSharedComponents/npm/registry/@storybook/react/-/react-6.5.15.tgz#83e645b16a4d241ec84a8d0015b1a7a2d55c5091"
+  integrity sha1-g+ZFsWpNJB7ISo0AFbGnotVcUJE=
   dependencies:
     "@babel/preset-flow" "^7.12.1"
     "@babel/preset-react" "^7.12.10"
     "@pmmmwh/react-refresh-webpack-plugin" "^0.5.3"
-    "@storybook/addons" "6.5.14"
-    "@storybook/client-logger" "6.5.14"
-    "@storybook/core" "6.5.14"
-    "@storybook/core-common" "6.5.14"
+    "@storybook/addons" "6.5.15"
+    "@storybook/client-logger" "6.5.15"
+    "@storybook/core" "6.5.15"
+    "@storybook/core-common" "6.5.15"
     "@storybook/csf" "0.0.2--canary.4566f4d.1"
-    "@storybook/docs-tools" "6.5.14"
-    "@storybook/node-logger" "6.5.14"
+    "@storybook/docs-tools" "6.5.15"
+    "@storybook/node-logger" "6.5.15"
     "@storybook/react-docgen-typescript-plugin" "1.0.2-canary.6.9d540b91e815f8fc2f8829189deb00553559ff63.0"
     "@storybook/semver" "^7.3.2"
-    "@storybook/store" "6.5.14"
+    "@storybook/store" "6.5.15"
     "@types/estree" "^0.0.51"
     "@types/node" "^14.14.20 || ^16.0.0"
     "@types/webpack-env" "^1.16.0"
@@ -3460,12 +3464,12 @@
     util-deprecate "^1.0.2"
     webpack ">=4.43.0 <6.0.0"
 
-"@storybook/router@6.5.14":
-  version "6.5.14"
-  resolved "https://msazure.pkgs.visualstudio.com/a531312f-ba7b-4573-ab4f-d468b740a319/_packaging/CognitiveServicesSharedComponents/npm/registry/@storybook/router/-/router-6.5.14.tgz#8cb959c8cfece2a948cd6a4e14ac0fa1cece3095"
-  integrity sha1-jLlZyM/s4qlIzWpOFKwPoc7OMJU=
+"@storybook/router@6.5.15":
+  version "6.5.15"
+  resolved "https://msazure.pkgs.visualstudio.com/a531312f-ba7b-4573-ab4f-d468b740a319/_packaging/CognitiveServicesSharedComponents/npm/registry/@storybook/router/-/router-6.5.15.tgz#bf01d35bdd4603bf188629a6578489e313a312fd"
+  integrity sha1-vwHTW91GA78YhimmV4SJ4xOjEv0=
   dependencies:
-    "@storybook/client-logger" "6.5.14"
+    "@storybook/client-logger" "6.5.15"
     core-js "^3.8.2"
     memoizerific "^1.11.3"
     qs "^6.10.0"
@@ -3479,13 +3483,13 @@
     core-js "^3.6.5"
     find-up "^4.1.0"
 
-"@storybook/source-loader@6.5.14":
-  version "6.5.14"
-  resolved "https://msazure.pkgs.visualstudio.com/a531312f-ba7b-4573-ab4f-d468b740a319/_packaging/CognitiveServicesSharedComponents/npm/registry/@storybook/source-loader/-/source-loader-6.5.14.tgz#cf4e78166a40edd7dd3df3563face750f70c29df"
-  integrity sha1-z054FmpA7dfdPfNWP6znUPcMKd8=
+"@storybook/source-loader@6.5.15":
+  version "6.5.15"
+  resolved "https://msazure.pkgs.visualstudio.com/a531312f-ba7b-4573-ab4f-d468b740a319/_packaging/CognitiveServicesSharedComponents/npm/registry/@storybook/source-loader/-/source-loader-6.5.15.tgz#363a9b2812a2cef6cc5cb948e55d8a2624e18643"
+  integrity sha1-NjqbKBKizvbMXLlI5V2KJiThhkM=
   dependencies:
-    "@storybook/addons" "6.5.14"
-    "@storybook/client-logger" "6.5.14"
+    "@storybook/addons" "6.5.15"
+    "@storybook/client-logger" "6.5.15"
     "@storybook/csf" "0.0.2--canary.4566f4d.1"
     core-js "^3.8.2"
     estraverse "^5.2.0"
@@ -3495,14 +3499,14 @@
     prettier ">=2.2.1 <=2.3.0"
     regenerator-runtime "^0.13.7"
 
-"@storybook/store@6.5.14":
-  version "6.5.14"
-  resolved "https://msazure.pkgs.visualstudio.com/a531312f-ba7b-4573-ab4f-d468b740a319/_packaging/CognitiveServicesSharedComponents/npm/registry/@storybook/store/-/store-6.5.14.tgz#92b67aac8c6a55beff934e135937a1c6e1e77879"
-  integrity sha1-krZ6rIxqVb7/k04TWTehxuHneHk=
+"@storybook/store@6.5.15":
+  version "6.5.15"
+  resolved "https://msazure.pkgs.visualstudio.com/a531312f-ba7b-4573-ab4f-d468b740a319/_packaging/CognitiveServicesSharedComponents/npm/registry/@storybook/store/-/store-6.5.15.tgz#d6ca7a3165442aabfde335f243bdd179d53bca1a"
+  integrity sha1-1sp6MWVEKqv94zXyQ73RedU7yho=
   dependencies:
-    "@storybook/addons" "6.5.14"
-    "@storybook/client-logger" "6.5.14"
-    "@storybook/core-events" "6.5.14"
+    "@storybook/addons" "6.5.15"
+    "@storybook/client-logger" "6.5.15"
+    "@storybook/core-events" "6.5.15"
     "@storybook/csf" "0.0.2--canary.4566f4d.1"
     core-js "^3.8.2"
     fast-deep-equal "^3.1.3"
@@ -3516,13 +3520,13 @@
     ts-dedent "^2.0.0"
     util-deprecate "^1.0.2"
 
-"@storybook/telemetry@6.5.14":
-  version "6.5.14"
-  resolved "https://msazure.pkgs.visualstudio.com/a531312f-ba7b-4573-ab4f-d468b740a319/_packaging/CognitiveServicesSharedComponents/npm/registry/@storybook/telemetry/-/telemetry-6.5.14.tgz#b2e8a99ed36fc97451a1f695792a79605b5f7746"
-  integrity sha1-suipntNvyXRRofaVeSp5YFtfd0Y=
+"@storybook/telemetry@6.5.15":
+  version "6.5.15"
+  resolved "https://msazure.pkgs.visualstudio.com/a531312f-ba7b-4573-ab4f-d468b740a319/_packaging/CognitiveServicesSharedComponents/npm/registry/@storybook/telemetry/-/telemetry-6.5.15.tgz#852050c1e54bf704a104e47e4e498d999096e0e7"
+  integrity sha1-hSBQweVL9wShBOR+TkmNmZCW4Oc=
   dependencies:
-    "@storybook/client-logger" "6.5.14"
-    "@storybook/core-common" "6.5.14"
+    "@storybook/client-logger" "6.5.15"
+    "@storybook/core-common" "6.5.15"
     chalk "^4.1.0"
     core-js "^3.8.2"
     detect-package-manager "^2.0.1"
@@ -3552,30 +3556,30 @@
   dependencies:
     "@storybook/csf" "0.0.2--canary.87bc651.0"
 
-"@storybook/theming@6.5.14", "@storybook/theming@^6.1.18":
-  version "6.5.14"
-  resolved "https://msazure.pkgs.visualstudio.com/a531312f-ba7b-4573-ab4f-d468b740a319/_packaging/CognitiveServicesSharedComponents/npm/registry/@storybook/theming/-/theming-6.5.14.tgz#4cc7e568b9641112f35abe0606cc6925952cb647"
-  integrity sha1-TMflaLlkERLzWr4GBsxpJZUstkc=
+"@storybook/theming@6.5.15", "@storybook/theming@^6.1.18":
+  version "6.5.15"
+  resolved "https://msazure.pkgs.visualstudio.com/a531312f-ba7b-4573-ab4f-d468b740a319/_packaging/CognitiveServicesSharedComponents/npm/registry/@storybook/theming/-/theming-6.5.15.tgz#048461b37ad0c29dc8d91a065a6bf1c90067524c"
+  integrity sha1-BIRhs3rQwp3I2RoGWmvxyQBnUkw=
   dependencies:
-    "@storybook/client-logger" "6.5.14"
+    "@storybook/client-logger" "6.5.15"
     core-js "^3.8.2"
     memoizerific "^1.11.3"
     regenerator-runtime "^0.13.7"
 
-"@storybook/ui@6.5.14":
-  version "6.5.14"
-  resolved "https://msazure.pkgs.visualstudio.com/a531312f-ba7b-4573-ab4f-d468b740a319/_packaging/CognitiveServicesSharedComponents/npm/registry/@storybook/ui/-/ui-6.5.14.tgz#8c03a37917adc0060b077d3acb7f0064ace68083"
-  integrity sha1-jAOjeRetwAYLB306y38AZKzmgIM=
+"@storybook/ui@6.5.15":
+  version "6.5.15"
+  resolved "https://msazure.pkgs.visualstudio.com/a531312f-ba7b-4573-ab4f-d468b740a319/_packaging/CognitiveServicesSharedComponents/npm/registry/@storybook/ui/-/ui-6.5.15.tgz#e4d80465116e53d48d2c3bb616909c37f5405181"
+  integrity sha1-5NgEZRFuU9SNLDu2FpCcN/VAUYE=
   dependencies:
-    "@storybook/addons" "6.5.14"
-    "@storybook/api" "6.5.14"
-    "@storybook/channels" "6.5.14"
-    "@storybook/client-logger" "6.5.14"
-    "@storybook/components" "6.5.14"
-    "@storybook/core-events" "6.5.14"
-    "@storybook/router" "6.5.14"
+    "@storybook/addons" "6.5.15"
+    "@storybook/api" "6.5.15"
+    "@storybook/channels" "6.5.15"
+    "@storybook/client-logger" "6.5.15"
+    "@storybook/components" "6.5.15"
+    "@storybook/core-events" "6.5.15"
+    "@storybook/router" "6.5.15"
     "@storybook/semver" "^7.3.2"
-    "@storybook/theming" "6.5.14"
+    "@storybook/theming" "6.5.15"
     core-js "^3.8.2"
     memoizerific "^1.11.3"
     qs "^6.10.0"
@@ -3696,13 +3700,13 @@
     loader-utils "^2.0.0"
 
 "@testing-library/dom@^8.3.0":
-  version "8.19.0"
-  resolved "https://msazure.pkgs.visualstudio.com/a531312f-ba7b-4573-ab4f-d468b740a319/_packaging/CognitiveServicesSharedComponents/npm/registry/@testing-library/dom/-/dom-8.19.0.tgz#bd3f83c217ebac16694329e413d9ad5fdcfd785f"
-  integrity sha1-vT+DwhfrrBZpQynkE9mtX9z9eF8=
+  version "8.19.1"
+  resolved "https://msazure.pkgs.visualstudio.com/a531312f-ba7b-4573-ab4f-d468b740a319/_packaging/CognitiveServicesSharedComponents/npm/registry/@testing-library/dom/-/dom-8.19.1.tgz#0e2dafd281dedb930bb235eac1045470b4129d0e"
+  integrity sha1-Di2v0oHe25MLsjXqwQRUcLQSnQ4=
   dependencies:
     "@babel/code-frame" "^7.10.4"
     "@babel/runtime" "^7.12.5"
-    "@types/aria-query" "^4.2.0"
+    "@types/aria-query" "^5.0.1"
     aria-query "^5.0.0"
     chalk "^4.1.0"
     dom-accessibility-api "^0.5.9"
@@ -3726,10 +3730,10 @@
   resolved "https://msazure.pkgs.visualstudio.com/a531312f-ba7b-4573-ab4f-d468b740a319/_packaging/CognitiveServicesSharedComponents/npm/registry/@trysound/sax/-/sax-0.2.0.tgz#cccaab758af56761eb7bf37af6f03f326dd798ad"
   integrity sha1-zMqrdYr1Z2Hre/N69vA/Mm3XmK0=
 
-"@types/aria-query@^4.2.0":
-  version "4.2.2"
-  resolved "https://msazure.pkgs.visualstudio.com/a531312f-ba7b-4573-ab4f-d468b740a319/_packaging/CognitiveServicesSharedComponents/npm/registry/@types/aria-query/-/aria-query-4.2.2.tgz#ed4e0ad92306a704f9fb132a0cfcf77486dbe2bc"
-  integrity sha1-7U4K2SMGpwT5+xMqDPz3dIbb4rw=
+"@types/aria-query@^5.0.1":
+  version "5.0.1"
+  resolved "https://msazure.pkgs.visualstudio.com/a531312f-ba7b-4573-ab4f-d468b740a319/_packaging/CognitiveServicesSharedComponents/npm/registry/@types/aria-query/-/aria-query-5.0.1.tgz#3286741fb8f1e1580ac28784add4c7a1d49bdfbc"
+  integrity sha1-MoZ0H7jx4VgKwoeErdTHodSb37w=
 
 "@types/babel__core@^7.0.0", "@types/babel__core@^7.1.14", "@types/babel__core@^7.1.7":
   version "7.1.20"
@@ -3833,9 +3837,9 @@
   integrity sha1-z9cJJKJaP9MrIY5eQg5ol+GsT0A=
 
 "@types/express-serve-static-core@*", "@types/express-serve-static-core@^4.17.31":
-  version "4.17.31"
-  resolved "https://msazure.pkgs.visualstudio.com/a531312f-ba7b-4573-ab4f-d468b740a319/_packaging/CognitiveServicesSharedComponents/npm/registry/@types/express-serve-static-core/-/express-serve-static-core-4.17.31.tgz#a1139efeab4e7323834bb0226e62ac019f474b2f"
-  integrity sha1-oROe/qtOcyODS7AibmKsAZ9HSy8=
+  version "4.17.32"
+  resolved "https://msazure.pkgs.visualstudio.com/a531312f-ba7b-4573-ab4f-d468b740a319/_packaging/CognitiveServicesSharedComponents/npm/registry/@types/express-serve-static-core/-/express-serve-static-core-4.17.32.tgz#93dda387f5516af616d8d3f05f2c4c79d81e1b82"
+  integrity sha1-k92jh/VRavYW2NPwXyxMedgeG4I=
   dependencies:
     "@types/node" "*"
     "@types/qs" "*"
@@ -3995,14 +3999,14 @@
     form-data "^3.0.0"
 
 "@types/node@*":
-  version "18.11.17"
-  resolved "https://msazure.pkgs.visualstudio.com/a531312f-ba7b-4573-ab4f-d468b740a319/_packaging/CognitiveServicesSharedComponents/npm/registry/@types/node/-/node-18.11.17.tgz#5c009e1d9c38f4a2a9d45c0b0c493fe6cdb4bcb5"
-  integrity sha1-XACeHZw49KKp1FwLDEk/5s20vLU=
+  version "18.11.18"
+  resolved "https://msazure.pkgs.visualstudio.com/a531312f-ba7b-4573-ab4f-d468b740a319/_packaging/CognitiveServicesSharedComponents/npm/registry/@types/node/-/node-18.11.18.tgz#8dfb97f0da23c2293e554c5a50d61ef134d7697f"
+  integrity sha1-jfuX8Nojwik+VUxaUNYe8TTXaX8=
 
 "@types/node@^14.0.10 || ^16.0.0", "@types/node@^14.14.20 || ^16.0.0":
-  version "16.18.10"
-  resolved "https://msazure.pkgs.visualstudio.com/a531312f-ba7b-4573-ab4f-d468b740a319/_packaging/CognitiveServicesSharedComponents/npm/registry/@types/node/-/node-16.18.10.tgz#d7415ef18c94f8d4e4a82ebcc8b8999f965d8920"
-  integrity sha1-10Fe8YyU+NTkqC68yLiZn5ZdiSA=
+  version "16.18.11"
+  resolved "https://msazure.pkgs.visualstudio.com/a531312f-ba7b-4573-ab4f-d468b740a319/_packaging/CognitiveServicesSharedComponents/npm/registry/@types/node/-/node-16.18.11.tgz#cbb15c12ca7c16c85a72b6bdc4d4b01151bb3cae"
+  integrity sha1-y7FcEsp8Fshacra9xNSwEVG7PK4=
 
 "@types/normalize-package-data@^2.4.0":
   version "2.4.1"
@@ -4025,9 +4029,9 @@
   integrity sha1-57Wuu6wVD4tf3UpG5/C9jmXhkQk=
 
 "@types/prettier@^2.1.5":
-  version "2.7.1"
-  resolved "https://msazure.pkgs.visualstudio.com/a531312f-ba7b-4573-ab4f-d468b740a319/_packaging/CognitiveServicesSharedComponents/npm/registry/@types/prettier/-/prettier-2.7.1.tgz#dfd20e2dc35f027cdd6c1908e80a5ddc7499670e"
-  integrity sha1-39IOLcNfAnzdbBkI6Apd3HSZZw4=
+  version "2.7.2"
+  resolved "https://msazure.pkgs.visualstudio.com/a531312f-ba7b-4573-ab4f-d468b740a319/_packaging/CognitiveServicesSharedComponents/npm/registry/@types/prettier/-/prettier-2.7.2.tgz#6c2324641cc4ba050a8c710b2b251b377581fbf0"
+  integrity sha1-bCMkZBzEugUKjHELKyUbN3WB+/A=
 
 "@types/pretty-hrtime@^1.0.0":
   version "1.0.1"
@@ -4078,9 +4082,9 @@
     "@types/react-router" "*"
 
 "@types/react-router@*":
-  version "5.1.19"
-  resolved "https://msazure.pkgs.visualstudio.com/a531312f-ba7b-4573-ab4f-d468b740a319/_packaging/CognitiveServicesSharedComponents/npm/registry/@types/react-router/-/react-router-5.1.19.tgz#9b404246fba7f91474d7008a3d48c17b6e075ad6"
-  integrity sha1-m0BCRvun+RR01wCKPUjBe24HWtY=
+  version "5.1.20"
+  resolved "https://msazure.pkgs.visualstudio.com/a531312f-ba7b-4573-ab4f-d468b740a319/_packaging/CognitiveServicesSharedComponents/npm/registry/@types/react-router/-/react-router-5.1.20.tgz#88eccaa122a82405ef3efbcaaa5dcdd9f021387c"
+  integrity sha1-iOzKoSKoJAXvPvvKql3N2fAhOHw=
   dependencies:
     "@types/history" "^4.7.11"
     "@types/react" "*"
@@ -4208,9 +4212,9 @@
     source-map "^0.6.0"
 
 "@types/ws@^8.5.1":
-  version "8.5.3"
-  resolved "https://msazure.pkgs.visualstudio.com/a531312f-ba7b-4573-ab4f-d468b740a319/_packaging/CognitiveServicesSharedComponents/npm/registry/@types/ws/-/ws-8.5.3.tgz#7d25a1ffbecd3c4f2d35068d0b283c037003274d"
-  integrity sha1-fSWh/77NPE8tNQaNCyg8A3ADJ00=
+  version "8.5.4"
+  resolved "https://msazure.pkgs.visualstudio.com/a531312f-ba7b-4573-ab4f-d468b740a319/_packaging/CognitiveServicesSharedComponents/npm/registry/@types/ws/-/ws-8.5.4.tgz#bb10e36116d6e570dd943735f86c933c1587b8a5"
+  integrity sha1-uxDjYRbW5XDdlDc1+GyTPBWHuKU=
   dependencies:
     "@types/node" "*"
 
@@ -4220,23 +4224,23 @@
   integrity sha1-DGDlN/p5D1+Ucu0ndsK3HsEXNRs=
 
 "@types/yargs@^15.0.0":
-  version "15.0.14"
-  resolved "https://msazure.pkgs.visualstudio.com/a531312f-ba7b-4573-ab4f-d468b740a319/_packaging/CognitiveServicesSharedComponents/npm/registry/@types/yargs/-/yargs-15.0.14.tgz#26d821ddb89e70492160b66d10a0eb6df8f6fb06"
-  integrity sha1-Jtgh3biecEkhYLZtEKDrbfj2+wY=
+  version "15.0.15"
+  resolved "https://msazure.pkgs.visualstudio.com/a531312f-ba7b-4573-ab4f-d468b740a319/_packaging/CognitiveServicesSharedComponents/npm/registry/@types/yargs/-/yargs-15.0.15.tgz#e609a2b1ef9e05d90489c2f5f45bbfb2be092158"
+  integrity sha1-5gmise+eBdkEicL19Fu/sr4JIVg=
   dependencies:
     "@types/yargs-parser" "*"
 
 "@types/yargs@^16.0.0":
-  version "16.0.4"
-  resolved "https://msazure.pkgs.visualstudio.com/a531312f-ba7b-4573-ab4f-d468b740a319/_packaging/CognitiveServicesSharedComponents/npm/registry/@types/yargs/-/yargs-16.0.4.tgz#26aad98dd2c2a38e421086ea9ad42b9e51642977"
-  integrity sha1-JqrZjdLCo45CEIbqmtQrnlFkKXc=
+  version "16.0.5"
+  resolved "https://msazure.pkgs.visualstudio.com/a531312f-ba7b-4573-ab4f-d468b740a319/_packaging/CognitiveServicesSharedComponents/npm/registry/@types/yargs/-/yargs-16.0.5.tgz#12cc86393985735a283e387936398c2f9e5f88e3"
+  integrity sha1-EsyGOTmFc1ooPjh5NjmML55fiOM=
   dependencies:
     "@types/yargs-parser" "*"
 
 "@types/yargs@^17.0.8":
-  version "17.0.17"
-  resolved "https://msazure.pkgs.visualstudio.com/a531312f-ba7b-4573-ab4f-d468b740a319/_packaging/CognitiveServicesSharedComponents/npm/registry/@types/yargs/-/yargs-17.0.17.tgz#5672e5621f8e0fca13f433a8017aae4b7a2a03e7"
-  integrity sha1-VnLlYh+OD8oT9DOoAXquS3oqA+c=
+  version "17.0.19"
+  resolved "https://msazure.pkgs.visualstudio.com/a531312f-ba7b-4573-ab4f-d468b740a319/_packaging/CognitiveServicesSharedComponents/npm/registry/@types/yargs/-/yargs-17.0.19.tgz#8dbecdc9ab48bee0cb74f6e3327de3fa0d0c98ae"
+  integrity sha1-jb7NyatIvuDLdPbjMn3j+g0MmK4=
   dependencies:
     "@types/yargs-parser" "*"
 
@@ -4246,13 +4250,13 @@
   integrity sha1-ljkCDh+2USCi9Dh9uPHotj798ik=
 
 "@typescript-eslint/eslint-plugin@^5.4.0", "@typescript-eslint/eslint-plugin@^5.5.0":
-  version "5.47.0"
-  resolved "https://msazure.pkgs.visualstudio.com/a531312f-ba7b-4573-ab4f-d468b740a319/_packaging/CognitiveServicesSharedComponents/npm/registry/@typescript-eslint/eslint-plugin/-/eslint-plugin-5.47.0.tgz#dadb79df3b0499699b155839fd6792f16897d910"
-  integrity sha1-2tt53zsEmWmbFVg5/WeS8WiX2RA=
+  version "5.48.0"
+  resolved "https://msazure.pkgs.visualstudio.com/a531312f-ba7b-4573-ab4f-d468b740a319/_packaging/CognitiveServicesSharedComponents/npm/registry/@typescript-eslint/eslint-plugin/-/eslint-plugin-5.48.0.tgz#54f8368d080eb384a455f60c2ee044e948a8ce67"
+  integrity sha1-VPg2jQgOs4SkVfYMLuBE6Uiozmc=
   dependencies:
-    "@typescript-eslint/scope-manager" "5.47.0"
-    "@typescript-eslint/type-utils" "5.47.0"
-    "@typescript-eslint/utils" "5.47.0"
+    "@typescript-eslint/scope-manager" "5.48.0"
+    "@typescript-eslint/type-utils" "5.48.0"
+    "@typescript-eslint/utils" "5.48.0"
     debug "^4.3.4"
     ignore "^5.2.0"
     natural-compare-lite "^1.4.0"
@@ -4261,78 +4265,78 @@
     tsutils "^3.21.0"
 
 "@typescript-eslint/experimental-utils@^5.0.0":
-  version "5.47.0"
-  resolved "https://msazure.pkgs.visualstudio.com/a531312f-ba7b-4573-ab4f-d468b740a319/_packaging/CognitiveServicesSharedComponents/npm/registry/@typescript-eslint/experimental-utils/-/experimental-utils-5.47.0.tgz#60f26e62d948f9977488825730007ec350bc1e44"
-  integrity sha1-YPJuYtlI+Zd0iIJXMAB+w1C8HkQ=
+  version "5.48.0"
+  resolved "https://msazure.pkgs.visualstudio.com/a531312f-ba7b-4573-ab4f-d468b740a319/_packaging/CognitiveServicesSharedComponents/npm/registry/@typescript-eslint/experimental-utils/-/experimental-utils-5.48.0.tgz#10c0871a1dfee734fbcd49399b6a07ce38bdb61c"
+  integrity sha1-EMCHGh3+5zT7zUk5m2oHzji9thw=
   dependencies:
-    "@typescript-eslint/utils" "5.47.0"
+    "@typescript-eslint/utils" "5.48.0"
 
 "@typescript-eslint/parser@^5.4.0", "@typescript-eslint/parser@^5.5.0":
-  version "5.47.0"
-  resolved "https://msazure.pkgs.visualstudio.com/a531312f-ba7b-4573-ab4f-d468b740a319/_packaging/CognitiveServicesSharedComponents/npm/registry/@typescript-eslint/parser/-/parser-5.47.0.tgz#62e83de93499bf4b500528f74bf2e0554e3a6c8d"
-  integrity sha1-Yug96TSZv0tQBSj3S/LgVU46bI0=
+  version "5.48.0"
+  resolved "https://msazure.pkgs.visualstudio.com/a531312f-ba7b-4573-ab4f-d468b740a319/_packaging/CognitiveServicesSharedComponents/npm/registry/@typescript-eslint/parser/-/parser-5.48.0.tgz#02803355b23884a83e543755349809a50b7ed9ba"
+  integrity sha1-AoAzVbI4hKg+VDdVNJgJpQt+2bo=
   dependencies:
-    "@typescript-eslint/scope-manager" "5.47.0"
-    "@typescript-eslint/types" "5.47.0"
-    "@typescript-eslint/typescript-estree" "5.47.0"
+    "@typescript-eslint/scope-manager" "5.48.0"
+    "@typescript-eslint/types" "5.48.0"
+    "@typescript-eslint/typescript-estree" "5.48.0"
     debug "^4.3.4"
 
-"@typescript-eslint/scope-manager@5.47.0":
-  version "5.47.0"
-  resolved "https://msazure.pkgs.visualstudio.com/a531312f-ba7b-4573-ab4f-d468b740a319/_packaging/CognitiveServicesSharedComponents/npm/registry/@typescript-eslint/scope-manager/-/scope-manager-5.47.0.tgz#f58144a6b0ff58b996f92172c488813aee9b09df"
-  integrity sha1-9YFEprD/WLmW+SFyxIiBOu6bCd8=
+"@typescript-eslint/scope-manager@5.48.0":
+  version "5.48.0"
+  resolved "https://msazure.pkgs.visualstudio.com/a531312f-ba7b-4573-ab4f-d468b740a319/_packaging/CognitiveServicesSharedComponents/npm/registry/@typescript-eslint/scope-manager/-/scope-manager-5.48.0.tgz#607731cb0957fbc52fd754fd79507d1b6659cecf"
+  integrity sha1-YHcxywlX+8Uv11T9eVB9G2ZZzs8=
   dependencies:
-    "@typescript-eslint/types" "5.47.0"
-    "@typescript-eslint/visitor-keys" "5.47.0"
+    "@typescript-eslint/types" "5.48.0"
+    "@typescript-eslint/visitor-keys" "5.48.0"
 
-"@typescript-eslint/type-utils@5.47.0":
-  version "5.47.0"
-  resolved "https://msazure.pkgs.visualstudio.com/a531312f-ba7b-4573-ab4f-d468b740a319/_packaging/CognitiveServicesSharedComponents/npm/registry/@typescript-eslint/type-utils/-/type-utils-5.47.0.tgz#2b440979c574e317d3473225ae781f292c99e55d"
-  integrity sha1-K0QJecV04xfTRzIlrngfKSyZ5V0=
+"@typescript-eslint/type-utils@5.48.0":
+  version "5.48.0"
+  resolved "https://msazure.pkgs.visualstudio.com/a531312f-ba7b-4573-ab4f-d468b740a319/_packaging/CognitiveServicesSharedComponents/npm/registry/@typescript-eslint/type-utils/-/type-utils-5.48.0.tgz#40496dccfdc2daa14a565f8be80ad1ae3882d6d6"
+  integrity sha1-QEltzP3C2qFKVl+L6ArRrjiC1tY=
   dependencies:
-    "@typescript-eslint/typescript-estree" "5.47.0"
-    "@typescript-eslint/utils" "5.47.0"
+    "@typescript-eslint/typescript-estree" "5.48.0"
+    "@typescript-eslint/utils" "5.48.0"
     debug "^4.3.4"
     tsutils "^3.21.0"
 
-"@typescript-eslint/types@5.47.0":
-  version "5.47.0"
-  resolved "https://msazure.pkgs.visualstudio.com/a531312f-ba7b-4573-ab4f-d468b740a319/_packaging/CognitiveServicesSharedComponents/npm/registry/@typescript-eslint/types/-/types-5.47.0.tgz#67490def406eaa023dbbd8da42ee0d0c9b5229d3"
-  integrity sha1-Z0kN70BuqgI9u9jaQu4NDJtSKdM=
+"@typescript-eslint/types@5.48.0":
+  version "5.48.0"
+  resolved "https://msazure.pkgs.visualstudio.com/a531312f-ba7b-4573-ab4f-d468b740a319/_packaging/CognitiveServicesSharedComponents/npm/registry/@typescript-eslint/types/-/types-5.48.0.tgz#d725da8dfcff320aab2ac6f65c97b0df30058449"
+  integrity sha1-1yXajfz/MgqrKsb2XJew3zAFhEk=
 
-"@typescript-eslint/typescript-estree@5.47.0":
-  version "5.47.0"
-  resolved "https://msazure.pkgs.visualstudio.com/a531312f-ba7b-4573-ab4f-d468b740a319/_packaging/CognitiveServicesSharedComponents/npm/registry/@typescript-eslint/typescript-estree/-/typescript-estree-5.47.0.tgz#ed971a11c5c928646d6ba7fc9dfdd6e997649aca"
-  integrity sha1-7ZcaEcXJKGRta6f8nf3W6Zdkmso=
+"@typescript-eslint/typescript-estree@5.48.0":
+  version "5.48.0"
+  resolved "https://msazure.pkgs.visualstudio.com/a531312f-ba7b-4573-ab4f-d468b740a319/_packaging/CognitiveServicesSharedComponents/npm/registry/@typescript-eslint/typescript-estree/-/typescript-estree-5.48.0.tgz#a7f04bccb001003405bb5452d43953a382c2fac2"
+  integrity sha1-p/BLzLABADQFu1RS1DlTo4LC+sI=
   dependencies:
-    "@typescript-eslint/types" "5.47.0"
-    "@typescript-eslint/visitor-keys" "5.47.0"
+    "@typescript-eslint/types" "5.48.0"
+    "@typescript-eslint/visitor-keys" "5.48.0"
     debug "^4.3.4"
     globby "^11.1.0"
     is-glob "^4.0.3"
     semver "^7.3.7"
     tsutils "^3.21.0"
 
-"@typescript-eslint/utils@5.47.0", "@typescript-eslint/utils@^5.13.0":
-  version "5.47.0"
-  resolved "https://msazure.pkgs.visualstudio.com/a531312f-ba7b-4573-ab4f-d468b740a319/_packaging/CognitiveServicesSharedComponents/npm/registry/@typescript-eslint/utils/-/utils-5.47.0.tgz#b5005f7d2696769a1fdc1e00897005a25b3a0ec7"
-  integrity sha1-tQBffSaWdpof3B4AiXAFols6Dsc=
+"@typescript-eslint/utils@5.48.0", "@typescript-eslint/utils@^5.13.0":
+  version "5.48.0"
+  resolved "https://msazure.pkgs.visualstudio.com/a531312f-ba7b-4573-ab4f-d468b740a319/_packaging/CognitiveServicesSharedComponents/npm/registry/@typescript-eslint/utils/-/utils-5.48.0.tgz#eee926af2733f7156ad8d15e51791e42ce300273"
+  integrity sha1-7ukmrycz9xVq2NFeUXkeQs4wAnM=
   dependencies:
     "@types/json-schema" "^7.0.9"
     "@types/semver" "^7.3.12"
-    "@typescript-eslint/scope-manager" "5.47.0"
-    "@typescript-eslint/types" "5.47.0"
-    "@typescript-eslint/typescript-estree" "5.47.0"
+    "@typescript-eslint/scope-manager" "5.48.0"
+    "@typescript-eslint/types" "5.48.0"
+    "@typescript-eslint/typescript-estree" "5.48.0"
     eslint-scope "^5.1.1"
     eslint-utils "^3.0.0"
     semver "^7.3.7"
 
-"@typescript-eslint/visitor-keys@5.47.0":
-  version "5.47.0"
-  resolved "https://msazure.pkgs.visualstudio.com/a531312f-ba7b-4573-ab4f-d468b740a319/_packaging/CognitiveServicesSharedComponents/npm/registry/@typescript-eslint/visitor-keys/-/visitor-keys-5.47.0.tgz#4aca4efbdf6209c154df1f7599852d571b80bb45"
-  integrity sha1-SspO+99iCcFU3x91mYUtVxuAu0U=
+"@typescript-eslint/visitor-keys@5.48.0":
+  version "5.48.0"
+  resolved "https://msazure.pkgs.visualstudio.com/a531312f-ba7b-4573-ab4f-d468b740a319/_packaging/CognitiveServicesSharedComponents/npm/registry/@typescript-eslint/visitor-keys/-/visitor-keys-5.48.0.tgz#4446d5e7f6cadde7140390c0e284c8702d944904"
+  integrity sha1-REbV5/bK3ecUA5DA4oTIcC2USQQ=
   dependencies:
-    "@typescript-eslint/types" "5.47.0"
+    "@typescript-eslint/types" "5.48.0"
     eslint-visitor-keys "^3.3.0"
 
 "@uifabric/merge-styles@^7.20.2":
@@ -4831,9 +4835,9 @@ ajv@^6.1.0, ajv@^6.10.0, ajv@^6.10.2, ajv@^6.12.2, ajv@^6.12.4, ajv@^6.12.5, ajv
     uri-js "^4.2.2"
 
 ajv@^8.0.0, ajv@^8.6.0, ajv@^8.8.0:
-  version "8.11.2"
-  resolved "https://msazure.pkgs.visualstudio.com/a531312f-ba7b-4573-ab4f-d468b740a319/_packaging/CognitiveServicesSharedComponents/npm/registry/ajv/-/ajv-8.11.2.tgz#aecb20b50607acf2569b6382167b65a96008bb78"
-  integrity sha1-rssgtQYHrPJWm2OCFntlqWAIu3g=
+  version "8.12.0"
+  resolved "https://msazure.pkgs.visualstudio.com/a531312f-ba7b-4573-ab4f-d468b740a319/_packaging/CognitiveServicesSharedComponents/npm/registry/ajv/-/ajv-8.12.0.tgz#d1a0527323e22f53562c567c00991577dfbe19d1"
+  integrity sha1-0aBScyPiL1NWLFZ8AJkVd9++GdE=
   dependencies:
     fast-deep-equal "^3.1.1"
     json-schema-traverse "^1.0.0"
@@ -5202,9 +5206,9 @@ awesome-typescript-loader@^5.2.1:
     webpack-log "^1.2.0"
 
 axe-core@^4.2.0, axe-core@^4.4.3:
-  version "4.6.1"
-  resolved "https://msazure.pkgs.visualstudio.com/a531312f-ba7b-4573-ab4f-d468b740a319/_packaging/CognitiveServicesSharedComponents/npm/registry/axe-core/-/axe-core-4.6.1.tgz#79cccdee3e3ab61a8f42c458d4123a6768e6fbce"
-  integrity sha1-eczN7j46thqPQsRY1BI6Z2jm+84=
+  version "4.6.2"
+  resolved "https://msazure.pkgs.visualstudio.com/a531312f-ba7b-4573-ab4f-d468b740a319/_packaging/CognitiveServicesSharedComponents/npm/registry/axe-core/-/axe-core-4.6.2.tgz#6e566ab2a3d29e415f5115bc0fd2597a5eb3e5e3"
+  integrity sha1-blZqsqPSnkFfURW8D9JZel6z5eM=
 
 axios@^0.21.4:
   version "0.21.4"
@@ -5929,9 +5933,9 @@ caniuse-api@^3.0.0:
     lodash.uniq "^4.5.0"
 
 caniuse-lite@^1.0.0, caniuse-lite@^1.0.30001109, caniuse-lite@^1.0.30001400, caniuse-lite@^1.0.30001426:
-  version "1.0.30001439"
-  resolved "https://msazure.pkgs.visualstudio.com/a531312f-ba7b-4573-ab4f-d468b740a319/_packaging/CognitiveServicesSharedComponents/npm/registry/caniuse-lite/-/caniuse-lite-1.0.30001439.tgz#ab7371faeb4adff4b74dad1718a6fd122e45d9cb"
-  integrity sha1-q3Nx+utK3/S3Ta0XGKb9Ei5F2cs=
+  version "1.0.30001442"
+  resolved "https://msazure.pkgs.visualstudio.com/a531312f-ba7b-4573-ab4f-d468b740a319/_packaging/CognitiveServicesSharedComponents/npm/registry/caniuse-lite/-/caniuse-lite-1.0.30001442.tgz#40337f1cf3be7c637b061e2f78582dc1daec0614"
+  integrity sha1-QDN/HPO+fGN7Bh4veFgtwdrsBhQ=
 
 capture-exit@^2.0.0:
   version "2.0.0"
@@ -6057,9 +6061,9 @@ ci-info@^2.0.0:
   integrity sha1-Z6npZL4xpR4V5QENWObxKDQAL0Y=
 
 ci-info@^3.2.0:
-  version "3.7.0"
-  resolved "https://msazure.pkgs.visualstudio.com/a531312f-ba7b-4573-ab4f-d468b740a319/_packaging/CognitiveServicesSharedComponents/npm/registry/ci-info/-/ci-info-3.7.0.tgz#6d01b3696c59915b6ce057e4aa4adfc2fa25f5ef"
-  integrity sha1-bQGzaWxZkVts4Ffkqkrfwvol9e8=
+  version "3.7.1"
+  resolved "https://msazure.pkgs.visualstudio.com/a531312f-ba7b-4573-ab4f-d468b740a319/_packaging/CognitiveServicesSharedComponents/npm/registry/ci-info/-/ci-info-3.7.1.tgz#708a6cdae38915d597afdf3b145f2f8e1ff55f3f"
+  integrity sha1-cIps2uOJFdWXr987FF8vjh/1Xz8=
 
 cipher-base@^1.0.0, cipher-base@^1.0.1, cipher-base@^1.0.3:
   version "1.0.4"
@@ -6453,21 +6457,21 @@ copy-descriptor@^0.1.0:
   integrity sha1-Z29us8OZl8LuGsOpJP1hJHSPV40=
 
 core-js-compat@^3.25.1, core-js-compat@^3.8.1:
-  version "3.26.1"
-  resolved "https://msazure.pkgs.visualstudio.com/a531312f-ba7b-4573-ab4f-d468b740a319/_packaging/CognitiveServicesSharedComponents/npm/registry/core-js-compat/-/core-js-compat-3.26.1.tgz#0e710b09ebf689d719545ac36e49041850f943df"
-  integrity sha1-DnELCev2idcZVFrDbkkEGFD5Q98=
+  version "3.27.1"
+  resolved "https://msazure.pkgs.visualstudio.com/a531312f-ba7b-4573-ab4f-d468b740a319/_packaging/CognitiveServicesSharedComponents/npm/registry/core-js-compat/-/core-js-compat-3.27.1.tgz#b5695eb25c602d72b1d30cbfba3cb7e5e4cf0a67"
+  integrity sha1-tWleslxgLXKx0wy/ujy35eTPCmc=
   dependencies:
     browserslist "^4.21.4"
 
 core-js-pure@^3.23.3, core-js-pure@^3.25.1:
-  version "3.26.1"
-  resolved "https://msazure.pkgs.visualstudio.com/a531312f-ba7b-4573-ab4f-d468b740a319/_packaging/CognitiveServicesSharedComponents/npm/registry/core-js-pure/-/core-js-pure-3.26.1.tgz#653f4d7130c427820dcecd3168b594e8bb095a33"
-  integrity sha1-ZT9NcTDEJ4INzs0xaLWU6LsJWjM=
+  version "3.27.1"
+  resolved "https://msazure.pkgs.visualstudio.com/a531312f-ba7b-4573-ab4f-d468b740a319/_packaging/CognitiveServicesSharedComponents/npm/registry/core-js-pure/-/core-js-pure-3.27.1.tgz#ede4a6b8440585c7190062757069c01d37a19dca"
+  integrity sha1-7eSmuEQFhccZAGJ1cGnAHTehnco=
 
 core-js@^3.0.4, core-js@^3.19.2, core-js@^3.6.5, core-js@^3.8.2, core-js@^3.8.3:
-  version "3.26.1"
-  resolved "https://msazure.pkgs.visualstudio.com/a531312f-ba7b-4573-ab4f-d468b740a319/_packaging/CognitiveServicesSharedComponents/npm/registry/core-js/-/core-js-3.26.1.tgz#7a9816dabd9ee846c1c0fe0e8fcad68f3709134e"
-  integrity sha1-epgW2r2e6EbBwP4Oj8rWjzcJE04=
+  version "3.27.1"
+  resolved "https://msazure.pkgs.visualstudio.com/a531312f-ba7b-4573-ab4f-d468b740a319/_packaging/CognitiveServicesSharedComponents/npm/registry/core-js/-/core-js-3.27.1.tgz#23cc909b315a6bb4e418bf40a52758af2103ba46"
+  integrity sha1-I8yQmzFaa7TkGL9ApSdYryEDukY=
 
 core-util-is@~1.0.0:
   version "1.0.3"
@@ -7210,9 +7214,9 @@ doctrine@^3.0.0:
     esutils "^2.0.2"
 
 dom-accessibility-api@^0.5.9:
-  version "0.5.14"
-  resolved "https://msazure.pkgs.visualstudio.com/a531312f-ba7b-4573-ab4f-d468b740a319/_packaging/CognitiveServicesSharedComponents/npm/registry/dom-accessibility-api/-/dom-accessibility-api-0.5.14.tgz#56082f71b1dc7aac69d83c4285eef39c15d93f56"
-  integrity sha1-VggvcbHceqxp2DxChe7znBXZP1Y=
+  version "0.5.15"
+  resolved "https://msazure.pkgs.visualstudio.com/a531312f-ba7b-4573-ab4f-d468b740a319/_packaging/CognitiveServicesSharedComponents/npm/registry/dom-accessibility-api/-/dom-accessibility-api-0.5.15.tgz#357e74338704f36fada8b2e01a4bfc11ef436ac9"
+  integrity sha1-NX50M4cE82+tqLLgGkv8Ee9Dask=
 
 dom-converter@^0.2.0:
   version "0.2.0"
@@ -7476,26 +7480,31 @@ error-stack-parser@^2.0.6:
     stackframe "^1.3.4"
 
 es-abstract@^1.17.2, es-abstract@^1.19.0, es-abstract@^1.20.4:
-  version "1.20.5"
-  resolved "https://msazure.pkgs.visualstudio.com/a531312f-ba7b-4573-ab4f-d468b740a319/_packaging/CognitiveServicesSharedComponents/npm/registry/es-abstract/-/es-abstract-1.20.5.tgz#e6dc99177be37cacda5988e692c3fa8b218e95d2"
-  integrity sha1-5tyZF3vjfKzaWYjmksP6iyGOldI=
+  version "1.21.0"
+  resolved "https://msazure.pkgs.visualstudio.com/a531312f-ba7b-4573-ab4f-d468b740a319/_packaging/CognitiveServicesSharedComponents/npm/registry/es-abstract/-/es-abstract-1.21.0.tgz#dd1b69ea5bfc3c27199c9753efd4de015102c252"
+  integrity sha1-3Rtp6lv8PCcZnJdT79TeAVECwlI=
   dependencies:
     call-bind "^1.0.2"
+    es-set-tostringtag "^2.0.0"
     es-to-primitive "^1.2.1"
     function-bind "^1.1.1"
     function.prototype.name "^1.1.5"
     get-intrinsic "^1.1.3"
     get-symbol-description "^1.0.0"
+    globalthis "^1.0.3"
     gopd "^1.0.1"
     has "^1.0.3"
     has-property-descriptors "^1.0.0"
+    has-proto "^1.0.1"
     has-symbols "^1.0.3"
-    internal-slot "^1.0.3"
+    internal-slot "^1.0.4"
+    is-array-buffer "^3.0.0"
     is-callable "^1.2.7"
     is-negative-zero "^2.0.2"
     is-regex "^1.1.4"
     is-shared-array-buffer "^1.0.2"
     is-string "^1.0.7"
+    is-typed-array "^1.1.10"
     is-weakref "^1.0.2"
     object-inspect "^1.12.2"
     object-keys "^1.1.1"
@@ -7504,7 +7513,9 @@ es-abstract@^1.17.2, es-abstract@^1.19.0, es-abstract@^1.20.4:
     safe-regex-test "^1.0.0"
     string.prototype.trimend "^1.0.6"
     string.prototype.trimstart "^1.0.6"
+    typed-array-length "^1.0.4"
     unbox-primitive "^1.0.2"
+    which-typed-array "^1.1.9"
 
 es-array-method-boxes-properly@^1.0.0:
   version "1.0.0"
@@ -7529,6 +7540,15 @@ es-module-lexer@^0.9.0:
   version "0.9.3"
   resolved "https://msazure.pkgs.visualstudio.com/a531312f-ba7b-4573-ab4f-d468b740a319/_packaging/CognitiveServicesSharedComponents/npm/registry/es-module-lexer/-/es-module-lexer-0.9.3.tgz#6f13db00cc38417137daf74366f535c8eb438f19"
   integrity sha1-bxPbAMw4QXE32vdDZvU1yOtDjxk=
+
+es-set-tostringtag@^2.0.0:
+  version "2.0.1"
+  resolved "https://msazure.pkgs.visualstudio.com/a531312f-ba7b-4573-ab4f-d468b740a319/_packaging/CognitiveServicesSharedComponents/npm/registry/es-set-tostringtag/-/es-set-tostringtag-2.0.1.tgz#338d502f6f674301d710b80c8592de8a15f09cd8"
+  integrity sha1-M41QL29nQwHXELgMhZLeihXwnNg=
+  dependencies:
+    get-intrinsic "^1.1.3"
+    has "^1.0.3"
+    has-tostringtag "^1.0.0"
 
 es-shim-unscopables@^1.0.0:
   version "1.0.0"
@@ -7570,9 +7590,9 @@ es6-iterator@^2.0.3:
     es6-symbol "^3.1.1"
 
 es6-shim@^0.35.5:
-  version "0.35.6"
-  resolved "https://msazure.pkgs.visualstudio.com/a531312f-ba7b-4573-ab4f-d468b740a319/_packaging/CognitiveServicesSharedComponents/npm/registry/es6-shim/-/es6-shim-0.35.6.tgz#d10578301a83af2de58b9eadb7c2c9945f7388a0"
-  integrity sha1-0QV4MBqDry3li56tt8LJlF9ziKA=
+  version "0.35.7"
+  resolved "https://msazure.pkgs.visualstudio.com/a531312f-ba7b-4573-ab4f-d468b740a319/_packaging/CognitiveServicesSharedComponents/npm/registry/es6-shim/-/es6-shim-0.35.7.tgz#db00f1cbb7d4de70b50dcafa45b157e9ba28f5d2"
+  integrity sha1-2wDxy7fU3nC1Dcr6RbFX6boo9dI=
 
 es6-symbol@^3.1.1, es6-symbol@^3.1.3:
   version "3.1.3"
@@ -7805,11 +7825,11 @@ eslint-webpack-plugin@^3.1.1:
     schema-utils "^4.0.0"
 
 eslint@^8.3.0, eslint@^8.9.0:
-  version "8.30.0"
-  resolved "https://msazure.pkgs.visualstudio.com/a531312f-ba7b-4573-ab4f-d468b740a319/_packaging/CognitiveServicesSharedComponents/npm/registry/eslint/-/eslint-8.30.0.tgz#83a506125d089eef7c5b5910eeea824273a33f50"
-  integrity sha1-g6UGEl0Inu98W1kQ7uqCQnOjP1A=
+  version "8.31.0"
+  resolved "https://msazure.pkgs.visualstudio.com/a531312f-ba7b-4573-ab4f-d468b740a319/_packaging/CognitiveServicesSharedComponents/npm/registry/eslint/-/eslint-8.31.0.tgz#75028e77cbcff102a9feae1d718135931532d524"
+  integrity sha1-dQKOd8vP8QKp/q4dcYE1kxUy1SQ=
   dependencies:
-    "@eslint/eslintrc" "^1.4.0"
+    "@eslint/eslintrc" "^1.4.1"
     "@humanwhocodes/config-array" "^0.11.8"
     "@humanwhocodes/module-importer" "^1.0.1"
     "@nodelib/fs.walk" "^1.2.8"
@@ -8117,9 +8137,9 @@ fastest-levenshtein@^1.0.12:
   integrity sha1-IQ5htv8YHekeqbPRuE/e3UfgNOU=
 
 fastq@^1.6.0:
-  version "1.14.0"
-  resolved "https://msazure.pkgs.visualstudio.com/a531312f-ba7b-4573-ab4f-d468b740a319/_packaging/CognitiveServicesSharedComponents/npm/registry/fastq/-/fastq-1.14.0.tgz#107f69d7295b11e0fccc264e1fc6389f623731ce"
-  integrity sha1-EH9p1ylbEeD8zCZOH8Y4n2I3Mc4=
+  version "1.15.0"
+  resolved "https://msazure.pkgs.visualstudio.com/a531312f-ba7b-4573-ab4f-d468b740a319/_packaging/CognitiveServicesSharedComponents/npm/registry/fastq/-/fastq-1.15.0.tgz#d04d07c6a2a68fe4599fea8d2e103a937fae6b3a"
+  integrity sha1-0E0HxqKmj+RZn+qNLhA6k3+uazo=
   dependencies:
     reusify "^1.0.4"
 
@@ -8689,7 +8709,7 @@ globals@^13.19.0:
   dependencies:
     type-fest "^0.20.2"
 
-globalthis@^1.0.0:
+globalthis@^1.0.0, globalthis@^1.0.3:
   version "1.0.3"
   resolved "https://msazure.pkgs.visualstudio.com/a531312f-ba7b-4573-ab4f-d468b740a319/_packaging/CognitiveServicesSharedComponents/npm/registry/globalthis/-/globalthis-1.0.3.tgz#5852882a52b80dc301b0660273e1ed082f0b6ccf"
   integrity sha1-WFKIKlK4DcMBsGYCc+HtCC8LbM8=
@@ -8823,6 +8843,11 @@ has-property-descriptors@^1.0.0:
   integrity sha1-YQcIYAYG02lh7QTBlhk7amB/qGE=
   dependencies:
     get-intrinsic "^1.1.1"
+
+has-proto@^1.0.1:
+  version "1.0.1"
+  resolved "https://msazure.pkgs.visualstudio.com/a531312f-ba7b-4573-ab4f-d468b740a319/_packaging/CognitiveServicesSharedComponents/npm/registry/has-proto/-/has-proto-1.0.1.tgz#1885c1305538958aff469fef37937c22795408e0"
+  integrity sha1-GIXBMFU4lYr/Rp/vN5N8InlUCOA=
 
 has-symbols@^1.0.1, has-symbols@^1.0.2, has-symbols@^1.0.3:
   version "1.0.3"
@@ -9256,14 +9281,14 @@ ignore@^5.2.0:
   integrity sha1-opHAxheP8blgvv5H/N7DAWdKYyQ=
 
 immer@^9.0.7:
-  version "9.0.16"
-  resolved "https://msazure.pkgs.visualstudio.com/a531312f-ba7b-4573-ab4f-d468b740a319/_packaging/CognitiveServicesSharedComponents/npm/registry/immer/-/immer-9.0.16.tgz#8e7caab80118c2b54b37ad43e05758cdefad0198"
-  integrity sha1-jnyquAEYwrVLN61D4FdYze+tAZg=
+  version "9.0.17"
+  resolved "https://msazure.pkgs.visualstudio.com/a531312f-ba7b-4573-ab4f-d468b740a319/_packaging/CognitiveServicesSharedComponents/npm/registry/immer/-/immer-9.0.17.tgz#7cfe8fbb8b461096444e9da7a5ec4a67c6c4adf4"
+  integrity sha1-fP6Pu4tGEJZETp2npexKZ8bErfQ=
 
 immutable@^4.0.0:
-  version "4.1.0"
-  resolved "https://msazure.pkgs.visualstudio.com/a531312f-ba7b-4573-ab4f-d468b740a319/_packaging/CognitiveServicesSharedComponents/npm/registry/immutable/-/immutable-4.1.0.tgz#f795787f0db780183307b9eb2091fcac1f6fafef"
-  integrity sha1-95V4fw23gBgzB7nrIJH8rB9vr+8=
+  version "4.2.1"
+  resolved "https://msazure.pkgs.visualstudio.com/a531312f-ba7b-4573-ab4f-d468b740a319/_packaging/CognitiveServicesSharedComponents/npm/registry/immutable/-/immutable-4.2.1.tgz#8a4025691018c560a40c67e43d698f816edc44d4"
+  integrity sha1-ikAlaRAYxWCkDGfkPWmPgW7cRNQ=
 
 import-fresh@^3.0.0, import-fresh@^3.1.0, import-fresh@^3.2.1:
   version "3.3.0"
@@ -9336,7 +9361,7 @@ inline-style-parser@0.1.1:
   resolved "https://msazure.pkgs.visualstudio.com/a531312f-ba7b-4573-ab4f-d468b740a319/_packaging/CognitiveServicesSharedComponents/npm/registry/inline-style-parser/-/inline-style-parser-0.1.1.tgz#ec8a3b429274e9c0a1f1c4ffa9453a7fef72cea1"
   integrity sha1-7Io7QpJ06cCh8cT/qUU6f+9yzqE=
 
-internal-slot@^1.0.3:
+internal-slot@^1.0.3, internal-slot@^1.0.4:
   version "1.0.4"
   resolved "https://msazure.pkgs.visualstudio.com/a531312f-ba7b-4573-ab4f-d468b740a319/_packaging/CognitiveServicesSharedComponents/npm/registry/internal-slot/-/internal-slot-1.0.4.tgz#8551e7baf74a7a6ba5f749cfb16aa60722f0d6f3"
   integrity sha1-hVHnuvdKemul90nPsWqmByLw1vM=
@@ -9421,6 +9446,15 @@ is-arguments@^1.0.4, is-arguments@^1.1.0, is-arguments@^1.1.1:
   dependencies:
     call-bind "^1.0.2"
     has-tostringtag "^1.0.0"
+
+is-array-buffer@^3.0.0:
+  version "3.0.1"
+  resolved "https://msazure.pkgs.visualstudio.com/a531312f-ba7b-4573-ab4f-d468b740a319/_packaging/CognitiveServicesSharedComponents/npm/registry/is-array-buffer/-/is-array-buffer-3.0.1.tgz#deb1db4fcae48308d54ef2442706c0393997052a"
+  integrity sha1-3rHbT8rkgwjVTvJEJwbAOTmXBSo=
+  dependencies:
+    call-bind "^1.0.2"
+    get-intrinsic "^1.1.3"
+    is-typed-array "^1.1.10"
 
 is-arrayish@^0.2.1:
   version "0.2.1"
@@ -9771,7 +9805,7 @@ is-symbol@^1.0.2, is-symbol@^1.0.3:
   dependencies:
     has-symbols "^1.0.2"
 
-is-typed-array@^1.1.10, is-typed-array@^1.1.3:
+is-typed-array@^1.1.10, is-typed-array@^1.1.3, is-typed-array@^1.1.9:
   version "1.1.10"
   resolved "https://msazure.pkgs.visualstudio.com/a531312f-ba7b-4573-ab4f-d468b740a319/_packaging/CognitiveServicesSharedComponents/npm/registry/is-typed-array/-/is-typed-array-1.1.10.tgz#36a5b5cb4189b575d1a3e4b08536bfb485801e3f"
   integrity sha1-NqW1y0GJtXXRo+SwhTa/tIWAHj8=
@@ -10478,9 +10512,9 @@ jest@^27.4.3:
     jest-cli "^27.5.1"
 
 jquery@~3.6.0:
-  version "3.6.2"
-  resolved "https://msazure.pkgs.visualstudio.com/a531312f-ba7b-4573-ab4f-d468b740a319/_packaging/CognitiveServicesSharedComponents/npm/registry/jquery/-/jquery-3.6.2.tgz#8302bbc9160646f507bdf59d136a478b312783c4"
-  integrity sha1-gwK7yRYGRvUHvfWdE2pHizEng8Q=
+  version "3.6.3"
+  resolved "https://msazure.pkgs.visualstudio.com/a531312f-ba7b-4573-ab4f-d468b740a319/_packaging/CognitiveServicesSharedComponents/npm/registry/jquery/-/jquery-3.6.3.tgz#23ed2ffed8a19e048814f13391a19afcdba160e6"
+  integrity sha1-I+0v/tihngSIFPEzkaGa/NuhYOY=
 
 js-sdsl@^4.1.4:
   version "4.2.0"
@@ -10586,16 +10620,16 @@ json-stable-stringify-without-jsonify@^1.0.1:
   integrity sha1-nbe1lJatPzz+8wp1FC0tkwrXJlE=
 
 json5@^1.0.1:
-  version "1.0.1"
-  resolved "https://msazure.pkgs.visualstudio.com/a531312f-ba7b-4573-ab4f-d468b740a319/_packaging/CognitiveServicesSharedComponents/npm/registry/json5/-/json5-1.0.1.tgz#779fb0018604fa854eacbf6252180d83543e3dbe"
-  integrity sha1-d5+wAYYE+oVOrL9iUhgNg1Q+Pb4=
+  version "1.0.2"
+  resolved "https://msazure.pkgs.visualstudio.com/a531312f-ba7b-4573-ab4f-d468b740a319/_packaging/CognitiveServicesSharedComponents/npm/registry/json5/-/json5-1.0.2.tgz#63d98d60f21b313b77c4d6da18bfa69d80e1d593"
+  integrity sha1-Y9mNYPIbMTt3xNbaGL+mnYDh1ZM=
   dependencies:
     minimist "^1.2.0"
 
-json5@^2.1.2, json5@^2.1.3, json5@^2.2.0, json5@^2.2.1:
-  version "2.2.2"
-  resolved "https://msazure.pkgs.visualstudio.com/a531312f-ba7b-4573-ab4f-d468b740a319/_packaging/CognitiveServicesSharedComponents/npm/registry/json5/-/json5-2.2.2.tgz#64471c5bdcc564c18f7c1d4df2e2297f2457c5ab"
-  integrity sha1-ZEccW9zFZMGPfB1N8uIpfyRXxas=
+json5@^2.1.2, json5@^2.1.3, json5@^2.2.0, json5@^2.2.2:
+  version "2.2.3"
+  resolved "https://msazure.pkgs.visualstudio.com/a531312f-ba7b-4573-ab4f-d468b740a319/_packaging/CognitiveServicesSharedComponents/npm/registry/json5/-/json5-2.2.3.tgz#78cd6f1a19bdc12b73db5ad0c61efd66c1e29283"
+  integrity sha1-eM1vGhm9wStz21rQxh79ZsHikoM=
 
 jsonfile@^6.0.1:
   version "6.1.0"
@@ -11219,9 +11253,9 @@ minimatch@^3.0.2, minimatch@^3.0.4, minimatch@^3.0.5, minimatch@^3.1.1, minimatc
     brace-expansion "^1.1.7"
 
 minimatch@^5.0.1:
-  version "5.1.1"
-  resolved "https://msazure.pkgs.visualstudio.com/a531312f-ba7b-4573-ab4f-d468b740a319/_packaging/CognitiveServicesSharedComponents/npm/registry/minimatch/-/minimatch-5.1.1.tgz#6c9dffcf9927ff2a31e74b5af11adf8b9604b022"
-  integrity sha1-bJ3/z5kn/yox50ta8Rrfi5YEsCI=
+  version "5.1.2"
+  resolved "https://msazure.pkgs.visualstudio.com/a531312f-ba7b-4573-ab4f-d468b740a319/_packaging/CognitiveServicesSharedComponents/npm/registry/minimatch/-/minimatch-5.1.2.tgz#0939d7d6f0898acbd1508abe534d1929368a8fff"
+  integrity sha1-CTnX1vCJisvRUIq+U00ZKTaKj/8=
   dependencies:
     brace-expansion "^2.0.1"
 
@@ -12200,17 +12234,17 @@ pkg-up@^3.1.0:
   dependencies:
     find-up "^3.0.0"
 
-playwright-core@1.29.0:
-  version "1.29.0"
-  resolved "https://msazure.pkgs.visualstudio.com/a531312f-ba7b-4573-ab4f-d468b740a319/_packaging/CognitiveServicesSharedComponents/npm/registry/playwright-core/-/playwright-core-1.29.0.tgz#314653618395afef5031156d691c7aa0826e5d05"
-  integrity sha1-MUZTYYOVr+9QMRVtaRx6oIJuXQU=
+playwright-core@1.29.1:
+  version "1.29.1"
+  resolved "https://msazure.pkgs.visualstudio.com/a531312f-ba7b-4573-ab4f-d468b740a319/_packaging/CognitiveServicesSharedComponents/npm/registry/playwright-core/-/playwright-core-1.29.1.tgz#9ec15d61c4bd2f386ddf6ce010db53a030345a47"
+  integrity sha1-nsFdYcS9Lzht32zgENtToDA0Wkc=
 
 playwright@^1.27.1:
-  version "1.29.0"
-  resolved "https://msazure.pkgs.visualstudio.com/a531312f-ba7b-4573-ab4f-d468b740a319/_packaging/CognitiveServicesSharedComponents/npm/registry/playwright/-/playwright-1.29.0.tgz#14b70f373a7d433b9e304ee1666cb70e93336364"
-  integrity sha1-FLcPNzp9QzueME7hZmy3DpMzY2Q=
+  version "1.29.1"
+  resolved "https://msazure.pkgs.visualstudio.com/a531312f-ba7b-4573-ab4f-d468b740a319/_packaging/CognitiveServicesSharedComponents/npm/registry/playwright/-/playwright-1.29.1.tgz#fc04b34f42e3bfc0edadb1c45ef9bffd53c21f70"
+  integrity sha1-/ASzT0Ljv8DtrbHEXvm//VPCH3A=
   dependencies:
-    playwright-core "1.29.0"
+    playwright-core "1.29.1"
 
 pnp-webpack-plugin@1.6.4:
   version "1.6.4"
@@ -13991,9 +14025,9 @@ sass-loader@^12.3.0:
     neo-async "^2.6.2"
 
 sass@^1.56.1:
-  version "1.57.0"
-  resolved "https://msazure.pkgs.visualstudio.com/a531312f-ba7b-4573-ab4f-d468b740a319/_packaging/CognitiveServicesSharedComponents/npm/registry/sass/-/sass-1.57.0.tgz#64c4144ed4e1c0ccb96dc18aef2c424cdbc0c12b"
-  integrity sha1-ZMQUTtThwMy5bcGK7yxCTNvAwSs=
+  version "1.57.1"
+  resolved "https://msazure.pkgs.visualstudio.com/a531312f-ba7b-4573-ab4f-d468b740a319/_packaging/CognitiveServicesSharedComponents/npm/registry/sass/-/sass-1.57.1.tgz#dfafd46eb3ab94817145e8825208ecf7281119b5"
+  integrity sha1-36/UbrOrlIFxReiCUgjs9ygRGbU=
   dependencies:
     chokidar ">=3.0.0 <4.0.0"
     immutable "^4.0.0"
@@ -15081,9 +15115,9 @@ text-table@^0.2.0:
   integrity sha1-f17oI66AUgfACvLfSoTsP8+lcLQ=
 
 throat@^6.0.1:
-  version "6.0.1"
-  resolved "https://msazure.pkgs.visualstudio.com/a531312f-ba7b-4573-ab4f-d468b740a319/_packaging/CognitiveServicesSharedComponents/npm/registry/throat/-/throat-6.0.1.tgz#d514fedad95740c12c2d7fc70ea863eb51ade375"
-  integrity sha1-1RT+2tlXQMEsLX/HDqhj61Gt43U=
+  version "6.0.2"
+  resolved "https://msazure.pkgs.visualstudio.com/a531312f-ba7b-4573-ab4f-d468b740a319/_packaging/CognitiveServicesSharedComponents/npm/registry/throat/-/throat-6.0.2.tgz#51a3fbb5e11ae72e2cf74861ed5c8020f89f29fe"
+  integrity sha1-UaP7teEa5y4s90hh7VyAIPifKf4=
 
 throttle-debounce@^3.0.1:
   version "3.0.1"
@@ -15111,9 +15145,9 @@ timers-browserify@^2.0.4:
     setimmediate "^1.0.4"
 
 tinycolor2@^1.4.1:
-  version "1.4.2"
-  resolved "https://msazure.pkgs.visualstudio.com/a531312f-ba7b-4573-ab4f-d468b740a319/_packaging/CognitiveServicesSharedComponents/npm/registry/tinycolor2/-/tinycolor2-1.4.2.tgz#3f6a4d1071ad07676d7fa472e1fac40a719d8803"
-  integrity sha1-P2pNEHGtB2dtf6Ry4frECnGdiAM=
+  version "1.5.2"
+  resolved "https://msazure.pkgs.visualstudio.com/a531312f-ba7b-4573-ab4f-d468b740a319/_packaging/CognitiveServicesSharedComponents/npm/registry/tinycolor2/-/tinycolor2-1.5.2.tgz#7d30b4584d8b7d62b9a94dacc505614a6516a95f"
+  integrity sha1-fTC0WE2LfWK5qU2sxQVhSmUWqV8=
 
 tmpl@1.0.5:
   version "1.0.5"
@@ -15339,6 +15373,15 @@ type@^2.7.2:
   version "2.7.2"
   resolved "https://msazure.pkgs.visualstudio.com/a531312f-ba7b-4573-ab4f-d468b740a319/_packaging/CognitiveServicesSharedComponents/npm/registry/type/-/type-2.7.2.tgz#2376a15a3a28b1efa0f5350dcf72d24df6ef98d0"
   integrity sha1-I3ahWjoose+g9TUNz3LSTfbvmNA=
+
+typed-array-length@^1.0.4:
+  version "1.0.4"
+  resolved "https://msazure.pkgs.visualstudio.com/a531312f-ba7b-4573-ab4f-d468b740a319/_packaging/CognitiveServicesSharedComponents/npm/registry/typed-array-length/-/typed-array-length-1.0.4.tgz#89d83785e5c4098bec72e08b319651f0eac9c1bb"
+  integrity sha1-idg3heXECYvscuCLMZZR8OrJwbs=
+  dependencies:
+    call-bind "^1.0.2"
+    for-each "^0.3.3"
+    is-typed-array "^1.1.9"
 
 typed-styles@^0.0.7:
   version "0.0.7"
@@ -16159,7 +16202,7 @@ which-collection@^1.0.1:
     is-weakmap "^2.0.1"
     is-weakset "^2.0.1"
 
-which-typed-array@^1.1.2, which-typed-array@^1.1.8:
+which-typed-array@^1.1.2, which-typed-array@^1.1.8, which-typed-array@^1.1.9:
   version "1.1.9"
   resolved "https://msazure.pkgs.visualstudio.com/a531312f-ba7b-4573-ab4f-d468b740a319/_packaging/CognitiveServicesSharedComponents/npm/registry/which-typed-array/-/which-typed-array-1.1.9.tgz#307cf898025848cf995e795e8423c7f337efbde6"
   integrity sha1-MHz4mAJYSM+ZXnlehCPH8zfvveY=

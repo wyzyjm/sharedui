@@ -16,16 +16,19 @@ Eg: Reduce duplicate accessibility bugs across studios that have distinct resolu
 ## <u>For developers wanting to integrate the shared components into their repo</u>
 
 ### Step 1: Update your artifact feed:
-Please add "CognitiveIbizaPortalExtension" feed as an upstream feed to your feed. 
+Please add "CognitiveServicesSharedComponents" feed as an upstream feed to your feed. 
 - Open your feed page from Azure devops and click on "Settings" button
 - Select "Upstream Sources" tab
 - Click on the "+ Add Upstream" button
 - If your feed stays in the "msazure" organization, select "Azure artifact feeds in this organization"
-    - select the "CognitiveIbizaPortalExtension" feed from the dropdown, "Local" as the view, "npm" as the package
+    - select the "CognitiveServicesSharedComponents" feed from the dropdown, "Local" as the view, "npm" as the package
 - If your feed isnt part of "msazure" organization, select "Azure artifact feed in a different organization"
-    - enter the feed locator as "azure-feed://msazure/CognitiveIbizaPortalExtension@Local", "npm" as the package
+    - enter the feed locator as "azure-feed://msazure/CognitiveServicesSharedComponents@Local", "npm" as the package
 
-[NOTE]: If npm package doesn't work, try choosing "Nuget" as the package.
+[More help]: 
+Q. How to find "your feed"? In your project, there should be a nuget.config file which would have the name of the registry. For example: https://msazure.pkgs.visualstudio.com/a531312f-ba7b-4573-ab4f-d468b740a319/_packaging/*CognitiveIbizaPortalExtension*/nuget/v3/index.json
+
+Q. How do I open "your feed page"? Open your ADO -> click artifacts -> select the name in the dropdown to be "your feed" 
 
 ### Step 2: Install the npm package:
 Using your terminal navigate to the repository's ClientApp folder(or folder where you have your package.json file)
@@ -92,7 +95,7 @@ We run npm publish for publishing a new npm package.
 
 ## Process for publishing a package to NPM (typically DIF contributions)
 Run the command: 
-npm publish -registry https://msazure.pkgs.visualstudio.com/a531312f-ba7b-4573-ab4f-d468b740a319/_packaging/CognitiveIbizaPortalExtension/npm/registry/
+npm publish -registry https://msazure.pkgs.visualstudio.com/a531312f-ba7b-4573-ab4f-d468b740a319/_packaging/CognitiveServicesSharedComponents/npm/registry/
 
 If the above doesnt work: This can be done from VSCode. Get the latest master branch for the repo/package you want to publish. Install all dependencies and ensure that it builds and passes all tests.
 1. `npm adduser` - add your NPM user details to the VSCode session, this should include entering 2FA.
@@ -102,7 +105,7 @@ If the above doesnt work: This can be done from VSCode. Get the latest master br
 
 ## Versioning and changelog
 
-We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [npm feed](https://msazure.visualstudio.com/Cognitive%20Services/_artifacts/feed/CognitiveIbizaPortalExtension/Npm/sharedui.studios/versions).
+We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [npm feed](https://msazure.visualstudio.com/Cognitive%20Services/_artifacts/feed/CognitiveServicesSharedComponents/Npm/sharedui.studios/versions).
 
 
 ## Authors

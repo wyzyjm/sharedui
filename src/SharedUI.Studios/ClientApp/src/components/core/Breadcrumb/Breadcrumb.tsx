@@ -40,7 +40,7 @@ const StyledBreadcrumbInternal = (props: DefaultBreadcrumbProps) => {
         listItem: {
           selectors: {
             ":last-child .ms-Breadcrumb-itemLink": {
-              color: defaultTheme.palette.themePrimary,
+              color: "black",
               fontWeight: 400,
               pointerEvents: 'none',
               cursor: 'pointer'
