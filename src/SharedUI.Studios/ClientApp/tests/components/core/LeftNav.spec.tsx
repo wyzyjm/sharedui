@@ -5,7 +5,7 @@ let storybookPOM: StorybookTestPOM;
 
 const panelClass = ".body-97";
 const navLinkClass = ".ms-Nav-groupContent";
-const titleClass = ".ms-Button-label";
+const titleClass = ".ms-Link";
 
 test.beforeEach(async ({ page }) => {
     storybookPOM = new StorybookTestPOM(page);

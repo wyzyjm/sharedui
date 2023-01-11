@@ -11,6 +11,7 @@ import {
   IRenderFunction,
   IRenderGroupHeaderProps,
   INavStyles,
+  Link,
 } from "@fluentui/react";
 import { CSSProperties, useState } from "react";
 import "./LeftNav.scss";
@@ -173,15 +174,18 @@ const MenuPage: React.FunctionComponent<ILeftNavProps> = (
           />
         </div>
         {expanded && props.title && (
-          <ActionButton
+          <><ActionButton
             iconProps={Icons.List}
-            onClick={() => props.onClick()}
-            styles={{
-              root: { height: "44px", marginBottom: "13px" },
-            }}
-          >
-            {props.title}
-          </ActionButton>
+            ariaLabel="List"
+          />
+            <Link
+              onClick={() => props.onClick()}
+              styles={{
+                root: { height: "44px", marginBottom: "13px" },
+              }}
+            >
+              {props.title}
+            </Link></>
         )}
         {
           <FabricNav
