@@ -1,6 +1,6 @@
 import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
-import { CircularLoadingIndicator, CircularLoadingIndicatorPageWide } from './Spinners';
+import { ISpinnerProps, CircularLoadingIndicator, CircularLoadingIndicatorPageWide } from './Spinners';
 import { ThemeProvider } from '@fluentui/react-theme-provider';
 import { defaultTheme } from "../../../themes";
 import { SharedComponentsContext } from '../SharedComponentsContext';
@@ -11,22 +11,36 @@ export default {
     subcomponents: { CircularLoadingIndicator, CircularLoadingIndicatorPageWide }
 } as ComponentMeta<any>;
 
-export const CircularLoading: ComponentStory<typeof CircularLoadingIndicator> = () => {
+const CircularLoadingTemplate: ComponentStory<typeof CircularLoadingIndicator> = (args) => {
     return (
         <ThemeProvider theme={defaultTheme.body}>
             <SharedComponentsContext.Provider value={{ locale: 'en' }}>
-                <CircularLoadingIndicator />
+                <CircularLoadingIndicator {...args} />
             </SharedComponentsContext.Provider>
         </ThemeProvider>
     );
 }
 
-export const CircularLoadingPageWide: ComponentStory<typeof CircularLoadingIndicatorPageWide> = () => {
+const CircularLoadingPageWideTemplate: ComponentStory<typeof CircularLoadingIndicatorPageWide> = (args) => {
     return (
         <ThemeProvider theme={defaultTheme.body}>
             <SharedComponentsContext.Provider value={{ locale: 'en' }}>
-                <CircularLoadingIndicatorPageWide />
+                <CircularLoadingIndicatorPageWide {...args} />
             </SharedComponentsContext.Provider>
         </ThemeProvider>
     );
 }
+
+export const CircularLoading = CircularLoadingTemplate.bind({});
+
+CircularLoading.args = {
+    hideLabel: false,
+    label: ""
+} as ISpinnerProps;
+
+export const CircularLoadingPageWide = CircularLoadingPageWideTemplate.bind({});
+
+CircularLoadingPageWide.args = {
+    hideLabel: false,
+    label: ""
+} as ISpinnerProps;

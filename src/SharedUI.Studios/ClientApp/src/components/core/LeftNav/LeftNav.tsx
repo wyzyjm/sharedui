@@ -169,7 +169,7 @@ const MenuPage: React.FunctionComponent<ILeftNavProps> = (
                 ? Icons.DoubleChevronLeft
                 : Icons.DoubleChevronRight
             }
-            ariaLabel={expanded ? INTL.formatMessage(LeftNavLocalizationFormatMessages.Opened) : INTL.formatMessage(LeftNavLocalizationFormatMessages.Hidden)}
+            ariaLabel={expanded ? INTL.formatMessage(LeftNavLocalizationFormatMessages.CollapseNavigation) : INTL.formatMessage(LeftNavLocalizationFormatMessages.ExpandNavigation)}
             onClick={toggleExpanded}
           />
         </div>

@@ -1,6 +1,48 @@
 import { defineMessages } from "react-intl";
 export const FormatMessagePlaceholder = "NamePlaceholderDoNotTranslate";
 
+export const SpinnersLocalizationFormatMessages = defineMessages({
+    Loading: {
+        id: "Spinners.Loading",
+        defaultMessage: "Loading...",
+    }
+});
+
+export const ThemedIconsLocalizationFormatMessages = defineMessages({
+    Success: {
+        id: "ThemedIcons.Success",
+        defaultMessage: "Success",
+    },
+    Failed: {
+        id: "ThemedIcons.Failed",
+        defaultMessage: "Failed",
+    },
+    Expired: {
+        id: "ThemedIcons.Expired",
+        defaultMessage: "Expired",
+    },
+    Processing: {
+        id: "ThemedIcons.Processing",
+        defaultMessage: "Processing",
+    },
+    Cancelled: {
+        id: "ThemedIcons.Cancelled",
+        defaultMessage: "Cancelled",
+    },
+    Paused: {
+        id: "ThemedIcons.Paused",
+        defaultMessage: "Paused",
+    },
+    Suspended: {
+        id: "ThemedIcons.Suspended",
+        defaultMessage: "Suspended",
+    },
+    Recent: {
+        id: "ThemedIcons.Recent",
+        defaultMessage: "Recent",
+    }
+});
+
 export const BreadcrumbLocalizationFormatMessages = defineMessages({
     NavigationHistory: {
         id: "Breadcrumb.NavigationHistory",
@@ -103,13 +145,13 @@ export const HelpLocalizationFormatMessages = defineMessages({
 });
 
 export const LeftNavLocalizationFormatMessages = defineMessages({
-    Opened: {
-        id: "LeftNav.Opened",
-        defaultMessage: "Opened",
+    CollapseNavigation: {
+        id: "LeftNav.CollapseNavigation",
+        defaultMessage: "Collapse navigation",
     },
-    Hidden: {
-        id: "LeftNav.Hidden",
-        defaultMessage: "Hidden",
+    ExpandNavigation: {
+        id: "LeftNav.ExpandNavigation",
+        defaultMessage: "Expand navigation",
     },
 });
 

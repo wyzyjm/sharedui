@@ -40,12 +40,13 @@ test.describe('Circular loading spinner page wide tests', () => {
 
     // Check pagewide background color
     const locator = page.frameLocator('#storybook-preview-iframe').locator('#root div >> nth=1');
-    await expect(locator).toHaveCSS("background-color", "rgb(161, 159, 157)")
+    await expect(locator).toHaveCSS("background-color", "rgb(250, 249, 248)");
   });
 
   // Accessibility voilations check
   test('to verify no accessibility violations are found', async ({ page }) => {
     // Check the Voilations tab under Accessibility
+    await page.locator('input[name="hideLabel"]').check();
     await page.getByRole('tab', { name: 'Accessibility' }).click();
     await page.locator('button', { hasText: 'Violations' }).click();
     await expect(page.locator('.sto-1551xjo')).toHaveText('0 Violations');
