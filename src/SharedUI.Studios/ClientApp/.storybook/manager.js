@@ -1,6 +1,7 @@
 import { addons } from '@storybook/addons';
-import storybookTheme from './CustomSbTheme';
+import fluentStorybookTheme from './CustomSbTheme';
 
 addons.setConfig({
-  theme: storybookTheme,
+  theme: fluentStorybookTheme,
+  showPanel: true,
 });

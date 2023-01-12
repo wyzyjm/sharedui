@@ -44,7 +44,6 @@ test.describe('Circular loading spinner tests', () => {
     // Check the Voilations tab under Accessibility
     await page.getByRole('tab', { name: 'Accessibility' }).click();
     await page.locator('button', { hasText: 'Violations' }).click();
-    await expect(page.locator('.sto-1551xjo')).toHaveText('0 Violations');
-    await expect(page.locator('.sto-snh8f7')).toContainText('No accessibility violations found.');
+    await expect(page.locator('.sto-142f1ph')).toHaveText('0 Violations');
   });
 });

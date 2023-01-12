@@ -1,38 +1,41 @@
 import { create } from '@storybook/theming';
+// import logo from '../public/fluentui-logo.svg';
 
-export default create({
-//   base: 'light',
+/**
+ * Theming and branding the storybook to fluent. Taken from https://storybook.js.org/docs/react/configure/theming
+ */
+const theme = create({
+  base: 'light',
 
-//   colorPrimary: 'hotpink',
-//   colorSecondary: 'deepskyblue',
+  // Storybook-specific color palette
+  colorPrimary: 'rgba(255, 255, 255, .4)',
+  colorSecondary: '#0078d4',
 
   // UI
-//   appBg: 'white',
-//   appContentBg: 'silver',
-//   appBorderColor: 'grey',
-//   appBorderRadius: 4,
+  appBg: '#ffffff',
+  appContentBg: '#ffffff',
+  appBorderColor: '#e0e0e0', // use msft gray
+  appBorderRadius: 4,
 
-  // Typography
-  fontBase: '"Open Sans", sans-serif',
+  // Fonts
+  fontBase:
+    '"Segoe UI", "Segoe UI Web (West European)", -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", sans-serif;',
   fontCode: 'monospace',
 
   // Text colors
-//   textColor: 'black',
-//   textInverseColor: 'rgba(255,255,255,0.9)',
+  textColor: '#11100f',
+  textInverseColor: '#0078d4', // use msft primary blue default
 
   // Toolbar default and active colors
-//   barTextColor: 'silver',
-//   barSelectedColor: 'black',
-//   barBg: 'hotpink',
+  barSelectedColor: '#0078d4', // use msft primary blue default
 
   // Form colors
-//   inputBg: 'white',
-//   inputBorder: 'silver',
-//   inputTextColor: 'black',
-//   inputBorderRadius: 4,
+  inputBorderRadius: 4,
 
-  brandTitle: 'CS Shared Components',
-  brandUrl: 'https://example.com',
-  brandImage: 'https://place-hold.it/350x150',
-  brandTarget: '_self',
+  // Use the fluent branding for the upper left image
+  brandTitle: 'CS Shared Studio Components',
+  brandUrl: 'https://aka.ms/csstudio',
+  // brandImage: logo,
 });
+
+export default theme;
