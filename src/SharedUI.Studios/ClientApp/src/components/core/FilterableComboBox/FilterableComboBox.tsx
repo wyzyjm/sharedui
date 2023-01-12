@@ -7,6 +7,7 @@ import {
   SelectableOptionMenuItemType,
 } from "@fluentui/react";
 import _ from "lodash";
+import "../core.scss";
 import React, { useEffect, useRef, useState } from "react";
 import { FilterableComboBoxFormatMessages } from "../../../clientResources";
 import { initializeComponent, withLocalization } from "../../../services/localization";

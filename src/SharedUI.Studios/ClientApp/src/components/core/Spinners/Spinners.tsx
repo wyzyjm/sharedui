@@ -1,5 +1,6 @@
 import { Spinner, SpinnerSize } from "@fluentui/react";
 import { useTheme } from "@fluentui/react-theme-provider";
+import "../core.scss";
 import { initializeComponent, useLocalization, withLocalization } from "../../../services/localization";
 import { INTL } from "../../../util/intlUtil";
 import { SpinnersLocalizationFormatMessages } from "../../../clientResources";
@@ -37,7 +38,7 @@ function CircularLoadingIndicatorPageWideInternal(props: ISpinnerProps): JSX.Ele
           left: 0,
           right: 0,
           bottom: 0,
-          backgroundColor: theme.palette.neutralLighterAlt,
+          backgroundColor: theme.palette.white,
           opacity: 0.5,
         }}
       ></div>

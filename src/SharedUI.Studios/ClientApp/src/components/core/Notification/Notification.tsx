@@ -5,6 +5,7 @@ import {
 import { values, sortBy } from "lodash";
 import React, { useEffect, useRef, useState } from "react";
 import "./Notification.scss";
+import "../core.scss";
 import { StatusIcons } from "../themed-icons";
 import { INTL } from "../../../util/intlUtil";
 import { NotificationLocalizationFormatMessages } from "../../../clientResources";

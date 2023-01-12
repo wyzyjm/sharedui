@@ -2,7 +2,8 @@
 import React, { useState } from "react";
 import { FontIcon, Text, DefaultButton, MessageBar, MessageBarType, ChoiceGroup } from "@fluentui/react";
 import { initializeIcons } from '@fluentui/react/lib/Icons';
-import "./RatingBanner.scss"
+import "./RatingBanner.scss";
+import "../core.scss";
 import { HaTSArea as CS_Hats, HatsProps } from '../Hats/Hats';
 import { INTL } from "../../../util/intlUtil";
 import { BannerLocalizationFormatMessages } from "../../../clientResources";

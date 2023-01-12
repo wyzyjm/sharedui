@@ -3,6 +3,7 @@ import {
 } from "@fluentui/react";
 import { initializeIcons } from '@fluentui/react/lib/Icons';
 import _ from "lodash";
+import "../core.scss";
 import { BreadcrumbLocalizationFormatMessages } from "../../../clientResources";
 import { initializeComponent, useLocalization, withLocalization } from "../../../services/localization";
 import { INTL } from "../../../util/intlUtil";

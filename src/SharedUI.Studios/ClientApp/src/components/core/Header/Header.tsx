@@ -11,9 +11,8 @@ import {
 } from "@fluentui/react";
 import { defaultTheme } from "../../../themes";
 import styled, { ThemeProvider as ReactThemeProvider } from "styled-components";
-import "./header.scss";
+import "./Header.scss";
 import "../core.scss";
-import "../base.scss";
 import { initializeComponent, useLocalization, withLocalization } from "../../../services/localization";
 
 const itemAlignmentsStackStyles: IStackStyles = {

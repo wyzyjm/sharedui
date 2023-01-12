@@ -1,4 +1,5 @@
 import { Checkbox as FluentCheckbox } from "@fluentui/react";
+import "../core.scss";
 import { initializeComponent, useLocalization, withLocalization } from "../../../services/localization";
 
 export interface CheckboxProps {

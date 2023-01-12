@@ -3,6 +3,7 @@ import {
   IButtonProps
 } from "@fluentui/react";
 import React from "react";
+import "../core.scss";
 import { initializeComponent, useLocalization, withLocalization } from "../../../services/localization";
 import { Icons } from "../Icons";
 import { ButtonLocalizationFormatMessages } from "../../../clientResources";

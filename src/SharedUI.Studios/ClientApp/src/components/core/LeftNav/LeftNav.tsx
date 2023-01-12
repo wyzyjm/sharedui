@@ -15,6 +15,7 @@ import {
 } from "@fluentui/react";
 import { CSSProperties, useState } from "react";
 import "./LeftNav.scss";
+import "../core.scss";
 import { Icons } from "../Icons";
 import { INTL } from "../../../util/intlUtil";
 import { LeftNavLocalizationFormatMessages } from "../../../clientResources";

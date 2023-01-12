@@ -1,10 +1,8 @@
 import { useTheme, IDocumentCardStyles, DocumentCard, Link } from "@fluentui/react";
 import React from "react";
 import { CSSProperties, ReactNode } from "react";
-import {
-    Stack,
-    Text,
-} from "@fluentui/react";
+import { Stack, Text, } from "@fluentui/react";
+import "../core.scss";
 import { initializeComponent, useLocalization, withLocalization } from "../../../services/localization";
 
 export interface ICardProp {

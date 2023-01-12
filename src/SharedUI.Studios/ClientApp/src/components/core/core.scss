@@ -1,4 +1,5 @@
 @import "./colors.scss";
+@import "./common.scss";
 
 // @font-face {
 //   font-family: winjs-symbols;
@@ -246,6 +247,7 @@ a.orange-border-button {
 }
 
 @media screen and (-ms-high-contrast: active) {
+
   button,
   .button {
     border: 1px solid !important;
@@ -260,6 +262,7 @@ a.orange-border-button {
   }
 
   button.ms-Dropdown-item {
+
     &:hover,
     &:active,
     &:focus {
@@ -269,4 +272,8 @@ a.orange-border-button {
       border-color: highlight;
     }
   }
+}
+
+.ms-DetailsRow-fields {
+  color: black;
 }
