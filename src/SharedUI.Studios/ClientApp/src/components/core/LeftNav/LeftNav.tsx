@@ -175,10 +175,11 @@ const MenuPage: React.FunctionComponent<ILeftNavProps> = (
           />
         </div>
         {expanded && props.title && (
-          <><ActionButton
-            iconProps={Icons.List}
-            ariaLabel="List"
-          />
+          <div style={{ display: "flex" }}>
+            <ActionButton
+              iconProps={Icons.List}
+              ariaLabel="List"
+            />
             <Link
               onClick={() => props.onClick()}
               styles={{
@@ -186,7 +187,8 @@ const MenuPage: React.FunctionComponent<ILeftNavProps> = (
               }}
             >
               {props.title}
-            </Link></>
+            </Link>
+          </div>
         )}
         {
           <FabricNav
