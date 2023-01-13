@@ -35,7 +35,12 @@ test.describe('Rating Banner tests', () => {
   });
 
   test('the rating banner should update on properties updates', async ({ page }) => {
-    await (await storybookPOM.getByText('10')).click();
+    const radioBtnLabel = await (await storybookPOM.getElementFromPreview('.rating-number-label')).filter({ 
+      hasText: '10'
+    });
+
+    await radioBtnLabel.click();
+
     // Check panel width
     const panelClass = ".ms-Panel-main";
     const panelElement = await storybookPOM.getElementFromPreview(panelClass);

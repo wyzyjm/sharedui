@@ -1,6 +1,6 @@
 // \FormRecognizerStudio\FormRecognizerStudio\ClientApp\src\view\components\navMenu\navMenu.tsx
 import React, { useState } from "react";
-import { FontIcon, Text, DefaultButton, MessageBar, MessageBarType, ChoiceGroup } from "@fluentui/react";
+import { FontIcon, Text, DefaultButton, MessageBar, MessageBarType, ChoiceGroup, IChoiceGroupOption } from "@fluentui/react";
 import { initializeIcons } from '@fluentui/react/lib/Icons';
 import "./RatingBanner.scss";
 import "../core.scss";
@@ -19,10 +19,10 @@ export interface RatingBannerProps {
 
 const RatingBannerInternal = (props: RatingBannerProps) => {
 
-    function handleRatingClick(e: any) {
+    function handleRatingClick(e: any, option: IChoiceGroupOption) {
         setIsBannerVisible(false);
         if (props.hatsProp) {
-            props.hatsProp.surveyLink = props.hatsProp.surveyLink + '&hats_nps_score=' + e.target.innerText;
+            props.hatsProp.surveyLink = props.hatsProp.surveyLink + `&Q_PopulateResponse={"QID25":"${option.value}"}`;
             setIsHatsVisible(true);
         }
         props.onClick && props.onClick();
@@ -63,8 +63,8 @@ const RatingBannerInternal = (props: RatingBannerProps) => {
                                                     className="inlineflex"
                                                     aria-label="Rating"
                                                     label={e}
-                                                    options={[{ key: e, text: "" }]}
-                                                    onClick={handleRatingClick}
+                                                    options={[{ key: e, text: "", value: e }]}
+                                                    onChange={handleRatingClick}
                                                 />
                                             </label>
                                         ))}

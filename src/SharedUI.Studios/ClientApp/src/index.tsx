@@ -25,3 +25,4 @@ export type { IWizardFlowMenuItem, WizardFlowProps, IWizardFlow, IWizardFlowStat
 export { VariantService } from "./services/flighting/variantService";
 export type { ICustomColumn, ICustomColumnWithHeader, ICustomColumnWithoutHeader, ICustomColumnsList, ICustomShimmeredDetailsListProp } from "./components/core/ItemList/ItemList";
 export { CustomShimmeredDetailsList } from "./components/core/ItemList/ItemList";
+export { SharedComponentsContext } from "./components/core/SharedComponentsContext";

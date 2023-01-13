@@ -1,6 +1,6 @@
 {
   "name": "sharedui.studios",
-  "version": "0.1.23",
+  "version": "0.1.26",
   "private": false,
   "files": [
     "dist/package"

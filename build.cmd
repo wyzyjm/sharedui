@@ -55,6 +55,10 @@ cd /D "%~dp0"
 set RepoRoot=%OriginalRepoRoot%
 set OutDir=%OriginalOutDir%
 
+echo Copying loc json files to the src directory
+
+PowerShell -NoProfile -ExecutionPolicy Bypass -Command "& './updateLocalizationFiles.ps1'"
+
 set PathToClientApp="%~dp0src\SharedUI.Studios\ClientApp"
 DIR
 echo %PathToClientApp%

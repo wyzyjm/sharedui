@@ -94,9 +94,19 @@ Currently, deployment is manually done from the dev machine.
 We publish the storybook artifacts to our storage account.
 We run npm publish for publishing a new npm package.
 
-## Process for publishing a package to NPM (typically DIF contributions)
-Run the command: 
-npm publish -registry https://msazure.pkgs.visualstudio.com/a531312f-ba7b-4573-ab4f-d468b740a319/_packaging/CognitiveServicesSharedComponents/npm/registry/
+## Process for publishing storybook:
+1. Run the command: 
+yarn production
+
+2. In the dist folder, right click the "storybook" folder and publish to Azure static website. 
+
+## Process for publishing a package to NPM (typically DIF contributions):
+1. Do not deploy from local, as it wont have localized files. Hence, we need to download the "dist/package" folder
+from the successful build artifacts. Once downloaded, replace the package folder in our "dist" folder.
+
+2. npm publish -registry https://msazure.pkgs.visualstudio.com/a531312f-ba7b-4573-ab4f-d468b740a319/_packaging/CognitiveServicesSharedComponents/npm/registry/
+
+3. Run `npm version patch`
 
 If the above doesnt work: This can be done from VSCode. Get the latest master branch for the repo/package you want to publish. Install all dependencies and ensure that it builds and passes all tests.
 1. `npm adduser` - add your NPM user details to the VSCode session, this should include entering 2FA.
