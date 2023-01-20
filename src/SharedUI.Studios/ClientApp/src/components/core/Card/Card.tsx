@@ -1,10 +1,19 @@
-import { useTheme, IDocumentCardStyles, DocumentCard, Link } from "@fluentui/react";
+import { useTheme, IDocumentCardStyles, DocumentCard, Link, Icon, Text, Stack } from "@fluentui/react";
+import { FontSizes } from '@fluentui/theme';
 import React from "react";
 import { CSSProperties, ReactNode } from "react";
-import { Stack, Text, } from "@fluentui/react";
 import "../core.scss";
 import { initializeComponent, useLocalization, withLocalization } from "../../../services/localization";
 
+
+export enum CardWidth {
+    CardWithIllustration = 260,
+    CardWithNoIllustration = 260,
+    CardWithIcon = 208,
+    CardWithCustomDesign = 199
+}
+
+type cardWidthNum = keyof typeof CardWidth
 export interface ICardProp {
     title: string;
     description: string;
@@ -12,7 +21,9 @@ export interface ICardProp {
     linkTitle: string;
     isCompactMode?: boolean;
     href?: string;
-    onClick?: () => void
+    onClick?: () => void,
+    cardType?: cardWidthNum,
+    iconName?: string
 };
 
 export interface IStyledDocumentCardProp {
@@ -32,6 +43,8 @@ const CardInternal = (props: ICardProp) => {
         header: {
             fontSize: 14,
             fontWeight: 600,
+            borderBottom: props.cardType === "CardWithCustomDesign" ? "2px solid #F7630C": 0,
+            paddingBottom: props.cardType === "CardWithCustomDesign" ? "5px": 0,
         },
         image: {
             textAlign: "center",
@@ -68,26 +81,67 @@ const CardInternal = (props: ICardProp) => {
     }
 
     return (
-        <StyledDocumentCard onClick={props.onClick} width={260}>
-            <Stack>
-                <Stack style={styles.image}>
-                    <Stack grow style={{ width: "100%", backgroundSize: "cover", background: `url(${props.icon})` }}>
-                    </Stack>
-                </Stack>
+      <StyledDocumentCard onClick={props.onClick} width={CardWidth[props.cardType]}>
+        {props.cardType === "CardWithIllustration" && (
+          <Stack>
+            <Stack style={styles.image}>
+              <Stack
+                grow
+                style={{
+                  width: "100%",
+                  backgroundSize: "cover",
+                  background: `url(${props.icon})`,
+                }}
+              ></Stack>
             </Stack>
-            <Stack style={styles.headerWrapper}>
-                <Text style={styles.header}>{props.title}</Text>
+          </Stack>
+        )}
+        {props.cardType === "CardWithIcon" && (
+          <Stack
+            horizontal
+            style={{
+              padding: "12px 12px 0",
+              alignItems: "center",
+            }}
+          >
+            <Stack
+              style={{
+                width: "28px",
+                height: "28px",
+                background: "#773ADC",
+                borderRadius: "4px",
+                position: "relative",
+              }}
+            >
+              <Icon
+                iconName={props.iconName || "AlignCenter"}
+                style={{
+                  color: "#FFFFFF",
+                  width: "16px",
+                  height: "16px",
+                  position: "absolute",
+                  left: "calc(50% - 14px/2)",
+                  top: "calc(50% - 22px/2)",
+                }}
+              />
             </Stack>
-            <Stack grow style={styles.descriptionWrapper}>
-                <Text style={styles.description}>{props.description}</Text>
-            </Stack>
-            <Stack style={styles.linkWrapper}>
-                <Link {...linkProps}
-                >
-                    {props.linkTitle}
-                </Link>
-            </Stack>
-        </StyledDocumentCard>
+            <Text style={{ fontSize: FontSizes.size12, paddingLeft: "8px" }}>
+              Stereo-channel audio
+            </Text>
+          </Stack>
+        )}
+        <Stack style={styles.headerWrapper}>
+          <Text style={styles.header}>{props.title}</Text>
+        </Stack>
+        <Stack grow style={styles.descriptionWrapper}>
+          <Text style={styles.description}>{props.description}</Text>
+        </Stack>
+        {["CardWithIllustration", "CardWithNoIllustration"].includes(props.cardType) && (
+          <Stack style={styles.linkWrapper}>
+            <Link {...linkProps}>{props.linkTitle}</Link>
+          </Stack>
+        )}
+      </StyledDocumentCard>
     );
 };
 
