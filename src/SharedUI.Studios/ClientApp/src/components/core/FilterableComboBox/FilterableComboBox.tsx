@@ -88,7 +88,7 @@ const FilterableComboBoxInternal = ({
   }, [initOptions]);
 
   const handleChange = (event: React.FormEvent<IComboBox>, option: IComboBoxOption, index: number, value: any) => {
-    void event, index;
+    // void event, index;
     if (!onChange) return;
 
     if (option) {

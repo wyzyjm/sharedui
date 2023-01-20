@@ -134,7 +134,7 @@ function buildColumns<T extends {}>(
         return col;
     });
 
-    columns[0].isRowHeader
+    // columns[0].isRowHeader
     if (contextualMenuProps?.contextMenuContainerColumnKey) {
         const commandButtionColumn = draftColumns?.find((x) => x.key == contextualMenuProps.contextMenuContainerColumnKey);
 

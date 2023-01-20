@@ -13,19 +13,13 @@ import { defaultTheme } from "../../../themes";
 import styled, { ThemeProvider as ReactThemeProvider } from "styled-components";
 import "./Header.scss";
 import "../core.scss";
-import { initializeComponent, useLocalization, withLocalization } from "../../../services/localization";
+import { initializeComponent, withLocalization } from "../../../services/localization";
 
 const itemAlignmentsStackStyles: IStackStyles = {
   root: {
     height: "40px",
   },
 };
-
-const ThemedHeaderButton = styled.button.attrs({})`
-  &.white {
-    background-color: ${(props) => props.theme.palette.themePrimary};
-  }
-`;
 
 export const ThemedHeaderIcon: any = styled(Icon).attrs({})`
   &.white {
@@ -34,6 +28,8 @@ export const ThemedHeaderIcon: any = styled(Icon).attrs({})`
 `;
 
 export interface IHeaderProps {
+  headerTitle: string;
+  headerHomeLink: string;
   headerText: string;
   headerLinkClickUrl: string;
   commandBarItems: ICommandBarItemProps[];
@@ -70,10 +66,10 @@ function ThemedHeaderInternal(props: IHeaderProps) {
           >
             <ThemedHeaderLink
               className="hidden_small"
-              href={"https://azure.microsoft.com/products/cognitive-services/"}
+              href={props.headerHomeLink}
               target="_blank"
             >
-              Azure Cognitive Services
+              {props.headerTitle}
             </ThemedHeaderLink>
             <Text
               className="hidden_small"
@@ -95,28 +91,12 @@ function ThemedHeaderInternal(props: IHeaderProps) {
             </Stack.Item>
             <div className="nav-right my-lg-0">
               <CommandBar
-                className="header-CommandBar show_little"
-                items={[]}
+                items={props.commandBarItems}
+                // overflowButtonAs={{className: "show_s"}}
                 overflowItems={props.commandBarItems}
-                overflowButtonProps={{ ariaLabel: "More commands" }}
+                overflowButtonProps={{ ariaLabel: "More commands", className: "show_s" }}
                 ariaLabel="Inbox actions"
               />
-              {props.commandBarItems.map((e) => (
-                <div key={e.key}>
-                  <ThemedHeaderButton
-                    aria-label={e.text}
-                    className="hidden_little right-icon nav-item "
-                    title={e.text}
-                  >
-                    <div className="header-link">
-                      <ThemedHeaderIcon
-                        iconName={e.iconProps.iconName}
-                        className="white"
-                      />
-                    </div>
-                  </ThemedHeaderButton>
-                </div>
-              ))}
             </div>
           </Stack>
         </ReactThemeProvider>

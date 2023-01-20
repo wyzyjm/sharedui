@@ -5,9 +5,10 @@ import React, { useState } from "react";
 import { FontIcon, Text, DefaultButton } from "@fluentui/react";
 import { initializeIcons } from '@fluentui/react/lib/Icons';
 import { HaTSArea as CS_Hats, HatsProps, HaTSInteraction } from '../Hats/Hats';
-initializeIcons(undefined, { disableWarnings: true });
 import { initializeComponent, useLocalization, withLocalization } from "../../../services/localization";
 import styled from "styled-components";
+
+initializeIcons(undefined, { disableWarnings: true });
 
 export interface BannerProps {
     onClose: Function;

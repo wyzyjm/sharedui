@@ -41,26 +41,35 @@ const commandBarItems = [
   {
     key: "Notifications",
     text: "Notifications",
+    ariaLabel: "Notifications",
+    iconOnly: true,
+    tooltipHostProps: { hidden: true },
     iconProps: { iconName: Icons.Ringer.iconName },
     onClick() { },
     onRenderIcon() {
       return (
-        <div className="button-item">
-          <ThemedHeaderIcon style={{ position: "absolute" }} iconName={Icons.Ringer.iconName} />
+        <>
+          <ThemedHeaderIcon iconName={Icons.Ringer.iconName} />
           <NotificationPrompt notifications={{ [notification.id]: notification }} />
           <NotificationProcessingBar notifications={{ [notification.id]: notification }} />
-        </div>
+        </>
       );
     },
   },
   {
     key: "Settings",
     text: "Settings",
+    ariaLabel: "Settings",
+    iconOnly: true,
+    tooltipHostProps: { hidden: true },
     iconProps: { iconName: Icons.Settings.iconName },
   },
   {
     key: "Help",
     text: "Help",
+    ariaLabel: "Help",
+    iconOnly: true,
+    tooltipHostProps: { hidden: true },
     iconProps: { iconName: Icons.Help.iconName },
   },
 ] as ICommandBarItemProps[];
@@ -83,6 +92,8 @@ const HeaderTemplate: ComponentStory<typeof CS_Header> = (args) => {
 export const Header = HeaderTemplate.bind({});
 
 Header.args = {
+  headerTitle: "Azure Cognitive Services",
+  headerHomeLink: "https://azure.microsoft.com/products/cognitive-services/",
   headerText: "Speech Studio",
   headerLinkClickUrl: "https://speech.microsoft.com/portal",
   commandBarItems: commandBarItems,

@@ -5,9 +5,10 @@ import { initializeIcons } from '@fluentui/react/lib/Icons';
 import { HaTSArea as CS_Hats, HatsProps } from '../Hats/Hats';
 import { INTL } from "../../../util/intlUtil";
 import { BannerLocalizationFormatMessages } from "../../../clientResources";
-initializeIcons(undefined, { disableWarnings: true });
 import { initializeComponent, useLocalization, withLocalization } from "../../../services/localization";
 import styled from "styled-components";
+
+initializeIcons(undefined, { disableWarnings: true });
 
 export interface RatingBannerProps {
     onClose: Function;
