@@ -62,7 +62,7 @@ test.describe('WizardFlow tests', () => {
 
     // Check width
     const titleWidth = await storybookPOM.getComputedStyle(wizardTitleElement, "width");
-    await expect(titleWidth).toBe("783px");
+    await expect(titleWidth).toBe("800px");
 
     // Check height
     const titleHeight = await storybookPOM.getComputedStyle(wizardTitleElement, "height");
@@ -74,7 +74,7 @@ test.describe('WizardFlow tests', () => {
     await page.locator('textarea[name="height"]').fill("10px");
     const dialogMainElement = await storybookPOM.getElementFromPreview(dialogMainClass);
     const height = await storybookPOM.getComputedStyle(dialogMainElement, "height");
-    await expect(height).toBe("244px");
+    await expect(height).toBe("276px");
 
     // Check the dialog hidden
     await page.locator('input[name="hidden"]').click();

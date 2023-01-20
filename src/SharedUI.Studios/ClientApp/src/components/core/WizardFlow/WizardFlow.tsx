@@ -1,28 +1,51 @@
-import { Dialog, IDialogProps, Text, Stack, FontIcon, StackItem, ActionButton, IIconProps, IButtonStyles, useTheme, Theme, ThemeContext } from "@fluentui/react";
+import {
+  Dialog,
+  IDialogProps,
+  Text,
+  Stack,
+  FontIcon,
+  StackItem,
+  ActionButton,
+  IIconProps,
+  IButtonStyles,
+  useTheme,
+  Theme,
+  ThemeContext,
+} from "@fluentui/react";
 import React, { FunctionComponent, ReactElement } from "react";
-import { useBoolean } from '@fluentui/react-hooks';
+import { useBoolean } from "@fluentui/react-hooks";
 import "./WizardFlow.scss";
 import "../core.scss";
 import "../common.scss";
-import { initializeComponent, useLocalization, withLocalization } from "../../../services/localization";
+import {
+  initializeComponent,
+  useLocalization,
+  withLocalization,
+} from "../../../services/localization";
 
 type ReactElementChildren = ReactElement<WizardFlowProps, FunctionComponent>;
 
-const findByType = (children: ReactElementChildren[], component: FunctionComponent): ReactElementChildren => {
+const findByType = (
+  children: ReactElementChildren[],
+  component: FunctionComponent
+): ReactElementChildren => {
   const result: ReactElementChildren[] = [];
   /* This is the array of result since Article can have multiple times the same sub-component */
   const type = [component.displayName || component.name];
   /* We can store the actual name of the component through the displayName or name property of our sub-component */
-  React.Children.forEach<ReactElementChildren>(children, (child: ReactElementChildren) => {
-    const childType = child && child.type && (child.type.displayName || child.type.name);
-    if (!result.length) {
-      if (type.includes(childType)) {
-        result.push(child);
+  React.Children.forEach<ReactElementChildren>(
+    children,
+    (child: ReactElementChildren) => {
+      const childType = child && child.type && (child.type.displayName || child.type.name);
+      if (!result.length) {
+        if (type.includes(childType)) {
+          result.push(child);
+        }
+        const childResult = findByType(child?.props?.children, component);
+        childResult && result.push(childResult);
       }
-      const childResult = findByType(child?.props?.children, component);
-      childResult && result.push(childResult);
     }
-  });
+  );
 
   /* Then we go through each React children, if one of matches the name of the sub-component we’re looking for we put it in the result array */
   return result[0];
@@ -57,7 +80,7 @@ export interface WizardFlowProps extends IDialogProps {
    * @deprecated Due to adapting to the screen environment, this attribute is obsolete, please use innerWidth
    */
   maxWidth?: number | string;
-};
+}
 
 export interface IWizardFlow extends FunctionComponent<WizardFlowProps> {
   Header: FunctionComponent;
@@ -96,6 +119,9 @@ export const WizardFlow: IWizardFlow = function (props: WizardFlowProps) {
               return iconName;
             })()}
             style={{
+              width: "16px",
+              height: "16px",
+              fontSize: "16px",
               color: (() => {
                 let color = "transparent";
                 switch (item.status) {
@@ -147,7 +173,11 @@ export const WizardFlow: IWizardFlow = function (props: WizardFlowProps) {
       }
     }
     return (
-      <Stack horizontalAlign="start" tokens={{ childrenGap: 3 }} style={{ padding: "16px", width: '100%' }}>
+      <Stack
+        horizontalAlign="start"
+        tokens={{ childrenGap: 3 }}
+        style={{ padding: "24px 20px", width: "100%", lineHeight: "20px" }}
+      >
         {menus}
       </Stack>
     );
@@ -160,15 +190,15 @@ export const WizardFlow: IWizardFlow = function (props: WizardFlowProps) {
 
   const [isMenuVisible, { toggle: toggleIsMenuVisible }] = useBoolean(false);
   const theme = useTheme();
-  const addChevronDownIcon: IIconProps = { iconName: 'ChevronDown' };
+  const addChevronDownIcon: IIconProps = { iconName: "ChevronDown" };
   const addChevronDownIconStyle: IButtonStyles = {
     root: {
-      height: 30
+      height: 30,
     },
     icon: {
       color: theme.palette.neutralPrimary,
     },
-  }
+  };
 
   return (
     <ThemeContext.Consumer>
@@ -187,7 +217,10 @@ export const WizardFlow: IWizardFlow = function (props: WizardFlowProps) {
                     width: "100%",
                   },
                   ".ms-Dialog-main": {
-                    width: "800px"
+                    width: "800px",
+                  },
+                  ".ms-Modal-scrollableContent": {
+                    overflowY: "hidden",
                   },
                 },
               },
@@ -201,6 +234,7 @@ export const WizardFlow: IWizardFlow = function (props: WizardFlowProps) {
                 styles={{
                   root: {
                     minWidth: "30%",
+                    borderRight: `1px solid ${theme.palette.neutralLight}`,
                   },
                 }}
               >
@@ -210,118 +244,119 @@ export const WizardFlow: IWizardFlow = function (props: WizardFlowProps) {
                 className="wizard-right expand_medium"
                 styles={{
                   root: {
-                    borderLeft: `1px solid ${theme.palette.neutralLight}`,
-                    flexDirection: "column",
-                    width: '70%',
+                    width: "70%",
                     height: "auto",
-                    position: 'relative',
                   },
                 }}
               >
-                {Stack && (
-                  <Stack
-                    className="wizard-right-header hidden_medium"
-                    role="heading"
-                    aria-level={2}
-                    styles={{
-                      root: {
-                        padding: "16px 16px 0",
-                        fontSize: "20px",
-                        fontWeight: "600",
-                      },
-                    }}
-                  >
-                    {HeaderComponent.props.children}
-                  </Stack>
-                )}
-                {Stack && (
-                  <Stack
-                    className="wizard-right-header hidden_medium_large"
-                    role="heading"
-                    aria-level={2}
-                    styles={{
-                      root: {
-                        padding: "16px",
-                        flexDirection: 'row',
-                        justifyContent: 'space-between',
-                        borderBottom: `1px solid ${theme.palette.neutralLight}`,
-                      },
-                    }}
-                  >
-                    <StackItem styles={{
-                      root: {
-                        fontSize: "20px",
-                        fontWeight: "600",
-                      }
-                    }}>
-                      <FontIcon iconName="CircleFill" style={{ color: theme.palette.themePrimary, fontSize: 14, paddingRight: 7, paddingTop: 6 }} />
+                <Stack style={{ maxHeight: "576px", padding: "20px", flex: 1, overflowY: "auto", wordBreak: "break-all" }}>
+                  {Stack && (
+                    <Stack
+                      className="wizard-right-header hidden_medium"
+                      role="heading"
+                      aria-level={2}
+                      styles={{
+                        root: {
+                          fontSize: "20px",
+                          fontWeight: "600",
+                          lineHeight: "28px",
+                        },
+                      }}
+                    >
                       {HeaderComponent.props.children}
-                    </StackItem>
-                    <ActionButton
-                      styles={addChevronDownIconStyle}
-                      iconProps={addChevronDownIcon}
-                      onClick={toggleIsMenuVisible}
-                      ariaLabel="Show model creation steps" />
-                  </Stack>
-                )}
-                {isMenuVisible && (
-                  <Stack
-                    className="hidden_medium_large"
-                    styles={{
-                      root: {
-                        position: "absolute",
-                        top: 63,
-                        background: 'white',
-                        width: '100%',
-                        zIndex: 1,
-                        boxShadow: "0 3px 5px 0 rgba(0, 0, 0, 0.3)",
-                      },
-                    }}
-                  >
-                    {generateLeftMenu(theme)}
-                  </Stack>
-                )}
-                {SubheaderComponent && (
-                  <Stack
-                    className="wizard-right-header"
-                    styles={{
-                      root: {
-                        padding: "16px 16px 0",
-                        fontSize: "14px",
-                        fontWeight: "400",
-                      },
-                    }}
-                  >
-                    {SubheaderComponent.props.children}
-                  </Stack>
-                )}
-                {ContentComponent && (
-                  <Stack
-                    className="wizard-right-content"
-                    styles={{
-                      root: {
-                        padding: "10px 32px 16px 16px",
-                        flex: "1",
-                        overflow: "hidden",
-                      },
-                    }}
-                  >
-                    {ContentComponent.props.children}
-                  </Stack>
-                )}
+                    </Stack>
+                  )}
+                  {Stack && (
+                    <Stack
+                      className="wizard-right-header hidden_medium_large"
+                      role="heading"
+                      aria-level={2}
+                      styles={{
+                        root: {
+                          padding: "16px",
+                          flexDirection: "row",
+                          justifyContent: "space-between",
+                          borderBottom: `1px solid ${theme.palette.neutralLight}`,
+                        },
+                      }}
+                    >
+                      <StackItem
+                        styles={{
+                          root: {
+                            fontSize: "20px",
+                            fontWeight: "600",
+                          },
+                        }}
+                      >
+                        {/* <FontIcon iconName="CircleFill" style={{ color: theme.palette.themePrimary, fontSize: 16, paddingRight: 7, paddingTop: 6 }} /> */}
+                        {HeaderComponent.props.children}
+                      </StackItem>
+                      <ActionButton
+                        styles={addChevronDownIconStyle}
+                        iconProps={addChevronDownIcon}
+                        onClick={toggleIsMenuVisible}
+                        ariaLabel="Show steps"
+                      />
+                    </Stack>
+                  )}
+                  {isMenuVisible && (
+                    <Stack
+                      className="hidden_medium_large"
+                      styles={{
+                        root: {
+                          position: "absolute",
+                          top: 63,
+                          background: "white",
+                          width: "100%",
+                          zIndex: 1,
+                          boxShadow: "0 3px 5px 0 rgba(0, 0, 0, 0.3)",
+                        },
+                      }}
+                    >
+                      {generateLeftMenu(theme)}
+                    </Stack>
+                  )}
+                  {SubheaderComponent && (
+                    <Stack
+                      className="wizard-right-header"
+                      styles={{
+                        root: {
+                          fontSize: "14px",
+                          fontWeight: "400",
+                        },
+                      }}
+                    >
+                      {SubheaderComponent.props.children}
+                    </Stack>
+                  )}
+                  {ContentComponent && (
+                    <Stack
+                      className="wizard-right-content"
+                      styles={{
+                        root: {
+                          flex: "1",
+                          overflowY: "auto",
+                          maxHeight: "597px",
+                        },
+                      }}
+                    >
+                      {ContentComponent.props.children}
+                    </Stack>
+                  )}
+                </Stack>
                 {FooterComponent && (
                   <Stack
                     className="wizard-right-footer"
+                    horizontal
                     styles={{
                       root: {
                         borderTop: `1px solid ${theme.palette.neutralLight}`,
-                        padding: "16px 16px",
                         overflow: "hidden",
-                        display: 'flex',
-                        justifyContent: 'flex-end'
+                        height: "64px",
+                        justifyContent: "space-between",
+                        padding: "16px 24px"
                       },
                     }}
-                    verticalAlign="center"
                   >
                     {FooterComponent.props.children}
                   </Stack>
