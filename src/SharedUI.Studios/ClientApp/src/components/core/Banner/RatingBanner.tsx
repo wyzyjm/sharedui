@@ -18,42 +18,9 @@ export interface RatingBannerProps {
 };
 
 const StyledMessageBar = styled(MessageBar)`
-    position: absolute;
-    left: 0px;
-    right: 0px;
-    top: 40px;
-
-    @media only screen and (max-width: 1116px) {
-        height: 69px;
-        top: 40px;
-    }
-
-    @media only screen and (max-width: 904px) {
-        height: 79px;
-        top: 40px;
-    }
-
-    @media only screen and (max-width: 680px) {
-        height: 144px;
-        right: -3px;
-        top: 40px;
-    }
-
-    @media only screen and (max-width: 480px) {
-        position: absolute;
-        height: 150px;
-        top: 40px;
-    }
-
-    @media only screen and (max-width: 390px) {
-        height: 154px;
-        top: 40px;
-    }
-
-    @media only screen and (max-width: 320px) {
-        height: 420px;
-        top: 40px;
-    }
+    position: relative;
+    height: 100%;
+    width: 100%;
 `;
 
 const StyledRatingBannerDiv = styled.div`
@@ -69,7 +36,7 @@ const StyledRatingBannerDiv = styled.div`
           font-weight: 400;
           padding-left: 5px;
 
-          @media only screen and (max-width: 390px) {
+          @media all and (max-width: 390px) {
             margin-left: 2px;
             margin-right: 5px;
           }
@@ -79,40 +46,21 @@ const StyledRatingBannerDiv = styled.div`
     .studio-banner-left {
         height: 100%;
         display: flex;
+        flex-wrap: wrap;
         overflow: hidden;
         width: 100%;
-
-        @media only screen and (max-width: 680px) {
-            flex-direction: column;
-        }
-
-        @media only screen and (max-width: 390px) {
-            flex-direction: column;
-            margin-left: -30px;
-            width: calc(100% + 15px);
-        }
     
         .studio-banner-content {
           margin: 0 8px;
           cursor: 'pointer';
           font-size: 12px;
           vertical-align: top;
+          min-width: 200px;
+          width: 45%;
 
-          @media only screen and (max-width: 1116px) {
-            width: 45%;
-          }
-
-          @media only screen and (max-width: 904px) {
-            width: 25%;
-          }
-
-          @media only screen and (max-width: 680px) {
-            width: calc(100% - 32px);
-          }
-
-          @media only screen and (max-width: 390px) {
-            width: calc(100% - 32px);
-            margin-left: 28px;
+          @media all and (max-width: 950px) { 
+            width: 100%;
+            padding-right: 32px;
           }
         }
       }
@@ -121,63 +69,48 @@ const StyledRatingBannerDiv = styled.div`
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
-        
-        @media only screen and (max-width: 680px) {
-            margin-top: 20px;
-        }
+        min-width: 450px;
+
+        @media all and (max-width: 950px) { 
+            width: 100%;
+            margin-top: 10px;
+            min-width: initial;
+          }
     
         .negative {
-          margin-right: 10px;
-          margin-left: 20px;
+          padding-right: 10px;
+          padding-left: 10px;
 
-          @media only screen and (max-width: 1116px) {
-            margin-right: 10px;
-            margin-left: 0px;
-          }
-
-          @media only screen and (max-width: 904px) {
-            margin-right: 10px;
-            margin-left: 0px;
-          }
-
-          @media only screen and (max-width: 680px) {
-            margin-left: 8px;
-          }
-
-          @media only screen and (max-width: 390px) {
-            margin-left: 4px;
-            margin-top: -5px;
+          @media all and (max-width: 390px) {
             align-items: left;
+            padding-left: 5px;
           }
         }
     
         .positive {
-          margin-left: 12px;
+          padding-left: 10px;
 
-          @media only screen and (max-width: 680px) {
+          @media all and (max-width: 680px) {
             margin-left: -90px;
           }
 
-          @media only screen and (max-width: 390px) {
+          @media all and (max-width: 390px) {
             margin-right: 0px;
-            margin-top: -16px;
-          }
-
-          @media only screen and (max-width: 320px) {
+            margin-top: -5px;
             margin-left: 0px;
-            margin-top: -4px;
+            padding-left: 5px;
           }
         }
     
         .ratings {
           margin-top: -5px;
 
-          @media only screen and (max-width: 680px) {
+          @media all and (max-width: 680px) {
             margin-left: -60px;
             margin-top: 20px;
           }
 
-          @media only screen and (max-width: 390px) {
+          @media all and (max-width: 390px) {
             margin-left: 0px;
             margin-top: 0px;
           }
@@ -192,7 +125,7 @@ const StyledRatingBannerDiv = styled.div`
         top: 0px;
         font-family: 'Fabric MDL2 Assets';
         font-style: normal;
-        margin-right: -5px;
+        padding-left: 9px;
         font-weight: 400;
         font-size: 10px;
         line-height: 100%;
@@ -206,7 +139,7 @@ const StyledRatingBannerDiv = styled.div`
 
 const StyledChoiceGroup = styled(ChoiceGroup)`
     .ms-ChoiceField {
-        @media only screen and (max-width: 390px) {
+        @media all and (max-width: 390px) {
             display: inline-block;
             font-family: 'Segoe UI';
             font-style: normal;
