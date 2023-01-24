@@ -11,8 +11,6 @@ import {
 } from "@fluentui/react";
 import { defaultTheme } from "../../../themes";
 import styled, { ThemeProvider as ReactThemeProvider } from "styled-components";
-import "./Header.scss";
-import "../core.scss";
 import { initializeComponent, withLocalization } from "../../../services/localization";
 
 const itemAlignmentsStackStyles: IStackStyles = {
@@ -35,6 +33,223 @@ export interface IHeaderProps {
   commandBarItems: ICommandBarItemProps[];
 };
 
+const StyledDiv = styled.div`
+    .header-o89jbf53v3 {
+      width: 100%;
+
+      .navbar {
+          padding: 0;
+          display: flex;
+          width: 100%;
+          height: 40px;
+      }
+
+      .nav-left {
+          margin-left: 1rem;
+          display: inline-flex;
+          flex-direction: row;
+      }
+
+      .nav-right {
+          display: inline-flex;
+          flex-direction: row;
+          position: relative;
+          float: right;
+      }
+
+      .spliter {
+          padding-left: 0.8125rem;
+          padding-right: 0.8125rem;
+          font-size: 100%;
+      }
+
+      .header-link {
+          line-height: normal;
+          letter-spacing: -0.17px;
+
+          span {
+              font-size: 18px;
+              vertical-align: middle;
+          }
+
+          i {
+              line-height: 1.5;
+
+              &.black-icon {
+                  font-weight: 600;
+              }
+          }
+      }
+
+      .right-icon {
+          display: -webkit-flex;
+          display: flex;
+          height: 40px;
+          width: 3rem;
+          -webkit-flex: 0 0 auto;
+          flex: 0 0 auto;
+          -webkit-align-items: center;
+          align-items: center;
+          -webkit-justify-content: center;
+          justify-content: center;
+          cursor: pointer;
+          background: none;
+          border: none;
+      }
+
+      .navbar-text {
+          padding-right: 1rem;
+      }
+    }
+
+    .header-link.notification {
+      position: absolute;
+    }
+
+    .ms-CommandBar {
+      padding: 0;
+      height: 40px;
+
+      .ms-ContextualMenu-link {
+          position: relative;
+      }
+
+      .ms-Button--commandBar {
+          width: 40px;
+          position: relative;
+      }
+
+      .notification-prompt {
+          position: absolute;
+          top: 8px;
+          left: 24px;
+      }
+    }
+
+    .ms-ContextualMenu {
+
+      .ms-ContextualMenu-linkContent {
+          i {
+              margin: 0 4px;
+              width: 16px !important;
+              font-size: 16px !important;
+          }
+
+          .notification-prompt {
+              top: 4px;
+              left: 16px;
+              overflow: hidden;
+              text-align: center;
+              line-height: 16px !important;
+          }
+      }
+
+
+      .notification-prompt,
+      .notification-progressing-bar {
+          position: absolute;
+      }
+
+      .notification-progressing-bar {
+          top: 25px;
+          width: 22px;
+      }
+
+    }
+
+    /** Mobile support start **/
+
+    .show_s {
+      display: none !important;
+    }
+
+    // 1200px
+    @media (max-width: 1200px) {
+
+      .container-inside-content,
+      .container-inside-header {
+          padding: 0 10px !important;
+      }
+    }
+
+    // 1023px
+    @media (max-width: 1023px) {
+      .ms-OverflowSet-item {
+          display: none !important;
+      }
+
+      .show_s {
+          display: block !important;
+      }
+    }
+
+    // 600px
+    @media (max-width: 600px) {
+      .hidden_little {
+          display: none !important;
+      }
+    }
+
+    // 600px
+    @media (max-width: 600px) {
+      .show_little {
+          display: block !important;
+      }
+    }
+
+    // 500px
+    @media (max-width: 500px) {
+      .hidden_small {
+          display: none !important;
+      }
+    }
+
+    // main
+    .container-content {
+      overflow-y: auto;
+      overflow-x: hidden;
+      flex: 1;
+    }
+
+    // wrapped
+    .container-inside-wrap {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+    }
+
+    .container-inside-header {
+      max-width: 1200px;
+      margin: 0 auto;
+      width: 100%;
+    }
+
+    // body
+    .container-inside-content {
+      overflow-y: overlay;
+      flex: 1;
+    }
+
+    // content-body
+    .container-inside-content--body {
+      max-width: 1200px;
+      margin: 0 auto;
+      position: relative;
+    }
+
+    button.ms-Link {
+      &:focus {
+          outline: none;
+      }
+    }
+
+    a {
+      &:focus {
+          text-decoration: underline;
+      }
+    }
+`;
+
 function ThemedHeaderInternal(props: IHeaderProps) {
   const itemAlignmentsStackTokens: IStackTokens = {
     padding: "0 0 0 10px",
@@ -55,7 +270,7 @@ function ThemedHeaderInternal(props: IHeaderProps) {
   `;
 
   return (
-    <div className="header-o89jbf53v3">
+    <StyledDiv className="header-o89jbf53v3">
       <ThemeProvider theme={defaultTheme.header}>
         <ReactThemeProvider theme={defaultTheme.header}>
           <Stack
@@ -101,7 +316,7 @@ function ThemedHeaderInternal(props: IHeaderProps) {
           </Stack>
         </ReactThemeProvider>
       </ThemeProvider>
-    </div>
+    </StyledDiv>
   );
 }
 
