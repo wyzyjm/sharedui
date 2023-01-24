@@ -58,7 +58,7 @@ const StyledRatingBannerDiv = styled.div`
           min-width: 200px;
           width: 45%;
 
-          @media all and (max-width: 950px) { 
+          @media all and (max-width: 965px) { 
             width: 100%;
             padding-right: 32px;
           }
@@ -71,7 +71,7 @@ const StyledRatingBannerDiv = styled.div`
         flex-wrap: wrap;
         min-width: 450px;
 
-        @media all and (max-width: 950px) { 
+        @media all and (max-width: 965px) { 
             width: 100%;
             margin-top: 10px;
             min-width: initial;
