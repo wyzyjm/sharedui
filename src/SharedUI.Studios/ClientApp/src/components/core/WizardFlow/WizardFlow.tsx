@@ -14,14 +14,12 @@ import {
 } from "@fluentui/react";
 import React, { FunctionComponent, ReactElement } from "react";
 import { useBoolean } from "@fluentui/react-hooks";
-import "./WizardFlow.scss";
-import "../core.scss";
-import "../common.scss";
 import {
   initializeComponent,
   useLocalization,
   withLocalization,
 } from "../../../services/localization";
+import styled from "styled-components";
 
 type ReactElementChildren = ReactElement<WizardFlowProps, FunctionComponent>;
 
@@ -94,6 +92,24 @@ export enum IWizardFlowStatus {
   Doing = 1,
   Undo = 2,
 }
+
+const StyledStack = styled(Stack)`
+  @media (max-width: 768px) {
+    .hidden_medium {
+        display: none !important;
+    }
+
+    .expand_medium {
+        width: 100%;
+    }
+  }
+
+  @media (min-width: 768px) {
+    .hidden_medium_large {
+        display: none !important;
+    }
+  }
+`;
 
 export const WizardFlow: IWizardFlow = function (props: WizardFlowProps) {
   const generateLeftMenu = function (theme: Theme) {
@@ -228,7 +244,7 @@ export const WizardFlow: IWizardFlow = function (props: WizardFlowProps) {
             {...props}
             maxWidth={"800px"}
           >
-            <Stack horizontal styles={{ root: { minHeight: props.height } }}>
+            <StyledStack horizontal styles={{ root: { minHeight: props.height } }}>
               <Stack
                 className="wizard-left hidden_medium"
                 styles={{
@@ -362,7 +378,7 @@ export const WizardFlow: IWizardFlow = function (props: WizardFlowProps) {
                   </Stack>
                 )}
               </Stack>
-            </Stack>
+            </StyledStack>
           </Dialog>
         );
       }}
