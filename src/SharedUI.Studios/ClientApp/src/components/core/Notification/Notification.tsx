@@ -4,12 +4,11 @@ import {
 } from "@fluentui/react";
 import { values, sortBy } from "lodash";
 import React, { useEffect, useRef, useState } from "react";
-import "./Notification.scss";
-import "../core.scss";
 import { StatusIcons } from "../themed-icons";
 import { INTL } from "../../../util/intlUtil";
 import { NotificationLocalizationFormatMessages } from "../../../clientResources";
 import { initializeComponent, useLocalization, withLocalization } from "../../../services/localization";
+import styled from "styled-components";
 
 export enum ClientNotificationDomain {
   Subscription = "Subscription",
@@ -116,6 +115,45 @@ function sortedNotifications(notifications: ClientNotification[]): ClientNotific
     .map((i) => i[2]);
 }
 
+const StyledPrimarySpan = styled.span`
+    a {
+      margin-right: 0.75rem;
+      margin-top: 1rem;
+      text-align: center;
+      height: 1.75rem;
+      line-height: 1.75rem;
+      display: inline-block;
+      padding-left: 1rem;
+      padding-right: 1rem;
+    }
+
+    a:hover {
+      text-decoration: none;
+    }
+`;
+
+const StyledSecondarySpan = styled.span`
+a {
+  margin-right: 0.75rem;
+  margin-top: 1rem;
+  text-align: center;
+  height: 1.75rem;
+  line-height: 1.75rem;
+  display: inline-block;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  border: 1px solid #086bca;
+  color: #086bca;
+}
+
+a:hover {
+  text-decoration: none;
+  color: #065299;
+  background-color: rgba(8, 107, 202, 0.05);
+}
+`;
+
+
 export function getNotificationMessage(
   content: string | JSX.Element,
   buttonPrimaryUrl?: string,
@@ -138,27 +176,27 @@ export function getNotificationMessage(
       <div className="notification-message-text">{content}</div>
       {primaryShow &&
         (primaryShowAsLink ? (
-          <span className="notification-message-button-primary">
+          <StyledPrimarySpan className="notification-message-button-primary">
             <PrimaryButton style={notificationLinkStyles}>
               {buttonPrimaryContent}
             </PrimaryButton>
-          </span>
+          </StyledPrimarySpan>
         ) : (
-          <span className="notification-message-button-primary">
+          <StyledPrimarySpan className="notification-message-button-primary">
             <FabricLink href={buttonPrimaryUrl}>{buttonPrimaryContent}</FabricLink>
-          </span>
+          </StyledPrimarySpan>
         ))}
       {secondaryShow &&
         (secondaryShowAsLink ? (
-          <span className="notification-message-button-secondary">
+          <StyledSecondarySpan className="notification-message-button-secondary">
             <PrimaryButton style={notificationLinkStyles}>
               {buttonSecondaryContent}
             </PrimaryButton>
-          </span>
+          </StyledSecondarySpan>
         ) : (
-          <span className="notification-message-button-secondary">
+          <StyledSecondarySpan className="notification-message-button-secondary">
             <FabricLink href={buttonSecondaryUrl}>{buttonSecondaryContent}</FabricLink>
-          </span>
+          </StyledSecondarySpan>
         ))}
     </div>
   );
@@ -189,12 +227,18 @@ export function NotificationStatusIcon(props: { status: ClientNotificationStatus
   }
 }
 
+const StyledProgressingBarDiv = styled.div`
+    width: 3rem;
+    position: absolute;
+    bottom: 0.15rem;
+`;
+
 export function NotificationProcessingBar(props: NotificationProcessingBarProp): JSX.Element {
   const processingItems: ClientNotification[] = values(props.notifications).filter(
     (p) => p.status === ClientNotificationStatus.Processing
   );
   return (
-    <div className="notification-progressing-bar">
+    <StyledProgressingBarDiv className="notification-progressing-bar">
       {processingItems.length > 0 && (
         // Label and description can fix the Accessibility bug, but it will affect the appearance
         <ProgressIndicator
@@ -210,7 +254,7 @@ export function NotificationProcessingBar(props: NotificationProcessingBarProp):
           description="Notification"
         />
       )}
-    </div>
+    </StyledProgressingBarDiv>
   );
 }
 
@@ -219,15 +263,36 @@ export interface NotificationPromptProp {
   lastViewedAt?: Date;
 }
 
+const StyledNotificationPromptDiv = styled.div`
+    width: 16px;
+    height: 16px;
+    font-size: 10px;
+    right: -0.5rem;
+    bottom: 0.5rem;
+    color: #ffffff;
+    background-color: #e1121a;
+    border-bottom-left-radius: 16px;
+    border-bottom-right-radius: 16px;
+    border-top-left-radius: 16px;
+    fill: rgb(0, 0, 0);
+    border-top-right-radius: 16px;
+    position: relative;
+
+    span {
+      top: 0rem;
+      right: 0.3rem;
+    }
+`;
+
 export function NotificationPrompt(props: NotificationPromptProp): JSX.Element {
   const items: ClientNotification[] = props.lastViewedAt
     ? values(props.notifications).filter((p) => p.updatedAt > props.lastViewedAt && !p.silent)
     : values(props.notifications).filter((p) => !p.silent);
   return (
     items.length > 0 && (
-      <div className="notification-prompt">
+      <StyledNotificationPromptDiv className="notification-prompt">
         <span>{items.length >= 100 ? "99+" : items.length}</span>
-      </div>
+      </StyledNotificationPromptDiv>
     )
   );
 }
@@ -240,6 +305,105 @@ export interface INotificationPanelProps {
   onClose: () => void;
 }
 
+const StyledPanel = styled(Panel)`
+    .error {
+      color: #c20008 !important;
+    }
+
+    .notification-dismiss-all {
+      background-color: transparent;
+      margin-left: 1rem;
+      padding: 0;
+      color: #086bca;
+      width: auto;
+      outline: none;
+
+      &:focus,
+      &:hover {
+        color: #086bca;
+        background-color: transparent;
+        text-decoration: none;
+      }
+    }
+
+    h3 {
+      font-size: 1.125rem;
+      padding: 0.875rem 1.5rem 0.125rem 1.5rem;
+      margin: 0;
+    }
+
+    .close-btn {
+      float: right;
+      font-size: 1.5rem;
+      padding: 0.25rem 1rem;
+      padding-bottom: 0;
+      cursor: pointer;
+    }
+
+    > ul {
+      list-style-type: none;
+      margin: 0 1.5rem 1.5rem 1.5rem;
+      padding: 0;
+
+      > li {
+        border-bottom: 1px solid rgba(112, 112, 112, 0.13);
+        padding: 0.5rem 0 0 0;
+
+        > h4 {
+          font-size: 0.875rem;
+          padding: 0.875rem 1.5rem;
+          padding-bottom: 0.5rem;
+          margin: 0;
+          color: #086bca;
+        }
+
+        > .message-text {
+          font-size: 0.875rem;
+          word-wrap: break-word;
+          padding: 0.5rem 0 0 0;
+        }
+
+        > .message-footer {
+          display: flex;
+          justify-content: space-between;
+          padding: 1rem 0 1rem 0rem;
+          font-size: 0.875rem;
+          text-align: right;
+          color: #707070;
+        }
+      }
+    }
+`;
+
+const StyledNotificationTitleDiv = styled.div`
+    display: flex;
+    justify-content: space-between;
+
+    .notification-title-text {
+      font-weight: bold;
+      margin-left: 6px;
+    }
+
+    .svg-rotate360 {
+      @keyframes ImageRotation {
+        100% {
+          -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
+        }
+      }
+
+      svg {
+        -webkit-animation: ImageRotation 1.45s infinite linear;
+        animation: ImageRotation 1.45s infinite linear;
+      }
+    }
+`;
+
+const StyledMessageTextDiv = styled.div`
+    font-size: 0.875rem;
+    word-wrap: break-word;
+`;
+
 function NotificationPanelInternal(props: INotificationPanelProps): JSX.Element {
   const sortedItems = sortedNotifications(values(props.notifications));
   const { onClose, headerText, isOpen } = props;
@@ -249,7 +413,7 @@ function NotificationPanelInternal(props: INotificationPanelProps): JSX.Element 
     onClose?.();
   }
   return (
-    <Panel
+    <StyledPanel
       className="notification-582m3vdw73"
       role="dialog"
       aria-labelledby="Notifications"
@@ -274,7 +438,7 @@ function NotificationPanelInternal(props: INotificationPanelProps): JSX.Element 
           <Stack.Item key={item.id}>
             <Stack tokens={{ childrenGap: 8 }}>
               <Stack horizontal tokens={{ childrenGap: 5 }} style={{ alignItems: "center" }}>
-                <div className="notification-title">
+                <StyledNotificationTitleDiv className="notification-title">
                   <Stack horizontal>
                     <NotificationStatusIcon status={item.status} />
                     {/* Highlight heading property for title in accordance to MAS 2.4.6 */}
@@ -282,7 +446,7 @@ function NotificationPanelInternal(props: INotificationPanelProps): JSX.Element 
                       {typeof item.title == "function" ? item.title() : item.title}
                     </Stack>
                   </Stack>
-                </div>
+                </StyledNotificationTitleDiv>
                 <Stack.Item grow={1}>
                   <span />
                 </Stack.Item>
@@ -293,11 +457,11 @@ function NotificationPanelInternal(props: INotificationPanelProps): JSX.Element 
                   </div>
                 )}
               </Stack>
-              <div className="message-text">
+              <StyledMessageTextDiv className="message-text">
                 <div style={{ overflowWrap: "break-word" }}>
                   {typeof item.message == "function" ? item.message() : item.message}
                 </div>
-              </div>
+              </StyledMessageTextDiv>
               <Stack horizontal>
                 {item.domain ? getDomainDisplayName(item.domain) : ""}
                 <Stack.Item grow={1}>
@@ -313,13 +477,42 @@ function NotificationPanelInternal(props: INotificationPanelProps): JSX.Element 
           </Stack.Item>
         ))}
       </Stack>
-    </Panel>
+    </StyledPanel>
   );
 }
 
 interface NotificationBoxProp {
   notification: ClientNotification;
-}
+};
+
+const StyledNotificationBoxDiv = styled.div`
+    width: 30rem;
+    max-width: calc(100vw - 28px);
+    background-color: #ffffff;
+    box-shadow: -1px 1px 12px rgba(0, 0, 0, 0.15);
+    margin: 14px;
+
+    .close-btn {
+      float: right;
+      font-size: 1.5rem;
+      padding: 0.75rem 1.5rem;
+      padding-bottom: 0;
+      cursor: pointer;
+    }
+
+    .error {
+      color: #c20008 !important;
+    }
+
+    .message-text {
+      font-size: 0.875rem;
+      word-wrap: break-word;
+    }
+
+    .message-box {
+      padding: 0.5rem 0.5rem 1rem 1rem;
+    }
+`;
 
 function NotificationBox(props: NotificationBoxProp): JSX.Element {
   const [item, setItem] = useState(props.notification);
@@ -349,9 +542,9 @@ function NotificationBox(props: NotificationBoxProp): JSX.Element {
   return (
     <div>
       {item && visible && (
-        <div className="notification-box-rim6bq6x2v">
+        <StyledNotificationBoxDiv className="notification-box-rim6bq6x2v">
           <div className="message-box">
-            <div className="notification-title">
+            <StyledNotificationTitleDiv className="notification-title">
               <Stack>
                 <Stack horizontal>
                   <NotificationStatusIcon status={item.status} />
@@ -364,14 +557,14 @@ function NotificationBox(props: NotificationBoxProp): JSX.Element {
               <div className="close-button" ref={closeButtonWaprredRef}>
                 <CloseButton onClick={() => setVisible(false)} />
               </div>
-            </div>
+            </StyledNotificationTitleDiv>
             <div className="message-text">
               <div style={{ overflowWrap: "break-word" }}>
                 {typeof item.message == "function" ? item.message() : item.message}
               </div>
             </div>
           </div>
-        </div>
+        </StyledNotificationBoxDiv>
       )}
     </div>
   );
@@ -380,6 +573,16 @@ function NotificationBox(props: NotificationBoxProp): JSX.Element {
 export interface NotificationBoxListProp {
   notifications: ClientNotifications;
 }
+
+const StyledNotificationBoxListDiv = styled.div`
+    position: absolute;
+    max-width: 100vw;
+    max-height: calc(100vh - 40px);
+    overflow: auto;
+    right: 0px;
+    top: 40px;
+    z-index: 1000001;
+`;
 
 export function NotificationBoxListWrapped(props: NotificationBoxListProp): JSX.Element {
   // for the overlay layer, earlier items stay on top so that they may pop away
@@ -390,11 +593,11 @@ export function NotificationBoxListWrapped(props: NotificationBoxListProp): JSX.
   );
 
   return (
-    <div className="notification-box-list-7ryh4xl7v9" aria-live="assertive" role="alert">
+    <StyledNotificationBoxListDiv className="notification-box-list-7ryh4xl7v9" aria-live="assertive" role="alert">
       {sortedItems.map((item) => {
         return <NotificationBox key={item.id} notification={item} />;
       })}
-    </div>
+    </StyledNotificationBoxListDiv>
   );
 }
 
