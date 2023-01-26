@@ -182,12 +182,11 @@ const RatingBannerInternal = (props: RatingBannerProps) => {
                             dismissButtonAriaLabel="Close"
                         >
                             <div className="studio-banner-left">
-                                <Text
+                                <div
                                     className="studio-banner-content"
-                                    tabIndex={0}
                                 >
                                     {props.headerText}
-                                </Text>
+                                </div>
                                 <div className="studio-ratings">
                                     <div className="negative">
                                         {INTL.formatMessage(BannerLocalizationFormatMessages.NotAtAll)}
