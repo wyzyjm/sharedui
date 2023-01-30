@@ -34,7 +34,7 @@ const StyledRatingBannerDiv = styled.div`
     .rating-number-label:not(:last-child) {
         .ms-Label {
           font-weight: 400;
-          padding-left: 5px;
+          padding-left: 7px;
 
           @media all and (max-width: 390px) {
             margin-left: 2px;
@@ -148,6 +148,7 @@ const StyledChoiceGroup = styled(ChoiceGroup)`
             line-height: 20px;
             text-align: center;
             margin-right: .7px;
+            padding-left: 2px
         }
     }
 `;
