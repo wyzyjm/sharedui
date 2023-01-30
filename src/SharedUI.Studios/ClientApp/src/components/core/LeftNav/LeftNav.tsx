@@ -140,6 +140,7 @@ const FabricNav: React.FunctionComponent<ILeftNavProps> = (props) => {
 
   return (
     <Nav
+      role="presentation"
       onLinkClick={() => props.onLinkClick()}
       {...props}
       onRenderGroupHeader={
@@ -159,7 +160,7 @@ const MenuPage: React.FunctionComponent<ILeftNavProps> = (
   const theme = useTheme();
   return (
     <div style={menuPageContainerStyles}>
-      <div style={getNavContainerStyles(leftWidth, theme, expanded)}>
+      <div style={getNavContainerStyles(leftWidth, theme, expanded)} role="navigation" aria-label="Navigation menu">
         <div style={{ textAlign: "right", marginBottom: "10px" }}>
           <IconButton
             styles={expansionToggleButtonStyles}
