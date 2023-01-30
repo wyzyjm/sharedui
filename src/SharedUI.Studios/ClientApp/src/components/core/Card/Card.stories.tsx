@@ -27,6 +27,9 @@ card.args = {
     icon: new URL('https://vision.cognitive.azure.com/dist/static/media/generic-image-tagging-illustration.e3c81ac9.svg'),
     description: "Use an AI model to automatically assign one or more labels to an image.",
     linkTitle: "Try it out",
+    linkProps: {
+        href: "https://aka.ms/csstudio"
+    },
     cardType: "CardWithIllustration",
     iconName: "AlignCenter"
 } as ICardProp;

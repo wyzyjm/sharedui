@@ -8,7 +8,7 @@ import { SharedComponentsContext } from '../SharedComponentsContext';
 
 const navLinkGroups: INavLinkGroup[] = [
   {
-    name: "rerewre",
+    name: "Speech project",
     groupData: "",
     links: [
       {
@@ -64,10 +64,11 @@ LeftNav.args = {
   navItems: navLinkGroups,
   defaultMenuSelectKey: "",
   title: "Custom Speech",
-  titleLink:
-    "https://speech.microsoft.com/portal/aa1c5d8161814be7bbd5e0ffd21e5dac/customspeech",
-  onClick: () => {
-    console.log("onClick method called");
+  titleLink: {
+    href: "https://speech.microsoft.com/portal/aa1c5d8161814be7bbd5e0ffd21e5dac/customspeech",
+    onClick: () => {
+      console.log("onClick method called");
+    }
   },
   onLinkClick: () => {
     console.log("onLinkClick method called");

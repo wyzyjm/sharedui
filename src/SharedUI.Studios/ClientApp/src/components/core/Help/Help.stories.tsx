@@ -3,6 +3,7 @@ import { ComponentStory, ComponentMeta } from "@storybook/react";
 import {
     IHelpAreaProps,
     HelpArea as CS_HelpArea,
+    LinkPropsExt,
 } from "./Help";
 import { ILinkProps, ThemeProvider } from "@fluentui/react";
 import { defaultTheme } from "../../../themes";
@@ -24,10 +25,10 @@ const HelpTemplate: ComponentStory<typeof CS_HelpArea> = (args) => {
 }
 
 const HelpBody = () => {
-    return <div><h5>Help Body</h5></div>
+    return <div><p>Help Body</p></div>
 }
 
-const helpItems: ILinkProps[] = [{
+const helpItems: LinkPropsExt[] = [{
     displayText: 'Custom speech document',
     href: 'https://go.microsoft.com/fwlink/?linkid=2085429'
 },
@@ -44,7 +45,7 @@ const helpItems: ILinkProps[] = [{
     href: 'https://go.microsoft.com/fwlink/?linkid=2162894',
 }]
 
-const footerItems: ILinkProps[] = [{
+const footerItems: LinkPropsExt[] = [{
     displayText: "Privacy & cookies",
     href: 'https://go.microsoft.com/fwlink/?linkid=521839'
 },

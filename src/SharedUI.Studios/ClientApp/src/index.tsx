@@ -17,7 +17,7 @@ export type { ILeftNavProps } from "./components/core/LeftNav/LeftNav";
 export { NotificationPanel, getNotificationMessage, NotificationProcessingBar, NotificationPrompt, NotificationBoxListWrapped } from "./components/core/Notification/Notification";
 export type { INotificationPanelProps, NotificationProcessingBarProp, NotificationPromptProp, NotificationBoxListProp } from "./components/core/Notification/Notification";
 export { HelpArea } from "./components/core/Help/Help";
-export type { IHelpAreaProps } from "./components/core/Help/Help";
+export type { IHelpAreaProps, LinkPropsExt } from "./components/core/Help/Help";
 export { FilterableComboBox } from "./components/core/FilterableComboBox/FilterableComboBox";
 export type { IFilterableComboBoxOption, IFilterableComboBoxProps } from "./components/core/FilterableComboBox/FilterableComboBox";
 export { WizardFlow } from "./components/core/WizardFlow/WizardFlow";

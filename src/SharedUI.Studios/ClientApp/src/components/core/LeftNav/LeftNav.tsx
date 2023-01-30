@@ -12,6 +12,8 @@ import {
   IRenderGroupHeaderProps,
   INavStyles,
   Link,
+  ILinkProps,
+  INavProps,
 } from "@fluentui/react";
 import { CSSProperties, useState } from "react";
 import { Icons } from "../Icons";
@@ -80,18 +82,16 @@ function useBoolean(
 
 export interface ILeftNavProps {
   title?: string | JSX.Element;
-  titleLink?: string;
+  titleLink?: ILinkProps;
   navItems: INavLinkGroup[];
   onRenderGroupHeader?: IRenderFunction<IRenderGroupHeaderProps>;
-  styles: Object;
-  groups: INavLinkGroup[];
-  onClick?: () => void;
+  styles?: Object;
   onLinkClick?: () => void;
   selectedKey?: string;
   defaultMenuSelectKey?: string;
 };
 
-const FabricNav: React.FunctionComponent<ILeftNavProps> = (props) => {
+const FabricNav: React.FunctionComponent<INavProps> = (props) => {
   const theme = useTheme();
 
   const onRenderGroupHeader = (group: INavLinkGroup): JSX.Element => {
@@ -175,28 +175,29 @@ const MenuPage: React.FunctionComponent<ILeftNavProps> = (
         </div>
         {expanded && props.title && (
           <div style={{ display: "flex" }}>
-            <ActionButton
-              iconProps={Icons.List}
-              ariaLabel="List"
-            />
-            <Link
-              onClick={() => props.onClick()}
-              styles={{
-                root: { height: "44px", marginBottom: "13px" },
-              }}
-            >
-              {props.title}
-            </Link>
+            <div style={{ paddingTop: "3px" }}>
+              <ActionButton
+                iconProps={Icons.List}
+                ariaLabel="List"
+              />
+            </div>
+            <div style={{ marginTop: "auto", marginBottom: "auto" }}>
+              <Link
+                styles={{
+                  root: { height: "44px", marginBottom: "13px" },
+                }}
+                {...props.titleLink}>
+                {props.title}
+              </Link>
+            </div>
           </div>
         )}
         {
           <FabricNav
             onRenderGroupHeader={props.onRenderGroupHeader}
             styles={expanded ? null : collapsedNavStyles}
-            groups={props.navItems}
             selectedKey={props.defaultMenuSelectKey}
-            navItems={props.navItems}
-            onClick={() => props.onClick()}
+            groups={props.navItems}
             onLinkClick={() => props.onLinkClick()}
           />
         }
@@ -215,10 +216,8 @@ const LeftNavInternal = (props: ILeftNavProps): JSX.Element => {
         defaultMenuSelectKey={props.defaultMenuSelectKey}
         title={props.title}
         titleLink={props.titleLink}
-        groups={props.groups}
         selectedKey={props.selectedKey}
         styles={props.styles}
-        onClick={() => props.onClick()}
         onLinkClick={() => props.onLinkClick()}
       ></MenuPage>
     </div>

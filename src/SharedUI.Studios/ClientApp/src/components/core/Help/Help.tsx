@@ -6,13 +6,15 @@ import { INTL } from "../../../util/intlUtil";
 import { HelpLocalizationFormatMessages } from "../../../clientResources";
 import { initializeComponent, useLocalization, withLocalization } from "../../../services/localization";
 
+export type LinkPropsExt =  ILinkProps & { displayText: string }
+
 export interface IHelpAreaProps {
     helpBody: JSX.Element;
     headerText: string;
     isOpen?: boolean | true;
     onClose: () => void;
-    helpItems: ILinkProps[];
-    footerItems: ILinkProps[];
+    helpItems: LinkPropsExt[];
+    footerItems: LinkPropsExt[];
 };
 
 const HelpAreaInternal = (props: IHelpAreaProps) => {
@@ -27,25 +29,25 @@ const HelpAreaInternal = (props: IHelpAreaProps) => {
     const onRenderFooterContent = React.useCallback(
         () => (
             <Stack wrap horizontal horizontalAlign={"space-between"}>
-                {props.footerItems.map((item: any, index: any) => (
-                    <Stack wrap horizontal horizontalAlign={"space-between"} tokens={{ childrenGap: 15 }}>
-                        <Stack.Item>
-                            <Link
-                                href={item.href}
-                                target='_blank'
-                            >
-                                {item.displayText}
-                            </Link>
-                        </Stack.Item>
-                        <Stack.Item>
-                            {index != (props.footerItems.length - 1) && (
+                {
+                    props.footerItems.map((item: LinkPropsExt, index: any) => {
+                        const { displayText, ...linkProps } = item;
+                        return (
+                            <Stack wrap horizontal horizontalAlign={"space-between"} tokens={{ childrenGap: 15 }} key={displayText}>
                                 <Stack.Item>
-                                    |
+                                    <Link {...linkProps}>{displayText}</Link>
                                 </Stack.Item>
-                            )}
-                        </Stack.Item>
-                    </Stack>
-                ))}
+                                <Stack.Item>
+                                    {index != (props.footerItems.length - 1) && (
+                                        <Stack.Item>
+                                            |
+                                        </Stack.Item>
+                                    )}
+                                </Stack.Item>
+                            </Stack>
+                        );
+                    })
+                }
             </Stack>
         ),
         []
@@ -69,16 +71,16 @@ const HelpAreaInternal = (props: IHelpAreaProps) => {
         >
             <Stack style={{ marginTop: 10 }}>
                 <Stack tokens={{ childrenGap: 5 }}>
-                    {props.helpItems.map((item: any) => (
-                        <Stack.Item >
-                            <Link
-                                href={item.href}
-                                target='_blank'
-                            >
-                                {item.displayText}
-                            </Link>
-                        </Stack.Item>
-                    ))}
+                    {
+                        props.helpItems.map((item: LinkPropsExt) => {
+                            const { displayText, ...linkProps } = item;
+                            return (
+                                <Stack.Item key={displayText}>
+                                    <Link {...linkProps}>{displayText}</Link>
+                                </Stack.Item>
+                            );
+                        })
+                    }
                 </Stack>
                 <Stack.Item>
                     {props.helpBody}

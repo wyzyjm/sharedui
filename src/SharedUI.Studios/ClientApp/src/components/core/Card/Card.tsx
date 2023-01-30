@@ -1,4 +1,4 @@
-import { useTheme, IDocumentCardStyles, DocumentCard, Link, Icon, Text, Stack } from "@fluentui/react";
+import { useTheme, IDocumentCardStyles, DocumentCard, Link, Icon, Text, Stack, ILinkProps } from "@fluentui/react";
 import { FontSizes } from '@fluentui/theme';
 import React from "react";
 import { CSSProperties, ReactNode } from "react";
@@ -19,8 +19,8 @@ export interface ICardProp {
     description: string;
     icon?: URL;
     linkTitle: string;
+    linkProps: ILinkProps;
     isCompactMode?: boolean;
-    href?: string;
     onClick?: () => void,
     cardType?: cardWidthNum,
     iconName?: string
@@ -75,10 +75,6 @@ const CardInternal = (props: ICardProp) => {
             lineHeight: "16px",
         },
     };
-    const linkProps = {
-        href: props.href,
-        tabIndex: 0
-    }
 
     return (
       <StyledDocumentCard onClick={props.onClick} width={CardWidth[props.cardType]}>
@@ -138,7 +134,7 @@ const CardInternal = (props: ICardProp) => {
         </Stack>
         {["CardWithIllustration", "CardWithNoIllustration"].includes(props.cardType) && (
           <Stack style={styles.linkWrapper}>
-            <Link {...linkProps}>{props.linkTitle}</Link>
+            <Link {...props.linkProps}>{props.linkTitle}</Link>
           </Stack>
         )}
       </StyledDocumentCard>
