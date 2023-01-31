@@ -2,7 +2,6 @@ import { useTheme, IDocumentCardStyles, DocumentCard, Link, Icon, Text, Stack, I
 import { FontSizes } from '@fluentui/theme';
 import React from "react";
 import { CSSProperties, ReactNode } from "react";
-import "../core.scss";
 import { initializeComponent, useLocalization, withLocalization } from "../../../services/localization";
 
 

@@ -1,6 +1,5 @@
 import { Spinner, SpinnerSize } from "@fluentui/react";
 import { useTheme } from "@fluentui/react-theme-provider";
-import "../core.scss";
 import { initializeComponent, useLocalization, withLocalization } from "../../../services/localization";
 import { INTL } from "../../../util/intlUtil";
 import { SpinnersLocalizationFormatMessages } from "../../../clientResources";

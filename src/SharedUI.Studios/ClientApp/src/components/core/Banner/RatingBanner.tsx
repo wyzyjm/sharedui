@@ -153,6 +153,10 @@ const StyledChoiceGroup = styled(ChoiceGroup)`
     }
 `;
 
+const StyledLabel = styled.label`
+    display: inline-block;
+    margin-bottom: 0.5rem;
+`;
 
 const RatingBannerInternal = (props: RatingBannerProps) => {
 
@@ -194,7 +198,7 @@ const RatingBannerInternal = (props: RatingBannerProps) => {
                                     </div>
                                     <div className="ratings">
                                         {ratings.map((e) => (
-                                            <label className="rating-number-label">
+                                            <StyledLabel className="rating-number-label">
                                                 <StyledChoiceGroup
                                                     className="inlineflex"
                                                     aria-label="Rating"
@@ -202,7 +206,7 @@ const RatingBannerInternal = (props: RatingBannerProps) => {
                                                     options={[{ key: e, text: "", value: e }]}
                                                     onChange={handleRatingClick}
                                                 />
-                                            </label>
+                                            </StyledLabel>
                                         ))}
                                     </div>
                                     <div className="positive">

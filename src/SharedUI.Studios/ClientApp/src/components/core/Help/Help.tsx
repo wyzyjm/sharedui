@@ -1,7 +1,6 @@
 import * as React from "react";
 import { Link, ILinkProps, Panel, PanelType, Stack } from "@fluentui/react";
 import { useState } from "react";
-import "../core.scss";
 import { INTL } from "../../../util/intlUtil";
 import { HelpLocalizationFormatMessages } from "../../../clientResources";
 import { initializeComponent, useLocalization, withLocalization } from "../../../services/localization";

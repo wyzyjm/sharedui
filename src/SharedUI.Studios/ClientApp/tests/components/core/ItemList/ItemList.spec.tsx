@@ -42,7 +42,7 @@ test.describe('ItemList tests', () => {
 
         // Check height
         const height = await storybookPOM.getComputedStyle(listElement, "height");
-        await expect(height).toBe("175px");
+        await expect(height).toBe("172px");
 
         // Check header background color
         const headerBackgroundColor = await storybookPOM.getComputedStyle(headerElement, "background-color");

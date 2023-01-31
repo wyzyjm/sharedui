@@ -30,7 +30,6 @@ import {
 } from "@fluentui/react";
 import { cloneDeep, every } from "lodash";
 import React, { CSSProperties, useEffect, useState } from "react";
-import "../core.scss";
 import { DetailsListLocalizedFormatMessages, FormatMessagePlaceholder } from "../../../clientResources";
 import { initializeComponent, withLocalization } from "../../../services/localization";
 import { comparatorUtil } from "../../../util/comparator";
