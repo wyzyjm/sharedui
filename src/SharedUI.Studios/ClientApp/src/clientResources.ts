@@ -169,3 +169,33 @@ export const NotificationLocalizationFormatMessages = defineMessages({
         defaultMessage: "Dismiss all",
     },
 });
+export const ProfileCardLocalizationFormatMessages = defineMessages({
+    SignOut: {
+        id: "ProfileCard.SignOut",
+        defaultMessage: "Sign out",
+    },
+    ViewAccount: {
+        id: "ProfileCard.ViewAccount",
+        defaultMessage: "View account",
+    },
+    CurrentDirectory: {
+        id: "ProfileCard.CurrentDirectory",
+        defaultMessage: "Current directory:",
+    },
+    CurrentResource: {
+        id: "ProfileCard.CurrentResource",
+        defaultMessage: "Current resource:",
+    },
+    PlaceHolder: {
+        id: "ProfileCard.PlaceHolder",
+        defaultMessage: "--",
+    },
+    Switch: {
+        id: "ProfileCard.Switch",
+        defaultMessage: "Switch",
+    },
+    SignInWithADifferentAccount: {
+        id: "ProfileCard.SignInWithADifferentAccount",
+        defaultMessage: "Sign in with a different account",
+    },
+});

@@ -21,9 +21,11 @@ export type { IHelpAreaProps, LinkPropsExt } from "./components/core/Help/Help";
 export { FilterableComboBox } from "./components/core/FilterableComboBox/FilterableComboBox";
 export type { IFilterableComboBoxOption, IFilterableComboBoxProps } from "./components/core/FilterableComboBox/FilterableComboBox";
 export { WizardFlow } from "./components/core/WizardFlow/WizardFlow";
-export type { IWizardFlowMenuItem, WizardFlowProps, IWizardFlow, IWizardFlowStatus  } from "./components/core/WizardFlow/WizardFlow";
+export type { IWizardFlowMenuItem, WizardFlowProps, IWizardFlow, IWizardFlowStatus } from "./components/core/WizardFlow/WizardFlow";
 export { VariantService } from "./services/flighting/variantService";
 export type { ICustomColumn, ICustomColumnWithHeader, ICustomColumnWithoutHeader, ICustomColumnsList, ICustomShimmeredDetailsListProp } from "./components/core/ItemList/ItemList";
 export { CustomShimmeredDetailsList } from "./components/core/ItemList/ItemList";
 export { SharedComponentsContext } from "./components/core/SharedComponentsContext";
 export { Icons } from "./components/core/Icons";
+export type { ProfileCardProps, TenantInformation } from './components/core/ProfileCard/ProfileCard'
+export { ProfileCard } from './components/core/ProfileCard/ProfileCard'

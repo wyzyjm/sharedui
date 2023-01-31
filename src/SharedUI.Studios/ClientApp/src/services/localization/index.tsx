@@ -164,7 +164,7 @@ export const useLocalization = () => {
   return { locale, messages, isInitialized, changeLocale };
 };
 
-export function withLocalization<P>(WrappedComponent: React.FunctionComponent<P>): React.FunctionComponent<P> { 
+export function withLocalization<P>(WrappedComponent: React.FunctionComponent<P>): React.FunctionComponent<P> {
   return (props: P) => {
     const localeProperties = useLocalization();
     const sharedComponentsContext = React.useContext(SharedComponentsContext);
@@ -185,11 +185,11 @@ export function withLocalization<P>(WrappedComponent: React.FunctionComponent<P>
   };
 }
 
-export function initializeComponent<P>(WrappedComponent: React.FunctionComponent<P>): React.FunctionComponent<P> { 
+export function initializeComponent<P>(WrappedComponent: React.FunctionComponent<P>): React.FunctionComponent<P> {
   return (props: P) => {
-      const intl = useIntl();
-      INTL.setIntl(intl);
-      
-      return (<WrappedComponent {...props} />);
+    const intl = useIntl();
+    INTL.setIntl(intl);
+
+    return (<WrappedComponent {...props} />);
   };
 };

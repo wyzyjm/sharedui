@@ -6,10 +6,10 @@
  *       implementation of this enforcement.
  * @warning Using a large `N` may impact the transpile performance.
  */
- export type ExactlyOne<Ta, Tb> =
- [...AtMostNTuple<Tb, 6>, Ta, ...Tb[]] | [...Tb[], Ta, ...AtMostNTuple<Tb, 6>];
+export type ExactlyOne<Ta, Tb> =
+  [...AtMostNTuple<Tb, 6>, Ta, ...Tb[]] | [...Tb[], Ta, ...AtMostNTuple<Tb, 6>];
 
- /** Tuple having exactly `N` items of type `T`. */
+/** Tuple having exactly `N` items of type `T`. */
 export type NTuple<T, N extends number> = NTupleI<T, N, []>;
 type NTupleI<T, N extends number, R extends unknown[]> = R["length"] extends N ? R : NTupleI<T, N, [T, ...R]>;
 
@@ -25,3 +25,5 @@ type AtMostNTupleI<T, N extends number, R extends unknown[]> =
   R["length"] extends N
   ? NTuple<T, N>
   : NTuple<T, R["length"]> | AtMostNTupleI<T, N, [T, ...R]>;
+
+export type Maybe<T> = T | undefined;
