@@ -65,6 +65,7 @@ const panelStyles = {
     main: {
         height: "fit-content",
         maxHeight: "calc(100vh - 40px)",
+        top: 40
     },
     contentInner: {
         overflow: "auto",
@@ -123,7 +124,7 @@ export const ProfileAreaWrapped = (props: ProfileCardProps) => {
                     <Text styles={{ root: { overflow: 'hidden' } }}>{tenant.resource ?? INTL.formatMessage(ProfileCardLocalizationFormatMessages.PlaceHolder)}</Text>
                     <Link styles={linkStyles} onClick={() => { toggleSwitchResource() }}>{INTL.formatMessage(ProfileCardLocalizationFormatMessages.Switch)}</Link>
                 </Stack>
-                <Text style={{ fontSize: 10, color: theme.palette.neutralTertiary }}>{tenant.site}</Text>
+                <Text style={{ fontSize: 10, color: theme.palette.neutralSecondary }}>{tenant.site}</Text>
             </Stack.Item>
         </Stack>
     }
@@ -175,7 +176,7 @@ export const ProfileAreaWrapped = (props: ProfileCardProps) => {
                     <ThemedAddUserIcon style={{ stroke: theme.palette.neutralPrimary, width: "40px", height: "40px" }} />
                 </Stack>
                 <Stack>
-                    <Link style={{ color: theme.palette.neutralPrimary }} onClick={() => { login() }}  >
+                    <Link onClick={() => { login() }}  >
                         {INTL.formatMessage(ProfileCardLocalizationFormatMessages.SignInWithADifferentAccount)}
                     </Link>
                 </Stack>
