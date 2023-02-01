@@ -5,6 +5,7 @@ import { addDecorator } from '@storybook/react';
 import { withThemes } from '@react-theming/storybook-addon';
 
 import { defaultTheme } from '../src/themes';
+import './docs-root.css';
 
 // pass ThemeProvider and array of your themes to decorator
 addDecorator(withThemes(ThemeProvider, [defaultTheme]));
