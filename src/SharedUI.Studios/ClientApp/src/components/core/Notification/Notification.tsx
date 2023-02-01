@@ -288,10 +288,11 @@ export function NotificationPrompt(props: NotificationPromptProp): JSX.Element {
   const items: ClientNotification[] = props.lastViewedAt
     ? values(props.notifications).filter((p) => p.updatedAt > props.lastViewedAt && !p.silent)
     : values(props.notifications).filter((p) => !p.silent);
+  const messagesAmount = items.length >= 100 ? "99+" : `${items.length}`;
   return (
     items.length > 0 && (
       <StyledNotificationPromptDiv className="notification-prompt">
-        <span>{items.length >= 100 ? "99+" : items.length}</span>
+        <span aria-label={INTL.formatMessage(NotificationLocalizationFormatMessages.Messages, messagesAmount)}>{messagesAmount}</span>
       </StyledNotificationPromptDiv>
     )
   );

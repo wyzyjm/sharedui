@@ -172,6 +172,10 @@ export const NotificationLocalizationFormatMessages = defineMessages({
         id: "Notification.DismissAll",
         defaultMessage: "Dismiss all",
     },
+    Messages: {
+        id: "Notification.Messages",
+        defaultMessage: "Notifications, {0} unread item(s)",
+    },
 });
 export const ProfileCardLocalizationFormatMessages = defineMessages({
     SignOut: {
