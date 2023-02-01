@@ -4,8 +4,9 @@ import { useState } from "react";
 import { INTL } from "../../../util/intlUtil";
 import { HelpLocalizationFormatMessages } from "../../../clientResources";
 import { initializeComponent, useLocalization, withLocalization } from "../../../services/localization";
+import styled from "styled-components";
 
-export type LinkPropsExt =  ILinkProps & { displayText: string }
+export type LinkPropsExt = ILinkProps & { displayText: string }
 
 export interface IHelpAreaProps {
     helpBody: JSX.Element;
@@ -15,6 +16,12 @@ export interface IHelpAreaProps {
     helpItems: LinkPropsExt[];
     footerItems: LinkPropsExt[];
 };
+
+const StyledStack = styled(Stack)`
+    .ms-Stack-inner{
+        margin-left: 5px !important;
+    }
+`;
 
 const HelpAreaInternal = (props: IHelpAreaProps) => {
     const { onClose, isOpen, headerText } = props;
@@ -32,7 +39,7 @@ const HelpAreaInternal = (props: IHelpAreaProps) => {
                     props.footerItems.map((item: LinkPropsExt, index: any) => {
                         const { displayText, ...linkProps } = item;
                         return (
-                            <Stack wrap horizontal horizontalAlign={"space-between"} tokens={{ childrenGap: 15 }} key={displayText}>
+                            <StyledStack wrap horizontal horizontalAlign={"space-between"} tokens={{ childrenGap: 11 }} key={displayText}>
                                 <Stack.Item>
                                     <Link {...linkProps}>{displayText}</Link>
                                 </Stack.Item>
@@ -43,7 +50,7 @@ const HelpAreaInternal = (props: IHelpAreaProps) => {
                                         </Stack.Item>
                                     )}
                                 </Stack.Item>
-                            </Stack>
+                            </StyledStack>
                         );
                     })
                 }
