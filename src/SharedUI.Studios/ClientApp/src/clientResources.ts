@@ -54,7 +54,11 @@ export const FilterableComboBoxFormatMessages = defineMessages({
     All: {
         id: "All",
         defaultMessage: "All",
-    }
+    },
+    IconButtonArialabel: {
+        id: "FilterableComboBoxFormatMessages.IconButtonArialabel",
+        defaultMessage: "Dropdown button",
+    },
 });
 
 export const DetailsListLocalizedFormatMessages = defineMessages({

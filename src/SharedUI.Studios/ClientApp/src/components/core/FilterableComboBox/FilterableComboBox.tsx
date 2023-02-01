@@ -1,3 +1,4 @@
+import { useCallback } from 'react'
 import {
   ComboBox,
   IAutofillProps,
@@ -71,16 +72,34 @@ const FilterableComboBoxInternal = ({
   const [texts, setTexts] = useState("" as string);
   const [selectedKeys, setSelectedKeys] = useState(originalProps.selectedKey);
 
+  const handleFocus = useCallback((e?: any) => {
+    if (originalProps.disabled) return;
+
+    if (!e || e?.target instanceof HTMLInputElement) {
+      openMenuOnFocus && !menuOpened.current && componentRef.current?.focus(true);
+    }
+
+    if (optionCustomizable) {
+      inputRef.current = inputRef.current || e?.target;
+    }
+  }, [openMenuOnFocus, optionCustomizable, originalProps.disabled])
+  const getText = useCallback((selects: string[]) => {
+    const selectOptions = _.filter(initOptions, x => selects?.includes(x.key as string));
+    const texts = _.map(selectOptions, item => item.text).toString();
+    if (originalProps.isShowAllOnly && selects?.includes("all")) return "All";
+    else return texts;
+  }, [initOptions, originalProps.isShowAllOnly])
+
   useEffect(() => {
     autoFocus && componentRef.current && handleFocus();
-  }, []);
+  }, [autoFocus, handleFocus]);
 
   useEffect(() => {
     if (originalProps.multiSelect) {
       setSelectedKeys(originalProps.selectedKey);
       setTexts(getText(originalProps.selectedKey as string[]));
     }
-  }, [originalProps.selectedKey]);
+  }, [getText, originalProps.multiSelect, originalProps.selectedKey]);
 
   useEffect(() => {
     setOptions(initOptions);
@@ -101,7 +120,7 @@ const FilterableComboBoxInternal = ({
 
   const handleMultiSelectChange = (event: any, option?: IComboBoxOption): void => {
     let selected = option?.selected;
-    if (event.type == "blur") return;
+    if (event.type === "blur") return;
     if (option || event.currentTarget.value) {
       const selectValue = option
         ? option.key
@@ -110,7 +129,7 @@ const FilterableComboBoxInternal = ({
         selected = !(selectedKeys as string[]).includes(selectValue as string);
       }
       if (typeof selected != "undefined" && typeof selectValue != "undefined") {
-        if (selectValue == "all") {
+        if (selectValue === "all") {
           const newSelectKeys = selected ? _.map(initOptions, option => option.key as string) : [];
           onChange(newSelectKeys);
           setSelectedKeys(newSelectKeys);
@@ -129,17 +148,7 @@ const FilterableComboBoxInternal = ({
     }
   };
 
-  const handleFocus = (e?: any) => {
-    if (originalProps.disabled) return;
 
-    if (!e || e?.target instanceof HTMLInputElement) {
-      openMenuOnFocus && !menuOpened.current && componentRef.current?.focus(true);
-    }
-
-    if (optionCustomizable) {
-      inputRef.current = inputRef.current || e?.target;
-    }
-  };
 
   const handleInput = (e: any) => {
     if ((e.nativeEvent as any)?.isComposing) return;
@@ -196,12 +205,7 @@ const FilterableComboBoxInternal = ({
     setAutoFill(true);
   };
 
-  const getText = (selects: string[]) => {
-    const selectOptions = _.filter(initOptions, x => selects?.includes(x.key as string));
-    const texts = _.map(selectOptions, item => item.text).toString();
-    if (originalProps.isShowAllOnly && selects?.includes("all")) return "All";
-    else return texts;
-  };
+
 
   const handleMenuDismissed = () => {
     menuOpened.current = false;
@@ -239,6 +243,7 @@ const FilterableComboBoxInternal = ({
       caretDownButtonStyles={caretDownButtonHidden && { root: { display: "none" } }}
       text={originalProps.multiSelect ? texts : null}
       {...originalProps}
+      iconButtonProps={{ ariaLabel: INTL.formatMessage(FilterableComboBoxFormatMessages.IconButtonArialabel), role: 'button' }}
     />
   );
 };
