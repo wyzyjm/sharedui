@@ -24,11 +24,9 @@ const tenantInformation: TenantInformation = {
   tenantId: 'tenantId',
   displayName: 'Conan Wang (CSI Interfusion Inc)',
   defaultDomain: 'defaultDomain',
-  subscription: 'subscription',
-  resource: 'resource',
+
   accountName: 'Conan Wang (CSI Interfusion Inc)',
   accountEmail: 'v-donglwang@microsoft.com',
-  site: 'West US 2, S0'
 }
 
 export const Profile = ProfileCardTemplate.bind({});
@@ -36,9 +34,15 @@ Profile.args = {
   headerText: "ProfileCard",
   isOpen: true,
   tenant: tenantInformation,
+  photoData: undefined,
+  subscription: {
+    name: 'subscription name',
+    sku: '2,50',
+    localeDisplayName: 'West US',
+  },
   onClose: () => { },
   login: () => { },
   signOut: () => { },
-  toggleSwitchTenant: () => { },
-  toggleSwitchResource: () => { },
+  onSwitchTenant: () => { },
+  onSwitchResource: () => { },
 } as ProfileCardProps

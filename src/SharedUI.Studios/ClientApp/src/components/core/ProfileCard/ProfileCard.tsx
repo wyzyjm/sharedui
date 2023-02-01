@@ -1,11 +1,7 @@
-
 import { useMemo } from 'react'
 import {
     Label,
     Link,
-    Image,
-    IImageProps,
-    ImageFit,
     Panel,
     PanelType,
     Persona,
@@ -18,10 +14,11 @@ import {
     IPersonaProps,
     IPersonaSharedProps,
     IPanelStyles,
-    ILinkStyles,
 } from "@fluentui/react";
+import { format } from "util";
 import { INTL } from "../../../util/intlUtil";
-import { ProfileCardLocalizationFormatMessages } from "../../../clientResources";
+import { ProfileCardLocalizationFormatMessages, AzureLocationMessages } from "../../../clientResources";
+import { Maybe } from '../../../util/typeUtil'
 
 import { initializeComponent, withLocalization } from "../../../services/localization";
 
@@ -34,30 +31,32 @@ const ThemedAddUserIcon = (props: IIconProps): JSX.Element => (<svg xmlns="http:
         </g>
     </g>
 </svg>);
-
-
 export declare interface CachableEntity {
     fromCache?: boolean;
 }
 export declare interface TenantInformation extends CachableEntity {
-    photoData?: string;
     tenantId: string;
     displayName: string;
     defaultDomain: string;
-    subscription: string;
-    resource: string;
+
     accountName: string;
     accountEmail: string;
-    site: string;
+}
+export interface Subscription {
+    name: string;
+    sku: string;
+    localeDisplayName: string;
 }
 export interface ProfileCardProps {
     isOpen: boolean;
     tenant: TenantInformation;
+    photoData: Maybe<string>,
+    subscription: Subscription;
     onClose: () => void;
     login: () => void;
     signOut: () => void;
-    toggleSwitchTenant: () => void;
-    toggleSwitchResource: () => void;
+    onSwitchTenant: () => void;
+    onSwitchResource: () => void;
 }
 
 // styles
@@ -81,14 +80,17 @@ const panelStyles = {
     },
 } as IPanelStyles;
 
-const linkStyles = {
-    root: { display: "flex", flexShrink: 0, justifyContent: 'flex-end', width: 60 }
-} as ILinkStyles
+const PlaceHolder = "--";
 
 export const ProfileAreaWrapped = (props: ProfileCardProps) => {
-    const { isOpen, tenant, onClose, login, signOut, toggleSwitchTenant, toggleSwitchResource } = props
+    const { isOpen, tenant, subscription, photoData, onClose, login, signOut, onSwitchTenant, onSwitchResource } = props
     const theme = useTheme();
 
+    function getLocalizationMessage(name: string): string {
+        const id = name.replace(/ /g, "").toLowerCase();
+        if (id in AzureLocationMessages) return INTL.formatMessage(AzureLocationMessages[id]);
+        return name;
+    }
     // Render 
     function _onRenderPrimaryText(_props: IPersonaProps): JSX.Element {
         return <Text style={{ fontSize: 20 }}>{_props.text}</Text>;
@@ -96,47 +98,78 @@ export const ProfileAreaWrapped = (props: ProfileCardProps) => {
     function _onRenderTertiaryText(_props: IPersonaProps) {
         return <Link target="_blank" href="https://myaccount.microsoft.com/?ref=MeControl">
             {_props.tertiaryText}
-            <FontIcon iconName="NavigateExternalInline" />
+            <FontIcon iconName="NavigateExternalInline" style={{ marginLeft: '3px' }} />
         </Link>
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
     function _onRenderPersonaCoin(_props: IPersonaSharedProps) {
-        const { imageAlt, imageUrl } = _props;
-        const imageProps: IImageProps = {
-            imageFit: ImageFit.cover,
-            src: imageUrl,
-            styles: _props => ({ root: { borderRadius: "50%", flexShrink: 0, } }),
-        }
-        return <Image  {...imageProps} alt={imageAlt} width={100} height={100} />
+        const { coinSize, imageAlt } = _props;
+        return (
+            <img
+                style={{ borderRadius: "50%" }}
+                src={`data:image/png;base64,${photoData ?? ""}`}
+                alt={imageAlt}
+                width={coinSize}
+                height={coinSize}
+            />
+        );
     }
     function _onRenderOptionalText(_props: IPersonaProps): JSX.Element {
         return <Stack tokens={{ childrenGap: 10 }} style={{ paddingTop: 10 }}>
-            <Stack.Item >
+            <Stack>
                 <Label>{INTL.formatMessage(ProfileCardLocalizationFormatMessages.CurrentDirectory)}</Label>
-                <Stack horizontal horizontalAlign="space-between">
-                    <Text styles={{ root: { overflow: 'hidden' } }}>{tenant.displayName ?? INTL.formatMessage(ProfileCardLocalizationFormatMessages.PlaceHolder)}</Text>
-                    <Link styles={linkStyles} onClick={() => { toggleSwitchTenant() }}>{INTL.formatMessage(ProfileCardLocalizationFormatMessages.Switch)}</Link>
+                <Stack horizontal>
+                    <Stack.Item styles={{ root: { maxWidth: 160, overflow: "hidden" } }}>
+                        <Text title={props.tenant?.displayName}>{props.tenant?.displayName ?? PlaceHolder}</Text>
+                    </Stack.Item>
+                    <Stack.Item grow>
+                        <span />
+                    </Stack.Item>
+                    <Link
+                        onClick={() => { onSwitchTenant() }}
+                        data-bi-name={INTL.formatMessage(ProfileCardLocalizationFormatMessages.SwitchDirectories)}
+                        aria-label={INTL.formatMessage(ProfileCardLocalizationFormatMessages.SwitchDirectory)}
+                    >
+                        {INTL.formatMessage(ProfileCardLocalizationFormatMessages.Switch)}
+                    </Link>
                 </Stack>
-            </Stack.Item>
-            <Stack.Item >
+            </Stack>
+            <Stack>
                 <Label>{INTL.formatMessage(ProfileCardLocalizationFormatMessages.CurrentResource)}</Label>
-                <Stack horizontal horizontalAlign="space-between">
-                    <Text styles={{ root: { overflow: 'hidden' } }}>{tenant.resource ?? INTL.formatMessage(ProfileCardLocalizationFormatMessages.PlaceHolder)}</Text>
-                    <Link styles={linkStyles} onClick={() => { toggleSwitchResource() }}>{INTL.formatMessage(ProfileCardLocalizationFormatMessages.Switch)}</Link>
+                <Stack horizontal>
+                    <Stack.Item styles={{ root: { maxWidth: 160, overflow: "hidden" } }}>
+                        <Text title={subscription?.name}>{subscription ? subscription.name : PlaceHolder}</Text>
+                    </Stack.Item>
+                    <Stack.Item grow>
+                        <span />
+                    </Stack.Item>
+                    <Link
+                        onClick={() => { onSwitchResource() }}
+                        data-bi-name={INTL.formatMessage(ProfileCardLocalizationFormatMessages.SwitchResources)}
+                        aria-label={INTL.formatMessage(ProfileCardLocalizationFormatMessages.SwitchResource)}
+                    >
+                        {INTL.formatMessage(ProfileCardLocalizationFormatMessages.Switch)}
+                    </Link>
                 </Stack>
-                <Text style={{ fontSize: 10, color: theme.palette.neutralSecondary }}>{tenant.site}</Text>
-            </Stack.Item>
+                <Text style={{ fontSize: 10, color: theme.palette.neutralSecondary }}>
+                    {format(
+                        "%s, %s",
+                        subscription ? getLocalizationMessage(subscription.localeDisplayName) : PlaceHolder,
+                        subscription ? subscription.sku : PlaceHolder
+                    )}
+                </Text>
+            </Stack>
         </Stack>
     }
 
-    const hasPhotoData: IPersonaProps = useMemo(() => (tenant.photoData ? {
+    const hasPhotoData: IPersonaProps = useMemo(() => (photoData ? {
         onRenderPersonaCoin: _onRenderPersonaCoin
-    } : null), [tenant, _onRenderPersonaCoin])
+    } : null), [photoData, _onRenderPersonaCoin])
     // Render
     return (
         <Panel
             role="dialog"
-            aria-labelledby="profile card"
+            aria-labelledby={INTL.formatMessage(ProfileCardLocalizationFormatMessages.Labelledby)}
             isOpen={isOpen}
             onDismiss={() => { onClose() }}
             type={PanelType.custom}

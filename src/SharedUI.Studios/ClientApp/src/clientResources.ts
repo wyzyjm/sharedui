@@ -178,6 +178,10 @@ export const NotificationLocalizationFormatMessages = defineMessages({
     },
 });
 export const ProfileCardLocalizationFormatMessages = defineMessages({
+    Labelledby: {
+        id: "ProfileCard.labelledby",
+        defaultMessage: "profile card",
+    },
     SignOut: {
         id: "ProfileCard.SignOut",
         defaultMessage: "Sign out",
@@ -190,9 +194,22 @@ export const ProfileCardLocalizationFormatMessages = defineMessages({
         id: "ProfileCard.CurrentDirectory",
         defaultMessage: "Current directory:",
     },
+    SwitchDirectories: {
+        id: "ProfileCard.SwitchDirectories",
+        defaultMessage: "header profile switch-directories",
+    },
+    SwitchDirectory: {
+        id: "ProfileCard.SwitchDirectory",
+        defaultMessage: "Switch directory",
+    },
     CurrentResource: {
         id: "ProfileCard.CurrentResource",
         defaultMessage: "Current resource:",
+    },
+
+    SwitchResource: {
+        id: "ProfileCard.SwitchResource",
+        defaultMessage: "Switch resource",
     },
     PlaceHolder: {
         id: "ProfileCard.PlaceHolder",
@@ -205,5 +222,171 @@ export const ProfileCardLocalizationFormatMessages = defineMessages({
     SignInWithADifferentAccount: {
         id: "ProfileCard.SignInWithADifferentAccount",
         defaultMessage: "Sign in with a different account",
+    },
+    SwitchResources: {
+        id: "ProfileCard.SwitchResources",
+        defaultMessage: "header file switch-resources",
+    },
+});
+export const AzureLocationMessages: any = defineMessages({
+    australiaeast: {
+        id: "SpeechStudio.AzureLocation.AustraliaEast",
+        defaultMessage: "Australia East",
+    },
+    brazilsouth: {
+        id: "SpeechStudio.AzureLocation.BrazilSouth",
+        defaultMessage: "Brazil South",
+    },
+    westus: {
+        id: "SpeechStudio.AzureLocation.WestUS",
+        defaultMessage: "West US",
+    },
+    westus2: {
+        id: "SpeechStudio.AzureLocation.WestUS2",
+        defaultMessage: "West US 2",
+    },
+    westeurope: {
+        id: "SpeechStudio.AzureLocation.WestEurope",
+        defaultMessage: "West Europe",
+    },
+    northeurope: {
+        id: "SpeechStudio.AzureLocation.NorthEurope",
+        defaultMessage: "North Europe",
+    },
+    southeastasia: {
+        id: "SpeechStudio.AzureLocation.SoutheastAsia",
+        defaultMessage: "Southeast Asia",
+    },
+    eastasia: {
+        id: "SpeechStudio.AzureLocation.EastAsia",
+        defaultMessage: "East Asia",
+    },
+    westcentralus: {
+        id: "SpeechStudio.AzureLocation.WestCentralUS",
+        defaultMessage: "West Central US",
+    },
+    southcentralus: {
+        id: "SpeechStudio.AzureLocation.SouthCentralUS",
+        defaultMessage: "South Central US",
+    },
+    eastus: {
+        id: "SpeechStudio.AzureLocation.EastUS",
+        defaultMessage: "East US",
+    },
+    eastus2: {
+        id: "SpeechStudio.AzureLocation.EastUS2",
+        defaultMessage: "East US 2",
+    },
+    canadacentral: {
+        id: "SpeechStudio.AzureLocation.CanadaCentral",
+        defaultMessage: "Canada Central",
+    },
+    japaneast: {
+        id: "SpeechStudio.AzureLocation.JapanEast",
+        defaultMessage: "Japan East",
+    },
+    centralindia: {
+        id: "SpeechStudio.AzureLocation.CentralIndia",
+        defaultMessage: "Central India",
+    },
+    jioindiawest: {
+        id: "SpeechStudio.AzureLocation.JioIndiaWest",
+        defaultMessage: "Jio India West",
+    },
+    uksouth: {
+        id: "SpeechStudio.AzureLocation.UKSouth",
+        defaultMessage: "UK South",
+    },
+    japanwest: {
+        id: "SpeechStudio.AzureLocation.JapanWest",
+        defaultMessage: "Japan West",
+    },
+    koreacentral: {
+        id: "SpeechStudio.AzureLocation.KoreaCentral",
+        defaultMessage: "Korea Central",
+    },
+    francecentral: {
+        id: "SpeechStudio.AzureLocation.FranceCentral",
+        defaultMessage: "France Central",
+    },
+    northcentralus: {
+        id: "SpeechStudio.AzureLocation.NorthCentralUS",
+        defaultMessage: "North Central US",
+    },
+    centralus: {
+        id: "SpeechStudio.AzureLocation.CentralUS",
+        defaultMessage: "Central US",
+    },
+    southafricanorth: {
+        id: "SpeechStudio.AzureLocation.SouthAfricaNorth",
+        defaultMessage: "South Africa North",
+    },
+    uaenorth: {
+        id: "SpeechStudio.AzureLocation.UAENorth",
+        defaultMessage: "UAE North",
+    },
+    centraluseuap: {
+        id: "SpeechStudio.AzureLocation.CentralUSEUAP",
+        defaultMessage: "Central US EUAP",
+    },
+    chinanorth: {
+        id: "SpeechStudio.AzureLocation.ChinaNorth",
+        defaultMessage: "China North",
+    },
+    chinanorth2: {
+        id: "SpeechStudio.AzureLocation.ChinaNorth2",
+        defaultMessage: "China North 2",
+    },
+    chinaeast: {
+        id: "SpeechStudio.AzureLocation.ChinaEast",
+        defaultMessage: "China East",
+    },
+    chinaeast2: {
+        id: "SpeechStudio.AzureLocation.ChinaEast2",
+        defaultMessage: "China East 2",
+    },
+    usgovarizona: {
+        id: "SpeechStudio.AzureLocation.USGovArizona",
+        defaultMessage: "USGov Arizona",
+    },
+    usgovvirginia: {
+        id: "SpeechStudio.AzureLocation.USGovVirginia",
+        defaultMessage: "USGov Virginia",
+    },
+    switzerlandnorth: {
+        id: "SpeechStudio.AzureLocation.SwitzerlandNorth",
+        defaultMessage: "Switzerland North",
+    },
+    switzerlandwest: {
+        id: "SpeechStudio.AzureLocation.SwitzerlandWest",
+        defaultMessage: "Switzerland West",
+    },
+    germanywestcentral: {
+        id: "SpeechStudio.AzureLocation.GermanyWestCentral",
+        defaultMessage: "Germany West Central",
+    },
+    norwayeast: {
+        id: "SpeechStudio.AzureLocation.NorwayEast",
+        defaultMessage: "Norway East",
+    },
+    westus3: {
+        id: "SpeechStudio.AzureLocation.WestUS3",
+        defaultMessage: "West US 3",
+    },
+    eastus2euap: {
+        id: "SpeechStudio.AzureLocation.EastUS2EUAP",
+        defaultMessage: "East US 2 EUAP",
+    },
+    swedencentral: {
+        id: "SpeechStudio.AzureLocation.SwedenCentral",
+        defaultMessage: "Sweden Central",
+    },
+    chinanorth3: {
+        id: "SpeechStudio.AzureLocation.ChinaNorth3",
+        defaultMessage: "China North 3",
+    },
+    qatarcentral: {
+        id: "SpeechStudio.AzureLocation.QatarCentral",
+        defaultMessage: "Qatar Central",
     },
 });
