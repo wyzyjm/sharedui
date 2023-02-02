@@ -390,3 +390,13 @@ export const AzureLocationMessages: any = defineMessages({
         defaultMessage: "Qatar Central",
     },
 });
+export const PrivacyLinkLocalizationFormatMessages = defineMessages({
+    PrivacyCookies: {
+        id: "PrivacyLink.Cookies",
+        defaultMessage: "Privacy & cookies"
+    },
+    Imprint: {
+        id: "PrivacyLink.Imprint",
+        defaultMessage: "Imprint"
+    }
+})
