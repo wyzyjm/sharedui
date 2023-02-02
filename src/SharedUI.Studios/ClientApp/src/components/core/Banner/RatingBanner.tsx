@@ -28,6 +28,7 @@ const StyledRatingBannerDiv = styled.div`
         .ms-Label {
             font-weight: 400;
             padding-left: 2px;
+            color: inherit;
         }
     }
 
@@ -35,6 +36,7 @@ const StyledRatingBannerDiv = styled.div`
         .ms-Label {
           font-weight: 400;
           padding-left: 7px;
+          color: inherit;
 
           @media all and (max-width: 390px) {
             margin-left: 2px;
@@ -57,6 +59,7 @@ const StyledRatingBannerDiv = styled.div`
           vertical-align: top;
           min-width: 200px;
           width: 45%;
+          color: inherit;
 
           @media all and (max-width: 965px) { 
             width: 100%;
@@ -187,11 +190,11 @@ const RatingBannerInternal = (props: RatingBannerProps) => {
                             dismissButtonAriaLabel="Close"
                         >
                             <div className="studio-banner-left">
-                                <div
+                                <Text
                                     className="studio-banner-content"
                                 >
                                     {props.headerText}
-                                </div>
+                                </Text>
                                 <div className="studio-ratings">
                                     <div className="negative">
                                         {INTL.formatMessage(BannerLocalizationFormatMessages.NotAtAll)}
