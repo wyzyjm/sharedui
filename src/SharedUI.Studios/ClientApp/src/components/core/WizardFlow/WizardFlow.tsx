@@ -206,7 +206,7 @@ export const WizardFlow: IWizardFlow = function (props: WizardFlowProps) {
 
   const [isMenuVisible, { toggle: toggleIsMenuVisible }] = useBoolean(false);
   const theme = useTheme();
-  const addChevronDownIcon: IIconProps = { iconName: "ChevronDown" };
+  const addChevronDownIcon: IIconProps = { iconName: isMenuVisible ? "ChevronDown" : "ChevronRight" };
   const addChevronDownIconStyle: IButtonStyles = {
     root: {
       height: 30,
