@@ -20,6 +20,57 @@ import { Icons } from "../Icons";
 import { INTL } from "../../../util/intlUtil";
 import { LeftNavLocalizationFormatMessages } from "../../../clientResources";
 import { initializeComponent, useLocalization, withLocalization } from "../../../services/localization";
+import styled from "styled-components";
+
+const StyledNav = styled(Nav)`
+  .ms-Nav-link {
+    position: relative;
+    text-decoration: none;
+  }
+  .ms-Nav-link::before {
+    content: "█";
+    height: 28px;
+    width: 3px;
+    border-radius: 2px;
+    display: none;
+    position: absolute;
+    top: 7px;
+    left: 2px;
+    font-size: 64px;
+    line-height: 28px;
+    color: currentcolor;
+    overflow: hidden;
+  }
+  i, div {
+    color: currentcolor !important;
+    @media screen and (-ms-high-contrast: active) {
+      color: ButtonText !important;
+    }
+  }
+  .is-selected .ms-Nav-link,
+  .ms-Nav-link:focus,
+  .ms-Nav-link:active,
+  .ms-Nav-link:hover {
+    @media screen and (-ms-high-contrast: active) {
+      background-color: highlight !important;
+      -ms-high-contrast: off !important;
+      i, div {
+        color: Window !important;
+        background-color: highlight !important; 
+        forced-color-adjust: none;
+      }
+    }
+  }
+  .is-selected .ms-Nav-link:hover::before,
+  .ms-Nav-link:hover::before,
+  .ms-Nav-link:active::before,
+  .ms-Nav-link:focus::before {
+    display: block;
+    @media screen and (-ms-high-contrast: active) {
+      color: Window !important;
+    }
+  }
+`;
 
 const menuPageContainerStyles: CSSProperties = {
   width: "100%",
@@ -139,7 +190,7 @@ const FabricNav: React.FunctionComponent<INavProps> = (props) => {
   };
 
   return (
-    <Nav
+    <StyledNav
       role="presentation"
       onLinkClick={() => props.onLinkClick()}
       {...props}
