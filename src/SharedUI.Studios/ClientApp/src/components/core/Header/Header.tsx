@@ -172,8 +172,8 @@ const StyledDiv = styled.div`
       }
     }
 
-    // 1023px
-    @media (max-width: 1023px) {
+    // 600px
+    @media (max-width: 600px) {
       .ms-OverflowSet-item {
           display: none !important;
       }
