@@ -390,6 +390,16 @@ export const AzureLocationMessages: any = defineMessages({
         defaultMessage: "Qatar Central",
     },
 });
+export const FaviconLocalizationFormatMessages = defineMessages({
+    Message : {
+        id: "Favicon.Message",
+        defaultMessage: 'We need to make sure that the favicon works fine for both dark and light browser themes. As such, refer to the below PR for what changes are needed to support this: ',
+    },
+    PullRequest: {
+        id: "Pull.Request",
+        defaultMessage: "Pull Request"
+    }
+})
 export const PrivacyLinkLocalizationFormatMessages = defineMessages({
     PrivacyCookies: {
         id: "PrivacyLink.Cookies",
