@@ -27,6 +27,8 @@ export type { ICustomColumn, ICustomColumnWithHeader, ICustomColumnWithoutHeader
 export { CustomShimmeredDetailsList } from "./components/core/ItemList/ItemList";
 export { SharedComponentsContext } from "./components/core/SharedComponentsContext";
 export { Icons } from "./components/core/Icons";
+export type { CardsContainerProps } from "./components/core/Card/CardsContainer";
+export { CardsContainer } from "./components/core/Card/CardsContainer";
 export { PrivacyLink } from "./components/core/PrivacyLink/PrivacyLink";
 export type { ProfileCardProps, TenantInformation } from './components/core/ProfileCard/ProfileCard'
 export { ProfileCard } from './components/core/ProfileCard/ProfileCard'
