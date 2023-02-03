@@ -1,6 +1,13 @@
 import { defineMessages } from "react-intl";
 export const FormatMessagePlaceholder = "NamePlaceholderDoNotTranslate";
 
+export const HeaderLocalizationFormatMessages = defineMessages({
+    CognitiveServices: {
+        id: "Header.CognitiveServices",
+        defaultMessage: "Cognitive Services"
+    }
+});
+
 export const SpinnersLocalizationFormatMessages = defineMessages({
     Loading: {
         id: "Spinners.Loading",

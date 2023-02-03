@@ -52,13 +52,13 @@ test.describe('Header tests', () => {
   test('the header should update on properties updates', async ({ page }) => {
     // Check the headerText prop
     await page.locator('textarea[name="headerText"]').fill("Hello");
-    const headerTextElement = await storybookPOM.getByRole('link', { name: 'Hello' });
-    expect(headerTextElement).toHaveText("Hello");
+    const headerTextElement = await storybookPOM.getByRole('link', { name: 'Cognitive Services|Hello' });
+    expect(headerTextElement).toHaveText("Cognitive Services|Hello");
 
     // Check the headerLinkClickUrl prop
     const hClass = ".sto-crh05v"
-    await page.locator('textarea[name="headerLinkClickUrl"]').fill("https://www.google.com/");
-    (await storybookPOM.getByRole('link', { name: 'Hello' })).click();
+    await page.locator('textarea[name="headerHomePageUrl"]').fill("https://www.google.com/");
+    (await storybookPOM.getByRole('link', { name: 'Cognitive Services|Hello' })).click();
     await expect(page).toHaveURL('https://www.google.com/');
   });
 

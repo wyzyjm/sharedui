@@ -12,6 +12,8 @@ import {
 import { defaultTheme } from "../../../themes";
 import styled, { ThemeProvider as ReactThemeProvider } from "styled-components";
 import { initializeComponent, withLocalization } from "../../../services/localization";
+import { INTL } from "../../../util/intlUtil";
+import { HeaderLocalizationFormatMessages } from "../../../clientResources";
 
 const itemAlignmentsStackStyles: IStackStyles = {
   root: {
@@ -26,10 +28,8 @@ export const ThemedHeaderIcon: any = styled(Icon).attrs({})`
 `;
 
 export interface IHeaderProps {
-  headerTitle: string;
-  headerHomeLink: string;
   headerText: string;
-  headerLinkClickUrl: string;
+  headerHomePageUrl: string;
   commandBarItems: ICommandBarItemProps[];
 };
 
@@ -280,25 +280,23 @@ function ThemedHeaderInternal(props: IHeaderProps) {
             tokens={itemAlignmentsStackTokens}
           >
             <ThemedHeaderLink
-              className="hidden_small"
-              href={props.headerHomeLink}
-              target="_blank"
-            >
-              {props.headerTitle}
-            </ThemedHeaderLink>
-            <Text
-              className="hidden_small"
-              style={{
-                marginRight: 10,
-                marginLeft: 10,
-              }}
-            >
-              |
-            </Text>
-            <ThemedHeaderLink
               style={{ overflow: "hidden", whiteSpace: "nowrap" }}
-              href={props.headerLinkClickUrl}
+              href={props.headerHomePageUrl}
             >
+              {INTL.formatMessage(HeaderLocalizationFormatMessages.CognitiveServices)}
+              <Text
+                className="hidden_small"
+                style={{
+                  marginRight: 10,
+                  marginLeft: 10
+                }}
+              >
+                <span
+                  style={{ color: "white" }}
+                >
+                  |
+                </span>
+              </Text>
               {props.headerText}
             </ThemedHeaderLink>
             <Stack.Item grow={1}>

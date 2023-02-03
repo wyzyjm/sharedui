@@ -92,9 +92,7 @@ const HeaderTemplate: ComponentStory<typeof CS_Header> = (args) => {
 export const Header = HeaderTemplate.bind({});
 
 Header.args = {
-  headerTitle: "Azure Cognitive Services",
-  headerHomeLink: "https://azure.microsoft.com/products/cognitive-services/",
-  headerText: "Speech Studio",
-  headerLinkClickUrl: "https://speech.microsoft.com/portal",
+  headerText: "Azure OpenAI Studio",
+  headerHomePageUrl: "https://openai.studio-ppe.azure.com/portal",
   commandBarItems: commandBarItems,
 } as IHeaderProps;
