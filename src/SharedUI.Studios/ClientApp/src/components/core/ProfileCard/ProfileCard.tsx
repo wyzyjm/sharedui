@@ -106,7 +106,7 @@ export const ProfileAreaWrapped = (props: ProfileCardProps) => {
         const { coinSize, imageAlt } = _props;
         return (
             <img
-                style={{ borderRadius: "50%" }}
+                style={{ borderRadius: "50%", width: 100, height: 100 }}
                 src={`data:image/png;base64,${photoData ?? ""}`}
                 alt={imageAlt}
                 width={coinSize}
