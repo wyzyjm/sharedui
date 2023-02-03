@@ -24,7 +24,7 @@ const DefaultCard: ComponentStory<typeof Card> = (args) => {
 export const card = DefaultCard.bind({});
 card.args = {
     title: "Extract common tags from images",
-    icon: new URL('https://vision.cognitive.azure.com/dist/static/media/generic-image-tagging-illustration.e3c81ac9.svg'),
+    iconUrl: new URL('https://vision.cognitive.azure.com/dist/static/media/generic-image-tagging-illustration.e3c81ac9.svg'),
     description: "Use an AI model to automatically assign one or more labels to an image.",
     linkTitle: "Try it out",
     linkProps: {

@@ -5,24 +5,37 @@ import { CSSProperties, ReactNode } from "react";
 import { initializeComponent, useLocalization, withLocalization } from "../../../services/localization";
 
 
-export enum CardWidth {
+export enum CardTypes {
   CardWithIllustration = 260,
   CardWithNoIllustration = 260,
   CardWithIcon = 208,
   CardWithCustomDesign = 199
 }
 
-type cardWidthNum = keyof typeof CardWidth
 export interface ICardProp {
+  cardType?: keyof typeof CardTypes;
+  
+  /**
+   * Only applicable if the CardType is CardWithIcon
+   */
+  headerIconText?: string;
+
+  isCompactMode?: boolean;
   title: string;
   description: string;
-  icon?: URL;
+  iconName?: string
+  iconUrl?: URL;
+
+  /**
+   * Sample usage for rendering SVG icons:
+   * const CreateArtwork = require('./portal/icons/CreateArtwork.svg').default;
+   * <CreateArtwork />
+   */
+  iconElement?: JSX.Element;
+
   linkTitle: string;
   linkProps: ILinkProps;
-  isCompactMode?: boolean;
-  onClick?: () => void,
-  cardType?: cardWidthNum,
-  iconName?: string
+  onClick?: () => void;
 };
 
 export interface IStyledDocumentCardProp {
@@ -76,19 +89,19 @@ const CardInternal = (props: ICardProp) => {
   };
 
   return (
-    <StyledDocumentCard onClick={props.onClick} width={CardWidth[props.cardType]}>
+    <StyledDocumentCard onClick={props.onClick} width={CardTypes[props.cardType]}>
       {props.cardType === "CardWithIllustration" && (
         <Stack>
-          <Stack style={styles.image}>
-            <Stack
-              grow
-              style={{
-                width: "100%",
-                backgroundSize: "cover",
-                background: `url(${props.icon})`,
-              }}
-            ></Stack>
-          </Stack>
+          {
+            props.iconUrl ? 
+              (<Stack style={styles.image}>
+                <Stack grow style={{ width: "100%", backgroundSize: "cover", background: `url(${props.iconUrl})` }} ></Stack>
+              </Stack>)
+              : (props.iconElement ? 
+                (<Stack style={styles.image}>
+                  <Stack style={{ width: "100%", height: "100%", justifyContent: "center", alignItems: "center" }}>{props.iconElement}</Stack>
+                </Stack>) : <></>)
+          }
         </Stack>
       )}
       {props.cardType === "CardWithIcon" && (
@@ -120,9 +133,7 @@ const CardInternal = (props: ICardProp) => {
               }}
             />
           </Stack>
-          <Text style={{ fontSize: FontSizes.size12, paddingLeft: "8px" }}>
-            Stereo-channel audio
-          </Text>
+          <Text style={{ fontSize: FontSizes.size12, paddingLeft: "8px" }}>{props.headerIconText}</Text>
         </Stack>
       )}
       <Stack style={styles.headerWrapper}>
