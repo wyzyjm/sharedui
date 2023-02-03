@@ -6,7 +6,7 @@ import { INTL } from "../../../util/intlUtil";
 import { PrivacyLinkLocalizationFormatMessages } from "../../../clientResources";
 import styled from "styled-components";
 
-interface CustomLinkProps {
+export interface CustomLinkProps {
     url?: string,
     action?(): any,
     text: string,
@@ -45,7 +45,7 @@ export function CustomLink(props: CustomLinkProps): JSX.Element {
   );
 }
 
-export function PrivacyAndImprintLink(props: CustomLinkProps): JSX.Element {
+export function PrivacyAndImprintLink(): JSX.Element {
     const sharedComponentsContext = useContext(SharedComponentsContext);
     const locale = sharedComponentsContext.locale;
 

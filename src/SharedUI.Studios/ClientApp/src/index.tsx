@@ -29,6 +29,7 @@ export { SharedComponentsContext } from "./components/core/SharedComponentsConte
 export { Icons } from "./components/core/Icons";
 export type { CardsContainerProps } from "./components/core/Card/CardsContainer";
 export { CardsContainer } from "./components/core/Card/CardsContainer";
-export { PrivacyLink } from "./components/core/PrivacyLink/PrivacyLink";
+export { PrivacyLink, CustomLink } from "./components/core/PrivacyLink/PrivacyLink";
+export type { CustomLinkProps } from "./components/core/PrivacyLink/PrivacyLink";
 export type { ProfileCardProps, TenantInformation } from './components/core/ProfileCard/ProfileCard'
 export { ProfileCard } from './components/core/ProfileCard/ProfileCard'
