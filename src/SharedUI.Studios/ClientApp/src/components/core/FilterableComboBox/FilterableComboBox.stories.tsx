@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 import { defaultTheme } from "../../../themes";
 import {
@@ -30,22 +30,22 @@ FilterableLanguageComboBox.args = {
     options: [
         {
             key: "en",
-            text:"English"
+            text: "English"
         },
         {
-            key:  "es",
-            text:"Spanish"
+            key: "es",
+            text: "Spanish"
         },
         {
             key: "ko",
-            text:"Korean"
+            text: "Korean"
         }
     ],
     required: true,
     label: "Choose the language displayed in the portal",
     placeholder: "Select a language",
-    // selectedKey: "es",
+    selectedKey: "en",
     styles: widthProps,
     onChange: selectedKey => console.log("changed to: " + selectedKey),
-    filterable: true    
+    filterable: true
 } as IFilterableComboBoxProps;
