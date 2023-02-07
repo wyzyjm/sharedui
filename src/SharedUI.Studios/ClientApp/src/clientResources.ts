@@ -199,7 +199,7 @@ export const ProfileCardLocalizationFormatMessages = defineMessages({
     },
     CurrentDirectory: {
         id: "ProfileCard.CurrentDirectory",
-        defaultMessage: "Current directory:",
+        defaultMessage: "Current directory",
     },
     SwitchDirectories: {
         id: "ProfileCard.SwitchDirectories",
@@ -211,7 +211,19 @@ export const ProfileCardLocalizationFormatMessages = defineMessages({
     },
     CurrentResource: {
         id: "ProfileCard.CurrentResource",
-        defaultMessage: "Current resource:",
+        defaultMessage: "Current resource",
+    },
+    CurrentRole: {
+        id: "ProfileCard.CurrentRole",
+        defaultMessage: "Current role",
+    },
+    CurrentRoleLearnMore: {
+        id: "ProfileCard.CurrentRoleLearnMore",
+        defaultMessage: "Your current role(s) for the selected resource.",
+    },
+    LearnMore: {
+        id: "ProfileCard.LearnMore",
+        defaultMessage: "Learn more",
     },
 
     SwitchResource: {
@@ -398,7 +410,7 @@ export const AzureLocationMessages: any = defineMessages({
     },
 });
 export const FaviconLocalizationFormatMessages = defineMessages({
-    Message : {
+    Message: {
         id: "Favicon.Message",
         defaultMessage: 'We need to make sure that the favicon works fine for both dark and light browser themes. As such, refer to the below PR for what changes are needed to support this: ',
     },

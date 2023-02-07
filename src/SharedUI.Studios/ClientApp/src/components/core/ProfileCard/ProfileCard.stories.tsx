@@ -27,6 +27,9 @@ const tenantInformation: TenantInformation = {
 
   accountName: 'Conan Wang (CSI Interfusion Inc)',
   accountEmail: 'v-donglwang@microsoft.com',
+
+  roleName: 'Owner',
+  roleLearnMoreLink: 'learn more link'
 }
 
 export const Profile = ProfileCardTemplate.bind({});

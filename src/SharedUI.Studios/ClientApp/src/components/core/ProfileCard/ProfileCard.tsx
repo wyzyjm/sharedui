@@ -8,6 +8,7 @@ import {
     PersonaSize,
     Stack,
     Text,
+    TooltipHost,
     IIconProps,
     FontIcon,
     useTheme,
@@ -41,6 +42,9 @@ export declare interface TenantInformation extends CachableEntity {
 
     accountName: string;
     accountEmail: string;
+
+    roleName?: string;
+    roleLearnMoreLink?: string
 }
 export interface Subscription {
     name: string;
@@ -116,6 +120,7 @@ export const ProfileAreaWrapped = (props: ProfileCardProps) => {
     }
     function _onRenderOptionalText(_props: IPersonaProps): JSX.Element {
         return <Stack tokens={{ childrenGap: 10 }} style={{ paddingTop: 10 }}>
+            {/* Resource */}
             <Stack>
                 <Label>{INTL.formatMessage(ProfileCardLocalizationFormatMessages.CurrentDirectory)}</Label>
                 <Stack horizontal>
@@ -134,6 +139,28 @@ export const ProfileAreaWrapped = (props: ProfileCardProps) => {
                     </Link>
                 </Stack>
             </Stack>
+
+            {/* Role */}
+            {tenant.roleName && <Stack>
+                <Stack horizontal verticalAlign='center'>
+                    <Label>{INTL.formatMessage(ProfileCardLocalizationFormatMessages.CurrentRole)}</Label>
+                    <TooltipHost content={INTL.formatMessage(ProfileCardLocalizationFormatMessages.CurrentRoleLearnMore)}>
+                        <FontIcon style={{ display: 'block', cursor: 'pointer', marginLeft: 5 }} iconName="info" />
+                    </TooltipHost>
+                </Stack>
+                <Stack horizontal tokens={{ childrenGap: 5 }}>
+                    <Stack.Item styles={{ root: { maxWidth: 160, overflow: "hidden" } }}>
+                        <Text title={tenant.roleName}>{tenant.roleName}</Text>
+                    </Stack.Item>
+                    {tenant.roleLearnMoreLink && <Stack.Item styles={{ root: { maxWidth: 80, overflow: "hidden" } }}>
+                        <Link target='_blank' href={tenant.roleLearnMoreLink}>
+                            {INTL.formatMessage(ProfileCardLocalizationFormatMessages.LearnMore)}
+                        </Link>
+                    </Stack.Item>}
+                </Stack>
+            </Stack>}
+
+            {/* Directory */}
             <Stack>
                 <Label>{INTL.formatMessage(ProfileCardLocalizationFormatMessages.CurrentResource)}</Label>
                 <Stack horizontal>
