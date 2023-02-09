@@ -1,16 +1,22 @@
+/* eslint-disable react/jsx-pascal-case */
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 import { BannerArea as CS_Banner, BannerProps } from './Banner';
 import { RatingBannerArea as CS_RatingBanner, RatingBannerProps } from './RatingBanner';
+import { GuidingBannerArea as CS_GuidingBanner, GuidingBannerProps } from './GuidingBanner';
 import { defaultTheme } from "../../../themes";
 import {
-    ThemeProvider
+    Text,
+    Icon,
+    PrimaryButton,
+    ThemeProvider,
+    DefaultButton
 } from "@fluentui/react";
 import { HaTSInteraction, HatsProps } from '../Hats/Hats';
 import { SharedComponentsContext } from '../SharedComponentsContext';
 
 export default {
     title: 'Banner',
-    subcomponents: { CS_Banner, CS_RatingBanner }
+    subcomponents: { CS_Banner, CS_RatingBanner, CS_GuidingBanner }
 } as ComponentMeta<any>;
 
 const HatsTemplate: ComponentStory<typeof CS_Banner> = (args: BannerProps) => {
@@ -28,6 +34,15 @@ const RatingHatsTemplate: ComponentStory<typeof CS_RatingBanner> = (args: Rating
         <ThemeProvider theme={defaultTheme.body}>
             <SharedComponentsContext.Provider value={{ locale: 'en' }}>
                 <CS_RatingBanner {...args} />
+            </SharedComponentsContext.Provider>
+        </ThemeProvider>
+    );
+}
+const GuidingHatsTemplate: ComponentStory<typeof CS_GuidingBanner> = (args: GuidingBannerProps) => {
+    return (
+        <ThemeProvider theme={defaultTheme.body}>
+            <SharedComponentsContext.Provider value={{ locale: 'en' }}>
+                <CS_GuidingBanner {...args} />
             </SharedComponentsContext.Provider>
         </ThemeProvider>
     );
@@ -65,3 +80,18 @@ RatingBanner.args = {
         interaction: HaTSInteraction.Banner
     } as HatsProps
 } as RatingBannerProps;
+
+export const GuidingBanner = GuidingHatsTemplate.bind({})
+const renderIcon = <Icon iconName="AzureLogo" styles={{
+    root: {
+        fontSize: 100,
+        color: 'skyblue'
+    }
+}} />
+GuidingBanner.args = {
+    icon: renderIcon,
+    title: 'No deployment detected',
+    description: <Text>To get started you will need to create a new deployment, then you can select an example below, and create a custom model based on one of the available presets, or create a custom model.</Text>,
+    buttons: <><DefaultButton>Default</DefaultButton> <PrimaryButton>Primary</PrimaryButton></>
+
+} as GuidingBannerProps;

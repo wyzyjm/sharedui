@@ -8,6 +8,8 @@ export { BannerArea } from "./components/core/Banner/Banner";
 export type { BannerProps } from "./components/core/Banner/Banner";
 export { RatingBannerArea } from "./components/core/Banner/RatingBanner";
 export type { RatingBannerProps } from "./components/core/Banner/RatingBanner";
+export { GuidingBannerArea } from "./components/core/Banner/GuidingBanner";
+export type { GuidingBannerProps } from "./components/core/Banner/GuidingBanner";
 export { Card } from "./components/core/Card/Card";
 export type { ICardProp } from "./components/core/Card/Card";
 export { ThemedHeader } from "./components/core/Header/Header";
