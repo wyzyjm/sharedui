@@ -217,172 +217,166 @@ export const WizardFlow: IWizardFlow = function (props: WizardFlowProps) {
   };
 
   return (
-    <ThemeContext.Consumer>
-      {(theme: Theme | undefined) => {
-        return (
-          <Dialog
-            styles={{
-              root: {
-                selectors: {
-                  ".ms-Dialog-title": {
-                    borderBottom: `1px solid ${theme.palette.neutralLight}`,
-                    padding: "16px",
-                  },
-                  ".ms-Dialog-inner": {
-                    padding: "0",
-                    width: "100%",
-                  },
-                  ".ms-Dialog-main": {
-                    width: "800px",
-                  },
-                  ".ms-Modal-scrollableContent": {
-                    overflowY: "hidden",
-                  },
-                },
-              },
-            }}
-            {...props}
-            maxWidth={"800px"}
-          >
-            <StyledStack horizontal styles={{ root: { minHeight: props.height } }}>
+    <Dialog
+      styles={{
+        root: {
+          selectors: {
+            ".ms-Dialog-title": {
+              borderBottom: `1px solid ${theme.palette.neutralLight}`,
+              padding: "16px",
+            },
+            ".ms-Dialog-inner": {
+              padding: "0",
+              width: "100%",
+            },
+            ".ms-Dialog-main": {
+              width: "800px",
+            },
+            ".ms-Modal-scrollableContent": {
+              overflowY: "hidden",
+            },
+          },
+        },
+      }}
+      {...props}
+      maxWidth={"800px"}
+    >
+      <StyledStack horizontal styles={{ root: { minHeight: props.height } }}>
+        <Stack
+          className="wizard-left hidden_medium"
+          styles={{
+            root: {
+              minWidth: "30%",
+              borderRight: `1px solid ${theme.palette.neutralLight}`,
+            },
+          }}
+        >
+          {generateLeftMenu(theme)}
+        </Stack>
+        <Stack
+          className="wizard-right expand_medium"
+          styles={{
+            root: {
+              width: "70%",
+              height: "auto",
+            },
+          }}
+        >
+          <Stack style={{ maxHeight: "576px", padding: "20px", flex: 1, overflowY: "auto", wordBreak: "break-all" }}>
+            {Stack && (
               <Stack
-                className="wizard-left hidden_medium"
+                className="wizard-right-header hidden_medium"
+                role="heading"
+                aria-level={2}
                 styles={{
                   root: {
-                    minWidth: "30%",
-                    borderRight: `1px solid ${theme.palette.neutralLight}`,
+                    fontSize: "20px",
+                    fontWeight: "600",
+                    lineHeight: "28px",
+                  },
+                }}
+              >
+                {HeaderComponent.props.children}
+              </Stack>
+            )}
+            {Stack && (
+              <Stack
+                className="wizard-right-header hidden_medium_large"
+                role="heading"
+                aria-level={2}
+                styles={{
+                  root: {
+                    padding: "16px",
+                    flexDirection: "row",
+                    justifyContent: "space-between",
+                    borderBottom: `1px solid ${theme.palette.neutralLight}`,
+                  },
+                }}
+              >
+                <StackItem
+                  styles={{
+                    root: {
+                      fontSize: "20px",
+                      fontWeight: "600",
+                    },
+                  }}
+                >
+                  {/* <FontIcon iconName="CircleFill" style={{ color: theme.palette.themePrimary, fontSize: 16, paddingRight: 7, paddingTop: 6 }} /> */}
+                  {HeaderComponent.props.children}
+                </StackItem>
+                <ActionButton
+                  styles={addChevronDownIconStyle}
+                  iconProps={addChevronDownIcon}
+                  onClick={toggleIsMenuVisible}
+                  ariaLabel="Show steps"
+                />
+              </Stack>
+            )}
+            {isMenuVisible && (
+              <Stack
+                className="hidden_medium_large"
+                styles={{
+                  root: {
+                    position: "absolute",
+                    top: 63,
+                    background: "white",
+                    width: "100%",
+                    zIndex: 1,
+                    boxShadow: "0 3px 5px 0 rgba(0, 0, 0, 0.3)",
                   },
                 }}
               >
                 {generateLeftMenu(theme)}
               </Stack>
+            )}
+            {SubheaderComponent && (
               <Stack
-                className="wizard-right expand_medium"
+                className="wizard-right-header"
                 styles={{
                   root: {
-                    width: "70%",
-                    height: "auto",
+                    fontSize: "14px",
+                    fontWeight: "400",
                   },
                 }}
               >
-                <Stack style={{ maxHeight: "576px", padding: "20px", flex: 1, overflowY: "auto", wordBreak: "break-all" }}>
-                  {Stack && (
-                    <Stack
-                      className="wizard-right-header hidden_medium"
-                      role="heading"
-                      aria-level={2}
-                      styles={{
-                        root: {
-                          fontSize: "20px",
-                          fontWeight: "600",
-                          lineHeight: "28px",
-                        },
-                      }}
-                    >
-                      {HeaderComponent.props.children}
-                    </Stack>
-                  )}
-                  {Stack && (
-                    <Stack
-                      className="wizard-right-header hidden_medium_large"
-                      role="heading"
-                      aria-level={2}
-                      styles={{
-                        root: {
-                          padding: "16px",
-                          flexDirection: "row",
-                          justifyContent: "space-between",
-                          borderBottom: `1px solid ${theme.palette.neutralLight}`,
-                        },
-                      }}
-                    >
-                      <StackItem
-                        styles={{
-                          root: {
-                            fontSize: "20px",
-                            fontWeight: "600",
-                          },
-                        }}
-                      >
-                        {/* <FontIcon iconName="CircleFill" style={{ color: theme.palette.themePrimary, fontSize: 16, paddingRight: 7, paddingTop: 6 }} /> */}
-                        {HeaderComponent.props.children}
-                      </StackItem>
-                      <ActionButton
-                        styles={addChevronDownIconStyle}
-                        iconProps={addChevronDownIcon}
-                        onClick={toggleIsMenuVisible}
-                        ariaLabel="Show steps"
-                      />
-                    </Stack>
-                  )}
-                  {isMenuVisible && (
-                    <Stack
-                      className="hidden_medium_large"
-                      styles={{
-                        root: {
-                          position: "absolute",
-                          top: 63,
-                          background: "white",
-                          width: "100%",
-                          zIndex: 1,
-                          boxShadow: "0 3px 5px 0 rgba(0, 0, 0, 0.3)",
-                        },
-                      }}
-                    >
-                      {generateLeftMenu(theme)}
-                    </Stack>
-                  )}
-                  {SubheaderComponent && (
-                    <Stack
-                      className="wizard-right-header"
-                      styles={{
-                        root: {
-                          fontSize: "14px",
-                          fontWeight: "400",
-                        },
-                      }}
-                    >
-                      {SubheaderComponent.props.children}
-                    </Stack>
-                  )}
-                  {ContentComponent && (
-                    <Stack
-                      className="wizard-right-content"
-                      styles={{
-                        root: {
-                          flex: "1",
-                          overflowY: "auto",
-                          maxHeight: "597px",
-                        },
-                      }}
-                    >
-                      {ContentComponent.props.children}
-                    </Stack>
-                  )}
-                </Stack>
-                {FooterComponent && (
-                  <Stack
-                    className="wizard-right-footer"
-                    horizontal
-                    styles={{
-                      root: {
-                        borderTop: `1px solid ${theme.palette.neutralLight}`,
-                        overflow: "hidden",
-                        height: "64px",
-                        justifyContent: "space-between",
-                        padding: "16px 24px"
-                      },
-                    }}
-                  >
-                    {FooterComponent.props.children}
-                  </Stack>
-                )}
+                {SubheaderComponent.props.children}
               </Stack>
-            </StyledStack>
-          </Dialog>
-        );
-      }}
-    </ThemeContext.Consumer>
+            )}
+            {ContentComponent && (
+              <Stack
+                className="wizard-right-content"
+                styles={{
+                  root: {
+                    flex: "1",
+                    overflowY: "auto",
+                    maxHeight: "597px",
+                  },
+                }}
+              >
+                {ContentComponent.props.children}
+              </Stack>
+            )}
+          </Stack>
+          {FooterComponent && (
+            <Stack
+              className="wizard-right-footer"
+              horizontal
+              styles={{
+                root: {
+                  borderTop: `1px solid ${theme.palette.neutralLight}`,
+                  overflow: "hidden",
+                  height: "64px",
+                  justifyContent: "space-between",
+                  padding: "16px 24px"
+                },
+              }}
+            >
+              {FooterComponent.props.children}
+            </Stack>
+          )}
+        </Stack>
+      </StyledStack>
+    </Dialog>
   );
 };
 
