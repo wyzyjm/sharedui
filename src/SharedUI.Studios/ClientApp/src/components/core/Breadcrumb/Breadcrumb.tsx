@@ -45,6 +45,9 @@ const StyledBreadcrumbInternal = (props: DefaultBreadcrumbProps) => {
               pointerEvents: 'none',
               cursor: 'pointer'
             },
+            ":first-child .ms-Breadcrumb-itemLink": {
+              paddingLeft: 0
+            }
           },
         },
       }}
