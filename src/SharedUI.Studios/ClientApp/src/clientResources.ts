@@ -51,9 +51,9 @@ export const ThemedIconsLocalizationFormatMessages = defineMessages({
 });
 
 export const BreadcrumbLocalizationFormatMessages = defineMessages({
-    NavigationHistory: {
-        id: "Breadcrumb.NavigationHistory",
-        defaultMessage: "Navigation history",
+    Breadcrumb: {
+        id: "Breadcrumb.Breadcrumb",
+        defaultMessage: "Breadcrumb",
     }
 });
 

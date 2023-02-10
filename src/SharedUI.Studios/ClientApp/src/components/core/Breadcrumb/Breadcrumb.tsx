@@ -30,7 +30,7 @@ const StyledBreadcrumbInternal = (props: DefaultBreadcrumbProps) => {
   return !props.items ? null : (
     <Breadcrumb
       items={breadcrumbs}
-      ariaLabel={INTL.formatMessage(BreadcrumbLocalizationFormatMessages.NavigationHistory)}
+      ariaLabel={INTL.formatMessage(BreadcrumbLocalizationFormatMessages.Breadcrumb)}
       styles={{
         root: { margin: "0px" },
         itemLink: {

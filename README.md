@@ -23,8 +23,8 @@ Please add "CognitiveServicesSharedComponents" feed as an upstream feed to your 
 - If your feed stays in the "msazure" organization, select "Azure artifact feeds in this organization"
     - select the "CognitiveServicesSharedComponents" feed from the dropdown, "Local" as the view, "npm" as the package
 - If your feed isnt part of "msazure" organization, select "Azure artifact feed in a different organization"
-    - enter the feed locator as "azure-feed://msazure/CognitiveServicesSharedComponents@Local", "npm" as the package
-     - if the above doesnt work, try: "azure-feed://msazure/Cognitive%20Services/CognitiveServicesSharedComponents@Local", "npm" as the package
+    - enter the feed locator as "azure-feed://msazure/Cognitive%20Services/CognitiveServicesSharedComponents@Local", "npm" as the package
+     - if the above doesnt work, try: "azure-feed://msazure/CognitiveServicesSharedComponents@Local", "npm" as the package
 
 [More help]: 
 Q. How to find "your feed"? In your project, there should be a nuget.config file which would have the name of the registry. For example: https://msazure.pkgs.visualstudio.com/a531312f-ba7b-4573-ab4f-d468b740a319/_packaging/*CognitiveIbizaPortalExtension*/nuget/v3/index.json

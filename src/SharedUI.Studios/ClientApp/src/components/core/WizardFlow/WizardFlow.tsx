@@ -230,7 +230,7 @@ export const WizardFlow: IWizardFlow = function (props: WizardFlowProps) {
               width: "100%",
             },
             ".ms-Dialog-main": {
-              width: "800px",
+              width: props.innerWidth || "800px",
             },
             ".ms-Modal-scrollableContent": {
               overflowY: "hidden",
@@ -239,7 +239,7 @@ export const WizardFlow: IWizardFlow = function (props: WizardFlowProps) {
         },
       }}
       {...props}
-      maxWidth={"800px"}
+      maxWidth={props.innerWidth || "800px"}
     >
       <StyledStack horizontal styles={{ root: { minHeight: props.height } }}>
         <Stack
