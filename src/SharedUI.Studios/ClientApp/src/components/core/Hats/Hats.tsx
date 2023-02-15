@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Panel, PanelType, Link, Separator } from "@fluentui/react";
 import { CircularLoadingIndicator as Spinner } from '../Spinners/Spinners';
 import { INTL } from "../../../util/intlUtil";
@@ -31,10 +31,13 @@ export interface HatsProps {
 };
 
 const HatsInternal = (props: HatsProps) => {
-    const [loading, setLoading] = useState(true);
-    const [isPanelOpen, setIsPanelOpen] = useState(props.isOpen);
-
     const { onClose, onLoad, interaction, autoFlyout, headerText, surveyLink, isOpen } = props;
+    const [loading, setLoading] = useState(true);
+    const [isPanelOpen, setIsPanelOpen] = useState(isOpen);
+    useEffect(() => {
+        setIsPanelOpen(isOpen)
+    }, [isOpen])
+
 
     if (!surveyLink || !surveyLink.length) {
         throw new Error("Survey Link is not passed for the HaTSArea component");

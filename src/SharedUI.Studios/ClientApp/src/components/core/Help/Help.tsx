@@ -1,6 +1,6 @@
 import * as React from "react";
 import { Link, ILinkProps, Panel, PanelType, Stack } from "@fluentui/react";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { INTL } from "../../../util/intlUtil";
 import { HelpLocalizationFormatMessages } from "../../../clientResources";
 import { initializeComponent, useLocalization, withLocalization } from "../../../services/localization";
@@ -26,7 +26,9 @@ const StyledStack = styled(Stack)`
 const HelpAreaInternal = (props: IHelpAreaProps) => {
     const { onClose, isOpen, headerText } = props;
     const [isPanelOpen, setIsPanelOpen] = useState(isOpen);
-
+    useEffect(() => {
+        setIsPanelOpen(isOpen)
+    }, [isOpen])
     function onDismiss() {
         setIsPanelOpen(false);
         onClose?.();
