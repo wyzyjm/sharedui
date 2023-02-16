@@ -34,32 +34,29 @@ const HelpAreaInternal = (props: IHelpAreaProps) => {
         onClose?.();
     }
 
-    const onRenderFooterContent = React.useCallback(
-        () => (
-            <Stack wrap horizontal horizontalAlign={"space-between"}>
-                {
-                    props.footerItems.map((item: LinkPropsExt, index: any) => {
-                        const { displayText, ...linkProps } = item;
-                        return (
-                            <StyledStack wrap horizontal horizontalAlign={"space-between"} tokens={{ childrenGap: 11 }} key={displayText}>
-                                <Stack.Item>
-                                    <Link {...linkProps}>{displayText}</Link>
-                                </Stack.Item>
-                                <Stack.Item>
-                                    {index != (props.footerItems.length - 1) && (
-                                        <Stack.Item>
-                                            |
-                                        </Stack.Item>
-                                    )}
-                                </Stack.Item>
-                            </StyledStack>
-                        );
-                    })
-                }
-            </Stack>
-        ),
-        []
-    );
+    const onRenderFooterContent = () => (
+        <Stack wrap horizontal horizontalAlign={"space-between"}>
+            {
+                props.footerItems.map((item: LinkPropsExt, index: any) => {
+                    const { displayText, ...linkProps } = item;
+                    return (
+                        <StyledStack wrap horizontal horizontalAlign={"space-between"} tokens={{ childrenGap: 11 }} key={displayText}>
+                            <Stack.Item>
+                                <Link {...linkProps}>{displayText}</Link>
+                            </Stack.Item>
+                            <Stack.Item>
+                                {index !== (props.footerItems.length - 1) && (
+                                    <Stack.Item>
+                                        |
+                                    </Stack.Item>
+                                )}
+                            </Stack.Item>
+                        </StyledStack>
+                    );
+                })
+            }
+        </Stack>
+    )
 
     return (
         <Panel
