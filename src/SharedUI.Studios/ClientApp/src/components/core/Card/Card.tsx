@@ -1,8 +1,22 @@
-import { useTheme, IDocumentCardStyles, DocumentCard, Link, Icon, Text, Stack, ILinkProps } from "@fluentui/react";
+import {
+  useTheme,
+  IDocumentCardStyles,
+  DocumentCard,
+  Link,
+  Icon,
+  Text,
+  Stack,
+  ILinkProps,
+  ActionButton,
+  IIconStyles,
+  IContextualMenuItem,
+} from "@fluentui/react";
 import { FontSizes } from '@fluentui/theme';
-import React from "react";
+import React, { useState } from "react";
 import { CSSProperties, ReactNode } from "react";
 import { initializeComponent, useLocalization, withLocalization } from "../../../services/localization";
+import { CardLocalizationFormatMessages } from "../../../clientResources";
+import { INTL } from "../../../util/intlUtil";
 
 
 export enum CardTypes {
@@ -36,6 +50,7 @@ export interface ICardProp {
   linkTitle: string;
   linkProps: ILinkProps;
   onClick?: () => void;
+  linkPropsDropdownOptions?: IContextualMenuItem[]
 };
 
 export interface IStyledDocumentCardProp {
@@ -46,8 +61,26 @@ export interface IStyledDocumentCardProp {
   selected?: boolean;
 }
 
+const iconStyles: IIconStyles = { root: { fontSize: "14px", textDecoration: "underline"} };
+
+const getSamplesLinkOptions = (linkPropsDropdownOptions: IContextualMenuItem[]): IContextualMenuItem[] =>
+  linkPropsDropdownOptions.map(
+    (link) =>
+      ({
+        ...link,
+        onRenderContent: () => (
+          <Link as="span" underline>
+            {`${link.text} `}
+            <Icon iconName="MiniExpand" styles={iconStyles} />
+          </Link>
+        ),
+      } as IContextualMenuItem)
+  );
+
 const CardInternal = (props: ICardProp) => {
   const theme = useTheme();
+  const { linkPropsDropdownOptions } = props;
+  const [isLinkPropsDropdownExpanded, setIsLinkPropsDropdownExpanded] = useState(false);
   const styles = {
     headerWrapper: {
       margin: "12px 12px 0px 12px",
@@ -136,16 +169,35 @@ const CardInternal = (props: ICardProp) => {
           <Text style={{ fontSize: FontSizes.size12, paddingLeft: "8px" }}>{props.headerIconText}</Text>
         </Stack>
       )}
-      <Stack style={styles.headerWrapper}>
+      <Stack className="header" style={styles.headerWrapper}>
         <Text style={styles.header}>{props.title}</Text>
       </Stack>
-      <Stack grow style={styles.descriptionWrapper}>
+      <Stack className="description" grow style={styles.descriptionWrapper}>
         <Text style={styles.description}>{props.description}</Text>
       </Stack>
       {["CardWithIllustration", "CardWithNoIllustration"].includes(props.cardType) && (
-        <Stack style={styles.linkWrapper}>
-          <Link {...props.linkProps}>{props.linkTitle}</Link>
-        </Stack>
+        <>
+          {linkPropsDropdownOptions?.length > 0 ? (
+            <Stack style={{ padding : "0 2px"}}>
+              <ActionButton
+                onClick={() => {}}
+                data-is-focusable
+                menuIconProps={{
+                  iconName: isLinkPropsDropdownExpanded ? "ChevronUp" : "ChevronDown",
+                  title: isLinkPropsDropdownExpanded ? INTL.formatMessage(CardLocalizationFormatMessages.CollapseCardLink) : INTL.formatMessage(CardLocalizationFormatMessages.ExpandCardLink)
+                }}
+                menuProps={{items: getSamplesLinkOptions(linkPropsDropdownOptions)}}
+                onMenuClick={()=> {setIsLinkPropsDropdownExpanded(!isLinkPropsDropdownExpanded)}}
+              >
+                {props.linkTitle}
+              </ActionButton>
+            </Stack>
+          ) : (
+            <Stack style={styles.linkWrapper}>
+              <Link {...props.linkProps}>{props.linkTitle}</Link>
+            </Stack>
+          )}
+        </>
       )}
     </StyledDocumentCard>
   );

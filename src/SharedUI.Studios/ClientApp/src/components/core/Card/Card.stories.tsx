@@ -31,5 +31,22 @@ card.args = {
         href: "https://aka.ms/csstudio"
     },
     cardType: "CardWithIllustration",
-    iconName: "AlignCenter"
+    iconName: "AlignCenter",
+    linkPropsDropdownOptions: [
+        {
+            key: 'codeSamplesCsharp',
+            text: 'Code samples - C#',
+            href: "https://aka.ms/language-sdks-csharp"
+        },
+        {
+            key: 'codeSamplesPython',
+            text: 'Code samples - Python',
+            href: "https://aka.ms/language-sdks-python"
+        },
+        {
+            key: 'codeSamplesJava',
+            text: 'Code samples - Java',
+            href: "https://aka.ms/language-sdks-java"
+        }
+    ]
 } as ICardProp;

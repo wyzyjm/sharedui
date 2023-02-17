@@ -433,3 +433,14 @@ export const PrivacyLinkLocalizationFormatMessages = defineMessages({
         defaultMessage: "Imprint"
     }
 })
+
+export const CardLocalizationFormatMessages = defineMessages({
+    ExpandCardLink: {
+        id: "Card.expandLink",
+        defaultMessage: "Expand card link dropdown"
+    },
+    CollapseCardLink: {
+        id: "Card.Collapse",
+        defaultMessage: "Collapse card link dropdown"
+    }
+})
