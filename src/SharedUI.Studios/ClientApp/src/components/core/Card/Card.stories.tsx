@@ -1,4 +1,5 @@
 import { ComponentStory, ComponentMeta } from '@storybook/react';
+import { Text } from "@fluentui/react";
 import { Card, ICardProp } from './Card';
 import { defaultTheme } from "../../../themes";
 import {
@@ -32,6 +33,8 @@ card.args = {
     },
     cardType: "CardWithIllustration",
     iconName: "AlignCenter",
+    subTitle: <Text>Next generation of QnAMaker</Text>,
+    preview: "(Preview)",
     linkPropsDropdownOptions: [
         {
             key: 'codeSamplesCsharp',

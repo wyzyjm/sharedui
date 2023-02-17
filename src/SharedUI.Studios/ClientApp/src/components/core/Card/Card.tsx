@@ -36,6 +36,8 @@ export interface ICardProp {
 
   isCompactMode?: boolean;
   title: string;
+  subTitle?: JSX.Element,
+  preview?: string,
   description: string;
   iconName?: string
   iconUrl?: URL;
@@ -78,6 +80,7 @@ const getSamplesLinkOptions = (linkPropsDropdownOptions: IContextualMenuItem[]):
   );
 
 const CardInternal = (props: ICardProp) => {
+  const { preview } = props;
   const theme = useTheme();
   const { linkPropsDropdownOptions } = props;
   const [isLinkPropsDropdownExpanded, setIsLinkPropsDropdownExpanded] = useState(false);
@@ -90,6 +93,10 @@ const CardInternal = (props: ICardProp) => {
       fontWeight: 600,
       borderBottom: props.cardType === "CardWithCustomDesign" ? "2px solid #F7630C" : 0,
       paddingBottom: props.cardType === "CardWithCustomDesign" ? "5px" : 0,
+    },
+    subTitleStyle: {
+      fontSize: "14px",
+      padding: "0 12px"
     },
     image: {
       textAlign: "center",
@@ -170,9 +177,17 @@ const CardInternal = (props: ICardProp) => {
         </Stack>
       )}
       <Stack className="header" style={styles.headerWrapper}>
-        <Text style={styles.header}>{props.title}</Text>
+          <Stack horizontal verticalAlign="center" tokens={{ childrenGap: 10 }}>
+              <Text style={styles.header}>{props.title}</Text>
+              {preview && <Text styles={{ root: { fontStyle: 'italic' } }}>{preview}</Text>}
+          </Stack>
       </Stack>
-      <Stack className="description" grow style={styles.descriptionWrapper}>
+      {
+        props.subTitle && <Stack  style={styles.subTitleStyle}>
+          {props.subTitle}
+        </Stack>
+      }
+      <Stack grow style={styles.descriptionWrapper}>
         <Text style={styles.description}>{props.description}</Text>
       </Stack>
       {["CardWithIllustration", "CardWithNoIllustration"].includes(props.cardType) && (
