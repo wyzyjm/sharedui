@@ -35,4 +35,6 @@ export { PrivacyLink, CustomLink } from "./components/core/PrivacyLink/PrivacyLi
 export type { CustomLinkProps } from "./components/core/PrivacyLink/PrivacyLink";
 export type { ProfileCardProps, TenantInformation } from './components/core/ProfileCard/ProfileCard'
 export { ProfileCard } from './components/core/ProfileCard/ProfileCard'
+export { SplashScreenView } from './components/core/SplashScreenView/SplashScreenView';
+export type { SplashScreenViewProps } from './components/core/SplashScreenView/SplashScreenView';
 export { PageHeader } from './components/core/PageHeader/PageHeader';
