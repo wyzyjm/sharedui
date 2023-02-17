@@ -5,6 +5,7 @@ let storybookPOM: StorybookTestPOM;
 
 const headerBodyClass = ".body-98";
 const itemsClass = ".ms-FocusZone";
+const headerTextClass = '.headerText'
 
 test.beforeEach(async ({ page }) => {
   storybookPOM = new StorybookTestPOM(page);
@@ -48,17 +49,15 @@ test.describe('Header tests', () => {
     const itemsFontWeight = await storybookPOM.getComputedStyle(itemsElement, "font-weight");
     await expect(itemsFontWeight).toBe("400");
   });
-
   test('the header should update on properties updates', async ({ page }) => {
     // Check the headerText prop
+    const headerTextElement = await storybookPOM.getElementFromPreview(headerTextClass);
     await page.locator('textarea[name="headerText"]').fill("Hello");
-    const headerTextElement = await storybookPOM.getByRole('link', { name: 'Cognitive Services|Hello' });
-    expect(headerTextElement).toHaveText("Cognitive Services|Hello");
+    await expect(headerTextElement).toHaveText("Hello");
 
     // Check the headerLinkClickUrl prop
-    const hClass = ".sto-crh05v"
     await page.locator('textarea[name="headerHomePageUrl"]').fill("https://www.google.com/");
-    (await storybookPOM.getByRole('link', { name: 'Cognitive Services|Hello' })).click();
+    await headerTextElement.click();
     await expect(page).toHaveURL('https://www.google.com/');
   });
 

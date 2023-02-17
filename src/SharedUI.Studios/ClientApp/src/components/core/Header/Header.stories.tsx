@@ -95,4 +95,12 @@ Header.args = {
   headerText: "Azure OpenAI Studio",
   headerHomePageUrl: "https://openai.studio-ppe.azure.com/portal",
   commandBarItems: commandBarItems,
+  loginPath: '/portal',
+  friendlyName: 'Conan Wang (CSI Interfusion Inc)',
+  subscription: {
+    name: 'subscription name',
+    sku: '2,50',
+    localeDisplayName: 'West US',
+  },
+  photoData: ''
 } as IHeaderProps;

@@ -5,7 +5,11 @@ export const HeaderLocalizationFormatMessages = defineMessages({
     CognitiveServices: {
         id: "Header.CognitiveServices",
         defaultMessage: "Cognitive Services"
-    }
+    },
+    SignIn: {
+        id: "Header.SignIn",
+        defaultMessage: "Sign In"
+    },
 });
 
 export const SpinnersLocalizationFormatMessages = defineMessages({

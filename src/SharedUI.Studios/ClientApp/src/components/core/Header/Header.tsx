@@ -1,3 +1,4 @@
+import { useState } from 'react'
 import {
   CommandBar,
   ICommandBarItemProps,
@@ -7,13 +8,19 @@ import {
   Link,
   Stack,
   Text,
+  useTheme,
+  Persona,
+  PersonaSize,
+  IPersonaProps,
   ThemeProvider,
 } from "@fluentui/react";
+import { format } from "util";
+
 import { defaultTheme } from "../../../themes";
 import styled, { ThemeProvider as ReactThemeProvider } from "styled-components";
 import { initializeComponent, withLocalization } from "../../../services/localization";
 import { INTL } from "../../../util/intlUtil";
-import { HeaderLocalizationFormatMessages } from "../../../clientResources";
+import { HeaderLocalizationFormatMessages, AzureLocationMessages } from "../../../clientResources";
 
 const itemAlignmentsStackStyles: IStackStyles = {
   root: {
@@ -27,230 +34,254 @@ export const ThemedHeaderIcon: any = styled(Icon).attrs({})`
   }
 `;
 
+interface Subscription {
+  name: string;
+  sku: string;
+  localeDisplayName: string;
+}
 export interface IHeaderProps {
   headerText: string;
   headerHomePageUrl: string;
   commandBarItems: ICommandBarItemProps[];
+  isAuthenticated: boolean;
+  friendlyName: string;
+  subscription: Subscription;
+  photoData: string;
+  loginPath: string;
+  onProfileClick: () => void
 };
 
 const StyledDiv = styled.div`
-    .header-o89jbf53v3 {
-      width: 100%;
+width: 100%;
 
-      .navbar {
-          padding: 0;
-          display: flex;
-          width: 100%;
-          height: 40px;
-      }
+.navbar {
+    padding: 0;
+    display: flex;
+    width: 100%;
+    height: 40px;
+}
 
-      .nav-left {
-          margin-left: 1rem;
-          display: inline-flex;
-          flex-direction: row;
-      }
+.nav-left {
+    margin-left: 1rem;
+    display: inline-flex;
+    flex-direction: row;
+}
 
-      .nav-right {
-          display: inline-flex;
-          flex-direction: row;
-          position: relative;
-          float: right;
-      }
+.nav-right {
+    display: inline-flex;
+    flex-direction: row;
+    position: relative;
+    float: right;
+}
 
-      .spliter {
-          padding-left: 0.8125rem;
-          padding-right: 0.8125rem;
-          font-size: 100%;
-      }
+.signin {
+  margin-right: 1rem;
+}
 
-      .header-link {
-          line-height: normal;
-          letter-spacing: -0.17px;
+.spliter {
+    padding-left: 0.8125rem;
+    padding-right: 0.8125rem;
+    font-size: 100%;
+}
 
-          span {
-              font-size: 18px;
-              vertical-align: middle;
-          }
+.header-link {
+    line-height: normal;
+    letter-spacing: -0.17px;
 
-          i {
-              line-height: 1.5;
-
-              &.black-icon {
-                  font-weight: 600;
-              }
-          }
-      }
-
-      .right-icon {
-          display: -webkit-flex;
-          display: flex;
-          height: 40px;
-          width: 3rem;
-          -webkit-flex: 0 0 auto;
-          flex: 0 0 auto;
-          -webkit-align-items: center;
-          align-items: center;
-          -webkit-justify-content: center;
-          justify-content: center;
-          cursor: pointer;
-          background: none;
-          border: none;
-      }
-
-      .navbar-text {
-          padding-right: 1rem;
-      }
+    span {
+        font-size: 18px;
+        vertical-align: middle;
     }
 
-    .header-link.notification {
+    i {
+        line-height: 1.5;
+
+        &.black-icon {
+            font-weight: 600;
+        }
+    }
+}
+
+.right-icon {
+    display: -webkit-flex;
+    display: flex;
+    height: 40px;
+    width: 3rem;
+    -webkit-flex: 0 0 auto;
+    flex: 0 0 auto;
+    -webkit-align-items: center;
+    align-items: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    cursor: pointer;
+    background: none;
+    border: none;
+}
+
+.navbar-text {
+    padding-right: 1rem;
+}
+
+.header-link.notification {
+  position: absolute;
+}
+
+.ms-CommandBar {
+  padding: 0;
+  height: 40px;
+
+  .ms-ContextualMenu-link {
+      position: relative;
+  }
+
+  .ms-Button--commandBar {
+      width: 40px;
+      position: relative;
+  }
+
+  .notification-prompt {
       position: absolute;
-    }
+      top: 8px;
+      left: 24px;
+  }
+}
 
-    .ms-CommandBar {
-      padding: 0;
-      height: 40px;
+.ms-ContextualMenu {
 
-      .ms-ContextualMenu-link {
-          position: relative;
-      }
-
-      .ms-Button--commandBar {
-          width: 40px;
-          position: relative;
+  .ms-ContextualMenu-linkContent {
+      i {
+          margin: 0 4px;
+          width: 16px !important;
+          font-size: 16px !important;
       }
 
       .notification-prompt {
-          position: absolute;
-          top: 8px;
-          left: 24px;
+          top: 4px;
+          left: 16px;
+          overflow: hidden;
+          text-align: center;
+          line-height: 16px !important;
       }
-    }
-
-    .ms-ContextualMenu {
-
-      .ms-ContextualMenu-linkContent {
-          i {
-              margin: 0 4px;
-              width: 16px !important;
-              font-size: 16px !important;
-          }
-
-          .notification-prompt {
-              top: 4px;
-              left: 16px;
-              overflow: hidden;
-              text-align: center;
-              line-height: 16px !important;
-          }
-      }
+  }
 
 
-      .notification-prompt,
-      .notification-progressing-bar {
-          position: absolute;
-      }
+  .notification-prompt,
+  .notification-progressing-bar {
+      position: absolute;
+  }
 
-      .notification-progressing-bar {
-          top: 25px;
-          width: 22px;
-      }
+  .notification-progressing-bar {
+      top: 25px;
+      width: 22px;
+  }
 
-    }
+}
 
-    /** Mobile support start **/
+/** Mobile support start **/
 
-    .show_s {
+.show_s {
+  display: none !important;
+}
+
+// 1200px
+@media (max-width: 1200px) {
+
+  .container-inside-content,
+  .container-inside-header {
+      padding: 0 10px !important;
+  }
+}
+
+// 600px
+@media (max-width: 600px) {
+  .ms-OverflowSet-item {
       display: none !important;
-    }
+  }
 
-    // 1200px
-    @media (max-width: 1200px) {
+  .show_s {
+      display: block !important;
+  }
+}
 
-      .container-inside-content,
-      .container-inside-header {
-          padding: 0 10px !important;
-      }
-    }
+// 600px
+@media (max-width: 600px) {
+  .hidden_little {
+      display: none !important;
+  }
+}
 
-    // 600px
-    @media (max-width: 600px) {
-      .ms-OverflowSet-item {
-          display: none !important;
-      }
+// 600px
+@media (max-width: 600px) {
+  .show_little {
+      display: block !important;
+  }
+}
 
-      .show_s {
-          display: block !important;
-      }
-    }
+// 500px
+@media (max-width: 500px) {
+  .hidden_small {
+      display: none !important;
+  }
+}
+// 768px
+@media (max-width: 768px) {
+  .hidden_medium {
+    display: none !important;
+  }
+}
 
-    // 600px
-    @media (max-width: 600px) {
-      .hidden_little {
-          display: none !important;
-      }
-    }
+// main
+.container-content {
+  overflow-y: auto;
+  overflow-x: hidden;
+  flex: 1;
+}
 
-    // 600px
-    @media (max-width: 600px) {
-      .show_little {
-          display: block !important;
-      }
-    }
+// wrapped
+.container-inside-wrap {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
 
-    // 500px
-    @media (max-width: 500px) {
-      .hidden_small {
-          display: none !important;
-      }
-    }
+.container-inside-header {
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+}
 
-    // main
-    .container-content {
-      overflow-y: auto;
-      overflow-x: hidden;
-      flex: 1;
-    }
+// body
+.container-inside-content {
+  overflow-y: overlay;
+  flex: 1;
+}
 
-    // wrapped
-    .container-inside-wrap {
-      display: flex;
-      flex-direction: column;
-      height: 100%;
-    }
+// content-body
+.container-inside-content--body {
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+}
 
-    .container-inside-header {
-      max-width: 1200px;
-      margin: 0 auto;
-      width: 100%;
-    }
+button.ms-Link {
+  &:focus {
+      outline: none;
+  }
+}
 
-    // body
-    .container-inside-content {
-      overflow-y: overlay;
-      flex: 1;
-    }
-
-    // content-body
-    .container-inside-content--body {
-      max-width: 1200px;
-      margin: 0 auto;
-      position: relative;
-    }
-
-    button.ms-Link {
-      &:focus {
-          outline: none;
-      }
-    }
-
-    a {
-      &:focus {
-          text-decoration: underline;
-      }
-    }
+a {
+  &:focus {
+      text-decoration: underline;
+  }
+}
 `;
-
+const PlaceHolder = "--";
 function ThemedHeaderInternal(props: IHeaderProps) {
+  const { isAuthenticated, friendlyName, subscription, photoData, loginPath, onProfileClick } = props
+  const theme = useTheme();
+
+  const [showProfile, setShowProfile] = useState(false);
+
   const itemAlignmentsStackTokens: IStackTokens = {
     padding: "0 0 0 10px",
   };
@@ -268,9 +299,56 @@ function ThemedHeaderInternal(props: IHeaderProps) {
       }
     }
   `;
+  const ThemedHeaderButton = styled.button.attrs({})`
+  &.white {
+    background-color: ${props => props.theme.palette.themePrimary};
+  }`;
+  const ThemedHeaderPersona = styled(Persona).attrs({})`
+  div.ms-Persona-initials {
+    width: 100%;
+    color: ${props => props.theme.palette.themePrimary};
+  }
+  &.white {
+    div.ms-Persona-initials {
+      background-color: ${props => props.theme.palette.themePrimary};
+      color: ${props => props.theme.palette.white};
+    }
+  }
 
+  div.ms-Persona-imageArea {
+    display: flex;
+    img {
+      width: 32px;
+      height: 32px;
+    }
+  }
+
+  &.hasPhoto {
+    div.ms-Persona-initials {
+      display: none;
+    }
+  }
+`;
+
+  function getLocalizationMessage(name: string): string {
+    const id = name.replace(/ /g, "").toLowerCase();
+    if (id in AzureLocationMessages) return INTL.formatMessage(AzureLocationMessages[id]);
+    return name;
+  }
+  function onRenderCoin(personaProps: IPersonaProps): JSX.Element {
+    const { coinSize, imageAlt } = personaProps;
+    return (
+      <img
+        style={{ borderRadius: "50%", width: 100, height: 100 }}
+        src={`data:image/png;base64,${photoData ?? ""}`}
+        alt={imageAlt}
+        width={coinSize}
+        height={coinSize}
+      />
+    );
+  }
   return (
-    <StyledDiv className="header-o89jbf53v3">
+    <StyledDiv>
       <ThemeProvider theme={defaultTheme.header}>
         <ReactThemeProvider theme={defaultTheme.header}>
           <Stack
@@ -279,26 +357,26 @@ function ThemedHeaderInternal(props: IHeaderProps) {
             styles={itemAlignmentsStackStyles}
             tokens={itemAlignmentsStackTokens}
           >
-            <ThemedHeaderLink
-              style={{ overflow: "hidden", whiteSpace: "nowrap" }}
-              href={props.headerHomePageUrl}
-            >
+            <ThemedHeaderLink className="hidden_small" href={props.headerHomePageUrl} >
               {INTL.formatMessage(HeaderLocalizationFormatMessages.CognitiveServices)}
-              <Text
-                className="hidden_small"
-                style={{
-                  marginRight: 10,
-                  marginLeft: 10
-                }}
+            </ThemedHeaderLink>
+            <Text
+              className="hidden_small"
+              style={{
+                marginRight: 10,
+                marginLeft: 10
+              }}
+            >
+              <span
+                style={{ color: "white" }}
               >
-                <span
-                  style={{ color: "white" }}
-                >
-                  |
-                </span>
-              </Text>
+                |
+              </span>
+            </Text>
+            <ThemedHeaderLink href={props.headerHomePageUrl} className="headerText">
               {props.headerText}
             </ThemedHeaderLink>
+
             <Stack.Item grow={1}>
               <span></span>
             </Stack.Item>
@@ -310,7 +388,76 @@ function ThemedHeaderInternal(props: IHeaderProps) {
                 overflowButtonProps={{ ariaLabel: "More commands", className: "show_s" }}
                 ariaLabel="Inbox actions"
               />
+              {/* profile start */}
+              {isAuthenticated && <ThemedHeaderButton
+                className={"right-icon nav-item " + (showProfile ? "white" : "")}
+                style={{ width: "auto" }}
+                title={friendlyName}
+                onClick={() => {
+                  onProfileClick();
+                  setShowProfile(!showProfile);
+                }}
+              >
+                <Stack horizontal tokens={{ childrenGap: 8 }} style={{ alignItems: "center" }}>
+                  <Stack className="hidden_medium" style={{ alignItems: "flex-end" }}>
+                    <Text style={{ fontSize: 14, color: showProfile ? "inherit" : theme.palette.white }}>
+                      {friendlyName}
+                    </Text>
+                    <Text
+                      title={format(
+                        "%s (%s, %s)",
+                        subscription ? subscription.name : PlaceHolder,
+                        subscription
+                          ? getLocalizationMessage(subscription.localeDisplayName)
+                          : PlaceHolder,
+                        subscription ? subscription.sku : PlaceHolder
+                      )}
+                      style={{
+                        fontSize: 10,
+                        color: showProfile ? "inherit" : theme.palette.white,
+                        maxWidth: 200,
+                        overflow: "hidden",
+                        whiteSpace: "nowrap",
+                        textOverflow: "ellipsis",
+                      }}
+                    >
+                      {format(
+                        "%s (%s, %s)",
+                        subscription ? subscription.name : PlaceHolder,
+                        subscription
+                          ? getLocalizationMessage(subscription.localeDisplayName)
+                          : PlaceHolder,
+                        subscription ? subscription.sku : PlaceHolder
+                      )}
+                    </Text>
+                  </Stack>
+                  {photoData && (
+                    <ThemedHeaderPersona
+                      className="hasPhoto"
+                      hidePersonaDetails
+                      size={PersonaSize.size32}
+                      onRenderCoin={onRenderCoin}
+                    />
+                  )}
+                  {!photoData && (
+                    <ThemedHeaderPersona
+                      hidePersonaDetails
+                      size={PersonaSize.size32}
+                      text={friendlyName}
+                      className={showProfile ? "" : "white"}
+                    />
+                  )}
+                </Stack>
+              </ThemedHeaderButton>}
+              {/* profile end */}
             </div>
+            {!isAuthenticated && (
+              <div className="nav-right my-lg-0 signin">
+                <ThemedHeaderLink href={loginPath}>
+                  {INTL.formatMessage(HeaderLocalizationFormatMessages.SignIn)}
+                </ThemedHeaderLink>
+              </div>
+            )}
           </Stack>
         </ReactThemeProvider>
       </ThemeProvider>
