@@ -77,6 +77,7 @@ const defaultDetailsListStyles = (theme: Theme) => ({
 }) as IDetailsListProps["styles"];
 
 export interface ICustomColumn<T> extends IColumn {
+    isHiddenFromColumnSelector: boolean;
     sortKey?: (item: T) => string | number | Date;
     onRenderDependencies?: string[];
 }
@@ -125,6 +126,7 @@ function buildColumns<T extends {}>(
     onMoreButtonClick: (eventTarget: EventTarget) => void
 ) {
     let draftColumns = cloneDeep(columns);
+    draftColumns = draftColumns.filter(col => !col.isHiddenFromColumnSelector);
     draftColumns = draftColumns.map(col => {
         if (col.sortKey && col.isResizable) {
             col.columnActionsMode = ColumnActionsMode.hasDropdown;
@@ -417,7 +419,7 @@ function CustomShimmeredDetailsListInternal<T>(props: ICustomShimmeredDetailsLis
             setColumns(modifiedColumns);
         }
     }, [
-        JSON.stringify(props.columns.map((column: any) => [column.name, column.key, column.onRenderDependencies].toString())),
+        JSON.stringify(props.columns.map((column: any) => [column.name, column.key, column.onRenderDependencies, column.isHiddenFromColumnSelector].toString())),
     ]);
 
     return (
@@ -456,7 +458,7 @@ function CustomShimmeredDetailsListInternal<T>(props: ICustomShimmeredDetailsLis
             />
 
             {colHeaderContextualMenuProps && <ContextualMenu {...colHeaderContextualMenuProps} />}
-            
+
             <Dialog
                 hidden={isResizeDialogHidden}
                 dialogContentProps={resizeDialogContentProps}

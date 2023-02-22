@@ -434,6 +434,42 @@ export const PrivacyLinkLocalizationFormatMessages = defineMessages({
     }
 })
 
+export const ColumnSelectorLocalizationFormatMessages = defineMessages({
+    Content: {
+        id: "ColumnSelector.Content",
+        defaultMessage: "Check the column names you would like to be visible. Drag items, or use arrow keys, to rearrange them."
+    },
+    EditColumns: {
+        id: "ColumnSelector.EditColumns",
+        defaultMessage: "Edit columns"
+    },
+    Save: {
+        id: "ColumnSelector.Save",
+        defaultMessage: "Save"
+    },
+    Cancel: {
+        id: "ColumnSelector.Cancel",
+        defaultMessage: "Cancel"
+    },
+    Close: {
+        id: "ColumnSelector.Close",
+        defaultMessage: "Close"
+    },
+    MoveUp: {
+        id: "ColumnSelector.MoveUp",
+        defaultMessage: "Move Up"
+    },
+    MoveDown: {
+        id: "ColumnSelector.MoveDown",
+        defaultMessage: "Move Down"
+    },
+    FilterByName: {
+        id: "ColumnSelector.FilterByName",
+        defaultMessage: "The columns are updated"
+    }
+})
+
+
 export const CardLocalizationFormatMessages = defineMessages({
     ExpandCardLink: {
         id: "Card.expandLink",
