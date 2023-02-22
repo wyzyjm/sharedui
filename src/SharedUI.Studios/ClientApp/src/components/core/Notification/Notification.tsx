@@ -374,6 +374,16 @@ const StyledPanel = styled(Panel)`
         }
       }
     }
+    
+    .ms-Panel-navigation .ms-PanelAction-close {
+      margin-right: 24px;
+    }
+
+    .notification-panel-separator::before {
+      @media screen and (-ms-high-contrast: active) {
+        background-color: GrayText;
+      }
+    }
 `;
 
 const StyledNotificationTitleDiv = styled.div`
@@ -433,7 +443,7 @@ function NotificationPanelInternal(props: INotificationPanelProps): JSX.Element 
           onClick={props.onClick}
         >{INTL.formatMessage(NotificationLocalizationFormatMessages.DismissAll)}</FabricLink>
       </div>
-      <Separator />
+      <Separator className="notification-panel-separator" />
       <Stack>
         {sortedItems.map((item) => (
           <Stack.Item key={item.id}>
@@ -474,7 +484,7 @@ function NotificationPanelInternal(props: INotificationPanelProps): JSX.Element 
                 />
               </Stack>
             </Stack>
-            <Separator />
+            <Separator className="notification-panel-separator" />
           </Stack.Item>
         ))}
       </Stack>
