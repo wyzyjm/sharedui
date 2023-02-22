@@ -40,6 +40,7 @@ test.describe('Rating Banner tests', () => {
     });
 
     await radioBtnLabel.click();
+    await (await storybookPOM.getByRole('button', { name: 'Submit' })).click();
 
     // Check panel width
     const panelClass = ".ms-Panel-main";

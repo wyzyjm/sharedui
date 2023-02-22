@@ -150,6 +150,10 @@ export const BannerLocalizationFormatMessages = defineMessages({
         id: "Banner.ExtremelyLikely",
         defaultMessage: "Extremely likely",
     },
+    Submit: {
+        id: "Banner.Submit",
+        defaultMessage: "Submit",
+    }
 });
 
 export const HelpLocalizationFormatMessages = defineMessages({

@@ -3,8 +3,8 @@ import { StorybookTestPOM } from '../../../StoryBook.spec';
 
 let storybookPOM: StorybookTestPOM;
 
-const bannerClass = '.hnplFi'
-const bannerTitleClass = ".hmVVEl";
+const bannerClass = '.iPbrZV';
+const bannerTitleClass = ".kejVBM";
 
 test.beforeEach(async ({ page }) => {
   storybookPOM = new StorybookTestPOM(page);

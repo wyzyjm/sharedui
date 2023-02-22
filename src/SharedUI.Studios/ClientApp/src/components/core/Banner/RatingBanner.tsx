@@ -1,6 +1,6 @@
 // \FormRecognizerStudio\FormRecognizerStudio\ClientApp\src\view\components\navMenu\navMenu.tsx
 import React, { useState } from "react";
-import { FontIcon, Text, DefaultButton, MessageBar, MessageBarType, ChoiceGroup, IChoiceGroupOption } from "@fluentui/react";
+import { FontIcon, Text, MessageBar, ChoiceGroup, IChoiceGroupOption, PrimaryButton } from "@fluentui/react";
 import { initializeIcons } from '@fluentui/react/lib/Icons';
 import { HaTSArea as CS_Hats, HatsProps } from '../Hats/Hats';
 import { INTL } from "../../../util/intlUtil";
@@ -24,27 +24,6 @@ const StyledMessageBar = styled(MessageBar)`
 `;
 
 const StyledRatingBannerDiv = styled.div`
-    .rating-number-label:last-child {
-        .ms-Label {
-            font-weight: 400;
-            padding-left: 2px;
-            color: inherit;
-        }
-    }
-
-    .rating-number-label:not(:last-child) {
-        .ms-Label {
-          font-weight: 400;
-          padding-left: 7px;
-          color: inherit;
-
-          @media all and (max-width: 390px) {
-            margin-left: 2px;
-            margin-right: 5px;
-          }
-        }
-    }
-
     .studio-banner-left {
         height: 100%;
         display: flex;
@@ -61,7 +40,7 @@ const StyledRatingBannerDiv = styled.div`
           width: 45%;
           color: inherit;
 
-          @media all and (max-width: 965px) { 
+          @media all and (max-width: 1250px) { 
             width: 100%;
             padding-right: 32px;
           }
@@ -74,7 +53,7 @@ const StyledRatingBannerDiv = styled.div`
         flex-wrap: wrap;
         min-width: 450px;
 
-        @media all and (max-width: 965px) { 
+        @media all and (max-width: 1250px) { 
             width: 100%;
             margin-top: 10px;
             min-width: initial;
@@ -84,39 +63,46 @@ const StyledRatingBannerDiv = styled.div`
           padding-right: 10px;
           padding-left: 10px;
 
-          @media all and (max-width: 390px) {
+          @media all and (max-width: 416px) {
             align-items: left;
-            padding-left: 5px;
+            padding-left: 8px;
           }
         }
     
         .positive {
           padding-left: 10px;
 
-          @media all and (max-width: 680px) {
-            margin-left: -90px;
+          @media all and (max-width: 704px) {
+            margin-left: -100px;
           }
 
-          @media all and (max-width: 390px) {
+          @media all and (max-width: 416px) {
             margin-right: 0px;
             margin-top: -5px;
             margin-left: 0px;
-            padding-left: 5px;
+            padding-left: 8px;
           }
         }
     
         .ratings {
-          margin-top: -5px;
+          margin-top: -6px;
+          margin-left: 8px;
+          margin-right: -8px;
 
-          @media all and (max-width: 680px) {
+          @media all and (max-width: 704px) {
             margin-left: -60px;
             margin-top: 20px;
           }
 
-          @media all and (max-width: 390px) {
-            margin-left: 0px;
+          @media all and (max-width: 416px) {
+            margin-left: 8px;
             margin-top: 0px;
+            margin-right: 5px;
           }
+
+        @media all and (max-width: 320px) { 
+            margin-right: 5px;
+        }
         }
       }
     
@@ -142,6 +128,8 @@ const StyledRatingBannerDiv = styled.div`
 
 const StyledChoiceGroup = styled(ChoiceGroup)`
     .ms-ChoiceField {
+        display: inline-block;
+
         @media all and (max-width: 390px) {
             display: inline-block;
             font-family: 'Segoe UI';
@@ -154,6 +142,11 @@ const StyledChoiceGroup = styled(ChoiceGroup)`
             padding-left: 2px
         }
     }
+    .ms-ChoiceFieldLabel {
+        margin-top: 30px;
+        margin-left: -21px;
+        margin-right: 16px;
+    }
 `;
 
 const StyledLabel = styled.label`
@@ -161,15 +154,65 @@ const StyledLabel = styled.label`
     margin-bottom: 0.5rem;
 `;
 
-const RatingBannerInternal = (props: RatingBannerProps) => {
+const StyledDiv = styled.div`
+        height: 60px;
+        width: 0px;
+        margin-left: 10px;
+        border: 1px solid #939393;
 
-    function handleRatingClick(e: any, option: IChoiceGroupOption) {
-        setIsBannerVisible(false);
-        if (props.hatsProp) {
-            props.hatsProp.surveyLink = props.hatsProp.surveyLink + `&Q_PopulateResponse={"QID25":"${option.value}"}`;
-            setIsHatsVisible(true);
+        @media all and (max-width: 516px) {
+            visibility: hidden;
         }
-        props.onClick && props.onClick();
+`;
+
+const StyledPrimaryButton = styled(PrimaryButton)`
+        width: 100px;
+        height: 30px;
+        margin-left: 10px;
+        top: 17px;
+        background: #0F6CBD;
+        border-radius: 4px;
+
+        @media all and (max-width: 516px) {
+            top: 0px;
+        }
+        @media all and (max-width: 416px) {
+            margin-left: -92px;
+            margin-top: 20px;
+        }
+`;
+
+const RatingBannerInternal = (props: RatingBannerProps) => {
+    const [isBannerVisible, setIsBannerVisible] = useState(true);
+    const [isHatsVisible, setIsHatsVisible] = useState(false);
+    const [selectedKey, setSelectedKey] = useState("");
+    const options: IChoiceGroupOption[] = [
+        { key: '0', text: '0' },
+        { key: '1', text: '1' },
+        { key: '2', text: '2' },
+        { key: '3', text: '3' },
+        { key: '4', text: '4' },
+        { key: '5', text: '5' },
+        { key: '6', text: '6' },
+        { key: '7', text: '7' },
+        { key: '8', text: '8' },
+        { key: '9', text: '9' },
+        { key: '10', text: '10' },
+    ];
+
+    function handleRatingClick(e: React.FormEvent, option: IChoiceGroupOption) {
+        setSelectedKey(option.key);
+    }
+
+    function handleSubmitClick() {
+        if (selectedKey != "") {
+            setIsBannerVisible(false);
+            if (props.hatsProp) {
+                props.hatsProp.surveyLink = props.hatsProp.surveyLink + `&Q_PopulateResponse={"QID25":"${selectedKey}"}`;
+                setIsHatsVisible(true);
+            }
+            props.onClick && props.onClick();
+        }
     }
 
     function handleCancel() {
@@ -177,9 +220,6 @@ const RatingBannerInternal = (props: RatingBannerProps) => {
         props.onClose && props.onClose();
     }
 
-    const [isBannerVisible, setIsBannerVisible] = useState(true);
-    const [isHatsVisible, setIsHatsVisible] = useState(false);
-    const ratings = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '10'];
     return (
         <div>
             {isBannerVisible
@@ -200,21 +240,22 @@ const RatingBannerInternal = (props: RatingBannerProps) => {
                                         {INTL.formatMessage(BannerLocalizationFormatMessages.NotAtAll)}
                                     </div>
                                     <div className="ratings">
-                                        {ratings.map((e) => (
-                                            <StyledLabel className="rating-number-label">
-                                                <StyledChoiceGroup
-                                                    className="inlineflex"
-                                                    aria-label="Rating"
-                                                    label={e}
-                                                    options={[{ key: e, text: "", value: e }]}
-                                                    onChange={handleRatingClick}
-                                                />
-                                            </StyledLabel>
-                                        ))}
+                                        <StyledLabel className="rating-number-label">
+                                            <StyledChoiceGroup
+                                                className="inlineflex"
+                                                aria-label="Rating"
+                                                options={options}
+                                                onChange={handleRatingClick}
+                                            />
+                                        </StyledLabel>
                                     </div>
                                     <div className="positive">
                                         {INTL.formatMessage(BannerLocalizationFormatMessages.ExtremelyLikely)}
                                     </div>
+                                    <StyledDiv></StyledDiv>
+                                    <StyledPrimaryButton onClick={handleSubmitClick}>
+                                        {INTL.formatMessage(BannerLocalizationFormatMessages.Submit)}
+                                    </StyledPrimaryButton>
                                 </div>
                             </div>
                             <button
