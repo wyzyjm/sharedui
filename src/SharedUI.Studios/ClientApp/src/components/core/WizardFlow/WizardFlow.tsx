@@ -246,7 +246,7 @@ export const WizardFlow: IWizardFlow = function (props: WizardFlowProps) {
           className="wizard-left hidden_medium"
           styles={{
             root: {
-              minWidth: "30%",
+              minWidth: props.menuWidth || "30%",
               borderRight: `1px solid ${theme.palette.neutralLight}`,
             },
           }}
@@ -257,12 +257,12 @@ export const WizardFlow: IWizardFlow = function (props: WizardFlowProps) {
           className="wizard-right expand_medium"
           styles={{
             root: {
-              width: "70%",
+              width: "auto",
               height: "auto",
             },
           }}
         >
-          <Stack style={{ maxHeight: "576px", padding: "20px", flex: 1, overflowY: "auto", wordBreak: "break-all" }}>
+          <Stack style={{ maxHeight: "576px", padding: "20px", flex: 1, overflowY: "auto", wordBreak: "break-word" }}>
             {Stack && (
               <Stack
                 className="wizard-right-header hidden_medium"

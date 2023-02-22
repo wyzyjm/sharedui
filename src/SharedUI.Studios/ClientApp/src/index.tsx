@@ -24,6 +24,7 @@ export { FilterableComboBox } from "./components/core/FilterableComboBox/Filtera
 export type { IFilterableComboBoxOption, IFilterableComboBoxProps } from "./components/core/FilterableComboBox/FilterableComboBox";
 export { WizardFlow, IWizardFlowStatus } from "./components/core/WizardFlow/WizardFlow";
 export type { IWizardFlowMenuItem, WizardFlowProps, IWizardFlow } from "./components/core/WizardFlow/WizardFlow";
+export type { Parameters } from "./services/flighting/variantService";
 export { VariantService } from "./services/flighting/variantService";
 export type { ICustomColumn, ICustomColumnWithHeader, ICustomColumnWithoutHeader, ICustomColumnsList, ICustomShimmeredDetailsListProp } from "./components/core/ItemList/ItemList";
 export { CustomShimmeredDetailsList } from "./components/core/ItemList/ItemList";

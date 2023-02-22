@@ -51,6 +51,21 @@ export class VariantService {
     public async getAllFeatures(namespace: string = "default"): Promise<Parameters> {
         //default is the namespace
         var defaultConfig = this.expResponse.find(c => c.Id.toLowerCase() === namespace.toLowerCase());
-        return defaultConfig?.Parameters;
+        const features = defaultConfig?.Parameters || {};
+
+        // Override the features when the "flight" param is present in the URL.
+        const queryString = window.location.search;
+        const urlParams = new URLSearchParams(queryString);
+        const flightsInUrl = urlParams.get('flight');
+
+        if (flightsInUrl) {
+            const flights = flightsInUrl.split(",");
+            flights.forEach(flightTuple => {
+                const flightParams = flightTuple.split(":");
+                features[flightParams[0]] = flightParams[1];
+            });
+        }
+
+        return features;
     }
 }
