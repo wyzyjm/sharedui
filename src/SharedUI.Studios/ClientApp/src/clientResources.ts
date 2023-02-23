@@ -426,7 +426,7 @@ export const FaviconLocalizationFormatMessages = defineMessages({
         id: "Pull.Request",
         defaultMessage: "Pull Request"
     }
-})
+});
 export const PrivacyLinkLocalizationFormatMessages = defineMessages({
     PrivacyCookies: {
         id: "PrivacyLink.Cookies",
@@ -436,7 +436,7 @@ export const PrivacyLinkLocalizationFormatMessages = defineMessages({
         id: "PrivacyLink.Imprint",
         defaultMessage: "Imprint"
     }
-})
+});
 
 export const ColumnSelectorLocalizationFormatMessages = defineMessages({
     Content: {
@@ -467,11 +467,19 @@ export const ColumnSelectorLocalizationFormatMessages = defineMessages({
         id: "ColumnSelector.MoveDown",
         defaultMessage: "Move Down"
     },
-    FilterByName: {
-        id: "ColumnSelector.FilterByName",
+    SearchColumnsUpdate: {
+        id: "ColumnSelector.SearchColumnsUpdate",
         defaultMessage: "The columns are updated"
+    },
+    MoveUpColumnsUpdate: {
+        id: "ColumnSelector.MoveUpColumnsUpdate",
+        defaultMessage: "The column is moved up"
+    },
+    MoveDownColumnsUpdate: {
+        id: "ColumnSelector.MoveDownColumnsUpdate",
+        defaultMessage: "The column is moved down"
     }
-})
+});
 
 
 export const CardLocalizationFormatMessages = defineMessages({
@@ -483,4 +491,23 @@ export const CardLocalizationFormatMessages = defineMessages({
         id: "Card.Collapse",
         defaultMessage: "Collapse card link dropdown"
     }
-})
+});
+
+export const PanelSelectorLocalizationFormatMessages = defineMessages({
+    MoveUp: {
+        id: "PanelSelector.MoveUp",
+        defaultMessage: "Move Up"
+    },
+    MoveDown: {
+        id: "PanelSelector.MoveDown",
+        defaultMessage: "Move Down"
+    },
+    MoveUpColumnsUpdate: {
+        id: "PanelSelector.MoveUpColumnsUpdate",
+        defaultMessage: "The column is moved up"
+    },
+    MoveDownColumnsUpdate: {
+        id: "PanelSelector.MoveDownColumnsUpdate",
+        defaultMessage: "The column is moved down"
+    }
+});

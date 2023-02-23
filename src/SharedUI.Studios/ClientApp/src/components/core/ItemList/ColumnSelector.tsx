@@ -1,5 +1,4 @@
 import { Announced, Checkbox, DefaultButton, IColumn, IconButton, IIconProps, Panel, PanelType, PrimaryButton, SearchBox, Stack } from "@fluentui/react";
-import { useBoolean } from "@fluentui/react-hooks";
 import React, { useEffect, useState } from "react";
 import { initializeComponent, useLocalization, withLocalization } from "../../../services/localization";
 import styled from "styled-components";
@@ -128,21 +127,26 @@ function ColumnSelectorInternal(props: IColumnSelectorProps): JSX.Element {
     );
 
     function handleMoveUp(index: number) {
-        let toggleColumnUp = columns[index];
-        columns[index] = columns[index - 1];
-        columns[index - 1] = toggleColumnUp;
-        setColumns(columns);
-        setMove(v => v + 1);
+        if (index > 0) {
+            let toggleColumnUp = columns[index];
+            columns[index] = columns[index - 1];
+            columns[index - 1] = toggleColumnUp;
+            setColumns(columns);
+            setMove(v => v + 1);
+            setAnnounced(<Announced message={INTL.formatMessage(ColumnSelectorLocalizationFormatMessages.MoveUpColumnsUpdate)} />);
+        }
     }
 
     function handleMoveDown(index: number) {
-        let toggleColumnDown = columns[index];
-        columns[index] = columns[index + 1];
-        columns[index + 1] = toggleColumnDown;
-        setColumns(columns);
-        setMove(v => v + 1);
+        if (index < columns.length - 1) {
+            let toggleColumnDown = columns[index];
+            columns[index] = columns[index + 1];
+            columns[index + 1] = toggleColumnDown;
+            setColumns(columns);
+            setMove(v => v + 1);
+            setAnnounced(<Announced message={INTL.formatMessage(ColumnSelectorLocalizationFormatMessages.MoveDownColumnsUpdate)} />);
+        }
     }
-
     function handleChange(item: any, isChecked?: boolean, ev?: React.FormEvent<HTMLElement | HTMLInputElement>) {
         item.isHiddenFromColumnSelector = !isChecked;
         setColumns(columns);
@@ -154,7 +158,7 @@ function ColumnSelectorInternal(props: IColumnSelectorProps): JSX.Element {
             return column.name.toLowerCase().startsWith(newValue.toLowerCase()) || column.name.toLowerCase().includes(newValue.toLowerCase());
         });
         setColumns(filteredColumns);
-        setAnnounced(<Announced message={INTL.formatMessage(ColumnSelectorLocalizationFormatMessages.FilterByName)} />);
+        setAnnounced(<Announced message={INTL.formatMessage(ColumnSelectorLocalizationFormatMessages.SearchColumnsUpdate)} />);
     }
 
     function handleSave() {
@@ -171,6 +175,7 @@ function ColumnSelectorInternal(props: IColumnSelectorProps): JSX.Element {
         <div className="column-selector">
             <Panel
                 headerText={INTL.formatMessage(ColumnSelectorLocalizationFormatMessages.EditColumns)}
+                headerTextProps={{ 'aria-level': 2 }}
                 type={PanelType.custom}
                 customWidth={"380px"}
                 style={{ top: "40px" }}

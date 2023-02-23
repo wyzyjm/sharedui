@@ -1,7 +1,7 @@
-import { Checkbox, CommandBarButton, IColumn, IconButton, IContextualMenuProps, IIconProps, Stack } from "@fluentui/react";
+import { Announced, Checkbox, IColumn, IconButton, IIconProps, Stack } from "@fluentui/react";
 import { useState } from "react";
 import styled from "styled-components";
-import { ColumnSelectorLocalizationFormatMessages } from "../../../clientResources";
+import { PanelSelectorLocalizationFormatMessages } from "../../../clientResources";
 import { initializeComponent, withLocalization } from "../../../services/localization";
 import { INTL } from "../../../util/intlUtil";
 
@@ -85,25 +85,30 @@ function PanelSelectorInternal(props: IPanelSelectorProps): JSX.Element {
     const [move, setMove] = useState(0);
     let draftColumns = props.tableColumns;
     const [columns, setColumns] = useState(draftColumns);
+    const [announced, setAnnounced] = useState<JSX.Element | undefined>(undefined);
     const upIcon: IIconProps = { iconName: "Up" };
     const downIcon: IIconProps = { iconName: "Down" };
 
     function handleMoveUp(index: number) {
-        let toggleColumnUp = columns[index];
-        columns[index] = columns[index - 1];
-        columns[index - 1] = toggleColumnUp;
-        setColumns(columns);
-        props.onChange(columns);
-        setMove(v => v + 1);
+        if (index > 0) {
+            let toggleColumnUp = columns[index];
+            columns[index] = columns[index - 1];
+            columns[index - 1] = toggleColumnUp;
+            setColumns(columns);
+            setMove(v => v + 1);
+            setAnnounced(<Announced message={INTL.formatMessage(PanelSelectorLocalizationFormatMessages.MoveUpColumnsUpdate)} />);
+        }
     }
 
     function handleMoveDown(index: number) {
-        let toggleColumnDown = columns[index];
-        columns[index] = columns[index + 1];
-        columns[index + 1] = toggleColumnDown;
-        setColumns(columns);
-        props.onChange(columns);
-        setMove(v => v + 1);
+        if (index < props.tableColumns.length - 1) {
+            let toggleColumnDown = columns[index];
+            columns[index] = columns[index + 1];
+            columns[index + 1] = toggleColumnDown;
+            setColumns(columns);
+            setMove(v => v + 1);
+            setAnnounced(<Announced message={INTL.formatMessage(PanelSelectorLocalizationFormatMessages.MoveDownColumnsUpdate)} />);
+        }
     }
 
     function handleChange(item: any, isChecked?: boolean, ev?: React.FormEvent<HTMLElement | HTMLInputElement>) {
@@ -116,13 +121,14 @@ function PanelSelectorInternal(props: IPanelSelectorProps): JSX.Element {
     return (
         <>{props.isOpen &&
             <div>
+                {announced}
                 {props.tableColumns.map((item: any, index: number) => (
                     <StyledCSColumnsMainDiv>
                         <StyledCSColumnsStack horizontal tabIndex={0}>
                             <Checkbox label={item.name} title={item.name} checked={!item.isHiddenFromColumnSelector} onChange={(ev, isChecked) => handleChange(item, isChecked, ev)} />
                             <StyledCSIconsDiv className="icons-div">
-                                <StyledCSMoveUpIconButton iconProps={upIcon} title="Move Up" ariaLabel={INTL.formatMessage(ColumnSelectorLocalizationFormatMessages.MoveUp)} onClick={ev => handleMoveUp(index)} />
-                                <StyledCSMoveDownIconButton iconProps={downIcon} title="Move Down" ariaLabel={INTL.formatMessage(ColumnSelectorLocalizationFormatMessages.MoveDown)} onClick={ev => handleMoveDown(index)} />
+                                <StyledCSMoveUpIconButton iconProps={upIcon} title="Move Up" ariaLabel={INTL.formatMessage(PanelSelectorLocalizationFormatMessages.MoveUp)} onClick={ev => handleMoveUp(index)} />
+                                <StyledCSMoveDownIconButton iconProps={downIcon} title="Move Down" ariaLabel={INTL.formatMessage(PanelSelectorLocalizationFormatMessages.MoveDown)} onClick={ev => handleMoveDown(index)} />
                             </StyledCSIconsDiv>
                         </StyledCSColumnsStack>
                     </StyledCSColumnsMainDiv>
