@@ -1665,12 +1665,12 @@
     minimatch "^3.1.2"
     strip-json-comments "^3.1.1"
 
-"@fluentui/date-time-utilities@^8.5.3":
-  version "8.5.3"
-  resolved "https://msazure.pkgs.visualstudio.com/a531312f-ba7b-4573-ab4f-d468b740a319/_packaging/CognitiveServicesSharedComponents/npm/registry/@fluentui/date-time-utilities/-/date-time-utilities-8.5.3.tgz#5c5eff49e8225c0ed53be70b5bb6821d55c76948"
-  integrity sha1-XF7/SegiXA7VO+cLW7aCHVXHaUg=
+"@fluentui/date-time-utilities@^8.5.5":
+  version "8.5.5"
+  resolved "https://msazure.pkgs.visualstudio.com/a531312f-ba7b-4573-ab4f-d468b740a319/_packaging/CognitiveServicesSharedComponents/npm/registry/@fluentui/date-time-utilities/-/date-time-utilities-8.5.5.tgz#624a312e962e4506aaf37aaca26172fb692ff48a"
+  integrity sha1-YkoxLpYuRQaq83qsomFy+2kv9Io=
   dependencies:
-    "@fluentui/set-version" "^8.2.3"
+    "@fluentui/set-version" "^8.2.5"
     tslib "^2.1.0"
 
 "@fluentui/dom-utilities@^1.1.2":
@@ -1689,31 +1689,39 @@
     "@fluentui/set-version" "^8.2.3"
     tslib "^2.1.0"
 
-"@fluentui/font-icons-mdl2@^8.5.5":
-  version "8.5.5"
-  resolved "https://msazure.pkgs.visualstudio.com/a531312f-ba7b-4573-ab4f-d468b740a319/_packaging/CognitiveServicesSharedComponents/npm/registry/@fluentui/font-icons-mdl2/-/font-icons-mdl2-8.5.5.tgz#03e38de34371679d437333eef9b5e7f47cece4dc"
-  integrity sha1-A+ON40NxZ51DczPu+bXn9Hzs5Nw=
+"@fluentui/dom-utilities@^2.2.5":
+  version "2.2.5"
+  resolved "https://msazure.pkgs.visualstudio.com/a531312f-ba7b-4573-ab4f-d468b740a319/_packaging/CognitiveServicesSharedComponents/npm/registry/@fluentui/dom-utilities/-/dom-utilities-2.2.5.tgz#70062a45b7fb5362627e28b2e891823b8be9f4a6"
+  integrity sha1-cAYqRbf7U2Jifiiy6JGCO4vp9KY=
   dependencies:
-    "@fluentui/set-version" "^8.2.3"
-    "@fluentui/style-utilities" "^8.8.4"
-    "@fluentui/utilities" "^8.13.4"
+    "@fluentui/set-version" "^8.2.5"
     tslib "^2.1.0"
 
-"@fluentui/foundation-legacy@^8.2.25":
-  version "8.2.25"
-  resolved "https://msazure.pkgs.visualstudio.com/a531312f-ba7b-4573-ab4f-d468b740a319/_packaging/CognitiveServicesSharedComponents/npm/registry/@fluentui/foundation-legacy/-/foundation-legacy-8.2.25.tgz#e4e4bfc4faa6b51b7fd42ece7a371d505d70ef9c"
-  integrity sha1-5OS/xPqmtRt/1C7OejcdUF1w75w=
+"@fluentui/font-icons-mdl2@^8.5.9":
+  version "8.5.9"
+  resolved "https://msazure.pkgs.visualstudio.com/a531312f-ba7b-4573-ab4f-d468b740a319/_packaging/CognitiveServicesSharedComponents/npm/registry/@fluentui/font-icons-mdl2/-/font-icons-mdl2-8.5.9.tgz#72eeb14b3763cc4b7651be69ef37e9632b34ca78"
+  integrity sha1-cu6xSzdjzEt2Ub5p7zfpYys0yng=
   dependencies:
-    "@fluentui/merge-styles" "^8.5.4"
-    "@fluentui/set-version" "^8.2.3"
-    "@fluentui/style-utilities" "^8.8.4"
-    "@fluentui/utilities" "^8.13.4"
+    "@fluentui/set-version" "^8.2.5"
+    "@fluentui/style-utilities" "^8.9.2"
+    "@fluentui/utilities" "^8.13.7"
     tslib "^2.1.0"
 
-"@fluentui/keyboard-key@^0.4.3":
-  version "0.4.3"
-  resolved "https://msazure.pkgs.visualstudio.com/a531312f-ba7b-4573-ab4f-d468b740a319/_packaging/CognitiveServicesSharedComponents/npm/registry/@fluentui/keyboard-key/-/keyboard-key-0.4.3.tgz#178872847aab63061fe0d7c79e8e783b76664635"
-  integrity sha1-F4hyhHqrYwYf4NfHno54O3ZmRjU=
+"@fluentui/foundation-legacy@^8.2.29":
+  version "8.2.29"
+  resolved "https://msazure.pkgs.visualstudio.com/a531312f-ba7b-4573-ab4f-d468b740a319/_packaging/CognitiveServicesSharedComponents/npm/registry/@fluentui/foundation-legacy/-/foundation-legacy-8.2.29.tgz#97e3e3d40c3c951e34180ec0cca8ea230f287323"
+  integrity sha1-l+Pj1Aw8lR40GA7AzKjqIw8ocyM=
+  dependencies:
+    "@fluentui/merge-styles" "^8.5.6"
+    "@fluentui/set-version" "^8.2.5"
+    "@fluentui/style-utilities" "^8.9.2"
+    "@fluentui/utilities" "^8.13.7"
+    tslib "^2.1.0"
+
+"@fluentui/keyboard-key@^0.4.5":
+  version "0.4.5"
+  resolved "https://msazure.pkgs.visualstudio.com/a531312f-ba7b-4573-ab4f-d468b740a319/_packaging/CognitiveServicesSharedComponents/npm/registry/@fluentui/keyboard-key/-/keyboard-key-0.4.5.tgz#068aa508d5a2d5fb72c7c95a1ffa2ffc9303eed1"
+  integrity sha1-BoqlCNWi1ftyx8laH/ov/JMD7tE=
   dependencies:
     tslib "^2.1.0"
 
@@ -1723,6 +1731,14 @@
   integrity sha1-4sSHzMbVuOWpyJFKFIu1UUalTDM=
   dependencies:
     "@fluentui/set-version" "^8.2.3"
+    tslib "^2.1.0"
+
+"@fluentui/merge-styles@^8.5.6":
+  version "8.5.6"
+  resolved "https://msazure.pkgs.visualstudio.com/a531312f-ba7b-4573-ab4f-d468b740a319/_packaging/CognitiveServicesSharedComponents/npm/registry/@fluentui/merge-styles/-/merge-styles-8.5.6.tgz#8b44f6477b51774c1551f0ecec4b414fe62ecff6"
+  integrity sha1-i0T2R3tRd0wVUfDs7EtBT+Yuz/Y=
+  dependencies:
+    "@fluentui/set-version" "^8.2.5"
     tslib "^2.1.0"
 
 "@fluentui/react-compose@^0.19.24":
@@ -1736,16 +1752,16 @@
     classnames "^2.2.6"
     tslib "^1.10.0"
 
-"@fluentui/react-focus@^8.8.11":
-  version "8.8.11"
-  resolved "https://msazure.pkgs.visualstudio.com/a531312f-ba7b-4573-ab4f-d468b740a319/_packaging/CognitiveServicesSharedComponents/npm/registry/@fluentui/react-focus/-/react-focus-8.8.11.tgz#bd40753ca4233d9c067277e9f8a75479ae000fd3"
-  integrity sha1-vUB1PKQjPZwGcnfp+KdUea4AD9M=
+"@fluentui/react-focus@^8.8.15":
+  version "8.8.15"
+  resolved "https://msazure.pkgs.visualstudio.com/a531312f-ba7b-4573-ab4f-d468b740a319/_packaging/CognitiveServicesSharedComponents/npm/registry/@fluentui/react-focus/-/react-focus-8.8.15.tgz#70434236545cb97dc498e168cc340606b11f2610"
+  integrity sha1-cENCNlRcuX3EmOFozDQGBrEfJhA=
   dependencies:
-    "@fluentui/keyboard-key" "^0.4.3"
-    "@fluentui/merge-styles" "^8.5.4"
-    "@fluentui/set-version" "^8.2.3"
-    "@fluentui/style-utilities" "^8.8.4"
-    "@fluentui/utilities" "^8.13.4"
+    "@fluentui/keyboard-key" "^0.4.5"
+    "@fluentui/merge-styles" "^8.5.6"
+    "@fluentui/set-version" "^8.2.5"
+    "@fluentui/style-utilities" "^8.9.2"
+    "@fluentui/utilities" "^8.13.7"
     tslib "^2.1.0"
 
 "@fluentui/react-hooks@^8.6.14":
@@ -1756,6 +1772,16 @@
     "@fluentui/react-window-provider" "^2.2.4"
     "@fluentui/set-version" "^8.2.3"
     "@fluentui/utilities" "^8.13.4"
+    tslib "^2.1.0"
+
+"@fluentui/react-hooks@^8.6.17":
+  version "8.6.17"
+  resolved "https://msazure.pkgs.visualstudio.com/a531312f-ba7b-4573-ab4f-d468b740a319/_packaging/CognitiveServicesSharedComponents/npm/registry/@fluentui/react-hooks/-/react-hooks-8.6.17.tgz#877d75a773fcd002577fb66e7bdd4f7f5c0006ad"
+  integrity sha1-h311p3P80AJXf7Zue91Pf1wABq0=
+  dependencies:
+    "@fluentui/react-window-provider" "^2.2.6"
+    "@fluentui/set-version" "^8.2.5"
+    "@fluentui/utilities" "^8.13.7"
     tslib "^2.1.0"
 
 "@fluentui/react-portal-compat-context@^9.0.4":
@@ -1805,23 +1831,31 @@
     "@fluentui/set-version" "^8.2.3"
     tslib "^2.1.0"
 
-"@fluentui/react@^8.0.0":
-  version "8.104.2"
-  resolved "https://msazure.pkgs.visualstudio.com/a531312f-ba7b-4573-ab4f-d468b740a319/_packaging/CognitiveServicesSharedComponents/npm/registry/@fluentui/react/-/react-8.104.2.tgz#0a8771be9c46fb727d9c97dd72c9ad703579bb6e"
-  integrity sha1-CodxvpxG+3J9nJfdcsmtcDV5u24=
+"@fluentui/react-window-provider@^2.2.6":
+  version "2.2.6"
+  resolved "https://msazure.pkgs.visualstudio.com/a531312f-ba7b-4573-ab4f-d468b740a319/_packaging/CognitiveServicesSharedComponents/npm/registry/@fluentui/react-window-provider/-/react-window-provider-2.2.6.tgz#210165ff34f091d39055e52732b882002e165511"
+  integrity sha1-IQFl/zTwkdOQVeUnMriCAC4WVRE=
   dependencies:
-    "@fluentui/date-time-utilities" "^8.5.3"
-    "@fluentui/font-icons-mdl2" "^8.5.5"
-    "@fluentui/foundation-legacy" "^8.2.25"
-    "@fluentui/merge-styles" "^8.5.4"
-    "@fluentui/react-focus" "^8.8.11"
-    "@fluentui/react-hooks" "^8.6.14"
+    "@fluentui/set-version" "^8.2.5"
+    tslib "^2.1.0"
+
+"@fluentui/react@^8.106.1":
+  version "8.106.1"
+  resolved "https://msazure.pkgs.visualstudio.com/a531312f-ba7b-4573-ab4f-d468b740a319/_packaging/CognitiveServicesSharedComponents/npm/registry/@fluentui/react/-/react-8.106.1.tgz#5330835dfbc933d61528476c5ec5465c3f08edd1"
+  integrity sha1-UzCDXfvJM9YVKEdsXsVGXD8I7dE=
+  dependencies:
+    "@fluentui/date-time-utilities" "^8.5.5"
+    "@fluentui/font-icons-mdl2" "^8.5.9"
+    "@fluentui/foundation-legacy" "^8.2.29"
+    "@fluentui/merge-styles" "^8.5.6"
+    "@fluentui/react-focus" "^8.8.15"
+    "@fluentui/react-hooks" "^8.6.17"
     "@fluentui/react-portal-compat-context" "^9.0.4"
-    "@fluentui/react-window-provider" "^2.2.4"
-    "@fluentui/set-version" "^8.2.3"
-    "@fluentui/style-utilities" "^8.8.4"
-    "@fluentui/theme" "^2.6.20"
-    "@fluentui/utilities" "^8.13.4"
+    "@fluentui/react-window-provider" "^2.2.6"
+    "@fluentui/set-version" "^8.2.5"
+    "@fluentui/style-utilities" "^8.9.2"
+    "@fluentui/theme" "^2.6.23"
+    "@fluentui/utilities" "^8.13.7"
     "@microsoft/load-themed-styles" "^1.10.26"
     tslib "^2.1.0"
 
@@ -1832,15 +1866,22 @@
   dependencies:
     tslib "^2.1.0"
 
-"@fluentui/style-utilities@^8.8.4":
-  version "8.8.4"
-  resolved "https://msazure.pkgs.visualstudio.com/a531312f-ba7b-4573-ab4f-d468b740a319/_packaging/CognitiveServicesSharedComponents/npm/registry/@fluentui/style-utilities/-/style-utilities-8.8.4.tgz#652e66914b613819104504deda22fd85634bca15"
-  integrity sha1-ZS5mkUthOBkQRQTe2iL9hWNLyhU=
+"@fluentui/set-version@^8.2.5":
+  version "8.2.5"
+  resolved "https://msazure.pkgs.visualstudio.com/a531312f-ba7b-4573-ab4f-d468b740a319/_packaging/CognitiveServicesSharedComponents/npm/registry/@fluentui/set-version/-/set-version-8.2.5.tgz#5f5b0bc00ea53c322480958c2652554d88169c7e"
+  integrity sha1-X1sLwA6lPDIkgJWMJlJVTYgWnH4=
   dependencies:
-    "@fluentui/merge-styles" "^8.5.4"
-    "@fluentui/set-version" "^8.2.3"
-    "@fluentui/theme" "^2.6.20"
-    "@fluentui/utilities" "^8.13.4"
+    tslib "^2.1.0"
+
+"@fluentui/style-utilities@^8.9.2":
+  version "8.9.2"
+  resolved "https://msazure.pkgs.visualstudio.com/a531312f-ba7b-4573-ab4f-d468b740a319/_packaging/CognitiveServicesSharedComponents/npm/registry/@fluentui/style-utilities/-/style-utilities-8.9.2.tgz#c19f67277eb63bcbbf84c1530af701ece7612cd8"
+  integrity sha1-wZ9nJ362O8u/hMFTCvcB7OdhLNg=
+  dependencies:
+    "@fluentui/merge-styles" "^8.5.6"
+    "@fluentui/set-version" "^8.2.5"
+    "@fluentui/theme" "^2.6.23"
+    "@fluentui/utilities" "^8.13.7"
     "@microsoft/load-themed-styles" "^1.10.26"
     tslib "^2.1.0"
 
@@ -1854,14 +1895,14 @@
     "@uifabric/utilities" "^7.38.2"
     tslib "^1.10.0"
 
-"@fluentui/theme@^2.6.20":
-  version "2.6.20"
-  resolved "https://msazure.pkgs.visualstudio.com/a531312f-ba7b-4573-ab4f-d468b740a319/_packaging/CognitiveServicesSharedComponents/npm/registry/@fluentui/theme/-/theme-2.6.20.tgz#2dc44be49d8db07cccc4ae38e757625056a243be"
-  integrity sha1-LcRL5J2NsHzMxK4451diUFaiQ74=
+"@fluentui/theme@^2.6.23":
+  version "2.6.23"
+  resolved "https://msazure.pkgs.visualstudio.com/a531312f-ba7b-4573-ab4f-d468b740a319/_packaging/CognitiveServicesSharedComponents/npm/registry/@fluentui/theme/-/theme-2.6.23.tgz#93771eb9f68d0921f8509710efe60417cd3103b8"
+  integrity sha1-k3ceufaNCSH4UJcQ7+YEF80xA7g=
   dependencies:
-    "@fluentui/merge-styles" "^8.5.4"
-    "@fluentui/set-version" "^8.2.3"
-    "@fluentui/utilities" "^8.13.4"
+    "@fluentui/merge-styles" "^8.5.6"
+    "@fluentui/set-version" "^8.2.5"
+    "@fluentui/utilities" "^8.13.7"
     tslib "^2.1.0"
 
 "@fluentui/utilities@^8.13.4":
@@ -1872,6 +1913,16 @@
     "@fluentui/dom-utilities" "^2.2.3"
     "@fluentui/merge-styles" "^8.5.4"
     "@fluentui/set-version" "^8.2.3"
+    tslib "^2.1.0"
+
+"@fluentui/utilities@^8.13.7":
+  version "8.13.7"
+  resolved "https://msazure.pkgs.visualstudio.com/a531312f-ba7b-4573-ab4f-d468b740a319/_packaging/CognitiveServicesSharedComponents/npm/registry/@fluentui/utilities/-/utilities-8.13.7.tgz#6ae0376297d14edd32421f55c8b5dae650b5afd7"
+  integrity sha1-auA3YpfRTt0yQh9VyLXa5lC1r9c=
+  dependencies:
+    "@fluentui/dom-utilities" "^2.2.5"
+    "@fluentui/merge-styles" "^8.5.6"
+    "@fluentui/set-version" "^8.2.5"
     tslib "^2.1.0"
 
 "@focus-reactive/react-yaml@^1.1.2":
