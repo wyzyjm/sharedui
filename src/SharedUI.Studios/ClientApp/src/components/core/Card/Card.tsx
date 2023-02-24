@@ -95,8 +95,9 @@ const CardInternal = (props: ICardProp) => {
       paddingBottom: props.cardType === "CardWithCustomDesign" ? "5px" : 0,
     },
     subTitleStyle: {
-      fontSize: "14px",
-      padding: "0 12px"
+      fontSize: "12pt",
+      padding: "0 12px",
+      color: "#5d5d5d"
     },
     image: {
       textAlign: "center",
@@ -115,7 +116,7 @@ const CardInternal = (props: ICardProp) => {
       paddingBottom: props.isCompactMode ? "0px" : "12px",
     },
     description: {
-      fontSize: 12,
+      fontSize: "12pt",
       color: theme.palette.neutralSecondary,
     },
     linkWrapper: {
@@ -177,16 +178,12 @@ const CardInternal = (props: ICardProp) => {
         </Stack>
       )}
       <Stack className="header" style={styles.headerWrapper}>
-          <Stack horizontal verticalAlign="center" tokens={{ childrenGap: 10 }}>
+          <Stack>
               <Text style={styles.header}>{props.title}</Text>
-              {preview && <Text styles={{ root: { fontStyle: 'italic' } }}>{preview}</Text>}
           </Stack>
       </Stack>
-      {
-        props.subTitle && <Stack  style={styles.subTitleStyle}>
-          {props.subTitle}
-        </Stack>
-      }
+      {props.subTitle && <Text style={styles.subTitleStyle}>{props.subTitle}</Text>}
+      {preview && <Text style={styles.subTitleStyle}>{preview}</Text>}
       <Stack grow style={styles.descriptionWrapper}>
         <Text style={styles.description}>{props.description}</Text>
       </Stack>

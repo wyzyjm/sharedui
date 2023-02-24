@@ -33,8 +33,8 @@ card.args = {
     },
     cardType: "CardWithIllustration",
     iconName: "AlignCenter",
-    subTitle: <Text>Next generation of QnAMaker</Text>,
-    preview: "(Preview)",
+    subTitle: <div>Next generation of QnAMaker</div>,
+    preview: "Preview",
     linkPropsDropdownOptions: [
         {
             key: 'codeSamplesCsharp',
