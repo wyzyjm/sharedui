@@ -32,12 +32,6 @@ const StyledCSColumnsStack = styled(Stack)`
                 visibility: visible;
             }
         }
-        :focus{
-            background: #F3F2F1;
-            .icons-div{
-                visibility: visible;
-            }
-        }
 `;
 
 const StyledCSIconsDiv = styled.div`
@@ -124,7 +118,7 @@ function PanelSelectorInternal(props: IPanelSelectorProps): JSX.Element {
                 {announced}
                 {props.tableColumns.map((item: any, index: number) => (
                     <StyledCSColumnsMainDiv>
-                        <StyledCSColumnsStack horizontal tabIndex={0}>
+                        <StyledCSColumnsStack horizontal>
                             <Checkbox label={item.name} title={item.name} checked={!item.isHiddenFromColumnSelector} onChange={(ev, isChecked) => handleChange(item, isChecked, ev)} />
                             <StyledCSIconsDiv className="icons-div">
                                 <StyledCSMoveUpIconButton iconProps={upIcon} title="Move Up" ariaLabel={INTL.formatMessage(PanelSelectorLocalizationFormatMessages.MoveUp)} onClick={ev => handleMoveUp(index)} />
