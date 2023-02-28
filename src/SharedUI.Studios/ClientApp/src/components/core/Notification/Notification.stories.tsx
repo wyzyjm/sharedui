@@ -47,6 +47,8 @@ Notification.args = {
   headerText: "Notifications",
   isOpen: true,
   onClick: handleDismissAll,
+  onDismissAll: handleDismissAll,
+  onDismissedItem: (id) => console.log(id),
   onClose: () => { },
   notifications: { [notification.id]: notification },
 } as INotificationPanelProps;

@@ -304,6 +304,8 @@ export interface INotificationPanelProps {
   headerText: string;
   onClick: () => void;
   onClose: () => void;
+  onDismissAll: () => void;
+  onDismissedItem: (id: string) => void;
 }
 
 const StyledPanel = styled(Panel)`
@@ -423,6 +425,7 @@ function NotificationPanelInternal(props: INotificationPanelProps): JSX.Element 
     setIsPanelOpen(false);
     onClose?.();
   }
+
   return (
     <StyledPanel
       className="notification-582m3vdw73"
@@ -440,7 +443,7 @@ function NotificationPanelInternal(props: INotificationPanelProps): JSX.Element 
     >
       <div>
         <FabricLink
-          onClick={props.onClick}
+          onClick={props.onDismissAll}
         >{INTL.formatMessage(NotificationLocalizationFormatMessages.DismissAll)}</FabricLink>
       </div>
       <Separator className="notification-panel-separator" />
@@ -463,7 +466,7 @@ function NotificationPanelInternal(props: INotificationPanelProps): JSX.Element 
                 </Stack.Item>
                 {item.status !== ClientNotificationStatus.Processing && (
                   <div className="close-button">
-                    <CloseButton onClick={props.onClick}
+                    <CloseButton onClick={() => props.onDismissedItem(item.id)}
                     />
                   </div>
                 )}
