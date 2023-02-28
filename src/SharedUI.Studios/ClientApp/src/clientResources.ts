@@ -438,6 +438,7 @@ export const PrivacyLinkLocalizationFormatMessages = defineMessages({
     }
 });
 
+
 export const ColumnSelectorLocalizationFormatMessages = defineMessages({
     Content: {
         id: "ColumnSelector.Content",
@@ -481,7 +482,6 @@ export const ColumnSelectorLocalizationFormatMessages = defineMessages({
     }
 });
 
-
 export const CardLocalizationFormatMessages = defineMessages({
     ExpandCardLink: {
         id: "Card.expandLink",
@@ -491,7 +491,54 @@ export const CardLocalizationFormatMessages = defineMessages({
         id: "Card.Collapse",
         defaultMessage: "Collapse card link dropdown"
     }
-});
+})
+
+export const UploadFileDialogFormatMessages = defineMessages({
+    FileLocation: {
+        id: "FileLocation",
+        defaultMessage: "File location"
+    },
+    UploadData: {
+        id: "UploadData",
+        defaultMessage: "Upload data"
+    },
+    UploadFile: {
+        id: "UploadFile",
+        defaultMessage: "Upload file"
+    },
+    Cancel: {
+        id: "Cancel",
+        defaultMessage: "Cancel"
+    },
+    LocalFile: {
+        id: "LocalFile",
+        defaultMessage: "Local file"
+    },
+    DragAndDrop: {
+        id: "DragAndDrop",
+        defaultMessage: "Drag and drop."
+    },
+    BrowseForFiles: {
+        id: "BrowseForFiles.1",
+        defaultMessage: "Browse for a file"
+    },
+    YourDataFormatIsInvalidPleaseArchiveCorrectFile: {
+        id: "YourDataFormatIsInvalidPleaseArchiveCorrectFile",
+        defaultMessage: "Your data format is invalid. Please upload a JSON lines file with {NamePlaceholderDoNotTranslate} extension."
+    },
+    SelectedFileForUpload: {
+        id: "SelectedFile",
+        defaultMessage: "Selected file for upload: {NamePlaceholderDoNotTranslate}"
+    },
+    YourDataIsOversizedPleaseDivideAndUpload: {
+        id: "YourDataIsOversizedPleaseDivideAndUpload",
+        defaultMessage: "Your data is oversized. Please divide the data into several batches and upload separately."
+    },
+    EmptyFilePleaseCheckYourData: {
+        id: "UploadEmptyFileNotAllowed",
+        defaultMessage: "Empty file. Please check your data and try again."
+    }
+})
 
 export const PanelSelectorLocalizationFormatMessages = defineMessages({
     MoveUp: {

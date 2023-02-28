@@ -43,3 +43,5 @@ export { ColumnSelector } from "./components/core/ItemList/ColumnSelector";
 export type { IColumnSelectorProps } from "./components/core/ItemList/ColumnSelector";
 export { PanelSelector } from "./components/core/ItemList/PanelSelector";
 export type { IPanelSelectorProps } from "./components/core/ItemList/PanelSelector";
+export { UploadFileDialog } from './components/core/UploadFileDialog/UploadFileDialog';
+export type { UploadFileDialogProps } from './components/core/UploadFileDialog/UploadFileDialog';
