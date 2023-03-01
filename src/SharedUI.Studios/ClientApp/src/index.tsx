@@ -20,8 +20,8 @@ export { NotificationPanel, getNotificationMessage, NotificationProcessingBar, N
 export type { INotificationPanelProps, NotificationProcessingBarProp, NotificationPromptProp, NotificationBoxListProp } from "./components/core/Notification/Notification";
 export { HelpArea } from "./components/core/Help/Help";
 export type { IHelpAreaProps, LinkPropsExt } from "./components/core/Help/Help";
-export { FilterableComboBox } from "./components/core/FilterableComboBox/FilterableComboBox";
-export type { IFilterableComboBoxOption, IFilterableComboBoxProps } from "./components/core/FilterableComboBox/FilterableComboBox";
+// export { FilterableComboBox } from "./components/core/FilterableComboBox/FilterableComboBox";
+// export type { IFilterableComboBoxOption, IFilterableComboBoxProps } from "./components/core/FilterableComboBox/FilterableComboBox";
 export { WizardFlow, IWizardFlowStatus } from "./components/core/WizardFlow/WizardFlow";
 export type { IWizardFlowMenuItem, WizardFlowProps, IWizardFlow } from "./components/core/WizardFlow/WizardFlow";
 export type { Parameters } from "./services/flighting/variantService";
