@@ -491,7 +491,57 @@ export const CardLocalizationFormatMessages = defineMessages({
         id: "Card.Collapse",
         defaultMessage: "Collapse card link dropdown"
     }
-})
+});
+export const DirectoryLocalizationFormatMessages = defineMessages({
+    SwitchDirectoryPrompt: {
+        id: "Directory.SwitchDirectoryPrompt",
+        defaultMessage: "The directory you choose will impact subscription, resource group, and region filters that are available when you view resources."
+    },
+    LearnMoreAboutAzureDirectories: {
+        id: "Directory.LearnMoreAboutAzureDirectories",
+        defaultMessage: "Learn more about directories"
+    },
+    CurrentDirectory: {
+        id: "Directory.CurrentDirectory",
+        defaultMessage: "Current directory:"
+    },
+    AllDirectories: {
+        id: "Directory.AllDirectories",
+        defaultMessage: "All directories"
+    },
+    SelectRow: {
+        id: "Directory.SelectRow",
+        defaultMessage: "Select row"
+    },
+    ToggleSelectionForAllItems: {
+        id: "Directory.ToggleSelectionForAllItems",
+        defaultMessage: "Toggle selection for all items"
+    },
+    Search: {
+        id: "Directory.Search",
+        defaultMessage: "Search"
+    },
+    DirectoryName: {
+        id: "Directory.DirectoryName",
+        defaultMessage: "Directory name"
+    },
+    Domain: {
+        id: "Directory.Domain",
+        defaultMessage: "Domain"
+    },
+    DirectoryID: {
+        id: "Directory.DirectoryID",
+        defaultMessage: "Directory ID"
+    },
+    SwitchDirectory: {
+        id: "Directory.SwitchDirectory",
+        defaultMessage: "Switch directory"
+    },
+    ViewAllPropertiesInAzurePortal: {
+        id: "Directory.ViewAllPropertiesInAzurePortal",
+        defaultMessage: "View all properties in Azure Portal"
+    },
+});
 
 export const UploadFileDialogFormatMessages = defineMessages({
     FileLocation: {

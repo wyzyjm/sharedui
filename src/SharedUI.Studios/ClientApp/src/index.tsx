@@ -39,6 +39,8 @@ export { ProfileCard } from './components/core/ProfileCard/ProfileCard'
 export { SplashScreenView } from './components/core/SplashScreenView/SplashScreenView';
 export type { SplashScreenViewProps } from './components/core/SplashScreenView/SplashScreenView';
 export { PageHeader } from './components/core/PageHeader/PageHeader';
+export { SelectDirectoryTab } from './components/core/Directory/Directory';
+export type { ISelectDirectoryTabProps } from './components/core/Directory/Directory';
 export { ColumnSelector } from "./components/core/ItemList/ColumnSelector";
 export type { IColumnSelectorProps } from "./components/core/ItemList/ColumnSelector";
 export { PanelSelector } from "./components/core/ItemList/PanelSelector";
