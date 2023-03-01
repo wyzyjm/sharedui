@@ -49,7 +49,7 @@ export function PrivacyAndImprintLink(): JSX.Element {
     const sharedComponentsContext = useContext(SharedComponentsContext);
     const locale = sharedComponentsContext.locale;
 
-    return <div className="privacyLinkContainer" role="contentinfo">
+    return <div className="privacyLinkContainer" role="navigation">
         <CustomLink isExternal={true} text={INTL.formatMessage(PrivacyLinkLocalizationFormatMessages.PrivacyCookies)} url={"https://go.microsoft.com/fwlink/?linkid=521839"} action={null}/>
 
         {["de", "at", "ch"].includes(locale) && (
