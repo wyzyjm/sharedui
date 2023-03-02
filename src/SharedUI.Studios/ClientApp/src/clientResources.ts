@@ -781,3 +781,10 @@ export const LeftNavCustomLocalizationFormatMessages = defineMessages({
         defaultMessage: "Expand/Collapse"
     },
 });
+
+export const CodeViewGuidanceLocalizationFormatMessages = defineMessages({
+    GuidMessage: {
+        id: "GuidMessage",
+        defaultMessage: "If you want to have code view in your studio, we recommend using 'react-syntax-highlighter' library. Here's the sample code:"
+    },
+});

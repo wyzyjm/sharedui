@@ -54,3 +54,4 @@ export type { UploadFileDialogProps } from './components/core/UploadFileDialog/U
 export type { TenantInformation } from './models'
 export { LeftNavCustom } from "./components/core/LeftNavCustom/LeftNavCustom";
 export type { NavigationProps } from "./components/core/LeftNavCustom/LeftNavCustom";
+export { CodeViewGuidance } from './components/core/CodeViewGuidance/CodeViewGuidance';
