@@ -24,4 +24,16 @@ export const urlLinks = {
                 return getDocumentFwlink("2162781");
         }
     },
+    learnMoreAboutCognitiveServicesSubscription: (): string => {
+        switch (process.env.AzureEnvironment) {
+            //   case AzureEnvironment.AzureEnvironmentDogfood:
+            //     return getDocumentFwlink("2163214");
+            //   case AzureEnvironment.AzureEnvironmentMooncake:
+            //     return getDocumentFwlink("2163215");
+            //   case AzureEnvironment.AzureEnvironmentFairfax:
+            //     return getDocumentFwlink("2162938");
+            default:
+                return getDocumentFwlink("2163216");
+        }
+    },
 }

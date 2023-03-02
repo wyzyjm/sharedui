@@ -1,6 +1,6 @@
 import React from "react";
 import { ComponentStory, ComponentMeta } from "@storybook/react";
-import { ProfileCard, TenantInformation, ProfileCardProps } from './ProfileCard'
+import { ProfileCard, ProfileCardInformation, ProfileCardProps } from './ProfileCard'
 import { ThemeProvider } from "@fluentui/react";
 import { defaultTheme } from "../../../themes";
 import { SharedComponentsContext } from '../SharedComponentsContext';
@@ -20,7 +20,7 @@ const ProfileCardTemplate: ComponentStory<typeof ProfileCard> = (args) => {
   );
 }
 
-const tenantInformation: TenantInformation = {
+const tenantInformation: ProfileCardInformation = {
   tenantId: 'tenantId',
   displayName: 'Conan Wang (CSI Interfusion Inc)',
   defaultDomain: 'defaultDomain',

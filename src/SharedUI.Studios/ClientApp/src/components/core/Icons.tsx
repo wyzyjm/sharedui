@@ -1,11 +1,10 @@
+import { IIconProps, registerIcons, useTheme } from "@fluentui/react";
 import React, { CSSProperties } from "react";
-import { IIconProps, registerIcons } from "@fluentui/react";
-import { useTheme } from "@fluentui/react-theme-provider";
 
 export type AccessibleKeyDefinition<T> = {
   [key: string]: T;
 };
-interface IconProp {
+export interface IconProp {
   style?: CSSProperties;
 }
 function defineIcons<T extends AccessibleKeyDefinition<IIconProps>>(icons: T): T {
@@ -141,7 +140,21 @@ export const Icons = defineIcons({
   Red: { iconName: "Red" },
   errorBadge: { iconName: "ErrorBadge" },
   unknown: { iconName: "Unknown" },
+  CheckboxChecked: { iconName: "CheckboxChecked" },
+  CheckboxPartialChecked: { iconName: "CheckboxPartialChecked" },
+  CheckboxUnchecked: { iconName: "CheckboxUnchecked" }
 })
+export const ThemedExternalLinkIcon = (props: IconProp): JSX.Element => {
+  const theme = useTheme();
+  return (
+    <svg style={props?.style} width="15" height="14" viewBox="0 0 15 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path
+        d="M13 7.75H14.25V14H0.5V0.25H6.75V1.5H1.75V12.75H13V7.75ZM14.25 0.25V6.5H13V2.38867L7.18945 8.18945L6.31055 7.31055L12.1113 1.5H8V0.25H14.25Z"
+        fill={theme.palette.themePrimary}
+      />
+    </svg>
+  );
+};
 
 // export const BoxbubblesIcon = (props: IIconProps): JSX.Element => 
 registerIcons({
@@ -428,16 +441,3 @@ registerIcons({
     ),
   },
 });
-
-
-export const ThemedExternalLinkIcon = (props: IconProp): JSX.Element => {
-  const theme = useTheme();
-  return (
-    <svg style={props?.style} width="15" height="14" viewBox="0 0 15 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <path
-        d="M13 7.75H14.25V14H0.5V0.25H6.75V1.5H1.75V12.75H13V7.75ZM14.25 0.25V6.5H13V2.38867L7.18945 8.18945L6.31055 7.31055L12.1113 1.5H8V0.25H14.25Z"
-        fill={theme.palette.themePrimary}
-      />
-    </svg>
-  );
-};

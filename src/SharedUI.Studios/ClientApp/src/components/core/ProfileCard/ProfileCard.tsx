@@ -20,7 +20,7 @@ import { format } from "util";
 import { INTL } from "../../../util/intlUtil";
 import { ProfileCardLocalizationFormatMessages, AzureLocationMessages } from "../../../clientResources";
 import { Maybe } from '../../../util/typeUtil'
-
+import { TenantInformation, Subscription } from '../../../models'
 import { initializeComponent, withLocalization } from "../../../services/localization";
 
 const ThemedAddUserIcon = (props: IIconProps): JSX.Element => (<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" style={props?.style}>
@@ -32,30 +32,18 @@ const ThemedAddUserIcon = (props: IIconProps): JSX.Element => (<svg xmlns="http:
         </g>
     </g>
 </svg>);
-export declare interface CachableEntity {
-    fromCache?: boolean;
-}
-export declare interface TenantInformation extends CachableEntity {
-    tenantId: string;
-    displayName: string;
-    defaultDomain: string;
 
+export declare interface ProfileCardInformation extends TenantInformation {
     accountName: string;
     accountEmail: string;
-
     roleName?: string;
     roleLearnMoreLink?: string
 }
-export interface Subscription {
-    name: string;
-    sku: string;
-    localeDisplayName: string;
-}
 export interface ProfileCardProps {
     isOpen: boolean;
-    tenant: TenantInformation;
+    tenant: ProfileCardInformation;
     photoData: Maybe<string>,
-    subscription: Subscription;
+    subscription: Pick<Subscription, "name" | "sku" | "localeDisplayName">;
     onClose: () => void;
     login: () => void;
     signOut: () => void;

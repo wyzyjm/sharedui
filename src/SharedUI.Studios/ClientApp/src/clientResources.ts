@@ -436,6 +436,117 @@ export const PrivacyLinkLocalizationFormatMessages = defineMessages({
         id: "PrivacyLink.Imprint",
         defaultMessage: "Imprint"
     }
+})
+
+export const ResourceLocalizationFormatMessages = defineMessages({
+    LearnMoreAboutCreatingResourcesDesc: {
+        id: "Resource.LearnMoreAboutCreatingResourcesDesc",
+        defaultMessage: "Resources for Azure Cognitive Services belong to an Azure subscription where billing happens. They contain projects for individual AI services, and they’re organized into resource groups. Use resource keys and endpoints to authenticate your applications."
+    },
+    LearnMoreAboutCreatingResourcesInAzure: {
+        id: "Resource.LearnMoreAboutCreatingResourcesInAzure",
+        defaultMessage: "Learn more about creating resources in Azure"
+    },
+    CurrentResource: {
+        id: "Resource.CurrentResource",
+        defaultMessage: "Current resource:"
+    },
+    CurrentSubscription: {
+        id: "Resource.CurrentSubscription",
+        defaultMessage: "Current subscription:"
+    },
+    CurrentRoleAssignments: {
+        id: "Resource.CurrentRoleAssignments",
+        defaultMessage: "Current role assignments:"
+    },
+    ViewLevelOfAccessForThisResource: {
+        id: "Resource.ViewLevelOfAccessForThisResource",
+        defaultMessage: "View level of access for this resource"
+    },
+    AllResources: {
+        id: "Resource.AllResources",
+        defaultMessage: "All resources"
+    },
+    SelectNow: {
+        id: "Resource.SelectNow",
+        defaultMessage: "Select row"
+    },
+    ToggleSelectionForAllItems: {
+        id: "Resource.ToggleSelectionForAllItems",
+        defaultMessage: "Toggle selection for all items"
+    },
+    Search: {
+        id: "Resource.Search",
+        defaultMessage: "Search"
+    },
+    CreateAzureResource: {
+        id: "Resource.CreateAzureResource",
+        defaultMessage: "Create a new resource"
+    },
+    ResourceName: {
+        id: "Resource.ResourceName",
+        defaultMessage: "Resource name"
+    },
+    AzureSubscription: {
+        id: "Resource.AzureSubscription",
+        defaultMessage: "Azure subscription"
+    },
+    Region: {
+        id: "Resource.Region",
+        defaultMessage: "Region"
+    },
+    PricingTier: {
+        id: "Resource.PricingTier",
+        defaultMessage: "Pricing tier"
+    },
+    Plan: {
+        id: "Resource.Plan",
+        defaultMessage: "Plan"
+    },
+    Standard: {
+        id: "Resource.Standard",
+        defaultMessage: "Standard"
+    },
+    Free: {
+        id: "Resource.Free",
+        defaultMessage: "Free"
+    },
+    Endpoint: {
+        id: "Resource.Endpoint",
+        defaultMessage: "Endpoint"
+    },
+    Key: {
+        id: "Resource.Key",
+        defaultMessage: "Key"
+    },
+    ShowKey: {
+        id: "Resource.ShowKey",
+        defaultMessage: "Show key"
+    },
+    HideKey: {
+        id: "Resource.HideKey",
+        defaultMessage: "Hide key"
+    },
+    Copy: {
+        id: "Resource.Copy",
+        defaultMessage: "Copy"
+    },
+    UseResource: {
+        id: "Resource.UseResource",
+        defaultMessage: "Use resource"
+    },
+    ViewAllPropertiesInAzurePortal: {
+        id: "Resource.ViewAllPropertiesInAzurePortal",
+        defaultMessage: "View all properties in Azure Portal"
+    },
+    CustomRole: {
+        id: "Resource.CustomRole",
+        defaultMessage: "Custom role"
+    },
+    Copied: {
+        id: "Resource.Copied",
+        defaultMessage: "Copied"
+    },
 });
 
 

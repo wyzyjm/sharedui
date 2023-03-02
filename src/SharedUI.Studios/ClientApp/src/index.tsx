@@ -34,7 +34,7 @@ export type { CardsContainerProps } from "./components/core/Card/CardsContainer"
 export { CardsContainer } from "./components/core/Card/CardsContainer";
 export { PrivacyLink, CustomLink } from "./components/core/PrivacyLink/PrivacyLink";
 export type { CustomLinkProps } from "./components/core/PrivacyLink/PrivacyLink";
-export type { ProfileCardProps, TenantInformation } from './components/core/ProfileCard/ProfileCard'
+export type { ProfileCardProps, ProfileCardInformation } from './components/core/ProfileCard/ProfileCard'
 export { ProfileCard } from './components/core/ProfileCard/ProfileCard'
 export { SplashScreenView } from './components/core/SplashScreenView/SplashScreenView';
 export type { SplashScreenViewProps } from './components/core/SplashScreenView/SplashScreenView';
@@ -45,7 +45,10 @@ export { ColumnSelector } from "./components/core/ItemList/ColumnSelector";
 export type { IColumnSelectorProps } from "./components/core/ItemList/ColumnSelector";
 export { PanelSelector } from "./components/core/ItemList/PanelSelector";
 export type { IPanelSelectorProps } from "./components/core/ItemList/PanelSelector";
+export { SelectResourceTab } from "./components/core/SelectResourceTab/SelectResourceTab";
+export type { ISelectResourceTabProps } from "./components/core/SelectResourceTab/SelectResourceTab";
 export { UploadFileDialog } from './components/core/UploadFileDialog/UploadFileDialog';
 export type { UploadFileDialogProps } from './components/core/UploadFileDialog/UploadFileDialog';
+export type { TenantInformation } from './models'
 export { LeftNavCustom } from "./components/core/LeftNavCustom/LeftNavCustom";
 export type { NavigationProps } from "./components/core/LeftNavCustom/LeftNavCustom";
