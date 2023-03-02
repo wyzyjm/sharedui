@@ -307,7 +307,7 @@ export const ResourceAreaWrapped = (props: ISelectResourceTabProps): JSX.Element
 
     return (
         <Stack grow>
-            <Stack.Item grow>
+            <Stack.Item>
                 {/* title */}
                 <div style={{ marginTop: 18, marginBottom: 18 }}>
                     <p>{INTL.formatMessage(ResourceLocalizationFormatMessages.LearnMoreAboutCreatingResourcesDesc)}</p>

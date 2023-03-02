@@ -548,6 +548,21 @@ export const ResourceLocalizationFormatMessages = defineMessages({
         defaultMessage: "Copied"
     },
 });
+export const TabLocalizationFormatMessages = defineMessages({
+    Directory: {
+        id: "Tab.Directory",
+        defaultMessage: "Directory"
+    },
+    General: {
+        id: "Tab.General",
+        defaultMessage: "General"
+    },
+    Resource: {
+        id: "Tab.Resource",
+        defaultMessage: "Resource"
+    },
+});
+
 
 
 export const ColumnSelectorLocalizationFormatMessages = defineMessages({

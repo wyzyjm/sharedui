@@ -89,7 +89,7 @@ export const DirectoryInternal = (props: ISelectDirectoryTabProps): JSX.Element 
     return (
         <StyledStack grow>
             {/* head */}
-            <Stack.Item grow>
+            <Stack.Item >
                 <div style={{ marginTop: 18, marginBottom: 18 }}>
                     <Text>{INTL.formatMessage(DirectoryLocalizationFormatMessages.SwitchDirectoryPrompt) + " "}</Text>
                     <FabricLink href={LearnMoreAboutAzureDirectoriesLink} target="_blank">
