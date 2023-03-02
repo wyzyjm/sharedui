@@ -28,7 +28,7 @@ export enum CardTypes {
 
 export interface ICardProp {
   cardType?: keyof typeof CardTypes;
-  
+
   /**
    * Only applicable if the CardType is CardWithIcon
    */
@@ -50,7 +50,7 @@ export interface ICardProp {
   iconElement?: JSX.Element;
 
   linkTitle: string;
-  linkProps: ILinkProps;
+  linkProps?: ILinkProps;
   onClick?: () => void;
   linkPropsDropdownOptions?: IContextualMenuItem[]
 };
@@ -63,20 +63,20 @@ export interface IStyledDocumentCardProp {
   selected?: boolean;
 }
 
-const iconStyles: IIconStyles = { root: { fontSize: "14px", textDecoration: "underline"} };
+const iconStyles: IIconStyles = { root: { fontSize: "14px", textDecoration: "underline" } };
 
 const getSamplesLinkOptions = (linkPropsDropdownOptions: IContextualMenuItem[]): IContextualMenuItem[] =>
   linkPropsDropdownOptions.map(
     (link) =>
-      ({
-        ...link,
-        onRenderContent: () => (
-          <Link as="span" underline>
-            {`${link.text} `}
-            <Icon iconName="MiniExpand" styles={iconStyles} />
-          </Link>
-        ),
-      } as IContextualMenuItem)
+    ({
+      ...link,
+      onRenderContent: () => (
+        <Link as="span" underline>
+          {`${link.text} `}
+          <Icon iconName="MiniExpand" styles={iconStyles} />
+        </Link>
+      ),
+    } as IContextualMenuItem)
   );
 
 const CardInternal = (props: ICardProp) => {
@@ -134,11 +134,11 @@ const CardInternal = (props: ICardProp) => {
       {props.cardType === "CardWithIllustration" && (
         <Stack>
           {
-            props.iconUrl ? 
+            props.iconUrl ?
               (<Stack style={styles.image}>
                 <Stack grow style={{ width: "100%", backgroundSize: "cover", background: `url(${props.iconUrl})` }} ></Stack>
               </Stack>)
-              : (props.iconElement ? 
+              : (props.iconElement ?
                 (<Stack style={styles.image}>
                   <Stack style={{ width: "100%", height: "100%", justifyContent: "center", alignItems: "center" }}>{props.iconElement}</Stack>
                 </Stack>) : <></>)
@@ -178,9 +178,9 @@ const CardInternal = (props: ICardProp) => {
         </Stack>
       )}
       <Stack className="header" style={styles.headerWrapper}>
-          <Stack>
-              <Text style={styles.header}>{props.title}</Text>
-          </Stack>
+        <Stack>
+          <Text style={styles.header}>{props.title}</Text>
+        </Stack>
       </Stack>
       {props.subTitle && <Text style={styles.subTitleStyle}>{props.subTitle}</Text>}
       {preview && <Text style={styles.subTitleStyle}>{preview}</Text>}
@@ -190,16 +190,16 @@ const CardInternal = (props: ICardProp) => {
       {["CardWithIllustration", "CardWithNoIllustration"].includes(props.cardType) && (
         <>
           {linkPropsDropdownOptions?.length > 0 ? (
-            <Stack style={{ padding : "0 2px"}}>
+            <Stack style={{ padding: "0 2px" }}>
               <ActionButton
-                onClick={() => {}}
+                onClick={() => { }}
                 data-is-focusable
                 menuIconProps={{
                   iconName: isLinkPropsDropdownExpanded ? "ChevronUp" : "ChevronDown",
                   title: isLinkPropsDropdownExpanded ? INTL.formatMessage(CardLocalizationFormatMessages.CollapseCardLink) : INTL.formatMessage(CardLocalizationFormatMessages.ExpandCardLink)
                 }}
-                menuProps={{items: getSamplesLinkOptions(linkPropsDropdownOptions)}}
-                onMenuClick={()=> {setIsLinkPropsDropdownExpanded(!isLinkPropsDropdownExpanded)}}
+                menuProps={{ items: getSamplesLinkOptions(linkPropsDropdownOptions) }}
+                onMenuClick={() => { setIsLinkPropsDropdownExpanded(!isLinkPropsDropdownExpanded) }}
               >
                 {props.linkTitle}
               </ActionButton>
