@@ -608,3 +608,50 @@ export const PanelSelectorLocalizationFormatMessages = defineMessages({
         defaultMessage: "The column is moved down"
     }
 });
+
+export const LeftNavCustomLocalizationFormatMessages = defineMessages({
+    ExpandCollapsed: {
+        id: "ExpandCollapsed",
+        defaultMessage: "Expand/Collapsed"
+    },
+    OpenAI: {
+        id: "OpenAI",
+        defaultMessage: "Azure OpenAI"
+    },
+    GPT3: {
+        id: "GPT3",
+        defaultMessage: "GPT-3"
+    },
+    Dalle: {
+        id: "Dalle",
+        defaultMessage: "DALL·E 2"
+    },
+    Playground: {
+        id: "Playground",
+        defaultMessage: "Playground"
+    },
+    Management: {
+        id: "Management",
+        defaultMessage: "Management"
+    },
+    Deployments: {
+        id: "Deployments",
+        defaultMessage: "Deployments"
+    },
+    Models: {
+        id: "Models",
+        defaultMessage: "Models"
+    },
+    FileManagement: {
+        id: "FileManagement",
+        defaultMessage: "File Management"
+    },
+    ChatGPT: {
+        id: "ChatGPT",
+        defaultMessage: "ChatGPT"
+    },
+    ExpandCollapse: {
+        id: "ExpandCollapse",
+        defaultMessage: "Expand/Collapse"
+    },
+});

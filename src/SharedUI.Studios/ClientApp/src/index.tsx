@@ -47,3 +47,5 @@ export { PanelSelector } from "./components/core/ItemList/PanelSelector";
 export type { IPanelSelectorProps } from "./components/core/ItemList/PanelSelector";
 export { UploadFileDialog } from './components/core/UploadFileDialog/UploadFileDialog';
 export type { UploadFileDialogProps } from './components/core/UploadFileDialog/UploadFileDialog';
+export { LeftNavCustom } from "./components/core/LeftNavCustom/LeftNavCustom";
+export type { NavigationProps } from "./components/core/LeftNavCustom/LeftNavCustom";
