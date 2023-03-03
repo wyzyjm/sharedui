@@ -58,8 +58,10 @@ test.describe('Left Navigation Panel tests', () => {
     // Accessibility voilations check
     test('to verify no accessibility violations are found', async ({ page }) => {
         // Check the Voilations tab under Accessibility
-        await page.getByRole('tab', { name: 'Accessibility' }).click();
-        await page.locator('button', { hasText: 'Violations' }).click();
-        await expect(page.locator('.sto-142f1ph')).toHaveText('0 Violations');
+        await page.waitForLoadState('load').then(async () => {
+            await page.getByRole('tab', { name: 'Accessibility' }).click();
+            await page.locator('button', { hasText: 'Violations' }).click();
+            await expect(page.locator('.sto-142f1ph')).toHaveText('0 Violations');
+        })
     });
 });
