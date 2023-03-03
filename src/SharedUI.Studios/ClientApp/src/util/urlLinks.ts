@@ -36,4 +36,27 @@ export const urlLinks = {
                 return getDocumentFwlink("2163216");
         }
     },
+
+    headerAzure: (): string => {
+        switch (process.env.AzureEnvironment) {
+            // case AzureEnvironment.AzureEnvironmentMooncake:
+            //     return "https://www.azure.cn";
+            default:
+                return "https://www.azure.com";
+        }
+    },
+
+    advancedOptionsLink: (): string => {
+        switch (process.env.AzureEnvironment) {
+            default:
+                return getDocumentFwlink("2189349");
+        }
+    },
+
+    learnMoreAboutAzureDirectories: (): string => {
+        switch (process.env.AzureEnvironment) {
+            default:
+                return getDocumentFwlink("2162896");
+        }
+    },
 }

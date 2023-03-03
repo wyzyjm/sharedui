@@ -735,6 +735,129 @@ export const PanelSelectorLocalizationFormatMessages = defineMessages({
     }
 });
 
+export const CreateResourceWizardMessages = defineMessages({
+    SelectDirectoryStepDescription1: {
+        id: "SelectDirectoryStep.Description1",
+        defaultMessage: "An Azure subscription has a trust relationship with Azure Active Directory (Azure AD). A subscription trusts Azure AD to authenticate users, services, and devices."
+    },
+    SelectDirectoryStepDescription2: {
+        id: "SelectDirectoryStep.Description2",
+        defaultMessage: "All of your users have a single home directory for authentication. Your users can also be guests in other directories. You can see both the home and guest directories for each user in Azure AD."
+    },
+    SelectDirectoryStepLearnMoreLinkText: {
+        id: "SelectDirectoryStep.LearnMoreLinkText",
+        defaultMessage: "Learn more"
+    },
+    SelectDirectoryStepSelectorTitle: {
+        id: "SelectDirectoryStep.SelectorTitle",
+        defaultMessage: "Good news! You have the following directory associated with your account:"
+    },
+    SelectDirectoryStepRelationship: {
+        id: "SelectDirectoryStep.Relationship",
+        defaultMessage: "Trust Relationship"
+    },
+    ResourceGroupSelectorPlaceholder: {
+        id: "SelectorPlaceholder.ResourceGroup",
+        defaultMessage: "Select group"
+    },
+    LocationSelectorPlaceholder: {
+        id: "SelectorPlaceholder.Location",
+        defaultMessage: "Select location"
+    },
+    PricingTierSelectorPlaceholder: {
+        id: "SelectorPlaceholder.PricingTier",
+        defaultMessage: "Select tier"
+    },
+    ResourceGroupSelectorTitle: {
+        id: "SelectorTitle.ResourceGroup",
+        defaultMessage: "Azure resource group"
+    },
+    LocationSelectorTitle: {
+        id: "SelectorTitle.Location",
+        defaultMessage: "Location"
+    },
+    PricingTierSelectorTitle: {
+        id: "SelectorTitle.PricingTier",
+        defaultMessage: "Pricing tier"
+    },
+    ResourceNameInputPlaceholder: {
+        id: "InputPlaceholder.ResourceName",
+        defaultMessage: "Name your resource"
+    },
+    ResourceNameInputTitle: {
+        id: "InputTitle.ResourceName",
+        defaultMessage: "Name your resource"
+    },
+    ResourceNameInputTip: {
+        id: "InputTip.ResourceName",
+        defaultMessage: "Tip: The resource name is best for recall when it’s in the following format."
+    },
+    LocationSelectorTip: {
+        id: "InputTip.Location",
+        defaultMessage: "Tip: Choose the location that is closest to your geographic region unless you work for a big company other considerations"
+    },
+    PricingTierSelectorTip: {
+        id: "InputTip.PricingTier",
+        defaultMessage: "Tip: Pricing tiers for Language are broken down into two categories - Free (F0) and Standard (S). Choose one for this situation and the other for this."
+    },
+    SubscriptionTitle: {
+        id: "Title.Subscription",
+        defaultMessage: "Azure subscription"
+    },
+    SummaryStepAzureDirectoryTitle: {
+        id: "SummaryStepTitle.AzureDirectory",
+        defaultMessage: "Azure directory"
+    },
+    SummaryStepSubscriptionTitle: {
+        id: "SummaryStepTitle.Subscription",
+        defaultMessage: "Subscription"
+    },
+    SummaryStepResourceTitle: {
+        id: "SummaryStepTitle.Resource",
+        defaultMessage: "Resource"
+    },
+    SummaryStepLocationTitle: {
+        id: "SummaryStepTitle.Location",
+        defaultMessage: "Location"
+    },
+    SummaryStepPricingTierTitle: {
+        id: "SummaryStepTitle.PricingTier",
+        defaultMessage: "PricingTier"
+    },
+    SummaryStepOptionsTitle: {
+        id: "SummaryStepTitle.Options",
+        defaultMessage: "Advanced options"
+    },
+    SummaryStepOptionsDescriptionPortal: {
+        id: "SummaryStepDescription.Portal",
+        defaultMessage: "If you need any of the following resource features, you can add them to this resource within the "
+    },
+    SummaryStepOptionsDescriptionPortalText: {
+        id: "SummaryStepDescription.PortalText",
+        defaultMessage: "Azure portal"
+    },
+    SummaryStepOptionsDescriptionOption1: {
+        id: "SummaryStepDescription.Option1",
+        defaultMessage: "Virtual private network (VPN) setup"
+    },
+    SummaryStepOptionsDescriptionOption2: {
+        id: "SummaryStepDescription.Option2",
+        defaultMessage: "System assigned managed identity"
+    },
+    SummaryStepOptionsDescriptionOption3: {
+        id: "SummaryStepDescription.Option3",
+        defaultMessage: "Store encryption"
+    },
+    SummaryStepOptionsDescriptionOption4: {
+        id: "SummaryStepDescription.Option4",
+        defaultMessage: "Tags (name/value pairs) for categorizing resources"
+    },
+    SummaryStepOptionsDescriptionLearnMoreText: {
+        id: "SummaryStepDescription.LearnMoreText",
+        defaultMessage: "Learn more about advanced options"
+    },
+});
+
 export const LeftNavCustomLocalizationFormatMessages = defineMessages({
     ExpandCollapsed: {
         id: "ExpandCollapsed",

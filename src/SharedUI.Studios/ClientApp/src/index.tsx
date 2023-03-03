@@ -1,7 +1,6 @@
 export { StyledBreadcrumb } from "./components/core/Breadcrumb/Breadcrumb";
 export type { DefaultBreadcrumbProps } from "./components/core/Breadcrumb/Breadcrumb";
 export { CircularLoadingIndicator, CircularLoadingIndicatorPageWide } from "./components/core/Spinners/Spinners";
-export { Checkbox } from "./components/core/Checkbox/Checkbox";
 export { HaTSArea, HaTSInteraction } from "./components/core/Hats/Hats";
 export type { HatsProps } from "./components/core/Hats/Hats";
 export { BannerArea } from "./components/core/Banner/Banner";
@@ -39,6 +38,14 @@ export { ProfileCard } from './components/core/ProfileCard/ProfileCard'
 export { SplashScreenView } from './components/core/SplashScreenView/SplashScreenView';
 export type { SplashScreenViewProps } from './components/core/SplashScreenView/SplashScreenView';
 export { PageHeader } from './components/core/PageHeader/PageHeader';
+export { SelectDirectoryStep } from "./components/core/CreateResourceWizard/SelectDirectoryStep";
+export type { ISelectDirectoryStepProps } from "./components/core/CreateResourceWizard/SelectDirectoryStep";
+export { AdditionalTermsStep } from "./components/core/CreateResourceWizard/AdditionalTermsStep";
+export type { IAdditionalTermsStepProps } from "./components/core/CreateResourceWizard/AdditionalTermsStep";
+export { CreateResourceStep } from "./components/core/CreateResourceWizard/CreateResourceStep";
+export type { ICreateResourceStepProps } from "./components/core/CreateResourceWizard/CreateResourceStep";
+export { SummaryStep } from "./components/core/CreateResourceWizard/SummaryStep";
+export type { ISummaryStepProps } from "./components/core/CreateResourceWizard/SummaryStep";
 export { Tab } from './components/core/Tab/Tab'
 export type { ITabProps } from './components/core/Tab/Tab'
 export { SelectDirectoryTab } from './components/core/Directory/Directory';

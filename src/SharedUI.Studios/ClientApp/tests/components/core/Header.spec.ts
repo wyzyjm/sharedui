@@ -56,9 +56,9 @@ test.describe('Header tests', () => {
     await expect(headerTextElement).toHaveText("Hello");
 
     // Check the headerLinkClickUrl prop
-    await page.locator('textarea[name="headerHomePageUrl"]').fill("https://www.google.com/");
+    await page.locator('textarea[name="headerHomePageUrl"]').fill("https://www.microsoft.com/");
     await headerTextElement.click();
-    await expect(page).toHaveURL('https://www.google.com/');
+    await expect(page).toHaveURL(/.*microsoft.com/);
   });
 
   // Accessibility voilations check
