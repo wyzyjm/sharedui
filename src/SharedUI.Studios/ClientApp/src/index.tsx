@@ -58,7 +58,37 @@ export { SelectResourceTab } from "./components/core/SelectResourceTab/SelectRes
 export type { ISelectResourceTabProps } from "./components/core/SelectResourceTab/SelectResourceTab";
 export { UploadFileDialog } from './components/core/UploadFileDialog/UploadFileDialog';
 export type { UploadFileDialogProps } from './components/core/UploadFileDialog/UploadFileDialog';
-export type { TenantInformation } from './models'
 export { LeftNavCustom } from "./components/core/LeftNavCustom/LeftNavCustom";
-export type { NavigationProps } from "./components/core/LeftNavCustom/LeftNavCustom";
+export type { NavigationCustomProps } from "./components/core/LeftNavCustom/LeftNavCustom";
+export type {
+  TenantInformation,
+  FetchStatus,
+  CachableEntity,
+  SubscriptionType,
+  CognitiveServicesSubscriptionKey,
+  CognitiveServicesSubscriptionPermissions,
+  CognitiveServicesSubscriptionCapability,
+  CognitiveServicesSubscriptionPrivateEndpointConnection,
+  CognitiveServicesSubscriptionVirtualNetworkRules,
+  CognitiveServicesSubscriptionNetworkAclsDefaultAction,
+  CognitiveServicesSubscriptionIpRules,
+  CognitiveServicesSubscriptionNetworkAcls,
+  CognitiveServicesSubscription,
+  SubscriptionRoleAssignmentPropertiesWithScope,
+  SubscriptionRoleAssignment,
+  Subscription,
+  fromCognitiveServicesSubscription,
+  toCognitiveServicesSubscription,
+  ResourceGroup,
+  AzureRoleDefinitionType,
+  AzureRoleDefinitionProperties,
+  AzureRoleDefinition,
+  AzureSubscription,
+  AzureSubscriptionFeatureRegistrations,
+  FeatureRegistrations,
+  AzureAsyncOperation,
+  AzureSku,
+  SubscriptionViewModel,
+  ProvisioningStates
+} from "./models";
 export { CodeViewGuidance } from './components/core/CodeViewGuidance/CodeViewGuidance';

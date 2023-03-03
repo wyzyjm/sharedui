@@ -1,6 +1,6 @@
 import React from 'react';
 import { ComponentStory, ComponentMeta } from "@storybook/react";
-import { LeftNavCustom, NavigationProps } from "./LeftNavCustom";
+import { LeftNavCustom, NavigationCustomProps } from "./LeftNavCustom";
 import { ThemeProvider, INavLinkGroup } from "@fluentui/react";
 import { INTL } from "../../../util/intlUtil";
 import { SharedComponentsContext } from '../SharedComponentsContext';
@@ -11,7 +11,6 @@ export default {
     title: "LeftNavCustom",
     component: LeftNavCustom
 } as ComponentMeta<typeof LeftNavCustom>
-
 
 const LeftNavTemplate: ComponentStory<typeof LeftNavCustom> = (args) =>  {
     return (
@@ -158,4 +157,4 @@ LeftNavCustomComponent.args ={
     getCurrentUrl: () => "path/home",
     expandedNaviItems: getNavLinkGroups(),
     collapsedNaviItems: getSkinnyNavItems(),
-} as NavigationProps
+} as NavigationCustomProps

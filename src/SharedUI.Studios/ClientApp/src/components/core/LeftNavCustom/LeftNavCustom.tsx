@@ -1,12 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Nav, INavStyles, INavLinkGroup, Stack, IStackItemStyles, find } from "@fluentui/react";
 import { initializeComponent, withLocalization } from "../../../services/localization";
-
-
 import styled from 'styled-components';
-
-export const DALLE_PREVIEW_HIDEKEY = "azureopenai_dalle_preview";
-export const CHATGPT_PREVIEW_HIDEKEY = "azureopenai_chatgpt_preview";
 
 const navStylesExpanded: Partial<INavStyles> = {
   root: {
@@ -76,6 +71,8 @@ const stackItemStyles: IStackItemStyles = {
 };
 
 const LeftNavStyles = styled.div`
+  height: 100%;
+  margin-left: 0;
   @media all and (max-width: 992px) {
     .hideOnMediumOrSmallerDevice {
       display: none;
@@ -267,14 +264,12 @@ const Navi = (props: {
   );
 };
 
-const Navigation = (props: NavigationProps) => {
+const Navigation = (props: NavigationCustomProps) => {
   const { subscriptionId, navigation, getCurrentUrl, expandedNaviItems,  collapsedNaviItems} = props;
-  const navStyle: React.CSSProperties = { height: '100%', marginLeft: '0px' };
 
   return (
-    <>
       <LeftNavStyles>
-        <div className="hideOnMediumOrSmallerDevice" style={navStyle}>
+        <div className="hideOnMediumOrSmallerDevice">
           <Navi
             subscriptionId={subscriptionId}
             expandedNaviItems={expandedNaviItems}
@@ -285,7 +280,7 @@ const Navigation = (props: NavigationProps) => {
             getCurrentUrl={getCurrentUrl}
           />
         </div>
-        <div className="showOnMediumOrLargerDevice" style={navStyle}>
+        <div className="showOnMediumOrLargerDevice">
           <Navi
             subscriptionId={subscriptionId}
             expandedNaviItems={collapsedNaviItems}
@@ -297,11 +292,10 @@ const Navigation = (props: NavigationProps) => {
           />
         </div>
       </LeftNavStyles>
-    </>
   );
 }
 
-export interface NavigationProps {
+export interface NavigationCustomProps {
   subscriptionId?: string,
   expandedNaviItems: INavLinkGroup[];
   collapsedNaviItems: INavLinkGroup[];
@@ -310,6 +304,4 @@ export interface NavigationProps {
   search?: string;
 }
 
-
-  
 export const LeftNavCustom = withLocalization(initializeComponent(Navigation))
