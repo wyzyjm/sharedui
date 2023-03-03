@@ -5,10 +5,14 @@ import {
   ICommandBarItemProps,
   IIconProps,
   ThemeProvider,
+  Callout,
 } from "@fluentui/react";
 import { defaultTheme } from "../../../themes";
 import { ClientNotification, ClientNotificationDomain, ClientNotificationStatus, getNotificationMessage, NotificationProcessingBar, NotificationPrompt } from "../Notification/Notification";
 import { SharedComponentsContext } from '../SharedComponentsContext';
+import { ProfileCard, ProfileCardProps } from '../ProfileCard/ProfileCard'
+import { Profile } from '../ProfileCard/ProfileCard.stories'
+import { useId } from "@fluentui/react-hooks";
 
 const notification: ClientNotification = {
   id: "ID",
@@ -80,10 +84,13 @@ export default {
 } as ComponentMeta<typeof CS_Header>;
 
 const HeaderTemplate: ComponentStory<typeof CS_Header> = (args) => {
+  // const buttonId = useId('callout-button');
   return (
     <ThemeProvider theme={defaultTheme.body}>
       <SharedComponentsContext.Provider value={{ locale: 'en' }}>
         <CS_Header {...args} />
+        {/* <CS_Header {...args} profileButtonId={buttonId} /> */}
+        {/* <Callout target={`#${buttonId}`} >Callout content</Callout> */}
       </SharedComponentsContext.Provider>
     </ThemeProvider>
   );
@@ -94,6 +101,7 @@ export const Header = HeaderTemplate.bind({});
 Header.args = {
   headerText: "Azure OpenAI Studio",
   headerHomePageUrl: "https://openai.studio-ppe.azure.com/portal",
+  isAuthenticated: true,
   commandBarItems: commandBarItems,
   loginPath: '/portal',
   friendlyName: 'Conan Wang (CSI Interfusion Inc)',
@@ -102,5 +110,5 @@ Header.args = {
     sku: '2,50',
     localeDisplayName: 'West US',
   },
-  photoData: ''
+  // photoData: ''
 } as IHeaderProps;

@@ -43,12 +43,13 @@ export interface IHeaderProps {
   headerText: string;
   headerHomePageUrl: string;
   commandBarItems: ICommandBarItemProps[];
+  profileButtonId?: string;
   isAuthenticated: boolean;
   friendlyName: string;
   subscription: Subscription;
-  photoData: string;
+  photoData?: string;
   loginPath: string;
-  onProfileClick: () => void
+  onProfileClick: (showProfile: boolean) => void
 };
 
 const StyledDiv = styled.div`
@@ -390,11 +391,12 @@ function ThemedHeaderInternal(props: IHeaderProps) {
               />
               {/* profile start */}
               {isAuthenticated && <ThemedHeaderButton
+                id={props.profileButtonId}
                 className={"right-icon nav-item " + (showProfile ? "white" : "")}
                 style={{ width: "auto" }}
                 title={friendlyName}
                 onClick={() => {
-                  onProfileClick();
+                  onProfileClick(!showProfile);
                   setShowProfile(!showProfile);
                 }}
               >
