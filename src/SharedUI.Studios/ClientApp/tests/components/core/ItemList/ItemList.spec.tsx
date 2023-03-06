@@ -71,7 +71,7 @@ test.describe('ItemList tests', () => {
         await (await storybookPOM.getByRole('menuitem', { name: 'Sort' })).click();
         await (await storybookPOM.getByRole('button', { name: 'First name' })).click();
         await (await storybookPOM.getByRole('menuitem', { name: 'Sort' })).click();
-        await expect(await storybookPOM.getByRole('gridcell', { name: 'Mukesh' })).toHaveText('Mukesh');
+        await expect(await storybookPOM.getByText('Mukesh')).toHaveText('Mukesh');
 
         // Check Last name sorting
         await (await storybookPOM.getByRole('button', { name: 'Last name' })).click();
@@ -94,6 +94,7 @@ test.describe('ItemList tests', () => {
         await expect(await storybookPOM.getByRole('gridcell', { name: '10' })).toHaveText('10');
 
         // Check the enableShimmer prop
+        await page.getByRole('row', { name: 'enableShimmer Set boolean' }).getByRole('button', { name: 'Set boolean' }).click();
         await page.locator('input[name="enableShimmer"]').click();
         const shimmerClass = ".ms-DetailsList-contentWrapper";
         const shimmerElement = await storybookPOM.getElementFromPreview(shimmerClass);

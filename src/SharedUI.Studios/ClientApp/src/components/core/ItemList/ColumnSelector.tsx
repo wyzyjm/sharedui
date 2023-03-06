@@ -1,14 +1,21 @@
 import { Announced, Checkbox, DefaultButton, IColumn, IconButton, IIconProps, Panel, PanelType, PrimaryButton, SearchBox, Stack } from "@fluentui/react";
 import React, { useEffect, useState } from "react";
-import { initializeComponent, useLocalization, withLocalization } from "../../../services/localization";
+import { initializeComponent, withLocalization } from "../../../services/localization";
 import styled from "styled-components";
 import { INTL } from "../../../util/intlUtil";
 import { ColumnSelectorLocalizationFormatMessages } from "../../../clientResources";
+import { cloneDeep } from "lodash";
+export interface IColumnSelectorItem {
+    name: string;
+    key: string;
+    isItemUnselected: boolean;
+}
 
 export interface IColumnSelectorProps {
-    tableColumns?: IColumn[];
-    onChange?: (arg: Object) => void;
+    tableColumns?: IColumnSelectorItem[];
+    onChange?: (arg: IColumnSelectorItem[]) => void;
     isOpen?: boolean | true;
+    onCloseColumnSelector?: () => void;
 };
 
 const StyledCSContentDiv = styled.div`
@@ -93,77 +100,87 @@ const StyledCSMoveDownIconButton = styled(IconButton)`
 `;
 
 function ColumnSelectorInternal(props: IColumnSelectorProps): JSX.Element {
-    const [move, setMove] = useState(0);
-    let draftColumns = props.tableColumns;
-    const [columns, setColumns] = useState(draftColumns);
-    const [announced, setAnnounced] = useState<JSX.Element | undefined>(undefined);
-    const [isPanelOpen, setIsPanelOpen] = useState(props.isOpen);
-    useEffect(() => {
-        setIsPanelOpen(props.isOpen)
-    }, [props.isOpen])
-
     const upIcon: IIconProps = { iconName: "Up" };
     const downIcon: IIconProps = { iconName: "Down" };
     const buttonStyles = { root: { marginRight: 8 } };
 
-    const onRenderFooterContent = React.useCallback(
-        () => (
-            <div style={{ display: 'flex', justifyContent: 'flex-end' }}>
-                <PrimaryButton onClick={handleSave} styles={buttonStyles}>
-                    {INTL.formatMessage(ColumnSelectorLocalizationFormatMessages.Save)}
-                </PrimaryButton>
-                <DefaultButton onClick={onDismiss}>
-                    {INTL.formatMessage(ColumnSelectorLocalizationFormatMessages.Cancel)}
-                </DefaultButton>
-            </div>
-        ),
-        [isPanelOpen],
+    const [isColumnVisible, setIsColumnVisible] = useState<{[ id: string]: boolean}>({});
+    const [columns, setColumns] = useState<IColumnSelectorItem[]>(cloneDeep(props.tableColumns));
+    const [announced, setAnnounced] = useState<JSX.Element | undefined>(undefined);
+    const [isPanelOpen, setIsPanelOpen] = useState(props.isOpen);
+    const [isSaveBtnDisabled, setIsSaveBtnDisabled] = useState(true);
+
+    useEffect(() => {
+        setIsPanelOpen(props.isOpen);
+    }, [props.isOpen]);
+
+    useEffect(() => {
+        setColumns(cloneDeep(props.tableColumns));
+    }, [props.tableColumns]);
+
+    useEffect(() => {
+        setIsSaveBtnDisabled(JSON.stringify(props.tableColumns) === JSON.stringify(columns));
+    }, [columns]);
+
+    const onRenderFooterContent = () => (
+        <div style={{ display: 'flex', justifyContent: 'flex-end' }}>
+            <PrimaryButton onClick={handleSave} styles={buttonStyles} disabled={isSaveBtnDisabled}>
+                {INTL.formatMessage(ColumnSelectorLocalizationFormatMessages.Save)}
+            </PrimaryButton>
+            <DefaultButton onClick={onDismiss}>
+                {INTL.formatMessage(ColumnSelectorLocalizationFormatMessages.Cancel)}
+            </DefaultButton>
+        </div>
     );
 
-    function handleMoveUp(index: number) {
+    const handleMoveUp = (index: number) => {
         if (index > 0) {
             let toggleColumnUp = columns[index];
             columns[index] = columns[index - 1];
             columns[index - 1] = toggleColumnUp;
-            setColumns(columns);
-            setMove(v => v + 1);
+            setColumns(cloneDeep(columns));
             setAnnounced(<Announced message={INTL.formatMessage(ColumnSelectorLocalizationFormatMessages.MoveUpColumnsUpdate)} />);
         }
-    }
+    };
 
-    function handleMoveDown(index: number) {
+    const handleMoveDown = (index: number) => {
         if (index < columns.length - 1) {
             let toggleColumnDown = columns[index];
             columns[index] = columns[index + 1];
             columns[index + 1] = toggleColumnDown;
-            setColumns(columns);
-            setMove(v => v + 1);
+            setColumns(cloneDeep(columns));
             setAnnounced(<Announced message={INTL.formatMessage(ColumnSelectorLocalizationFormatMessages.MoveDownColumnsUpdate)} />);
         }
-    }
-    function handleChange(item: any, isChecked?: boolean, ev?: React.FormEvent<HTMLElement | HTMLInputElement>) {
-        item.isHiddenFromColumnSelector = !isChecked;
-        setColumns(columns);
-        setMove(v => v + 1);
-    }
+    };
 
-    function handleSearchChange(event?: React.ChangeEvent<HTMLInputElement>, newValue?: string) {
-        const filteredColumns = draftColumns.filter((column) => {
+    const handleChange = (item: IColumnSelectorItem, isChecked?: boolean) => {
+        item.isItemUnselected = !isChecked;
+        setColumns(cloneDeep(columns));
+    };
+
+    const handleSearchChange = (event?: React.ChangeEvent<HTMLInputElement>, newValue?: string) => {
+        const isColumnPresentInSearch = (column: IColumnSelectorItem) => {
             return column.name.toLowerCase().startsWith(newValue.toLowerCase()) || column.name.toLowerCase().includes(newValue.toLowerCase());
+        };
+
+        const isColumnVisibleMap: {[id: string]: boolean} = {};
+        columns.forEach(col => {
+            isColumnVisibleMap[col.key] = isColumnPresentInSearch(col);
         });
-        setColumns(filteredColumns);
+
+        setIsColumnVisible(isColumnVisibleMap);
         setAnnounced(<Announced message={INTL.formatMessage(ColumnSelectorLocalizationFormatMessages.SearchColumnsUpdate)} />);
-    }
+    };
 
-    function handleSave() {
-        onDismiss();
+    const handleSave = () => {
         props.onChange(columns);
-        setMove(v => v + 1);
-    }
+        onDismiss();
+    };
 
-    function onDismiss() {
+    const onDismiss = () => {
         setIsPanelOpen(false);
-    }
+        props.onCloseColumnSelector();
+    };
 
     return (
         <div className="column-selector">
@@ -186,17 +203,20 @@ function ColumnSelectorInternal(props: IColumnSelectorProps): JSX.Element {
                     </StyledCSContentDiv>
                     <StyledCSSearchBox placeholder="Filter by name" onChange={handleSearchChange} />
                     {announced}
-                    {columns.map((item: any, index: number) => (
-                        <StyledCSColumnsMainDiv>
-                            <StyledCSColumnsStack horizontal>
-                                <Checkbox label={item.name} title={item.name} checked={!item.isHiddenFromColumnSelector} onChange={(ev, isChecked) => handleChange(item, isChecked, ev)} />
-                                <StyledCSIconsDiv className="icons-div">
-                                    <StyledCSMoveUpIconButton iconProps={upIcon} title="Move Up" ariaLabel={INTL.formatMessage(ColumnSelectorLocalizationFormatMessages.MoveUp)} onClick={ev => handleMoveUp(index)} />
-                                    <StyledCSMoveDownIconButton iconProps={downIcon} title="Move Down" ariaLabel={INTL.formatMessage(ColumnSelectorLocalizationFormatMessages.MoveDown)} onClick={ev => handleMoveDown(index)} />
-                                </StyledCSIconsDiv>
-                            </StyledCSColumnsStack>
-                        </StyledCSColumnsMainDiv>
-                    ))}
+                    { 
+                        columns.map((item: IColumnSelectorItem, index: number) => (
+                            (isColumnVisible[item.key] !== false) &&
+                                (<StyledCSColumnsMainDiv key={item.key}>
+                                    <StyledCSColumnsStack horizontal>
+                                        <Checkbox label={item.name} title={item.name} checked={!item.isItemUnselected} onChange={(ev, isChecked) => handleChange(item, isChecked)} />
+                                        <StyledCSIconsDiv className="icons-div">
+                                            <StyledCSMoveUpIconButton iconProps={upIcon} title="Move Up" ariaLabel={INTL.formatMessage(ColumnSelectorLocalizationFormatMessages.MoveUp)} onClick={ev => handleMoveUp(index)} />
+                                            <StyledCSMoveDownIconButton iconProps={downIcon} title="Move Down" ariaLabel={INTL.formatMessage(ColumnSelectorLocalizationFormatMessages.MoveDown)} onClick={ev => handleMoveDown(index)} />
+                                        </StyledCSIconsDiv>
+                                    </StyledCSColumnsStack>
+                                </StyledCSColumnsMainDiv>)
+                        ))
+                    }
                 </div>
             </Panel>
         </div>

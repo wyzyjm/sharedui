@@ -51,7 +51,7 @@ export type { ITabProps } from './components/core/Tab/Tab'
 export { SelectDirectoryTab } from './components/core/Directory/Directory';
 export type { ISelectDirectoryTabProps } from './components/core/Directory/Directory';
 export { ColumnSelector } from "./components/core/ItemList/ColumnSelector";
-export type { IColumnSelectorProps } from "./components/core/ItemList/ColumnSelector";
+export type { IColumnSelectorProps, IColumnSelectorItem } from "./components/core/ItemList/ColumnSelector";
 export { PanelSelector } from "./components/core/ItemList/PanelSelector";
 export type { IPanelSelectorProps } from "./components/core/ItemList/PanelSelector";
 export { SelectResourceTab } from "./components/core/SelectResourceTab/SelectResourceTab";

@@ -418,7 +418,7 @@ function CustomShimmeredDetailsListInternal<T>(props: ICustomShimmeredDetailsLis
             }
             setColumns(modifiedColumns);
         }
-    }, [
+    }, [props.columns,
         JSON.stringify(props.columns.map((column: any) => [column.name, column.key, column.onRenderDependencies, column.isHiddenFromColumnSelector].toString())),
     ]);
 
