@@ -38,11 +38,11 @@ Profile.args = {
   isOpen: true,
   tenant: tenantInformation,
   photoData: undefined,
-  subscription: {
-    name: 'subscription name',
-    sku: '2,50',
-    localeDisplayName: 'West US',
-  },
+  // subscription: {
+  //   name: 'subscription name',
+  //   sku: '2,50',
+  //   localeDisplayName: 'West US',
+  // },
   onClose: () => { },
   login: () => { },
   signOut: () => { },

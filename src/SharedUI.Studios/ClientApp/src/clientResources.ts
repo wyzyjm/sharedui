@@ -246,6 +246,10 @@ export const ProfileCardLocalizationFormatMessages = defineMessages({
         id: "ProfileCard.Switch",
         defaultMessage: "Switch",
     },
+    Select: {
+        id: "ProfileCard.Select",
+        defaultMessage: "Select",
+    },
     SignInWithADifferentAccount: {
         id: "ProfileCard.SignInWithADifferentAccount",
         defaultMessage: "Sign in with a different account",

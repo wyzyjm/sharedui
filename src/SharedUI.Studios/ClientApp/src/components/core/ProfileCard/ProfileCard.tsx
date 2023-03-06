@@ -43,7 +43,7 @@ export interface ProfileCardProps {
     isOpen: boolean;
     tenant: ProfileCardInformation;
     photoData: Maybe<string>,
-    subscription: Pick<Subscription, "name" | "sku" | "localeDisplayName">;
+    subscription?: Pick<Subscription, "name" | "sku" | "localeDisplayName">;
     onClose: () => void;
     login: () => void;
     signOut: () => void;
@@ -72,7 +72,7 @@ const panelStyles = {
     },
 } as IPanelStyles;
 
-const PlaceHolder = "--";
+const PlaceHolder = "unselected";
 
 export const ProfileAreaWrapped = (props: ProfileCardProps) => {
     const { isOpen, tenant, subscription, photoData, onClose, login, signOut, onSwitchTenant, onSwitchResource } = props
@@ -108,7 +108,7 @@ export const ProfileAreaWrapped = (props: ProfileCardProps) => {
     }
     function _onRenderOptionalText(_props: IPersonaProps): JSX.Element {
         return <Stack tokens={{ childrenGap: 10 }} style={{ paddingTop: 10 }}>
-            {/* Resource */}
+            {/* Directory */}
             <Stack>
                 <Label>{INTL.formatMessage(ProfileCardLocalizationFormatMessages.CurrentDirectory)}</Label>
                 <Stack horizontal>
@@ -148,7 +148,7 @@ export const ProfileAreaWrapped = (props: ProfileCardProps) => {
                 </Stack>
             </Stack>}
 
-            {/* Directory */}
+            {/* Resource */}
             <Stack>
                 <Label>{INTL.formatMessage(ProfileCardLocalizationFormatMessages.CurrentResource)}</Label>
                 <Stack horizontal>
@@ -163,16 +163,18 @@ export const ProfileAreaWrapped = (props: ProfileCardProps) => {
                         data-bi-name={INTL.formatMessage(ProfileCardLocalizationFormatMessages.SwitchResources)}
                         aria-label={INTL.formatMessage(ProfileCardLocalizationFormatMessages.SwitchResource)}
                     >
-                        {INTL.formatMessage(ProfileCardLocalizationFormatMessages.Switch)}
+                        {subscription ? INTL.formatMessage(ProfileCardLocalizationFormatMessages.Switch) :
+                            INTL.formatMessage(ProfileCardLocalizationFormatMessages.Select)
+                        }
                     </Link>
                 </Stack>
-                <Text style={{ fontSize: 10, color: theme.palette.neutralSecondary }}>
+                {subscription && subscription.localeDisplayName && subscription.sku && <Text style={{ fontSize: 10, color: theme.palette.neutralSecondary }}>
                     {format(
                         "%s, %s",
                         subscription ? getLocalizationMessage(subscription.localeDisplayName) : PlaceHolder,
                         subscription ? subscription.sku : PlaceHolder
                     )}
-                </Text>
+                </Text>}
             </Stack>
         </Stack>
     }
