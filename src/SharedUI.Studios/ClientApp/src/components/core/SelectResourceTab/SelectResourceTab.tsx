@@ -425,7 +425,7 @@ export const ResourceAreaWrapped = (props: ISelectResourceTabProps): JSX.Element
                         enableShimmer={false}
                         contextualMenuProps={{
                             getContextualMenuItems: (items) => [] as any,
-                            contextMenuContainerColumnKey: "FirstName",
+                            contextMenuContainerColumnKey: "",
                         }}
                     />
                 </ScrollablePane>

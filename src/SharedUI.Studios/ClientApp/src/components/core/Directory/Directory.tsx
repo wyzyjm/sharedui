@@ -126,7 +126,7 @@ export const DirectoryInternal = (props: ISelectDirectoryTabProps): JSX.Element 
                         )}
                         contextualMenuProps={{
                             getContextualMenuItems: (items) => [] as any,
-                            contextMenuContainerColumnKey: "FirstName",
+                            contextMenuContainerColumnKey: "",
                         }}
                         getKey={(item: TenantInformation) => item?.tenantId}
                         selectedKeys={[selectedTenant?.tenantId]}
