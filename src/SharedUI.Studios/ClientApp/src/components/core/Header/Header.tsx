@@ -49,7 +49,8 @@ export interface IHeaderProps {
   subscription: Subscription;
   photoData?: string;
   loginPath: string;
-  onProfileClick: (showProfile: boolean) => void
+  onProfileClick: () => void;
+  isProfileCardVisible: boolean;
 };
 
 const StyledDiv = styled.div`
@@ -278,10 +279,8 @@ a {
 `;
 const PlaceHolder = "--";
 function ThemedHeaderInternal(props: IHeaderProps) {
-  const { isAuthenticated, friendlyName, subscription, photoData, loginPath, onProfileClick } = props
+  const { isAuthenticated, friendlyName, subscription, photoData, loginPath, onProfileClick, isProfileCardVisible } = props
   const theme = useTheme();
-
-  const [showProfile, setShowProfile] = useState(false);
 
   const itemAlignmentsStackTokens: IStackTokens = {
     padding: "0 0 0 10px",
@@ -392,17 +391,16 @@ function ThemedHeaderInternal(props: IHeaderProps) {
               {/* profile start */}
               {isAuthenticated && <ThemedHeaderButton
                 id={props.profileButtonId}
-                className={"right-icon nav-item " + (showProfile ? "white" : "")}
+                className={"right-icon nav-item " + (isProfileCardVisible ? "white" : "")}
                 style={{ width: "auto" }}
                 title={friendlyName}
                 onClick={() => {
-                  onProfileClick(!showProfile);
-                  setShowProfile(!showProfile);
+                  onProfileClick();
                 }}
               >
                 <Stack horizontal tokens={{ childrenGap: 8 }} style={{ alignItems: "center" }}>
                   <Stack className="hidden_medium" style={{ alignItems: "flex-end" }}>
-                    <Text style={{ fontSize: 14, color: showProfile ? "inherit" : theme.palette.white }}>
+                    <Text style={{ fontSize: 14, color: isProfileCardVisible ? "inherit" : theme.palette.white }}>
                       {friendlyName}
                     </Text>
                     <Text
@@ -416,7 +414,7 @@ function ThemedHeaderInternal(props: IHeaderProps) {
                       )}
                       style={{
                         fontSize: 10,
-                        color: showProfile ? "inherit" : theme.palette.white,
+                        color: isProfileCardVisible ? "inherit" : theme.palette.white,
                         maxWidth: 200,
                         overflow: "hidden",
                         whiteSpace: "nowrap",
@@ -446,7 +444,7 @@ function ThemedHeaderInternal(props: IHeaderProps) {
                       hidePersonaDetails
                       size={PersonaSize.size32}
                       text={friendlyName}
-                      className={showProfile ? "" : "white"}
+                      className={isProfileCardVisible ? "" : "white"}
                     />
                   )}
                 </Stack>
