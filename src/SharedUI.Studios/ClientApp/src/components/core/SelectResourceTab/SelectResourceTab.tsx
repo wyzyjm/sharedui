@@ -23,6 +23,7 @@ import _ from "lodash";
 import { format } from "util";
 import { ThemedExternalLinkIcon } from '../Icons'
 import { CustomShimmeredDetailsList, ICustomColumnsList } from "../ItemList/ItemList";
+import { ColumnSelector, IColumnSelectorItem } from "../ItemList/ColumnSelector";
 
 import { FetchStatusUtil } from '../../../util/common'
 import { INTL } from "../../../util/intlUtil";
@@ -305,6 +306,33 @@ export const ResourceAreaWrapped = (props: ISelectResourceTabProps): JSX.Element
         },
     ];
 
+    const [tableSchemaCols, setTableSchemaCols] = useState(allResourcesSchema);
+    const [columnSelectorCols, setColumnSelectorCols] = useState(getColumnsForColumnSelector(allResourcesSchema));
+    const [isColumnSelectorOpen, setIsColumnSelectorOpen] = useState(false);
+    const updateTable = (columns: IColumnSelectorItem[]) => {
+        const newTableSchema: any = [];
+        const olderTableSchema = tableSchemaCols;
+
+        columns.forEach(column => {
+            const tableSchemaCol = olderTableSchema.find(schema => schema.key === column.key);
+            tableSchemaCol.isHiddenFromColumnSelector = column.isItemUnselected;
+            newTableSchema.push(tableSchemaCol);
+        });
+
+        setTableSchemaCols(newTableSchema);
+        setColumnSelectorCols(getColumnsForColumnSelector(newTableSchema));
+    };
+
+    function getColumnsForColumnSelector(tableSchema: ICustomColumnsList<SubscriptionViewModel>): IColumnSelectorItem[] {
+        return tableSchema.map(tableColumn => {
+            return {
+                name: tableColumn.name,
+                key: tableColumn.key,
+                isItemUnselected: tableColumn.isHiddenFromColumnSelector
+            };
+        });
+    }
+
     return (
         <Stack grow>
             <Stack.Item>
@@ -386,6 +414,13 @@ export const ResourceAreaWrapped = (props: ISelectResourceTabProps): JSX.Element
                             >
                                 {INTL.formatMessage(ResourceLocalizationFormatMessages.CreateAzureResource)}
                             </CommandBarButton>
+                            <CommandBarButton
+                                iconProps={{ iconName: "Repair" }}
+                                title={INTL.formatMessage(ResourceLocalizationFormatMessages.ColumnOptions)}
+                                onClick={() => { setIsColumnSelectorOpen(!isColumnSelectorOpen) }}
+                            >
+                                {INTL.formatMessage(ResourceLocalizationFormatMessages.ColumnOptions)}
+                            </CommandBarButton>
                         </Stack>
                     </PivotItem>
                 </Pivot>
@@ -393,6 +428,7 @@ export const ResourceAreaWrapped = (props: ISelectResourceTabProps): JSX.Element
             {/* Table list */}
             <Stack.Item grow>
                 <ScrollablePane style={{ position: "relative", width: "100%", height: "100%", minHeight: 120 }}>
+                    <ColumnSelector tableColumns={columnSelectorCols} isOpen={isColumnSelectorOpen} onCloseColumnSelector={() => { setIsColumnSelectorOpen(false) }} onChange={updateTable} />
                     <CustomShimmeredDetailsList<SubscriptionViewModel>
                         componentRef={subscriptionListRef}
                         isDefaultTopItem={item => subscription && item.id === subscription.id}
@@ -405,7 +441,7 @@ export const ResourceAreaWrapped = (props: ISelectResourceTabProps): JSX.Element
                                 }).sort((a, b) => (a.name > b.name ? 1 : -1))
                         )}
                         selectedKeys={[selectedSubscription?.id]}
-                        columns={allResourcesSchema}
+                        columns={tableSchemaCols}
                         ariaLabel={INTL.formatMessage(ResourceLocalizationFormatMessages.AllResources)}
                         checkButtonAriaLabel={INTL.formatMessage(ResourceLocalizationFormatMessages.SelectNow)}
                         ariaLabelForSelectAllCheckbox={INTL.formatMessage(ResourceLocalizationFormatMessages.ToggleSelectionForAllItems)}

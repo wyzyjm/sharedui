@@ -487,6 +487,10 @@ export const ResourceLocalizationFormatMessages = defineMessages({
         id: "Resource.CreateAzureResource",
         defaultMessage: "Create a new resource"
     },
+    ColumnOptions: {
+        id: "Resource.ColumnOptions",
+        defaultMessage: "Column options"
+    },
     ResourceName: {
         id: "Resource.ResourceName",
         defaultMessage: "Resource name"
