@@ -45,12 +45,12 @@ const HatsInternal = (props: HatsProps) => {
 
     function onDismiss() {
         setIsPanelOpen(false);
-        onClose?.();
+        props.onClose?.();
     }
 
     function onLightDismissClick() {
         setIsPanelOpen(false);
-        onLightDismissClick?.();
+        props.onLightDismissClick?.();
     }
 
     return (
