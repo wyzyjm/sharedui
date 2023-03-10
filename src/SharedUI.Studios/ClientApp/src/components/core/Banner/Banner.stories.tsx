@@ -2,6 +2,7 @@
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 import { BannerArea as CS_Banner, BannerProps } from './Banner';
 import { RatingBannerArea as CS_RatingBanner, RatingBannerProps } from './RatingBanner';
+import { RatingBannerButtonsArea as CS_RatingBannerButtons, RatingBannerButtonsProps } from './RatingBannerButtons';
 import { GuidingBannerArea as CS_GuidingBanner, GuidingBannerProps } from './GuidingBanner';
 import { defaultTheme } from "../../../themes";
 import {
@@ -16,7 +17,7 @@ import { SharedComponentsContext } from '../SharedComponentsContext';
 
 export default {
     title: 'Banner',
-    subcomponents: { CS_Banner, CS_RatingBanner, CS_GuidingBanner }
+    subcomponents: { CS_Banner, CS_RatingBanner, CS_RatingBannerButtons, CS_GuidingBanner }
 } as ComponentMeta<any>;
 
 const HatsTemplate: ComponentStory<typeof CS_Banner> = (args: BannerProps) => {
@@ -38,6 +39,15 @@ const RatingHatsTemplate: ComponentStory<typeof CS_RatingBanner> = (args: Rating
         </ThemeProvider>
     );
 }
+const RatingButtonsHatsTemplate: ComponentStory<typeof CS_RatingBannerButtons> = (args: RatingBannerButtonsProps) => {
+    return (
+        <ThemeProvider theme={defaultTheme.body}>
+            <SharedComponentsContext.Provider value={{ locale: 'en' }}>
+                <CS_RatingBannerButtons {...args} />
+            </SharedComponentsContext.Provider>
+        </ThemeProvider>
+    );
+}
 const GuidingHatsTemplate: ComponentStory<typeof CS_GuidingBanner> = (args: GuidingBannerProps) => {
     return (
         <ThemeProvider theme={defaultTheme.body}>
@@ -51,6 +61,8 @@ const GuidingHatsTemplate: ComponentStory<typeof CS_GuidingBanner> = (args: Guid
 export const Banner = HatsTemplate.bind({});
 
 export const RatingBanner = RatingHatsTemplate.bind({});
+
+export const RatingBannerButtons = RatingButtonsHatsTemplate.bind({});
 
 Banner.args = {
     onClick: () => { console.log("banner clicked"); },
@@ -80,6 +92,20 @@ RatingBanner.args = {
         interaction: HaTSInteraction.Banner
     } as HatsProps
 } as RatingBannerProps;
+
+RatingBannerButtons.args = {
+    onClick: () => { console.log("banner clicked"); },
+    onClose: () => { console.log("banner closed"); },
+    headerText: "How likely is it that you would recommend Speech Services Studio to a friend or colleague? Please select one:",
+    hatsProp: {
+        onClose: () => { },
+        autoFlyout: false,
+        headerText: "Feedback",
+        surveyLink: "https://microsoft.qualtrics.com/jfe/form/SV_40zWLBFYILTkRWl?Kind=FormRecognizer&From=Preview",
+        isOpen: true,
+        interaction: HaTSInteraction.Banner
+    } as HatsProps
+} as RatingBannerButtonsProps;
 
 export const GuidingBanner = GuidingHatsTemplate.bind({})
 const renderIcon = <Icon iconName="AzureLogo" styles={{

@@ -92,3 +92,5 @@ export type {
   ProvisioningStates
 } from "./models";
 export { CodeViewGuidance } from './components/core/CodeViewGuidance/CodeViewGuidance';
+export { RatingBannerButtonsArea } from "./components/core/Banner/RatingBannerButtons";
+export type { RatingBannerButtonsProps } from "./components/core/Banner/RatingBannerButtons";
