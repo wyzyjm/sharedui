@@ -4,6 +4,7 @@ import { IWizardFlowMenuItem, WizardFlow, WizardFlowComp, WizardFlowProps, IWiza
 import { defaultTheme } from "../../../themes";
 import { ThemeProvider, Stack, IStackTokens, DefaultButton, PrimaryButton } from "@fluentui/react";
 import { SharedComponentsContext } from '../SharedComponentsContext';
+import { useBoolean } from "@fluentui/react-hooks";
 
 export default {
     title: 'Wizard',
@@ -12,10 +13,12 @@ export default {
 const stackTokens: IStackTokens = { childrenGap: 8 };
 
 const WizardTemplate: ComponentStory<typeof WizardFlowComp> = (args) => {
+    const [hideDialog, { setTrue: HideDialog }] = useBoolean(false);
+
     return (
         <ThemeProvider theme={defaultTheme.body}>
             <SharedComponentsContext.Provider value={{ locale: 'en' }}>
-                <WizardFlowComp {...args}>
+                <WizardFlowComp {...args} hidden={hideDialog} onDismiss={() => HideDialog()}>
                     <WizardFlow.Header>
                         <span>Question or main purpose of step</span>
                     </WizardFlow.Header>
@@ -39,7 +42,7 @@ const WizardTemplate: ComponentStory<typeof WizardFlowComp> = (args) => {
                                 tokens={stackTokens}
                             >
                                 <DefaultButton text="Creat project"  disabled allowDisabledFocus />
-                                <DefaultButton text="Cancel"  allowDisabledFocus />
+                                <DefaultButton text="Cancel" onClick={HideDialog} allowDisabledFocus />
                             </Stack>
                         </>
                     </WizardFlow.Footer>

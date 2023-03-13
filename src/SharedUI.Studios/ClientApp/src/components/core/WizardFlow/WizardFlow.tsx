@@ -204,6 +204,7 @@ export const WizardFlow: IWizardFlow = function (props: WizardFlowProps) {
   const ContentComponent = findByType(props.children, Content);
   const FooterComponent = findByType(props.children, Footer);
 
+  const { hidden, onDismiss } = props
   const [isMenuVisible, { toggle: toggleIsMenuVisible }] = useBoolean(false);
   const theme = useTheme();
   const addChevronDownIcon: IIconProps = { iconName: isMenuVisible ? "ChevronDown" : "ChevronRight" };
@@ -239,6 +240,8 @@ export const WizardFlow: IWizardFlow = function (props: WizardFlowProps) {
         },
       }}
       {...props}
+      hidden={hidden}
+      onDismiss={() => onDismiss()}
       maxWidth={props.innerWidth || "800px"}
     >
       <StyledStack horizontal styles={{ root: { minHeight: props.height } }}>
@@ -262,7 +265,15 @@ export const WizardFlow: IWizardFlow = function (props: WizardFlowProps) {
             },
           }}
         >
-          <Stack style={{ maxHeight: "576px", padding: "20px", flex: 1, overflowY: "auto", wordBreak: "break-word" }}>
+          <Stack
+            style={{
+              maxHeight: "576px",
+              padding: "20px",
+              flex: 1,
+              overflowY: "auto",
+              wordBreak: "break-word",
+            }}
+          >
             {Stack && (
               <Stack
                 className="wizard-right-header hidden_medium"
