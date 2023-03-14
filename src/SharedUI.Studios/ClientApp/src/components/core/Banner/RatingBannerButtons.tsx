@@ -72,7 +72,7 @@ const StyledRatingBannerDiv = styled.div`
           }
           @media all and (max-width: 410px) {
             margin-left: 7px;
-            margin-top: 0;
+            margin-top: 20px;
           }
         }
     
@@ -136,12 +136,6 @@ const StyledCommandBar = styled(CommandBar)`
             @media all and (max-width: 432px) { 
                 margin-top: 8px;
                 margin-left: -10px;
-            }
-            @media all and (max-width: 410px) { 
-                padding-bottom: 20px;
-            }
-            @media all and (max-width: 316px) { 
-                max-width: 200px;
             }
         }
         .ms-CommandBar-primaryCommand {
