@@ -16,6 +16,7 @@ import {
 } from "@fluentui/react";
 import { format } from "util";
 
+import { NotificationBoxListWrapped, NotificationBoxListProp } from "../Notification/Notification";
 import { defaultTheme } from "../../../themes";
 import styled, { ThemeProvider as ReactThemeProvider } from "styled-components";
 import { initializeComponent, withLocalization } from "../../../services/localization";
@@ -49,6 +50,7 @@ export interface IHeaderProps {
   subscription: Subscription;
   photoData?: string;
   loginPath: string;
+  notifications?: NotificationBoxListProp;
   onProfileClick: () => void;
   isProfileCardVisible: boolean;
 };
@@ -461,6 +463,7 @@ function ThemedHeaderInternal(props: IHeaderProps) {
           </Stack>
         </ReactThemeProvider>
       </ThemeProvider>
+      <NotificationBoxListWrapped {...props.notifications} />
     </StyledDiv>
   );
 }

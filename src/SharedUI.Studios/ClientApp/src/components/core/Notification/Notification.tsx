@@ -42,7 +42,7 @@ export interface ClientNotification {
   domainProperties?: INotificationDomainPropertiesBase;
   silent: boolean;
 }
-interface ClientNotifications {
+export interface ClientNotifications {
   [id: string]: ClientNotification;
 }
 const CloseButton = (props: {
@@ -300,6 +300,7 @@ export function NotificationPrompt(props: NotificationPromptProp): JSX.Element {
 
 export interface INotificationPanelProps {
   notifications: ClientNotifications;
+  showDomainNDate?: boolean | true;
   isOpen?: boolean | true;
   headerText: string;
   onClick: () => void;
@@ -395,6 +396,7 @@ const StyledNotificationTitleDiv = styled.div`
     .notification-title-text {
       font-weight: bold;
       margin-left: 6px;
+      line-height: 100%;
     }
 
     .svg-rotate360 {
@@ -476,7 +478,7 @@ function NotificationPanelInternal(props: INotificationPanelProps): JSX.Element 
                   {typeof item.message == "function" ? item.message() : item.message}
                 </div>
               </StyledMessageTextDiv>
-              <Stack horizontal>
+              {props.showDomainNDate && <Stack horizontal>
                 {item.domain ? getDomainDisplayName(item.domain) : ""}
                 <Stack.Item grow={1}>
                   <span />
@@ -485,7 +487,7 @@ function NotificationPanelInternal(props: INotificationPanelProps): JSX.Element 
                   // 'whence the current status was pushed to the user'
                   value={item.status === ClientNotificationStatus.Processing ? item.createdAt : item.updatedAt}
                 />
-              </Stack>
+              </Stack>}
             </Stack>
             <Separator className="notification-panel-separator" />
           </Stack.Item>
@@ -554,7 +556,7 @@ function NotificationBox(props: NotificationBoxProp): JSX.Element {
   }, [props.notification.updatedAt, props.notification.silent]);
 
   return (
-    <div>
+    <div className="header-notification-message-box">
       {item && visible && (
         <StyledNotificationBoxDiv className="notification-box-rim6bq6x2v">
           <div className="message-box">
@@ -591,10 +593,10 @@ export interface NotificationBoxListProp {
 const StyledNotificationBoxListDiv = styled.div`
     position: absolute;
     max-width: 100vw;
-    max-height: calc(100vh - 40px);
+    max-height: calc(100vh - 64px);
     overflow: auto;
-    right: 0px;
-    top: 40px;
+    right: 16px;
+    top: 64px;
     z-index: 1000001;
 `;
 

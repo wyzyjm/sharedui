@@ -1,5 +1,5 @@
 import { expect, test, Locator, Page } from '@playwright/test';
-import { StorybookTestPOM } from '../../StoryBook.spec';
+import { StorybookTestPOM } from '../../../StoryBook.spec';
 
 let storybookPOM: StorybookTestPOM;
 
@@ -11,7 +11,7 @@ test.beforeEach(async ({ page }) => {
     storybookPOM = new StorybookTestPOM(page);
     await storybookPOM.goto();
 
-    const pageUrl = storybookPOM.getBaseUrl() + "?path=/story/notification--notification";
+    const pageUrl = storybookPOM.getBaseUrl() + "?path=/story/notification--notification-panel-com";
     await page.goto(pageUrl);
 });
 
@@ -38,13 +38,14 @@ test.describe('Notification tests', () => {
         const panelWidth = await storybookPOM.getComputedStyle(panelElement, "width");
         await expect(panelWidth).toBe("380px");
 
-        // Check notification font-size
-        const notificationFontSize = await storybookPOM.getComputedStyle(notificationElement, "font-size");
-        await expect(notificationFontSize).toBe("14px");
-
-        // Check notification font weight
-        const notificationFontWeight = await storybookPOM.getComputedStyle(notificationElement, "font-weight");
-        await expect(notificationFontWeight).toBe("400");
+        for (const ele of await notificationElement.all()) {
+            // Check notification font-size
+            const notificationFontSize = await storybookPOM.getComputedStyle(ele, "font-size");
+            expect(notificationFontSize).toBe("14px");
+            // Check notification font weight
+            const notificationFontWeight = await storybookPOM.getComputedStyle(ele, "font-weight");
+            expect(notificationFontWeight).toBe("400");
+        }
     });
 
     test('the notification panel should update on properties updates', async ({ page }) => {

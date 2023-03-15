@@ -8,7 +8,7 @@ import {
   Callout,
 } from "@fluentui/react";
 import { defaultTheme } from "../../../themes";
-import { ClientNotification, ClientNotificationDomain, ClientNotificationStatus, getNotificationMessage, NotificationProcessingBar, NotificationPrompt } from "../Notification/Notification";
+import { ClientNotification, ClientNotificationDomain, ClientNotifications, ClientNotificationStatus, getNotificationMessage, NotificationBoxListProp, NotificationProcessingBar, NotificationPrompt } from "../Notification/Notification";
 import { SharedComponentsContext } from '../SharedComponentsContext';
 import { ProfileCard, ProfileCardProps } from '../ProfileCard/ProfileCard'
 import { Profile } from '../ProfileCard/ProfileCard.stories'
@@ -24,6 +24,17 @@ const notification: ClientNotification = {
   updatedAt: new Date(),
   silent: false
 };
+
+const clientNotificationGenerator = (p: string) => ({
+  id: p,
+  domain: ClientNotificationDomain.Subscription,
+  title: p,
+  message: p,
+  status: ClientNotificationStatus.Failed,
+  createdAt: new Date(),
+  updatedAt: new Date(),
+  silent: false,
+} as ClientNotification)
 
 function defineIcons<T extends AccessibleKeyDefinition<IIconProps>>(
   icons: T
@@ -110,5 +121,12 @@ Header.args = {
     sku: '2,50',
     localeDisplayName: 'West US',
   },
-  // photoData: ''
+  // photoData: '',
+  notifications: {
+    notifications: {
+      "123": clientNotificationGenerator("123"),
+      "456": clientNotificationGenerator("456"),
+      "789": clientNotificationGenerator("789"),
+   } as ClientNotifications
+  } as NotificationBoxListProp
 } as IHeaderProps;
