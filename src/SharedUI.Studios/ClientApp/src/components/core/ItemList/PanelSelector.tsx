@@ -1,13 +1,20 @@
 import { Announced, Checkbox, IColumn, IconButton, IIconProps, Stack } from "@fluentui/react";
-import { useState } from "react";
+import { cloneDeep } from "lodash";
+import { useEffect, useState } from "react";
 import styled from "styled-components";
 import { PanelSelectorLocalizationFormatMessages } from "../../../clientResources";
 import { initializeComponent, withLocalization } from "../../../services/localization";
 import { INTL } from "../../../util/intlUtil";
 
+export interface IColumnSelectorItem {
+    name: string;
+    key: string;
+    isItemUnselected: boolean;
+}
+
 export interface IPanelSelectorProps {
-    tableColumns?: IColumn[];
-    onChange?: (arg: Object) => void;
+    tableColumns?: IColumnSelectorItem[];
+    onChange?: (arg: IColumnSelectorItem[]) => void;
     isOpen?: boolean | true;
 };
 
@@ -76,60 +83,63 @@ const StyledCSMoveDownIconButton = styled(IconButton)`
 `;
 
 function PanelSelectorInternal(props: IPanelSelectorProps): JSX.Element {
-    const [move, setMove] = useState(0);
-    let draftColumns = props.tableColumns;
-    const [columns, setColumns] = useState(draftColumns);
-    const [announced, setAnnounced] = useState<JSX.Element | undefined>(undefined);
     const upIcon: IIconProps = { iconName: "Up" };
     const downIcon: IIconProps = { iconName: "Down" };
 
-    function handleMoveUp(index: number) {
+    const [isColumnVisible, setIsColumnVisible] = useState<{ [id: string]: boolean }>({});
+    const [columns, setColumns] = useState<IColumnSelectorItem[]>(cloneDeep(props.tableColumns));
+    const [announced, setAnnounced] = useState<JSX.Element | undefined>(undefined);
+
+    useEffect(() => {
+        setColumns(cloneDeep(props.tableColumns));
+    }, [props.tableColumns]);
+
+    const handleMoveUp = (index: number) => {
         if (index > 0) {
             let toggleColumnUp = columns[index];
             columns[index] = columns[index - 1];
             columns[index - 1] = toggleColumnUp;
-            setColumns(columns);
-            setMove(v => v + 1);
+            setColumns(cloneDeep(columns));
+            props.onChange(columns);
             setAnnounced(<Announced message={INTL.formatMessage(PanelSelectorLocalizationFormatMessages.MoveUpColumnsUpdate)} />);
         }
-    }
+    };
 
-    function handleMoveDown(index: number) {
-        if (index < props.tableColumns.length - 1) {
+    const handleMoveDown = (index: number) => {
+        if (index < columns.length - 1) {
             let toggleColumnDown = columns[index];
             columns[index] = columns[index + 1];
             columns[index + 1] = toggleColumnDown;
-            setColumns(columns);
-            setMove(v => v + 1);
+            setColumns(cloneDeep(columns));
+            props.onChange(columns);
             setAnnounced(<Announced message={INTL.formatMessage(PanelSelectorLocalizationFormatMessages.MoveDownColumnsUpdate)} />);
         }
-    }
+    };
 
-    function handleChange(item: any, isChecked?: boolean, ev?: React.FormEvent<HTMLElement | HTMLInputElement>) {
-        item.isHiddenFromColumnSelector = !isChecked;
-        setColumns(columns);
+    const handleChange = (item: IColumnSelectorItem, isChecked?: boolean) => {
+        item.isItemUnselected = !isChecked;
+        setColumns(cloneDeep(columns));
         props.onChange(columns);
-        setMove(v => v + 1);
-    }
+    };
 
     return (
         <>{props.isOpen &&
             <div>
                 {announced}
-                {props.tableColumns.map((item: any, index: number) => (
-                    <StyledCSColumnsMainDiv>
+                {columns.map((item: IColumnSelectorItem, index: number) => (
+                    (isColumnVisible[item.key] !== false) &&
+                    (<StyledCSColumnsMainDiv>
                         <StyledCSColumnsStack horizontal>
-                            <Checkbox label={item.name} title={item.name} checked={!item.isHiddenFromColumnSelector} onChange={(ev, isChecked) => handleChange(item, isChecked, ev)} />
+                            <Checkbox label={item.name} title={item.name} checked={!item.isItemUnselected} onChange={(ev, isChecked) => handleChange(item, isChecked)} />
                             <StyledCSIconsDiv className="icons-div">
                                 <StyledCSMoveUpIconButton iconProps={upIcon} title="Move Up" ariaLabel={INTL.formatMessage(PanelSelectorLocalizationFormatMessages.MoveUp)} onClick={ev => handleMoveUp(index)} />
                                 <StyledCSMoveDownIconButton iconProps={downIcon} title="Move Down" ariaLabel={INTL.formatMessage(PanelSelectorLocalizationFormatMessages.MoveDown)} onClick={ev => handleMoveDown(index)} />
                             </StyledCSIconsDiv>
                         </StyledCSColumnsStack>
-                    </StyledCSColumnsMainDiv>
+                    </StyledCSColumnsMainDiv>)
                 ))}
-
-            </div>}
-        </>
+            </div>
+        }</>
     )
 };
 

@@ -123,16 +123,12 @@ const gridItems = [
     }
 ] as SampleGridItem[];
 
-let ps_args = {
-    tableColumns: tableSchema,
-    isOpen: false
-} as IPanelSelectorProps;
-
 const ItemListTemplate: ComponentStory<typeof CustomShimmeredDetailsList<SampleGridItem>> = (args: ICustomShimmeredDetailsListProp<SampleGridItem>) => {
     const [tableSchemaCols, setTableSchemaCols] = useState(tableSchema);
     const [columnSelectorCols, setColumnSelectorCols] = useState(getColumnsForColumnSelector(tableSchema));
     const [isColumnSelectorOpen, setIsColumnSelectorOpen] = useState(false);
-   
+    const [isPanelSelectorOpen, setIsPanelSelectorOpen] = useState(false);
+
     const updateTable = (columns: IColumnSelectorItem[]) => {
         const newTableSchema: any = [];
         const olderTableSchema = tableSchemaCols;
@@ -152,17 +148,17 @@ const ItemListTemplate: ComponentStory<typeof CustomShimmeredDetailsList<SampleG
     }
 
     function handlePanelSelector() {
-        ps_args.isOpen = !ps_args.isOpen;
+        setIsPanelSelectorOpen(!isPanelSelectorOpen);
     }
 
     return (
         <ThemeProvider theme={defaultTheme.body}>
             <SharedComponentsContext.Provider value={{ locale: 'en' }}>
                 <DefaultButton text="Column selector" onClick={handlePanel} />
-                <CS_ColumnSelector tableColumns={columnSelectorCols} isOpen={isColumnSelectorOpen} onCloseColumnSelector={() => {}} onChange={updateTable} />
-                <CustomShimmeredDetailsList<SampleGridItem> contextualMenuProps={null} onSelect={items => console.log("items selected")} items={gridItems} columns={tableSchemaCols} enableShimmer={false}  />
+                <CS_ColumnSelector tableColumns={columnSelectorCols} isOpen={isColumnSelectorOpen} onCloseColumnSelector={() => { }} onChange={updateTable} />
+                <CustomShimmeredDetailsList<SampleGridItem> contextualMenuProps={null} onSelect={items => console.log("items selected")} items={gridItems} columns={tableSchemaCols} enableShimmer={false} />
                 <CommandBarButton text="Panel selector" onClick={handlePanelSelector} />
-                {/* <CS_PanelSelector {...ps_args} onChange={getTable} /> */}
+                <CS_PanelSelector tableColumns={columnSelectorCols} isOpen={isPanelSelectorOpen} onChange={updateTable} />
             </SharedComponentsContext.Provider>
         </ThemeProvider>
     );

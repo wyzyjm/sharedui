@@ -15,32 +15,32 @@ test.beforeEach(async ({ page }) => {
 test.describe('Panel Selector tests', () => {
     test('should render Panel Selector as per design', async ({ page }) => {
 
-        // const buttonElement = await storybookPOM.getByRole('button', { name: 'Panel selector' });
+        const buttonElement = await storybookPOM.getByRole('button', { name: 'Panel selector' });
 
-        // // Check text color
-        // const color = await storybookPOM.getComputedStyle(buttonElement, "color");
-        // await expect(color).toBe("rgb(50, 49, 48)");
+        // Check text color
+        const color = await storybookPOM.getComputedStyle(buttonElement, "color");
+        await expect(color).toBe("rgb(50, 49, 48)");
 
-        // // Check font size
-        // const fontSize = await storybookPOM.getComputedStyle(buttonElement, "font-size");
-        // await expect(fontSize).toBe("14px");
+        // Check font size
+        const fontSize = await storybookPOM.getComputedStyle(buttonElement, "font-size");
+        await expect(fontSize).toBe("14px");
 
-        // // Check font weight
-        // const fontWeight = await storybookPOM.getComputedStyle(buttonElement, "font-weight");
-        // await expect(fontWeight).toBe("400");
+        // Check font weight
+        const fontWeight = await storybookPOM.getComputedStyle(buttonElement, "font-weight");
+        await expect(fontWeight).toBe("400");
 
-        // // Check background color
-        // const headerBackgroundColor = await storybookPOM.getComputedStyle(buttonElement, "background-color");
-        // await expect(headerBackgroundColor).toBe("rgb(255, 255, 255)");
+        // Check background color
+        const headerBackgroundColor = await storybookPOM.getComputedStyle(buttonElement, "background-color");
+        await expect(headerBackgroundColor).toBe("rgb(255, 255, 255)");
 
     });
 
     test('the ItemList should update on Panel Selector updates', async ({ page }) => {
-        // await (await storybookPOM.getByRole('button', { name: 'Panel selector' })).click();
+        await (await storybookPOM.getByRole('button', { name: 'Panel selector' })).click();
 
-        // //Check ItemList for updates
-        // await (await storybookPOM.getLocatorIframe('label:has-text("First name") span')).click();
-        // await expect(await storybookPOM.getByRole('button', { name: 'Last name' })).toContainText('Last name');
+        //Check ItemList for updates
+        await (await storybookPOM.getLocatorIframe('label:has-text("First name") span')).click();
+        await expect(await storybookPOM.getByRole('button', { name: 'Last name' })).toContainText('Last name');
     });
 
     // Accessibility voilations check
