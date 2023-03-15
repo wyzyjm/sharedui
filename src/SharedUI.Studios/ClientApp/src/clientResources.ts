@@ -217,6 +217,10 @@ export const ProfileCardLocalizationFormatMessages = defineMessages({
         id: "ProfileCard.SwitchDirectory",
         defaultMessage: "Switch directory",
     },
+    CurrentSubscription: {
+        id: "ProfileCard.CurrentSubscription",
+        defaultMessage: "Current subscription",
+    },
     CurrentResource: {
         id: "ProfileCard.CurrentResource",
         defaultMessage: "Current resource",
@@ -257,6 +261,10 @@ export const ProfileCardLocalizationFormatMessages = defineMessages({
     SwitchResources: {
         id: "ProfileCard.SwitchResources",
         defaultMessage: "header file switch-resources",
+    },
+    SwitchSubscription: {
+        id: "ProfileCard.SwitchSubscription",
+        defaultMessage: "header file switch-subscription",
     },
 });
 export const AzureLocationMessages: any = defineMessages({

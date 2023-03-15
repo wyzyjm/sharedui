@@ -42,12 +42,15 @@ export declare interface ProfileCardInformation extends TenantInformation {
 export interface ProfileCardProps {
     isOpen: boolean;
     tenant: ProfileCardInformation;
+    azureSubscriptionName?: string;
+    showAzureSubscription?: boolean;
     photoData: Maybe<string>,
-    subscription?: Pick<Subscription, "name" | "sku" | "localeDisplayName">;
+    resource?: Pick<Subscription, "name" | "sku" | "localeDisplayName">;
     onClose: () => void;
     login: () => void;
     signOut: () => void;
     onSwitchTenant: () => void;
+    onSwitchAzureSubscription: () => void;
     onSwitchResource: () => void;
 }
 
@@ -75,7 +78,7 @@ const panelStyles = {
 const PlaceHolder = "unselected";
 
 export const ProfileAreaWrapped = (props: ProfileCardProps) => {
-    const { isOpen, tenant, subscription, photoData, onClose, login, signOut, onSwitchTenant, onSwitchResource } = props
+    const { isOpen, tenant, resource, photoData, onClose, login, signOut, onSwitchTenant, onSwitchAzureSubscription, onSwitchResource } = props
     const theme = useTheme();
 
     function getLocalizationMessage(name: string): string {
@@ -147,13 +150,32 @@ export const ProfileAreaWrapped = (props: ProfileCardProps) => {
                     </Stack.Item>}
                 </Stack>
             </Stack>}
-
+            {/* {Subscription} */}
+            {props?.showAzureSubscription &&
+            <Stack>
+                <Label>{INTL.formatMessage(ProfileCardLocalizationFormatMessages.CurrentSubscription)}</Label>
+                <Stack horizontal>
+                    <Stack.Item styles={{ root: { maxWidth: 160, overflow: "hidden" } }}>
+                        <Text title={props?.azureSubscriptionName || PlaceHolder}>{props?.azureSubscriptionName ?? PlaceHolder}</Text>
+                    </Stack.Item>
+                    <Stack.Item grow>
+                        <span />
+                    </Stack.Item>
+                    <Link
+                        onClick={() => { onSwitchAzureSubscription() }}
+                        data-bi-name={INTL.formatMessage(ProfileCardLocalizationFormatMessages.SwitchSubscription)}
+                        aria-label={INTL.formatMessage(ProfileCardLocalizationFormatMessages.SwitchSubscription)}
+                    >
+                        {props?.azureSubscriptionName ? INTL.formatMessage(ProfileCardLocalizationFormatMessages.Switch): INTL.formatMessage(ProfileCardLocalizationFormatMessages.Select)}
+                    </Link>
+                </Stack>
+            </Stack>}
             {/* Resource */}
             <Stack>
                 <Label>{INTL.formatMessage(ProfileCardLocalizationFormatMessages.CurrentResource)}</Label>
                 <Stack horizontal>
                     <Stack.Item styles={{ root: { maxWidth: 160, overflow: "hidden" } }}>
-                        <Text title={subscription?.name}>{subscription ? subscription.name : PlaceHolder}</Text>
+                        <Text title={resource?.name || PlaceHolder}>{resource ? resource.name : PlaceHolder}</Text>
                     </Stack.Item>
                     <Stack.Item grow>
                         <span />
@@ -163,16 +185,16 @@ export const ProfileAreaWrapped = (props: ProfileCardProps) => {
                         data-bi-name={INTL.formatMessage(ProfileCardLocalizationFormatMessages.SwitchResources)}
                         aria-label={INTL.formatMessage(ProfileCardLocalizationFormatMessages.SwitchResource)}
                     >
-                        {subscription ? INTL.formatMessage(ProfileCardLocalizationFormatMessages.Switch) :
+                        {resource ? INTL.formatMessage(ProfileCardLocalizationFormatMessages.Switch) :
                             INTL.formatMessage(ProfileCardLocalizationFormatMessages.Select)
                         }
                     </Link>
                 </Stack>
-                {subscription && subscription.localeDisplayName && subscription.sku && <Text style={{ fontSize: 10, color: theme.palette.neutralSecondary }}>
+                {resource && resource.localeDisplayName && resource.sku && <Text style={{ fontSize: 10, color: theme.palette.neutralSecondary }}>
                     {format(
                         "%s, %s",
-                        subscription ? getLocalizationMessage(subscription.localeDisplayName) : PlaceHolder,
-                        subscription ? subscription.sku : PlaceHolder
+                        resource ? getLocalizationMessage(resource.localeDisplayName) : PlaceHolder,
+                        resource ? resource.sku : PlaceHolder
                     )}
                 </Text>}
             </Stack>

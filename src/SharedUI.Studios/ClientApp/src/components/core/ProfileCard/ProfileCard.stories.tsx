@@ -37,9 +37,11 @@ Profile.args = {
   headerText: "ProfileCard",
   isOpen: true,
   tenant: tenantInformation,
+  azureSubscriptionName: "CS-Platform-Dev-01",
+  showAzureSubscription: true,
   photoData: undefined,
-  // subscription: {
-  //   name: 'subscription name',
+  // resource: {
+  //   name: 'resource name',
   //   sku: '2,50',
   //   localeDisplayName: 'West US',
   // },
@@ -47,5 +49,6 @@ Profile.args = {
   login: () => { },
   signOut: () => { },
   onSwitchTenant: () => { },
+  onSwitchAzureSubscription: () => {},
   onSwitchResource: () => { },
 } as ProfileCardProps
