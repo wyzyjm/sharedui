@@ -94,3 +94,5 @@ export type {
 export { CodeViewGuidance } from './components/core/CodeViewGuidance/CodeViewGuidance';
 export { RatingBannerButtonsArea } from "./components/core/Banner/RatingBannerButtons";
 export type { RatingBannerButtonsProps } from "./components/core/Banner/RatingBannerButtons";
+export { NonSignedInCard } from "./components/core/NonSignedInCard/NonSignedInCard";
+export type { INonSignedInCardProps } from "./components/core/NonSignedInCard/NonSignedInCard";

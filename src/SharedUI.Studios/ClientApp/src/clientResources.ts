@@ -919,3 +919,25 @@ export const CodeViewGuidanceLocalizationFormatMessages = defineMessages({
         defaultMessage: "If you want to have code view in your studio, we recommend using 'react-syntax-highlighter' library. Here's the sample code:"
     },
 });
+export const NonSignedInCardLocalizationFormatMessages = defineMessages({
+    DontHaveAzureAccount: {
+        id: "TeachingBubble.DontHaveAzureAccount",
+        defaultMessage: "Don’t have Azure account?"
+    },
+    CreateOneLink: {
+        id: "TeachingBubble.CreateOneLink",
+        defaultMessage: "Create one here",
+    },
+    or: {
+        id: "TeachingBubble.or",
+        defaultMessage: "or",
+    },
+    howToCreateAccountLink: {
+        id: "TeachingBubble.howToCreateAccountLink",
+        defaultMessage: "learn how to create Azure account.",
+    },
+    SignUpAndGetFreeAzureCredit: {
+        id: "TeachingBubble.SignUpAndGetFreeAzureCredit",
+        defaultMessage: 'Sign up and get free $200 Azure Credit',
+    },
+});

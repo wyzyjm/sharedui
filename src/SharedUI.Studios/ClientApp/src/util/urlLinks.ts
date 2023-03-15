@@ -59,4 +59,16 @@ export const urlLinks = {
                 return getDocumentFwlink("2162896");
         }
     },
+    createAzureAccount: (): string => {
+        switch (process.env.AzureEnvironment) {
+            default:
+                return getDocumentFwlink("2162782");
+        }
+    },
+    learnMoreCreatingAzureAccount: (): string => {
+        switch (process.env.AzureEnvironment) {
+            default:
+                return getDocumentFwlink("2191822");
+        }
+    },
 }
