@@ -337,11 +337,12 @@ function ThemedHeaderInternal(props: IHeaderProps) {
     if (id in AzureLocationMessages) return INTL.formatMessage(AzureLocationMessages[id]);
     return name;
   }
+
   function onRenderCoin(personaProps: IPersonaProps): JSX.Element {
     const { coinSize, imageAlt } = personaProps;
     return (
       <img
-        style={{ borderRadius: "50%", width: 100, height: 100 }}
+        style={{ borderRadius: "50%" }}
         src={`data:image/png;base64,${photoData ?? ""}`}
         alt={imageAlt}
         width={coinSize}
@@ -349,6 +350,7 @@ function ThemedHeaderInternal(props: IHeaderProps) {
       />
     );
   }
+
   return (
     <StyledDiv>
       <ThemeProvider theme={defaultTheme.header}>
