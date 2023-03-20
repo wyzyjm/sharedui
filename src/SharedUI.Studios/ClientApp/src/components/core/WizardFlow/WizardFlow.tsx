@@ -102,6 +102,10 @@ const StyledStack = styled(Stack)`
     .expand_medium {
         width: 100%;
     }
+    .wizard-right-footer{
+      flex-wrap:wrap;
+      height:auto
+    }
   }
 
   @media (min-width: 768px) {
@@ -222,6 +226,10 @@ export const WizardFlow: IWizardFlow = function (props: WizardFlowProps) {
       styles={{
         root: {
           selectors: {
+            ".content-110": {
+              overflowX: 'hidden',
+              overflowY: 'auto'
+            },
             ".ms-Dialog-title": {
               borderBottom: `1px solid ${theme.palette.neutralLight}`,
               padding: "16px",
@@ -249,7 +257,7 @@ export const WizardFlow: IWizardFlow = function (props: WizardFlowProps) {
           className="wizard-left hidden_medium"
           styles={{
             root: {
-              minWidth: props.menuWidth || "30%",
+              width: props.menuWidth || "30%",
               borderRight: `1px solid ${theme.palette.neutralLight}`,
             },
           }}
@@ -260,7 +268,7 @@ export const WizardFlow: IWizardFlow = function (props: WizardFlowProps) {
           className="wizard-right expand_medium"
           styles={{
             root: {
-              width: "auto",
+              width: props.menuWidth ? `calc(100% - ${props.menuWidth})` : '70%',
               height: "auto",
             },
           }}
@@ -358,13 +366,17 @@ export const WizardFlow: IWizardFlow = function (props: WizardFlowProps) {
                 className="wizard-right-content"
                 styles={{
                   root: {
+                    position: 'relative',
                     flex: "1",
+                    overflowX: "hidden",
                     overflowY: "auto",
                     maxHeight: "597px",
                   },
                 }}
               >
-                {ContentComponent.props.children}
+                <Stack styles={{ root: { position: 'absolute', insert: '0', width: '100%' } }}>
+                  {ContentComponent.props.children}
+                </Stack>
               </Stack>
             )}
           </Stack>
@@ -376,6 +388,7 @@ export const WizardFlow: IWizardFlow = function (props: WizardFlowProps) {
                 root: {
                   borderTop: `1px solid ${theme.palette.neutralLight}`,
                   overflow: "hidden",
+                  flexWrap: 'wrap',
                   height: "64px",
                   justifyContent: "space-between",
                   padding: "16px 24px"

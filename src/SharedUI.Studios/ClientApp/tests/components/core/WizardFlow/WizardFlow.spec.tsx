@@ -74,7 +74,7 @@ test.describe('WizardFlow tests', () => {
     await page.locator('textarea[name="height"]').fill("10px");
     const dialogMainElement = await storybookPOM.getElementFromPreview(dialogMainClass);
     const height = await storybookPOM.getComputedStyle(dialogMainElement, "height");
-    await expect(height).toBe("268px");
+    await expect(height).toBe("252px");
 
     // Check the dialog hidden
     await page.locator('input[name="hidden"]').click();
