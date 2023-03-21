@@ -1,278 +1,313 @@
-import {
-  ActionButton,
-  IButtonStyles,
-  IconButton,
-  INavLinkGroup,
-  Stack,
-  Theme,
-  Text,
-  useTheme,
-  Nav,
-  IRenderFunction,
-  IRenderGroupHeaderProps,
-  INavStyles,
-  Link,
-  ILinkProps,
-  INavProps,
-} from "@fluentui/react";
-import { CSSProperties, useState } from "react";
-import { Icons } from "../Icons";
-import { INTL } from "../../../util/intlUtil";
-import { LeftNavLocalizationFormatMessages } from "../../../clientResources";
-import { initializeComponent, useLocalization, withLocalization } from "../../../services/localization";
-import styled from "styled-components";
+import React, { useState, useEffect } from 'react';
+import { Nav, INavStyles, INavLinkGroup, Stack, IStackItemStyles, find } from "@fluentui/react";
+import { initializeComponent, withLocalization } from "../../../services/localization";
+import styled from 'styled-components';
 
-const StyledNav = styled(Nav)`
-  .ms-Nav-link {
-    position: relative;
-    text-decoration: none;
-  }
-  .ms-Nav-link::before {
-    content: "█";
-    height: 28px;
-    width: 3px;
-    border-radius: 2px;
-    display: none;
-    position: absolute;
-    top: 7px;
-    left: 2px;
-    font-size: 64px;
-    line-height: 28px;
-    color: currentcolor;
-    overflow: hidden;
-  }
-  i, div {
-    color: currentcolor !important;
-    @media screen and (-ms-high-contrast: active) {
-      color: ButtonText !important;
-    }
-  }
-  .is-selected .ms-Nav-link,
-  .ms-Nav-link:focus,
-  .ms-Nav-link:active,
-  .ms-Nav-link:hover {
-    @media screen and (-ms-high-contrast: active) {
-      background-color: highlight !important;
-      -ms-high-contrast: off !important;
-      i, div {
-        color: Window !important;
-        background-color: highlight !important; 
-        forced-color-adjust: none;
-      }
-    }
-  }
-  .is-selected .ms-Nav-link:hover::before,
-  .ms-Nav-link:hover::before,
-  .ms-Nav-link:active::before,
-  .ms-Nav-link:focus::before {
-    display: block;
-    @media screen and (-ms-high-contrast: active) {
-      color: Window !important;
-    }
-  }
-`;
-
-const menuPageContainerStyles: CSSProperties = {
-  width: "100%",
-  height: "100%",
-  display: "flex",
-};
-
-const getNavContainerStyles = (
-  leftWidth: string,
-  theme: Theme,
-  expanded: boolean
-): CSSProperties => ({
-  width: leftWidth,
-  minWidth: leftWidth,
-  height: "100%",
-  borderRight: `1px solid ${theme.palette.neutralLight}`,
-  overflow: "auto",
-  transitionDuration: expanded ? "200ms" : "0s",
-  transitionProperty: "width, min-width",
-});
-
-const expansionToggleButtonStyles: Partial<IButtonStyles> = {
-  root: { width: "3rem", maxWidth: "100%", height: "36px" },
-  icon: { fontSize: "8px", height: "8px", width: "8px", lineHeight: "8px" },
-};
-
-const collapsedNavStyles: Partial<INavStyles> = {
+const navStylesExpanded: Partial<INavStyles> = {
   root: {
-    ".nav-group-name": { display: "none" },
+    position: 'relative',
+    width: '100%',
+    height: '100%',
+    boxSizing: 'border-box',
+    border: '1px solid #eee',
+    borderBottom: 0,
+    overflowY: 'auto',
+    overflowX: 'hidden'
   },
+  // these link styles override the default truncation behavior
   link: {
-    padding: 0,
-    ".ms-Button-flexContainer": { justifyContent: "center" },
+    whiteSpace: 'normal',
+    lineHeight: 'inherit',
+    paddingLeft: '16px',
+    paddingRight: '16px',
+    minWidth: '228px'
   },
-  linkText: { display: "none" },
+  linkText: {
+    color: '#323130'
+  },
+  chevronIcon: {
+    display: 'none'
+  },
+  chevronButton: {
+    display: 'none'
+  }
 };
 
-const getBodyContainerStyles = (
-  leftWidth: string,
-  expanded: boolean
-): CSSProperties => ({
-  width: `calc(100% - ${leftWidth})`,
-  overflow: "auto",
-  transitionDuration: expanded ? "200ms" : "0s",
-  transitionProperty: "width",
-});
+const navStylesCollapsed: Partial<INavStyles> = {
+  root: {
+    position: 'relative',
+    width: '100%',
+    height: '100%',
+    boxSizing: 'border-box',
+    border: '1px solid #eee',
+    borderBottom: 0,
+    overflowY: 'auto',
+    overflowX: 'hidden',
+  },
+  // these link styles override the default truncation behavior
+  link: {
+    whiteSpace: 'normal',
+    lineHeight: 'inherit',
+    paddingLeft: '11px',
+    paddingRight: '11px'
+  },
+  linkText: {
+    color: '#323130'
+  },
+  chevronIcon: {
+    display: 'none'
+  },
+  chevronButton: {
+    display: 'none'
+  }
+};
 
-function useBoolean(
-  initialState: boolean
-): [
-    boolean,
-    { setTrue: () => void; setFalse: () => void; toggle: () => void }
-  ] {
-  const [value, setValue] = useState(initialState);
-  const setTrue = () => setValue(true);
-  const setFalse = () => setValue(false);
-  const toggle = () => setValue((x) => !x);
-  return [value, { setTrue, setFalse, toggle }];
+const stackItemStyles: IStackItemStyles = {
+  root: {
+    alignItems: 'start',
+    display: 'flex',
+    height: '100%'
+  }
+};
+
+const LeftNavStyles = styled.div`
+  height: 100%;
+  margin-left: 0;
+  @media all and (max-width: 992px) {
+    .hideOnMediumOrSmallerDevice {
+      display: none;
+    }
+  }
+  @media all and (min-width: 992px) {
+    .showOnMediumOrLargerDevice {
+      display: none;
+    }
+  }
+  .ms-Nav-compositeLink#collapseChevron {
+    span {
+        justify-content: flex-end;
+    }
+    button {
+      background-color: transparent;
+    }
+    &:focus {
+        outline: none;
+    }
+    i {
+        color: #0078D4;
+        font-size: 8px;
+        display: flex;
+        height: 32px;
+        width: 32px;
+        align-items: center;
+        justify-content: center;
+        &:hover {
+            background-color: #EDEBE9;
+        }
+    }
+  }
+
+  #tryitout, #management {
+      pointer-events: none;
+  }
+
+  .ms-Nav-link {
+      &:after {
+          border-left: 0;
+      }
+  }
+
+  .ms-Nav-compositeLink#expandChevron {
+      button {
+          padding-right: 0;
+          padding-left: 0;
+          span {
+              justify-content: center;
+              align-items: center;
+          }
+          &:focus {
+              outline: none;
+          }
+      }
+      background-color: transparent;
+      &:focus {
+          outline: 0;
+      }
+      i {
+          color: #0078D4;
+          font-size: 8px;
+          height: 32px;
+          width: 32px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          &:hover {
+              background-color: #EDEBE9;
+          }
+      }
+  }
+
+  .ms-Nav-link {
+      border-radius: 0;
+      i {
+          margin-left: 0;
+      }
+  }
+
+  .ms-Nav-link[title="Expand/Collapsed"] {
+      padding-right: 0;
+      position: relative;
+      top: -7px;
+      right: -5px;
+      outline: none;
+  }
+
+  .ms-Nav-compositeLink {
+      button:disabled {
+          color:rgb(50, 49, 48);
+      }
+  }
+
+  .ms-Nav-groupContent {
+      margin-bottom: 0px;
+  }
+
+  .navigation-header {
+      height: 44px;
+      display: flex;
+      align-items: center;
+      p {
+          font-size: 14px;
+          font-weight: bold;
+          padding-left: 16px;
+          margin-bottom: 0px;
+      }
+  }
+`
+
+const _onRenderGroupHeader = (group: INavLinkGroup): JSX.Element => {
+  return (
+    <div className='navigation-header'>
+      <p>{group.name}</p>
+    </div>
+  )
 }
 
-export interface ILeftNavProps {
-  title?: string | JSX.Element;
-  titleLink?: ILinkProps;
-  navItems: INavLinkGroup[];
-  onRenderGroupHeader?: IRenderFunction<IRenderGroupHeaderProps>;
-  styles?: Object;
-  onLinkClick?: () => void;
-  selectedKey?: string;
-  defaultMenuSelectKey?: string;
-};
+const Navi = (props: {
+  subscriptionId: string;
+  expandedNaviItems: INavLinkGroup[];
+  collapsedNaviItems: INavLinkGroup[];
+  expandedStyle: Partial<INavStyles>;
+  collapsedStyle: Partial<INavStyles>;
+  navigation: (navigate: {pathname: string, search: string}) => void;
+  getCurrentUrl: () => string;
+  pathname?: string;
+  search?: string;
+}) => {
+  const [naviItems, setNaviItems] = useState(props.expandedNaviItems);
+  const [naviStyles, setNaviStyles] = useState(props.expandedStyle);
+  const [currentUrl, setCurrentUrl] = useState("");
 
-const FabricNav: React.FunctionComponent<INavProps> = (props) => {
-  const theme = useTheme();
-
-  const onRenderGroupHeader = (group: INavLinkGroup): JSX.Element => {
-    return (
-      //nav-group-name hidden title when shrink
-      <Stack
-        className="nav-group-name"
-        styles={{
-          root: { height: "auto", justifyContent: "center", marginLeft: "8px" },
-        }}
-      >
-        <Text
-          styles={{
-            root: {
-              fontSize: "14px",
-              fontWeight: "600",
-              overflow: "hidden",
-              textOverflow: "ellipsis",
-              whiteSpace: "nowrap",
-            },
-          }}
-          title={group.name}
-        >
-          {group.name}
-        </Text>
-        {group.groupData && group.groupData.locale && (
-          <Text
-            styles={{
-              root: {
-                fontSize: "12px",
-                overflow: "hidden",
-                textOverflow: "ellipsis",
-                whiteSpace: "nowrap",
-                paddingBottom: 10,
-                paddingTop: 5,
-                color: theme.palette.neutralSecondary,
-              },
-            }}
-          >
-            {group.groupData.locale}
-          </Text>
-        )}
-      </Stack>
-    );
-  };
+  useEffect(() => {
+     setCurrentUrl(props.getCurrentUrl());
+  }, []);
 
   return (
-    <StyledNav
-      role="presentation"
-      onLinkClick={() => props.onLinkClick()}
-      {...props}
-      onRenderGroupHeader={
-        props.onRenderGroupHeader
-          ? props.onRenderGroupHeader
-          : onRenderGroupHeader
-      }
-    />
+    <Stack.Item
+      grow={0}
+      styles={stackItemStyles}
+      className="childrenFullHeight"
+    >
+      <Nav
+        styles={naviStyles}
+        groups={naviItems}
+        selectedKey={currentUrl}
+        onRenderLink={(link) => {
+          if (link.isExpanded) {
+            return <b>{link.name}</b>;
+          } else {
+            return <div>{link.name}</div>;
+          }
+        }}
+        onLinkClick={(ev, item) => {
+          ev.stopPropagation();
+          ev.preventDefault();
+
+          if (item.key !== "collapse") {
+            setCurrentUrl(item.url);
+            props.navigation({
+              pathname: props.pathname,
+              search: props.search
+            });
+          }
+          if (item.links && item.links.length) {
+            ev.stopPropagation();
+            ev.preventDefault();
+            return false;
+          }
+          if (item.key == "collapse") {
+            if (naviItems == props.expandedNaviItems) {
+              setNaviItems(props.collapsedNaviItems);
+              setNaviStyles(props.collapsedStyle);
+            } else {
+              setNaviItems(props.expandedNaviItems);
+              setNaviStyles(props.expandedStyle);
+            }
+          }
+        }}
+        onLinkExpandClick={(evt) => {
+          evt.stopPropagation();
+        }}
+        onRenderGroupHeader={_onRenderGroupHeader}
+        ariaLabel="Main"
+      />
+    </Stack.Item>
   );
 };
 
-const MenuPage: React.FunctionComponent<ILeftNavProps> = (
-  props: ILeftNavProps
-) => {
-  const [expanded, { toggle: toggleExpanded }] = useBoolean(true);
-  const leftWidth = expanded ? "14.125rem" : "3rem";
-  const theme = useTheme();
+const Navigation = (props: NavigationProps) => {
+  const { subscriptionId, navigation, getCurrentUrl, expandedNaviItems,  collapsedNaviItems, pathname, search } = props;
+
   return (
-    <div style={menuPageContainerStyles}>
-      <div style={getNavContainerStyles(leftWidth, theme, expanded)} role="navigation" aria-label="Navigation menu">
-        <div style={{ textAlign: "right", marginBottom: "10px" }}>
-          <IconButton
-            styles={expansionToggleButtonStyles}
-            iconProps={
-              expanded
-                ? Icons.DoubleChevronLeft
-                : Icons.DoubleChevronRight
-            }
-            ariaLabel={expanded ? INTL.formatMessage(LeftNavLocalizationFormatMessages.CollapseNavigation) : INTL.formatMessage(LeftNavLocalizationFormatMessages.ExpandNavigation)}
-            onClick={toggleExpanded}
+      <LeftNavStyles>
+        <div className="hideOnMediumOrSmallerDevice">
+          <Navi
+            subscriptionId={subscriptionId}
+            expandedNaviItems={expandedNaviItems}
+            collapsedNaviItems={collapsedNaviItems}
+            expandedStyle={navStylesExpanded}
+            collapsedStyle={navStylesCollapsed}
+            navigation={navigation}
+            getCurrentUrl={getCurrentUrl}
+            pathname={pathname}
+            search={search}
           />
         </div>
-        {expanded && props.title && (
-          <div style={{ display: "flex" }}>
-            <div style={{ paddingTop: "3px" }}>
-              <ActionButton
-                iconProps={Icons.List}
-                ariaLabel="List"
-              />
-            </div>
-            <div style={{ marginTop: "auto", marginBottom: "auto" }}>
-              <Link
-                styles={{
-                  root: { height: "44px", marginBottom: "13px" },
-                }}
-                {...props.titleLink}>
-                {props.title}
-              </Link>
-            </div>
-          </div>
-        )}
-        {
-          <FabricNav
-            onRenderGroupHeader={props.onRenderGroupHeader}
-            styles={expanded ? null : collapsedNavStyles}
-            selectedKey={props.defaultMenuSelectKey}
-            groups={props.navItems}
-            onLinkClick={() => props.onLinkClick()}
+        <div className="showOnMediumOrLargerDevice">
+          <Navi
+            subscriptionId={subscriptionId}
+            expandedNaviItems={collapsedNaviItems}
+            collapsedNaviItems={expandedNaviItems}
+            expandedStyle={navStylesCollapsed}
+            collapsedStyle={navStylesExpanded}
+            navigation={navigation}
+            getCurrentUrl={getCurrentUrl}
+            pathname={pathname}
+            search={search}
           />
-        }
-      </div>
-      <div style={getBodyContainerStyles(leftWidth, expanded)}>
-      </div>
-    </div>
+        </div>
+      </LeftNavStyles>
   );
-};
+}
 
-const LeftNavInternal = (props: ILeftNavProps): JSX.Element => {
-  return (
-    <div style={{ display: "unset" }}>
-      <MenuPage
-        navItems={props.navItems}
-        defaultMenuSelectKey={props.defaultMenuSelectKey}
-        title={props.title}
-        titleLink={props.titleLink}
-        selectedKey={props.selectedKey}
-        styles={props.styles}
-        onLinkClick={() => props.onLinkClick()}
-      ></MenuPage>
-    </div>
-  );
-};
+export interface NavigationProps {
+  subscriptionId?: string,
+  expandedNaviItems: INavLinkGroup[];
+  collapsedNaviItems: INavLinkGroup[];
+  navigation: (navigate: {pathname: string, search: string}) => void;
+  getCurrentUrl: () => string;
+  pathname?: string;
+  search?: string;
+}
 
-export const LeftNav = withLocalization(initializeComponent(LeftNavInternal));
+export const LeftNav = withLocalization(initializeComponent(Navigation))

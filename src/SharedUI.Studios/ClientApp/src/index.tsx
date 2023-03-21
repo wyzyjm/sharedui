@@ -14,7 +14,7 @@ export type { ICardProp } from "./components/core/Card/Card";
 export { ThemedHeader } from "./components/core/Header/Header";
 export type { IHeaderProps } from "./components/core/Header/Header";
 export { LeftNav } from "./components/core/LeftNav/LeftNav";
-export type { ILeftNavProps } from "./components/core/LeftNav/LeftNav";
+export type { NavigationProps } from "./components/core/LeftNav/LeftNav";
 export { NotificationPanel, getNotificationMessage, NotificationProcessingBar, NotificationPrompt, NotificationBoxListWrapped } from "./components/core/Notification/Notification";
 export type { INotificationPanelProps, NotificationProcessingBarProp, NotificationPromptProp, NotificationBoxListProp } from "./components/core/Notification/Notification";
 export { HelpArea } from "./components/core/Help/Help";
@@ -58,8 +58,7 @@ export { SelectResourceTab } from "./components/core/SelectResourceTab/SelectRes
 export type { ISelectResourceTabProps } from "./components/core/SelectResourceTab/SelectResourceTab";
 export { UploadFileDialog } from './components/core/UploadFileDialog/UploadFileDialog';
 export type { UploadFileDialogProps } from './components/core/UploadFileDialog/UploadFileDialog';
-export { LeftNavCustom } from "./components/core/LeftNavCustom/LeftNavCustom";
-export type { NavigationCustomProps } from "./components/core/LeftNavCustom/LeftNavCustom";
+
 export type {
   TenantInformation,
   FetchStatus,
