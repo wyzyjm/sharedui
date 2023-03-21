@@ -63,7 +63,9 @@ export interface ISelectResourceTabProps {
     onChangeResource: (resource: Subscription) => void;
     createOpenAIResourceLink: string;
     learnMoreAboutCreatingCognitiveServicesSubscriptionLink: string;
-    openAIStudioBuiltInRoleIdsArray: string[]
+    openAIStudioBuiltInRoleIdsArray: string[];
+    hasCreateNewResourceAction?: boolean | false;
+    onCreateNewResource?: () => void;
 }
 export const settingItemKeys: {
     directoryItemKey: string;
@@ -406,14 +408,25 @@ export const ResourceAreaWrapped = (props: ISelectResourceTabProps): JSX.Element
                                     setSearchSubscriptionName(text ? text : "");
                                 }}
                             />
-                            <CommandBarButton
-                                style={{ marginLeft: 30 }}
-                                href={createOpenAIResourceLink}
-                                iconProps={{ iconName: "Add" }}
-                                title={INTL.formatMessage(ResourceLocalizationFormatMessages.CreateAzureResource)}
-                            >
-                                {INTL.formatMessage(ResourceLocalizationFormatMessages.CreateAzureResource)}
-                            </CommandBarButton>
+                            {props.hasCreateNewResourceAction ?
+                                (<CommandBarButton
+                                    style={{ marginLeft: 30 }}
+                                    onClick={props.onCreateNewResource}
+                                    iconProps={{ iconName: "Add" }}
+                                    title={INTL.formatMessage(ResourceLocalizationFormatMessages.CreateAzureResource)}
+                                >
+                                    {INTL.formatMessage(ResourceLocalizationFormatMessages.CreateAzureResource)}
+                                </CommandBarButton>) :
+                                (<CommandBarButton
+                                    style={{ marginLeft: 30 }}
+                                    href={createOpenAIResourceLink}
+                                    iconProps={{ iconName: "Add" }}
+                                    title={INTL.formatMessage(ResourceLocalizationFormatMessages.CreateAzureResource)}
+                                >
+                                    {INTL.formatMessage(ResourceLocalizationFormatMessages.CreateAzureResource)}
+                                </CommandBarButton>)
+                            }
+
                             <CommandBarButton
                                 iconProps={{ iconName: "Repair" }}
                                 title={INTL.formatMessage(ResourceLocalizationFormatMessages.ColumnOptions)}

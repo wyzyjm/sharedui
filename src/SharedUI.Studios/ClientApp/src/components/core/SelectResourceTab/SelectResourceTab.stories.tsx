@@ -65,6 +65,8 @@ const azureSubscriptions = [{ "id": "/subscriptions/09e8ad18-7bdb-43b8-80c4-43ee
 
 export const selectResourceTab = ResourceTemplate.bind({});
 selectResourceTab.args = {
+  hasCreateNewResourceAction: true,
+  onCreateNewResource: () => console.log("On Create New Resource"),
   selectedSubscription: subscriptions[0],
   subscriptions: subscriptions,
   selectedTenant,

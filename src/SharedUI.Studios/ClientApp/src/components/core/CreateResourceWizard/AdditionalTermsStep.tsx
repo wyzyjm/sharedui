@@ -1,4 +1,5 @@
 import { Stack, Checkbox } from "@fluentui/react";
+import { useCallback, useState } from "react";
 import styled from "styled-components";
 
 const StyledContainer = styled(Stack)`
@@ -8,23 +9,33 @@ const StyledContainer = styled(Stack)`
     }
 `;
 export interface IAdditionalTermsStepProps {
-    kind: 'AdditionalTermsStep';
     title: string;
     content: JSX.Element;
     confirmationMessage: string;
     onChangeConfirmationMessageSelection: (status: boolean) => void;
 }
 
-export const AdditionalTermsStep = (props: IAdditionalTermsStepProps) => (
-    <StyledContainer>
+export const AdditionalTermsStep = (props: IAdditionalTermsStepProps) => {
+    const [checkState, setCheckState] = useState(false);
+
+    const onChange = useCallback(
+        (ev?: React.FormEvent<HTMLElement | HTMLInputElement>, checked?: boolean): void => {
+            setCheckState(!!checked);
+            props.onChangeConfirmationMessageSelection(checked)
+        },
+        [],
+    );
+
+    return (<StyledContainer>
         {props.content}
         <Checkbox
             disabled={false}
             name={props.title}
+            checked={checkState}
             defaultChecked={false}
             className="crw-checkbox"
             label={props.confirmationMessage}
-            onChange={(_, value) => props.onChangeConfirmationMessageSelection(value)}
+            onChange={onChange}
         />
-    </StyledContainer>
-);
+    </StyledContainer>)
+};
