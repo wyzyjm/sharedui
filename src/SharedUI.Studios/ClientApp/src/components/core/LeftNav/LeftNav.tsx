@@ -201,7 +201,7 @@ const Navi = (props: {
   collapsedStyle: Partial<INavStyles>;
   navigation: (navigate: {pathname: string, search: string}) => void;
   getCurrentUrl: () => string;
-  pathname?: string;
+  getPathname?: (url: string) => string;
   search?: string;
 }) => {
   const [naviItems, setNaviItems] = useState(props.expandedNaviItems);
@@ -235,11 +235,13 @@ const Navi = (props: {
 
           if (item.key !== "collapse") {
             setCurrentUrl(item.url);
+            
             props.navigation({
-              pathname: props.pathname,
+              pathname: props.getPathname(item.url),
               search: props.search
             });
           }
+          
           if (item.links && item.links.length) {
             ev.stopPropagation();
             ev.preventDefault();
@@ -266,7 +268,7 @@ const Navi = (props: {
 };
 
 const Navigation = (props: NavigationProps) => {
-  const { subscriptionId, navigation, getCurrentUrl, expandedNaviItems,  collapsedNaviItems, pathname, search } = props;
+  const { subscriptionId, navigation, getCurrentUrl, expandedNaviItems,  collapsedNaviItems, getPathname, search } = props;
 
   return (
       <LeftNavStyles>
@@ -279,7 +281,7 @@ const Navigation = (props: NavigationProps) => {
             collapsedStyle={navStylesCollapsed}
             navigation={navigation}
             getCurrentUrl={getCurrentUrl}
-            pathname={pathname}
+            getPathname={getPathname}
             search={search}
           />
         </div>
@@ -292,7 +294,7 @@ const Navigation = (props: NavigationProps) => {
             collapsedStyle={navStylesExpanded}
             navigation={navigation}
             getCurrentUrl={getCurrentUrl}
-            pathname={pathname}
+            getPathname={getPathname}
             search={search}
           />
         </div>
@@ -306,7 +308,7 @@ export interface NavigationProps {
   collapsedNaviItems: INavLinkGroup[];
   navigation: (navigate: {pathname: string, search: string}) => void;
   getCurrentUrl: () => string;
-  pathname?: string;
+  getPathname?: (url: string) => string;
   search?: string;
 }
 
