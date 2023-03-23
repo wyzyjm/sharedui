@@ -33,23 +33,23 @@ card.args = {
     },
     cardType: "CardWithIllustration",
     iconName: "AlignCenter",
-    subTitle: <div>Next generation of QnAMaker</div>,
-    preview: "Preview",
-    linkPropsDropdownOptions: [
-        {
-            key: 'codeSamplesCsharp',
-            text: 'Code samples - C#',
-            href: "https://aka.ms/language-sdks-csharp"
-        },
-        {
-            key: 'codeSamplesPython',
-            text: 'Code samples - Python',
-            href: "https://aka.ms/language-sdks-python"
-        },
-        {
-            key: 'codeSamplesJava',
-            text: 'Code samples - Java',
-            href: "https://aka.ms/language-sdks-java"
-        }
-    ]
+    // subTitle: <div>Next generation of QnAMaker</div>,
+    // preview: "Preview",
+    // linkPropsDropdownOptions: [
+    //     {
+    //         key: 'codeSamplesCsharp',
+    //         text: 'Code samples - C#',
+    //         href: "https://aka.ms/language-sdks-csharp"
+    //     },
+    //     {
+    //         key: 'codeSamplesPython',
+    //         text: 'Code samples - Python',
+    //         href: "https://aka.ms/language-sdks-python"
+    //     },
+    //     {
+    //         key: 'codeSamplesJava',
+    //         text: 'Code samples - Java',
+    //         href: "https://aka.ms/language-sdks-java"
+    //     }
+    // ]
 } as ICardProp;

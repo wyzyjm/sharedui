@@ -17,7 +17,26 @@ import { CSSProperties, ReactNode } from "react";
 import { initializeComponent, useLocalization, withLocalization } from "../../../services/localization";
 import { CardLocalizationFormatMessages } from "../../../clientResources";
 import { INTL } from "../../../util/intlUtil";
+import styled from "styled-components";
 
+const CardWrapper = styled.div.attrs((props: ICardProp) => {
+  if (props.linkProps && !props.linkPropsDropdownOptions) {
+    return {
+      as: Link,
+      ...props.linkProps
+    }
+  }
+})`
+  display:inline-block;
+  border-radius:8px;
+  &&:focus{
+    outline:#0078d4 solid 2px;
+    text-decoration: none;
+  }
+  &&:hover{
+    text-decoration: none;
+  }
+`
 
 export enum CardTypes {
   CardWithIllustration = 260,
@@ -89,21 +108,21 @@ const CardInternal = (props: ICardProp) => {
       margin: "12px 12px 0px 12px",
     },
     header: {
-      fontSize: 14,
+      fontSize: "14px",
       fontWeight: 600,
       borderBottom: props.cardType === "CardWithCustomDesign" ? "2px solid #F7630C" : 0,
       paddingBottom: props.cardType === "CardWithCustomDesign" ? "5px" : 0,
     },
     subTitleStyle: {
-      fontSize: "12pt",
+      fontSize: "12px",
       padding: "0 12px",
-      color: "#5d5d5d"
+      color: "#707070"
     },
     image: {
       textAlign: "center",
       minHeight: "153px",
       maxHeight: "153px",
-      background: theme.palette.neutralLighter,
+      background: "#f2f2f2",
       borderRadius: "8px 8px 0 0",
       overflow: "hidden",
       width: "100%",
@@ -116,8 +135,8 @@ const CardInternal = (props: ICardProp) => {
       paddingBottom: props.isCompactMode ? "0px" : "12px",
     },
     description: {
-      fontSize: "12pt",
-      color: theme.palette.neutralSecondary,
+      fontSize: "12px",
+      color: "#242424",
     },
     linkWrapper: {
       padding: "12px",
@@ -127,9 +146,14 @@ const CardInternal = (props: ICardProp) => {
       fontSize: "12px",
       lineHeight: "16px",
     },
+    linkStyle: {
+      fontSize: "14px",
+      color: " #106ebe"
+    }
   };
 
   return (
+    <CardWrapper {...props}>
     <StyledDocumentCard onClick={props.onClick} width={CardTypes[props.cardType]}>
       {props.cardType === "CardWithIllustration" && (
         <Stack>
@@ -206,12 +230,13 @@ const CardInternal = (props: ICardProp) => {
             </Stack>
           ) : (
             <Stack style={styles.linkWrapper}>
-              <Link {...props.linkProps}>{props.linkTitle}</Link>
+                <Text style={styles.linkStyle}>{props.linkTitle}</Text>
             </Stack>
           )}
         </>
       )}
     </StyledDocumentCard>
+    </CardWrapper>
   );
 };
 
@@ -235,12 +260,12 @@ export function StyledDocumentCard(props: IStyledDocumentCardProp): JSX.Element 
         outline: "2px solid transparent",
         boxShadow: `0px 2px 4px ${theme.palette.neutralQuaternary}, 0px 0px 2px ${theme.palette.neutralLight}`,
         border: props.selected ? `solid 2px ${theme.palette.themePrimary} !important` : "none !important",
-        borderRadius: "8px",
+        borderRadius: "8px"
       },
       ":hover": {
         "border": "none",
         "boxShadow": "none",
-        "background": theme.palette.neutralLighterAlt,
+        "background": "#fafafa",
         "::after": {
           boxShadow: `0px 4px 8px ${theme.palette.neutralQuaternary}, 0px 0px 2px ${theme.palette.neutralLight}`,
         },

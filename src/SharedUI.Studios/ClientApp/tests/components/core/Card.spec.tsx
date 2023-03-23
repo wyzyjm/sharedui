@@ -17,9 +17,9 @@ test.describe("card compoment", () => {
     })
 
     test("has link text", async ({ page }) => {
-        const textElement = await storybookPOM.getByRole('button', { name: 'Try it out' });
+        const textElement = await page.waitForSelector('text=Try it out');
         
-        await expect(textElement).toBeVisible();
+        await expect(textElement).not.toBeNull();
     });
     // Accessibility voilations check
     test('to verify no accessibility violations are found', async ({ page }) => {
